@@ -2055,7 +2055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &176750174
 GameObject:
@@ -5039,7 +5039,7 @@ MonoBehaviour:
   _grid: {fileID: 348750434}
   bSnapFree: 0
   _autoName: {fileID: 355145128}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &361429478
 GameObject:
   m_ObjectHideFlags: 0
@@ -7039,7 +7039,7 @@ MonoBehaviour:
   _grid: {fileID: 348750434}
   bSnapFree: 0
   _autoName: {fileID: 494172142}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &503792203
 GameObject:
   m_ObjectHideFlags: 0
@@ -8618,7 +8618,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725354321360248, guid: 2d6e5544ae374d54fbbb33de6f4148e9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114080869328083372, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
         type: 2}
@@ -10544,9 +10544,10 @@ Transform:
   m_LocalRotation: {x: 0.27984515, y: -0.36470562, z: 0.11591567, w: 0.8804772}
   m_LocalPosition: {x: 0.239, y: 4, z: -0.259}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 1591824755}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &753097425
 GameObject:
@@ -22907,11 +22908,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1591824752}
-  m_LocalRotation: {x: 0.27984515, y: -0.36470562, z: 0.11591567, w: 0.8804772}
-  m_LocalPosition: {x: 2.94, y: 5.25, z: -2.97}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0035356283, y: -0.5943965, z: -1.9231577}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 737374989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1597410114
@@ -27022,7 +27023,7 @@ GameObject:
   - component: {fileID: 1925598885}
   - component: {fileID: 1925598891}
   m_Layer: 0
-  m_Name: T_F12_(-01,-01)__voxelTile_21
+  m_Name: T_F12_(-01,-01)__platformerTile_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
