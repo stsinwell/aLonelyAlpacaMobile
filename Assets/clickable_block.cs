@@ -37,14 +37,14 @@ public class clickable_block : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		print(Input.mousePosition);
+		//print(Input.mousePosition);
 		if(selectedBlock){
-			print("block selected");
+			//print("block selected");
 			if(Input.GetMouseButtonUp(0)){
 				debounceSelect = true;
 			}
 			if(Input.GetMouseButtonDown(0) && debounceSelect){
-				print("setting down");
+				//print("setting down");
 				tempPos = gameObject.transform.position;
 				//Vector3 camPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 				//tempPos.x = camPos.x;
@@ -56,7 +56,7 @@ public class clickable_block : MonoBehaviour {
 				sr.color=new Color(1.0f,1.0f,1.0f,1.0f);
 			}
 		}
-		else print("block not selected");
+		//else print("block not selected");
 	}
 	
 }
