@@ -5,56 +5,61 @@ using UnityEngine;
 public class clickable_block : MonoBehaviour {
 
 	//vars usable in every function
-	Vector3 tempPos;
-	public bool selectedBlock;
-	bool debounceSelect;
+	//Vector3 tempPos;
+	//bool debounceSelect;
+    bool isSelected;
 	SpriteRenderer sr;
     LandableBlock landableBlockScript;
 
 	// initializer
 	void Start () {
-        Debug.Log("Starttttt");
-        selectedBlock = false;
+        isSelected = false;
 		sr = GetComponentInChildren<SpriteRenderer>();
-        Debug.Log("End of Start");
 	}
 	
 	//Called when mouse enters block
 	void OnMouseEnter(){
-        Debug.Log("OnMouseEnter");
-		if(!selectedBlock)sr.color=new Color(0.835f,0.878f,1.0f,1.0f);
+        //Highlights over clickable block when mouse hovers
+		if(!isSelected) {
+            sr.color = new Color(0.835f,0.878f,1.0f,1.0f);
+        }
 	}
 
 	//Called when mouse exits block
 	void OnMouseExit(){
-        Debug.Log("OnMouseExit");
-		if(!selectedBlock) {
+        //Changes back to normal color if the clickable block has not been selected
+		if(!isSelected) {
             setBlockToRegularColor();
         }
 	}
 
 	// Called whenever the mouse is over the gameobject
-	void OnMouseOver(){
-        Debug.Log("OnMouseOver");
-        if(Input.GetMouseButtonDown(0)){
-            Debug.Log("inner");
-			selectedBlock = !selectedBlock;
-			if(selectedBlock){
-				sr.color=new Color(0.78f,0.80f,1.0f,1.0f);
-			}
-		} 
-    }
+//	void OnMouseOver(){
+//        if(Input.GetMouseButtonDown(0)){
+//			selectedBlock = !selectedBlock;
+//			if(selectedBlock){
+//				sr.color=new Color(0.78f,0.80f,1.0f,1.0f);
+//			}
+//		} 
+//    }
     
     void OnMouseDown() {
-        Debug.Log("OnMouseDown");
-        gameObject.tag = "SelectedBlock";
+        //Toggles if the block has been selected or unselected
+        isSelected = !isSelected;
         
-        GameObject[] allLandableBlocks = GameObject.FindGameObjectsWithTag("Landable");
-        foreach(GameObject landableBlock in allLandableBlocks) {
-            LandableBlock landableBlockScript = landableBlock.GetComponent<LandableBlock>();
-            landableBlockScript.setSelectedBlock();
-            
-            selectedBlock = false;
+        if (isSelected) { //Block was just selected
+            sr.color=new Color(0.78f,0.80f,1.0f,1.0f);
+            gameObject.tag = "SelectedBlock";
+
+            //Tell all landable blocks that a block has been selected
+            GameObject[] allLandableBlocks = GameObject.FindGameObjectsWithTag("Landable"); 
+            foreach(GameObject landableBlock in allLandableBlocks) {
+                LandableBlock landableBlockScript = landableBlock.GetComponent<LandableBlock>();
+                landableBlockScript.setSelectedBlock();
+            }
+        } else { //Block was unselected
+            gameObject.tag = "Clickable";
+            nullifyClickableBlockForLandableBlocks();
         }
     }
 
@@ -86,10 +91,22 @@ public class clickable_block : MonoBehaviour {
 //		else {}//Debug.Log("block not selected");
 	}
     
+    void nullifyClickableBlockForLandableBlocks() {
+        //Tell all landable blocks that a block has been unselected
+        GameObject[] allLandableBlocks = GameObject.FindGameObjectsWithTag("Landable");
+        foreach(GameObject landableBlock in allLandableBlocks) {
+            LandableBlock landableBlockScript = landableBlock.GetComponent<LandableBlock>();
+            landableBlockScript.nullSelectedBlock();
+        }
+    }
+    
+    //Moves the selected block
     public void move(Vector3 position) {
-        selectedBlock = false;
+        nullifyClickableBlockForLandableBlocks();
+        isSelected = false; 
         transform.position = position;
         
+        //Selected block is now landable
         gameObject.tag = "Landable";
         gameObject.AddComponent<LandableBlock>();
         setBlockToRegularColor();

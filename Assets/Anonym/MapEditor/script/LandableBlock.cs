@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LandableBlock : MonoBehaviour {
-    public SpriteRenderer sr;
+    public SpriteRenderer sr; 
     public bool isHighlight;
 
-    public GameObject selectedBlock;
-    clickable_block clickable_block_script;
+    public GameObject selectedBlock; //Block if the user has selected the clickable block
+    clickable_block clickable_block_script; //Script for clickable block
 
 	// Use this for initialization
 	void Start () {
@@ -21,29 +21,27 @@ public class LandableBlock : MonoBehaviour {
 	}
     
     void OnMouseEnter() {
-        if (selectedBlock != null && (clickable_block_script.selectedBlock || isHighlight)) {
+        //Highlight the landable block if the player has selected a block and mouse is hovered over landable block
+        if (selectedBlock != null) {
             sr.color=new Color(0.835f,0.878f,1.0f,1.0f);
         }
 	}
     
     void OnMouseExit() {
-        if (!isHighlight) {
-            setBlockToRegularColor();
-        }
+        setBlockToRegularColor();
     }
     
     void OnMouseDown() {
-        if (selectedBlock != null && clickable_block_script.selectedBlock) {
-            //move clickable block above this block
-            Vector3 pos = gameObject.transform.position;
-            pos.y += 1.01f;
-            clickable_block_script.move(pos);
+        //Move the clickable block (if selected) ontop of the landable block
+        if (selectedBlock != null) {
+            Vector3 pos = gameObject.transform.position; //Get pos of landable block
+            pos.y += 1.01f; //Set desired position to above landable block
+            clickable_block_script.move(pos); //Move the selected/clickable block
             
-            isHighlight = false;
-            setBlockToRegularColor();
-            gameObject.tag = "Untagged";
-            LandableBlock landableBlockScript = GetComponent<LandableBlock>();
-            Destroy(landableBlockScript);
+            setBlockToRegularColor(); //Set landable block back to regular color
+            gameObject.tag = "Untagged"; //Landable block is normal again
+            LandableBlock landableBlockScript = GetComponent<LandableBlock>(); 
+            Destroy(landableBlockScript); //Get rid of the landable block script for this no longer landable block
         }
     }
     
@@ -52,7 +50,13 @@ public class LandableBlock : MonoBehaviour {
     }
     
     public void setSelectedBlock() {
+        //A clickable block has been selected by the player
         selectedBlock = GameObject.FindWithTag("SelectedBlock");
         clickable_block_script = selectedBlock.GetComponent<clickable_block>();
+    }
+    
+    public void nullSelectedBlock() {
+        selectedBlock = null;
+        clickable_block_script = null;
     }
 }
