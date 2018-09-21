@@ -210,15 +210,15 @@ namespace Anonym.Isometric
             {
                 for (int i = 0; i < dependentList.Count; ++i)
                 {
-                    if (_sprrISOListForBackup.Count > i)
-                        dependentList[i].sortingOrder = _sprrISOListForBackup[i];
+                    //if (_sprrISOListForBackup.Count > i)
+                        //dependentList[i].sortingOrder = _sprrISOListForBackup[i];
                 }
 
                 var particleSystemRenderList = ParticleSystemRendererList;
                 for (int i = 0; i < particleSystemRenderList.Count; ++i)
                 {
-                    if (_prsISOListForBackup.Count > i)
-                        particleSystemRenderList[i].sortingOrder = _prsISOListForBackup[i];
+                    //if (_prsISOListForBackup.Count > i)
+                        //particleSystemRenderList[i].sortingOrder = _prsISOListForBackup[i];
                 }
             }
 
