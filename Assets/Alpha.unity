@@ -1841,7 +1841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 111283457}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 348750436}
   _autoName: {fileID: 111283453}
   _so: {fileID: 111283456}
   _attachedList:
@@ -12861,7 +12861,7 @@ MonoBehaviour:
   _grid: {fileID: 348750434}
   bSnapFree: 0
   _autoName: {fileID: 900248955}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &908942516
 GameObject:
   m_ObjectHideFlags: 0
@@ -27985,9 +27985,10 @@ GameObject:
   - component: {fileID: 1974105611}
   - component: {fileID: 1974105613}
   - component: {fileID: 1974105612}
+  - component: {fileID: 1974105614}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28037,6 +28038,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1974105614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974105610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09f35656139840a4ea5b29685261b082, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1978559927
 GameObject:
   m_ObjectHideFlags: 0
