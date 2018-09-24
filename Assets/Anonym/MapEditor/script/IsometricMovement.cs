@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Anonym.Isometric
 {
@@ -33,6 +34,8 @@ namespace Anonym.Isometric
     [DisallowMultipleComponent]
     public class IsometricMovement : MethodBTN_MonoBehaviour
     {
+
+        public Image deathImage;
         const string Name_X_Axis_Param = "X-Dir";
         const string Name_Z_Axis_Param = "Z-Dir";
         const string Name_Moving_Param = "OnMoving";
@@ -398,13 +401,13 @@ namespace Anonym.Isometric
                         v3TmpPosition += vHorizontalMovement;
 
                     bMove = Grounding(v3TmpPosition, fMaxDropHeight);
-                    if (bMove)
-                    {
-                        if (!bDashing)
-                            vLastCoordinates = vDestinationCoordinates;
-                        vDestinationCoordinates += v3TmpCoordinates;
-                        SetHorizontalMovement(v3TmpPosition - cTransform.position);
-                    }
+                    if (!bDashing)
+                        vLastCoordinates = vDestinationCoordinates;
+                    vDestinationCoordinates += v3TmpCoordinates;
+                    SetHorizontalMovement(v3TmpPosition - cTransform.position);
+                    if (!bMove) {
+                        deathImage.enabled = true;
+                    } 
                 }
             }
             else

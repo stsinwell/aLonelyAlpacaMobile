@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Reset : MonoBehaviour {
 
+	public Image deathImage;
+
 	// Use this for initialization
 	void Start () {
+
+		deathImage.enabled = false;
 		
 	}
 	
