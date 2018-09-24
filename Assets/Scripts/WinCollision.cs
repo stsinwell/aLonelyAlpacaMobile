@@ -16,8 +16,7 @@ public class WinCollision : MonoBehaviour {
 
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		if(hit.collider.tag == "Goal"){
-			print("win");
-			//SceneManager.LoadScene()
+			SceneManager.LoadScene("Alpha2", LoadSceneMode.Single);
 		}
 	}
 
