@@ -36,6 +36,7 @@ namespace Anonym.Isometric
     {
 
         public Image deathImage;
+        public bool alive = true;
         const string Name_X_Axis_Param = "X-Dir";
         const string Name_Z_Axis_Param = "Z-Dir";
         const string Name_Moving_Param = "OnMoving";
@@ -351,7 +352,7 @@ namespace Anonym.Isometric
 
         protected void ExecuteDir(InGameDirection dir)
         {
-            bool bMove = dir > 0;
+            bool bMove = dir > 0 && alive;
             if (!bMove)
             {
                 dir = (InGameDirection)(-1 * (int)dir);
@@ -407,6 +408,7 @@ namespace Anonym.Isometric
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
                         deathImage.enabled = true;
+                        alive = false;
                     } 
                 }
             }
