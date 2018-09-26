@@ -19,6 +19,7 @@ public class ManageWinCondition : MonoBehaviour {
             win = win || goalScript.inWinBounds(player.transform.position);
         }
 		if(win) print("win!");	
+		
 	}
 
 	
