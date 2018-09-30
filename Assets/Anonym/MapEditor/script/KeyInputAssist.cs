@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -25,9 +26,20 @@ namespace Anonym.Isometric
         [SerializeField, Header("Only available with NavMeshAgent.")]
         bool bUseClickToPathfinding = true;
 
+        GameObject[] playerBlocks;
+        Vector3 newAlpacaPos = Vector3.zero;
+        Facing lastFacing;
+        enum Facing {PosZ, NegZ, PosX, NegX};
+
         private void Start()
         {
             init();
+
+            playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
+        
+            foreach(GameObject playerBlock in playerBlocks) {
+                playerBlock.AddComponent<clickable_block>();
+            }
         }
 
         void Update()
@@ -60,12 +72,187 @@ namespace Anonym.Isometric
                 AddAnchor(destination);
         }
 
+        Vector3 RoundVectorToInt(Vector3 vec) {
+            return new Vector3(Mathf.RoundToInt(vec.x), Mathf.RoundToInt(vec.y), Mathf.RoundToInt(vec.z));
+        }
+
+        Vector3 GetCurrAlpacaLocation() {
+            return RoundVectorToInt(gameObject.transform.position);
+        }
+
+        public void adjustedAlpacaSize(Vector3 pos) {
+            newAlpacaPos = RoundVectorToInt(pos);
+        }
+
+        bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock) {
+            switch (facing) {
+                case Facing.PosZ:
+                    if (Mathf.Approximately(playerBlock.transform.position.x, newAlpacaPos.x)
+                    && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
+                    && Mathf.Approximately(playerBlock.transform.position.z, (newAlpacaPos.z + 1))) {
+                       return true;
+                    }
+                    break;
+
+                case Facing.NegZ:
+                    if (Mathf.Approximately(playerBlock.transform.position.x, newAlpacaPos.x)
+                    && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
+                    && Mathf.Approximately(playerBlock.transform.position.z, (newAlpacaPos.z - 1))) {
+                        return true;
+                    }
+                    break;
+             
+                case Facing.PosX:
+                    if (Mathf.Approximately(playerBlock.transform.position.x, (newAlpacaPos.x + 1))
+                    && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
+                    && Mathf.Approximately(playerBlock.transform.position.z, newAlpacaPos.z)) {
+                        return true;
+                    }
+                    break;
+             
+                case Facing.NegX:
+                    if (Mathf.Approximately(playerBlock.transform.position.x, (newAlpacaPos.x - 1))
+                    && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
+                    && Mathf.Approximately(playerBlock.transform.position.z, newAlpacaPos.z)) {
+                        return true;
+                    }
+                    break;
+            }
+
+            return false;
+        }
+
+        IEnumerator CheckIfFacingPlayerBlock(Facing facing) {
+            yield return new WaitUntil( () => newAlpacaPos != Vector3.zero);
+
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (playerBlock.GetComponent<clickable_block>().isSelected) {
+                    playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
+                } else if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
+                    playerBlock.GetComponent<clickable_block>().setPlayerFacing();
+                } else {
+                    playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
+                }
+            }
+
+            newAlpacaPos = Vector3.zero;
+        }
+
+        Vector3 GetDropPosition() {
+            Vector3 alpacaPos = GetCurrAlpacaLocation();
+            Vector3 targetPos = Vector3.zero;
+
+            switch(lastFacing) {
+                case Facing.PosZ:
+                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z + 1);
+                    break;
+
+                case Facing.NegZ:
+                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z - 1);
+                    break;
+             
+                case Facing.PosX:
+                    targetPos = new Vector3(alpacaPos.x + 1, alpacaPos.y, alpacaPos.z);
+                    break;
+             
+                case Facing.NegX:
+                    targetPos = new Vector3(alpacaPos.x - 1, alpacaPos.y, alpacaPos.z);
+                    break;
+            }
+
+            return targetPos;
+        }
+
+        void PickUpBlock(GameObject playerBlock) {
+            Vector3 alpacaPos = GetCurrAlpacaLocation();
+            playerBlock.transform.position = new Vector3(alpacaPos.x, alpacaPos.y + 1, alpacaPos.z);
+            playerBlock.GetComponent<clickable_block>().pickedUpBlock();
+        }
+
+        void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
+            float lowestY = GetLowestDropPossible(targetPos);
+
+            selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
+            selectedBlock.GetComponent<clickable_block>().dropBlock();
+            newAlpacaPos = GetCurrAlpacaLocation();
+            StartCoroutine(CheckIfFacingPlayerBlock(lastFacing));
+        }
+
+        float GetLowestDropPossible(Vector3 targetPos) {
+            float y = targetPos.y;
+            bool isDroppable = true;
+
+            while (isDroppable) {
+                isDroppable = isSpaceOpen(new Vector3(targetPos.x, y - 1, targetPos.z));
+                y = isDroppable ? y - 1 : y;
+            }
+
+            return y;
+        }
+
+        bool isSpaceOpen(Vector3 targetPos) {
+            GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
+
+            foreach (GameObject obj in allObjs) {
+                if (obj.tag == "Untagged") {
+                    if (obj.transform.position == targetPos) {
+                        return false;
+                    }
+                }
+            }
+
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (playerBlock.transform.position == targetPos) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        void AttemptDropBlock(GameObject selectedBlock) {
+            Vector3 targetPos = GetDropPosition();
+            bool canPlace = isSpaceOpen(targetPos);
+
+            if (canPlace) {
+                DropBlock(selectedBlock, targetPos);
+            }
+        }
+
+        void AttemptPickOrDropPlayerBlock() {
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (playerBlock.GetComponent<clickable_block>().isSelected) {
+                    AttemptDropBlock(playerBlock);
+                } else if (playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
+                    PickUpBlock(playerBlock);
+                } 
+            }
+        }
+
         void InputProcess()
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-                target.Jump();
-
             inputProcess();
+
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                lastFacing = Facing.PosZ;
+            }
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                lastFacing = Facing.NegZ;
+            }
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                lastFacing = Facing.PosX;
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                lastFacing = Facing.NegX;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                AttemptPickOrDropPlayerBlock();
+            }
 
             if (NMAgent != null && bUseClickToPathfinding)
                 ClickToMove();
