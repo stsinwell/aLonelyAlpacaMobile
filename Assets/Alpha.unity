@@ -12511,6 +12511,7 @@ GameObject:
   - component: {fileID: 873654899}
   - component: {fileID: 873654901}
   - component: {fileID: 873654900}
+  - component: {fileID: 873654902}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -12593,6 +12594,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &873654902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 873654898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89326cdec3c1d44d8ea4f36ebcfd8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  isPlayerFacing: 0
 --- !u!1 &886206664
 GameObject:
   m_ObjectHideFlags: 0
@@ -12794,7 +12808,7 @@ GameObject:
   - component: {fileID: 900248955}
   m_Layer: 0
   m_Name: T_F12_(-01,-01)__voxelTile_21
-  m_TagString: Untagged
+  m_TagString: PlayerBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14821,6 +14835,7 @@ GameObject:
   - component: {fileID: 1012517328}
   - component: {fileID: 1012517330}
   - component: {fileID: 1012517329}
+  - component: {fileID: 1012517331}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
   m_TagString: Clickable
@@ -14873,6 +14888,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1012517331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1012517327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f89326cdec3c1d44d8ea4f36ebcfd8d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isSelected: 0
+  isPlayerFacing: 0
 --- !u!1 &1024820028
 GameObject:
   m_ObjectHideFlags: 0
@@ -18622,7 +18650,7 @@ GameObject:
   - component: {fileID: 1304926271}
   m_Layer: 0
   m_Name: T_F12_(-01,00)__voxelTile_21
-  m_TagString: Untagged
+  m_TagString: PlayerBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -84,13 +84,25 @@ namespace Anonym.Isometric
             newAlpacaPos = RoundVectorToInt(pos);
         }
 
+        bool isPlayerBlockBelowOtherPlayerBlocks(GameObject blockInQuestion) {
+            foreach (GameObject playerBlock in playerBlocks) {
+                if (playerBlock.transform.position.x == blockInQuestion.transform.position.x && 
+                    playerBlock.transform.position.y == blockInQuestion.transform.position.y + 1 &&
+                    playerBlock.transform.position.z == blockInQuestion.transform.position.z) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
         bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock) {
             switch (facing) {
                 case Facing.PosZ:
                     if (Mathf.Approximately(playerBlock.transform.position.x, newAlpacaPos.x)
                     && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
                     && Mathf.Approximately(playerBlock.transform.position.z, (newAlpacaPos.z + 1))) {
-                       return true;
+                       return !isPlayerBlockBelowOtherPlayerBlocks(playerBlock);
                     }
                     break;
 
@@ -98,7 +110,7 @@ namespace Anonym.Isometric
                     if (Mathf.Approximately(playerBlock.transform.position.x, newAlpacaPos.x)
                     && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
                     && Mathf.Approximately(playerBlock.transform.position.z, (newAlpacaPos.z - 1))) {
-                        return true;
+                        return !isPlayerBlockBelowOtherPlayerBlocks(playerBlock);;
                     }
                     break;
              
@@ -106,7 +118,7 @@ namespace Anonym.Isometric
                     if (Mathf.Approximately(playerBlock.transform.position.x, (newAlpacaPos.x + 1))
                     && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
                     && Mathf.Approximately(playerBlock.transform.position.z, newAlpacaPos.z)) {
-                        return true;
+                        return !isPlayerBlockBelowOtherPlayerBlocks(playerBlock);;
                     }
                     break;
              
@@ -114,7 +126,7 @@ namespace Anonym.Isometric
                     if (Mathf.Approximately(playerBlock.transform.position.x, (newAlpacaPos.x - 1))
                     && Mathf.Approximately(playerBlock.transform.position.y, newAlpacaPos.y)
                     && Mathf.Approximately(playerBlock.transform.position.z, newAlpacaPos.z)) {
-                        return true;
+                        return !isPlayerBlockBelowOtherPlayerBlocks(playerBlock);;
                     }
                     break;
             }
@@ -193,6 +205,7 @@ namespace Anonym.Isometric
         bool isSpaceOpen(Vector3 targetPos) {
             GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
 
+            // can't if there's a normal block at desired drop pos
             foreach (GameObject obj in allObjs) {
                 if (obj.tag == "Untagged") {
                     if (obj.transform.position == targetPos) {
@@ -201,6 +214,7 @@ namespace Anonym.Isometric
                 }
             }
 
+            // can't if there's a playable block at desired drop pos
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.transform.position == targetPos) {
                     return false;
