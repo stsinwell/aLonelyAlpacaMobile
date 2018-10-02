@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Anonym.Isometric
 {
@@ -31,15 +32,48 @@ namespace Anonym.Isometric
         Facing lastFacing;
         enum Facing {PosZ, NegZ, PosX, NegX};
 
+        public Button posXButton, negXButton, posZButton, negZButton;
+
         private void Start()
         {
             init();
+
+            // Set up the movement buttons
+            Button pXB = posXButton.GetComponent<Button>();
+            Button nXB = negXButton.GetComponent<Button>();
+            Button pZB = posZButton.GetComponent<Button>();
+            Button nZB = negZButton.GetComponent<Button>();
+            pXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RD_Move); });
+            nXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LT_Move); });
+            pZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RT_Move); });
+            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
             }
+        }
+
+        void MoveToDir(InGameDirection dir) {
+            if (dir == InGameDirection.RD_Move) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                lastFacing = Facing.PosX;
+            }
+            if (dir == InGameDirection.RT_Move) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                lastFacing = Facing.PosZ;
+            }
+            if (dir == InGameDirection.LD_Move) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                lastFacing = Facing.NegZ;
+            }
+            if (dir == InGameDirection.LT_Move) {
+                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                lastFacing = Facing.NegX;
+            }
+
+            EnQueueTo(dir);
         }
 
         void Update()
