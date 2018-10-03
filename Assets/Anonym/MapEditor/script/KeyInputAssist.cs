@@ -29,8 +29,8 @@ namespace Anonym.Isometric
 
         GameObject[] playerBlocks;
         Vector3 newAlpacaPos = Vector3.zero;
-        Facing lastFacing;
-        enum Facing {PosZ, NegZ, PosX, NegX};
+        public Facing lastFacing;
+        public enum Facing {PosZ, NegZ, PosX, NegX};
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -316,7 +316,9 @@ namespace Anonym.Isometric
         void InputProcess()
         {
             inputProcess();
-
+            if(Input.GetKeyDown(KeyCode.J)){
+                target.Jump();
+            }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
                 lastFacing = Facing.PosZ;
