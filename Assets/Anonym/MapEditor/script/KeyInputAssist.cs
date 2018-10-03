@@ -316,7 +316,9 @@ namespace Anonym.Isometric
         void InputProcess()
         {
             inputProcess();
-
+            if(Input.GetKeyDown(KeyCode.J)){
+                target.Jump();
+            }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
                 lastFacing = Facing.PosZ;
