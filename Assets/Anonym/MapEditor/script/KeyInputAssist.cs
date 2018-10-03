@@ -29,8 +29,8 @@ namespace Anonym.Isometric
 
         GameObject[] playerBlocks;
         Vector3 newAlpacaPos = Vector3.zero;
-        Facing lastFacing;
-        enum Facing {PosZ, NegZ, PosX, NegX};
+        public Facing lastFacing;
+        public enum Facing {PosZ, NegZ, PosX, NegX};
 
         public Button posXButton, negXButton, posZButton, negZButton;
 

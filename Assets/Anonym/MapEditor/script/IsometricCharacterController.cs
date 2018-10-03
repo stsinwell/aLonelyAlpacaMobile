@@ -84,6 +84,7 @@ namespace Anonym.Isometric
         override public void Start()
         {
 
+            deathImage.enabled = false;
             if (CC == null)
                 CC = gameObject.GetComponent<CharacterController>();
             CC.enabled = true;
