@@ -34,26 +34,62 @@ namespace Anonym.Isometric
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
+        bool doubleClickDetected = false;
+        private float doubleClickTimeLimit = 0.25f;
+
         private void Start()
         {
             init();
 
             // Set up the movement buttons
-            Button pXB = posXButton.GetComponent<Button>();
+            /*Button pXB = posXButton.GetComponent<Button>();
             Button nXB = negXButton.GetComponent<Button>();
             Button pZB = posZButton.GetComponent<Button>();
             Button nZB = negZButton.GetComponent<Button>();
             pXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RD_Move); });
             nXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LT_Move); });
             pZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RT_Move); });
-            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
+            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });*/
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
             }
+
+            StartCoroutine(InputListener());
         }
+
+        //update called once per frame
+        private IEnumerator InputListener()
+        {
+            while (enabled)
+            {
+                if (Input.GetMouseButtonDown(0))
+                    yield return ClickEvent();
+
+                yield return null;
+            }
+        }
+
+        private IEnumerator ClickEvent()
+        {
+            yield return new WaitForEndOfFrame();
+
+            float count = 0f;
+            while(count < doubleClickTimeLimit)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    doubleClickDetected = true;
+                    yield break;
+                }
+                count += Time.deltaTime;
+                yield return null;
+            }
+    
+        }
+
 
         void MoveToDir(InGameDirection dir) {
             if (dir == InGameDirection.RD_Move) {
@@ -298,8 +334,9 @@ namespace Anonym.Isometric
                 lastFacing = Facing.NegX;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space)) {
+            if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
+                doubleClickDetected = false;
             }
 
             if (NMAgent != null && bUseClickToPathfinding)
