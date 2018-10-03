@@ -42,14 +42,14 @@ namespace Anonym.Isometric
             init();
 
             // Set up the movement buttons
-            /*Button pXB = posXButton.GetComponent<Button>();
+            Button pXB = posXButton.GetComponent<Button>();
             Button nXB = negXButton.GetComponent<Button>();
             Button pZB = posZButton.GetComponent<Button>();
             Button nZB = negZButton.GetComponent<Button>();
             pXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RD_Move); });
             nXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LT_Move); });
             pZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RT_Move); });
-            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });*/
+            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
         
