@@ -253,6 +253,7 @@ namespace Anonym.Isometric
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
+            if (lowestY == 0) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -264,7 +265,7 @@ namespace Anonym.Isometric
             float y = targetPos.y;
             bool isDroppable = true;
 
-            while (isDroppable) {
+            while (y > 0 && isDroppable) {
                 isDroppable = isSpaceOpen(new Vector3(targetPos.x, y - 1, targetPos.z));
                 y = isDroppable ? y - 1 : y;
             }
@@ -303,11 +304,22 @@ namespace Anonym.Isometric
             }
         }
 
+        bool isBlockSelected() {
+            bool isSelected = false;
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (playerBlock.GetComponent<clickable_block>().isSelected) {
+                    isSelected = true;
+                }
+            }
+
+            return isSelected;
+        }
+
         void AttemptPickOrDropPlayerBlock() {
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
                     AttemptDropBlock(playerBlock);
-                } else if (playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
+                } else if (!isBlockSelected() && playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
                     PickUpBlock(playerBlock);
                 } 
             }
