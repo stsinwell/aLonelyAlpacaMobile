@@ -208,18 +208,18 @@ namespace Anonym.Isometric
             }
             else if (bCurrpted || bJustDoIt)
             {
-                for (int i = 0; i < dependentList.Count; ++i)
-                {
-                    if (_sprrISOListForBackup.Count > i)
-                        dependentList[i].sortingOrder = _sprrISOListForBackup[i];
-                }
+                // for (int i = 0; i < dependentList.Count; ++i)
+                // {
+                //     if (_sprrISOListForBackup.Count > i)
+                //         dependentList[i].sortingOrder = _sprrISOListForBackup[i];
+                // }
 
                 var particleSystemRenderList = ParticleSystemRendererList;
-                for (int i = 0; i < particleSystemRenderList.Count; ++i)
-                {
-                    if (_prsISOListForBackup.Count > i)
-                        particleSystemRenderList[i].sortingOrder = _prsISOListForBackup[i];
-                }
+                // for (int i = 0; i < particleSystemRenderList.Count; ++i)
+                // {
+                //     if (_prsISOListForBackup.Count > i)
+                //         particleSystemRenderList[i].sortingOrder = _prsISOListForBackup[i];
+                // }
             }
 
             var regularColliderList = RegularColliderList;

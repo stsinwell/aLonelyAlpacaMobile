@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class WinCollision : MonoBehaviour {
 
+	public string nextLevel;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,7 +18,7 @@ public class WinCollision : MonoBehaviour {
 
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		if(hit.collider.tag == "Goal"){
-			SceneManager.LoadScene("Alpha2", LoadSceneMode.Single);
+			SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
 		}
 	}
 
