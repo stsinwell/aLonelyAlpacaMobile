@@ -430,10 +430,11 @@ namespace Anonym.Isometric
 
         void EnQueueTo(InGameDirection direction)
         {
-            bool bDash = target.bMovingDirection(direction) && (Time.time - fLastInputTime < fMaxDashInputInterval);
+            //bool bDash = target.bMovingDirection(direction) && (Time.time - fLastInputTime < fMaxDashInputInterval);
             fLastInputTime = Time.time;
 
-            target.EnQueueDirection(bDash ? InGameDirection.Dash : direction);
+            //target.EnQueueDirection(bDash ? InGameDirection.Dash : direction);
+            target.EnQueueDirection(direction);
         }
 
         void ContinuousMove(InGameDirection direction)
