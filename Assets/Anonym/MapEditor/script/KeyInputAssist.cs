@@ -340,8 +340,26 @@ namespace Anonym.Isometric
             return false;
         }
 
-        bool DidRotateAlpaca(Facing newFacing) {
+        bool RotateAlpaca(Facing newFacing) {
             if (isFacingEdge(GetCurrAlpacaLocation(), newFacing) && newFacing != lastFacing) {
+                return true;
+            }
+
+            return false;
+        }
+
+        bool AttemptJump(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            Debug.Log("posInFront1: " + posInFront);
+            if (isSpaceOpen(posInFront)) {
+                Debug.Log("space open in front");
+                return false;
+            }
+
+            posInFront.y += 1;
+            Debug.Log("posInFront2: " + posInFront);
+            if (isSpaceOpen(posInFront)) {
+                gameObject.transform.position = posInFront;
                 return true;
             }
 
@@ -351,14 +369,20 @@ namespace Anonym.Isometric
         void InputProcess()
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                if (!DidRotateAlpaca(Facing.PosZ)) {
+                bool didRotate = RotateAlpaca(Facing.PosZ);
+                bool didJump = AttemptJump(Facing.PosZ);
+
+                if (!didRotate && !didJump) {
                     inputProcess();
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
                 }
                 lastFacing = Facing.PosZ;
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                if (!DidRotateAlpaca(Facing.NegZ)) {
+                bool didRotate = RotateAlpaca(Facing.NegZ);
+                bool didJump = AttemptJump(Facing.NegZ);
+
+                if (!didRotate && !didJump) {
                     inputProcess();
                     lastFacing = Facing.NegZ;
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
@@ -366,7 +390,10 @@ namespace Anonym.Isometric
                 lastFacing = Facing.NegZ;
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                if (!DidRotateAlpaca(Facing.PosX)) {
+                bool didRotate = RotateAlpaca(Facing.PosX);
+                bool didJump = AttemptJump(Facing.PosX);
+
+                if (!didRotate && !didJump) {
                     inputProcess();
                     lastFacing = Facing.PosX;
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
@@ -374,7 +401,10 @@ namespace Anonym.Isometric
                 lastFacing = Facing.PosX;
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                if (!DidRotateAlpaca(Facing.NegX)) {
+                bool didRotate = RotateAlpaca(Facing.NegX);
+                bool didJump = AttemptJump(Facing.NegX);
+
+                if (!didRotate && !didJump) {
                     inputProcess();
                     lastFacing = Facing.NegX;
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
