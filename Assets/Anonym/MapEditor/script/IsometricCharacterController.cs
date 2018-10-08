@@ -62,7 +62,7 @@ namespace Anonym.Isometric
         #region MoveFunction
         override protected void ApplyMovement(Vector3 vMovement)
         {
-            Debug.Log(vMovement);
+            //Debug.Log(vMovement);
             if (!vMovement.Equals(Vector3.zero))
             {
                 CC.Move(vMovement);

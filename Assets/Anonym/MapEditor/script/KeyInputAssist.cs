@@ -28,9 +28,9 @@ namespace Anonym.Isometric
         bool bUseClickToPathfinding = true;
 
         GameObject[] playerBlocks;
-        Vector3 newAlpacaPos = Vector3.zero;
-        public Facing lastFacing;
+        Vector3 newAlpacaPos;
         public enum Facing {PosZ, NegZ, PosX, NegX};
+        public Facing lastFacing;
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -52,6 +52,7 @@ namespace Anonym.Isometric
             nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
+            newAlpacaPos = Vector3.zero;
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
@@ -221,24 +222,27 @@ namespace Anonym.Isometric
         }
 
         Vector3 GetDropPosition() {
-            Vector3 alpacaPos = GetCurrAlpacaLocation();
+            return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
+        }
+
+        Vector3 GetLocationInFront(Vector3 currLocation, Facing facing) {
             Vector3 targetPos = Vector3.zero;
 
-            switch(lastFacing) {
+            switch(facing) {
                 case Facing.PosZ:
-                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z + 1);
+                    targetPos = new Vector3(currLocation.x, currLocation.y, currLocation.z + 1);
                     break;
 
                 case Facing.NegZ:
-                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z - 1);
+                    targetPos = new Vector3(currLocation.x, currLocation.y, currLocation.z - 1);
                     break;
              
                 case Facing.PosX:
-                    targetPos = new Vector3(alpacaPos.x + 1, alpacaPos.y, alpacaPos.z);
+                    targetPos = new Vector3(currLocation.x + 1, currLocation.y, currLocation.z);
                     break;
              
                 case Facing.NegX:
-                    targetPos = new Vector3(alpacaPos.x - 1, alpacaPos.y, alpacaPos.z);
+                    targetPos = new Vector3(currLocation.x - 1, currLocation.y, currLocation.z);
                     break;
             }
 
@@ -325,26 +329,56 @@ namespace Anonym.Isometric
             }
         }
 
+        bool isFacingEdge(Vector3 currLocation, Facing facing) {
+            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
+            posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
+
+            if (posIfAlpacaMoved.y < GetCurrAlpacaLocation().y) {
+                return true;
+            }
+
+            return false;
+        }
+
+        bool DidRotateAlpaca(Facing newFacing) {
+            if (isFacingEdge(GetCurrAlpacaLocation(), newFacing) && newFacing != lastFacing) {
+                return true;
+            }
+
+            return false;
+        }
+
         void InputProcess()
         {
-            inputProcess();
-            if(Input.GetKeyDown(KeyCode.J)){
-                target.Jump();
-            }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                if (!DidRotateAlpaca(Facing.PosZ)) {
+                    inputProcess();
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                }
                 lastFacing = Facing.PosZ;
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                if (!DidRotateAlpaca(Facing.NegZ)) {
+                    inputProcess();
+                    lastFacing = Facing.NegZ;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                }
                 lastFacing = Facing.NegZ;
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                if (!DidRotateAlpaca(Facing.PosX)) {
+                    inputProcess();
+                    lastFacing = Facing.PosX;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                }
                 lastFacing = Facing.PosX;
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                if (!DidRotateAlpaca(Facing.NegX)) {
+                    inputProcess();
+                    lastFacing = Facing.NegX;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                }
                 lastFacing = Facing.NegX;
             }
 
