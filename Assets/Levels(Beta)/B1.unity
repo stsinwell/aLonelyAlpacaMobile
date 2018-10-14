@@ -4711,6 +4711,7 @@ GameObject:
   - component: {fileID: 737374990}
   - component: {fileID: 737374991}
   - component: {fileID: 737374992}
+  - component: {fileID: 737374993}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4936,10 +4937,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   k: {fileID: 737374984}
+  animator: {fileID: 737374993}
   alpacaNE: {fileID: 21300000, guid: 439599db51fdb2b4798a3a35f97befb5, type: 3}
   alpacaNW: {fileID: 21300000, guid: f9b2016c29f3f454e90fb3cac8e7ae14, type: 3}
   alpacaSE: {fileID: 21300000, guid: e079c52e270d4534fa48002e93a4ec49, type: 3}
   alpacaSW: {fileID: 21300000, guid: f0a70f71023c35a48b836d1bfb5c3229, type: 3}
+--- !u!95 &737374993
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737374983}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b70be82a87c5e88498a0ba16bee774b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &737845039
 GameObject:
   m_ObjectHideFlags: 0
