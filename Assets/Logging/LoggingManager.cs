@@ -314,6 +314,7 @@ public class LoggingManager : MonoBehaviour
 
     private void Start()
     {
+        LoggingManager.instance.RecordPageLoad();
         DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
     }
 
