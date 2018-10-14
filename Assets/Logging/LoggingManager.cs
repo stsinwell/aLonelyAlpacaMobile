@@ -309,6 +309,7 @@ public class LoggingManager : MonoBehaviour
                 pageHost = "https";
             }
         }
+        LoggingManager.instance.Initialize(890, 0, false); //called when game first loads
     }
 
     private void Start()
@@ -316,4 +317,6 @@ public class LoggingManager : MonoBehaviour
         DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
     }
 
+    
 }
+
