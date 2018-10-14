@@ -28,9 +28,9 @@ namespace Anonym.Isometric
         bool bUseClickToPathfinding = true;
 
         GameObject[] playerBlocks;
-        Vector3 newAlpacaPos = Vector3.zero;
-        public Facing lastFacing;
+        Vector3 newAlpacaPos;
         public enum Facing {PosZ, NegZ, PosX, NegX};
+        public Facing lastFacing;
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -52,6 +52,7 @@ namespace Anonym.Isometric
             nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
+            newAlpacaPos = Vector3.zero;
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
@@ -221,24 +222,27 @@ namespace Anonym.Isometric
         }
 
         Vector3 GetDropPosition() {
-            Vector3 alpacaPos = GetCurrAlpacaLocation();
+            return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
+        }
+
+        Vector3 GetLocationInFront(Vector3 currLocation, Facing facing) {
             Vector3 targetPos = Vector3.zero;
 
-            switch(lastFacing) {
+            switch(facing) {
                 case Facing.PosZ:
-                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z + 1);
+                    targetPos = new Vector3(currLocation.x, currLocation.y, currLocation.z + 1);
                     break;
 
                 case Facing.NegZ:
-                    targetPos = new Vector3(alpacaPos.x, alpacaPos.y, alpacaPos.z - 1);
+                    targetPos = new Vector3(currLocation.x, currLocation.y, currLocation.z - 1);
                     break;
              
                 case Facing.PosX:
-                    targetPos = new Vector3(alpacaPos.x + 1, alpacaPos.y, alpacaPos.z);
+                    targetPos = new Vector3(currLocation.x + 1, currLocation.y, currLocation.z);
                     break;
              
                 case Facing.NegX:
-                    targetPos = new Vector3(alpacaPos.x - 1, alpacaPos.y, alpacaPos.z);
+                    targetPos = new Vector3(currLocation.x - 1, currLocation.y, currLocation.z);
                     break;
             }
 
@@ -253,6 +257,7 @@ namespace Anonym.Isometric
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
+            if (lowestY == 0) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -264,7 +269,7 @@ namespace Anonym.Isometric
             float y = targetPos.y;
             bool isDroppable = true;
 
-            while (isDroppable) {
+            while (y > 0 && isDroppable) {
                 isDroppable = isSpaceOpen(new Vector3(targetPos.x, y - 1, targetPos.z));
                 y = isDroppable ? y - 1 : y;
             }
@@ -303,36 +308,107 @@ namespace Anonym.Isometric
             }
         }
 
+        bool isBlockSelected() {
+            bool isSelected = false;
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (playerBlock.GetComponent<clickable_block>().isSelected) {
+                    isSelected = true;
+                }
+            }
+
+            return isSelected;
+        }
+
         void AttemptPickOrDropPlayerBlock() {
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
                     AttemptDropBlock(playerBlock);
-                } else if (playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
+                } else if (!isBlockSelected() && playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
                     PickUpBlock(playerBlock);
                 } 
             }
         }
 
+        bool isFacingEdge(Vector3 currLocation, Facing facing) {
+            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
+            posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
+
+            if (posIfAlpacaMoved.y < GetCurrAlpacaLocation().y) {
+                return true;
+            }
+
+            return false;
+        }
+
+        bool RotateAlpaca(Facing newFacing) {
+            if (isFacingEdge(GetCurrAlpacaLocation(), newFacing) && newFacing != lastFacing) {
+                return true;
+            }
+
+            return false;
+        }
+
+        bool AttemptJump(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            Debug.Log("posInFront1: " + posInFront);
+            if (isSpaceOpen(posInFront)) {
+                Debug.Log("space open in front");
+                return false;
+            }
+
+            posInFront.y += 1;
+            Debug.Log("posInFront2: " + posInFront);
+            if (isSpaceOpen(posInFront)) {
+                gameObject.transform.position = posInFront;
+                return true;
+            }
+
+            return false;
+        }
+
         void InputProcess()
         {
-            inputProcess();
-            if(Input.GetKeyDown(KeyCode.J)){
-                target.Jump();
-            }
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                bool didRotate = RotateAlpaca(Facing.PosZ);
+                bool didJump = AttemptJump(Facing.PosZ);
+
+                if (!didRotate && !didJump) {
+                    inputProcess();
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
+                }
                 lastFacing = Facing.PosZ;
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                bool didRotate = RotateAlpaca(Facing.NegZ);
+                bool didJump = AttemptJump(Facing.NegZ);
+
+                if (!didRotate && !didJump) {
+                    inputProcess();
+                    lastFacing = Facing.NegZ;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
+                }
                 lastFacing = Facing.NegZ;
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                bool didRotate = RotateAlpaca(Facing.PosX);
+                bool didJump = AttemptJump(Facing.PosX);
+
+                if (!didRotate && !didJump) {
+                    inputProcess();
+                    lastFacing = Facing.PosX;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
+                }
                 lastFacing = Facing.PosX;
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                bool didRotate = RotateAlpaca(Facing.NegX);
+                bool didJump = AttemptJump(Facing.NegX);
+
+                if (!didRotate && !didJump) {
+                    inputProcess();
+                    lastFacing = Facing.NegX;
+                    StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
+                }
                 lastFacing = Facing.NegX;
             }
 
@@ -418,10 +494,11 @@ namespace Anonym.Isometric
 
         void EnQueueTo(InGameDirection direction)
         {
-            bool bDash = target.bMovingDirection(direction) && (Time.time - fLastInputTime < fMaxDashInputInterval);
+            //bool bDash = target.bMovingDirection(direction) && (Time.time - fLastInputTime < fMaxDashInputInterval);
             fLastInputTime = Time.time;
 
-            target.EnQueueDirection(bDash ? InGameDirection.Dash : direction);
+            //target.EnQueueDirection(bDash ? InGameDirection.Dash : direction);
+            target.EnQueueDirection(direction);
         }
 
         void ContinuousMove(InGameDirection direction)
