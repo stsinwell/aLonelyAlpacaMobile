@@ -37,10 +37,22 @@ public class loggingInGameManager : MonoBehaviour {
         Regex getNumber = new Regex(@"\d+$");
         var levelNumber = Int32.Parse(getNumber.Match(scene.name).ToString());
 
+        Debug.Log("level number is " + levelNumber);
         //record level number and level name
         LoggingManager.instance.RecordLevelStart(levelNumber, scene.name);
+    }
+
+    void OnApplicationQuit() {
+        //Record time in seconds from when player begins game to when player exits game.
+        LoggingManager.instance.RecordEvent(4, "Player has quit game. Session took " + Time.time + " seconds.");
+
+        //Record the level in which player exits the game.
+        Regex getNumber = new Regex(@"\d+$");
+        var lastLevelBeforePlayerExits = Int32.Parse(getNumber.Match(SceneManager.GetActiveScene().name).ToString());
+        LoggingManager.instance.RecordEvent(5, "Player quit the game on level " + lastLevelBeforePlayerExits);
     }
 }
 
 //todo:
 	//position in front is logged in console. use this to determine player death position
+    //user SceneManager.sceneUnloaded to detect when level ends

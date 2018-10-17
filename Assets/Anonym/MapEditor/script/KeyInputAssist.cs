@@ -151,6 +151,13 @@ namespace Anonym.Isometric
             return RoundVectorToInt(gameObject.transform.position);
         }
 
+        //method to access private GettCurrAlpacaLocation property
+        public Vector3 GetCurrAlpacaLocationProperty() {
+            
+            return GetCurrAlpacaLocation();
+    
+        }
+
         public void adjustedAlpacaSize(Vector3 pos) {
             newAlpacaPos = RoundVectorToInt(pos);
         }
