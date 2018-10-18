@@ -31,6 +31,7 @@ namespace Anonym.Isometric
         Vector3 newAlpacaPos;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
+        bool isFacingPickableBlock;
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -53,6 +54,7 @@ namespace Anonym.Isometric
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
             newAlpacaPos = Vector3.zero;
+            isFacingPickableBlock = false;
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
@@ -214,12 +216,14 @@ namespace Anonym.Isometric
 
         IEnumerator CheckIfFacingPlayerBlock(Facing facing) {
             yield return new WaitUntil( () => newAlpacaPos != Vector3.zero);
+            isFacingPickableBlock = false;
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
                     playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
                 } else if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
+                    isFacingPickableBlock = true;
                 } else {
                     playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
                 }
@@ -355,29 +359,40 @@ namespace Anonym.Isometric
             return false;
         }
 
-        bool AttemptJump(Facing newFacing) {
-            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
-            Debug.Log("posInFront1: " + posInFront);
+        bool AttemptJump(Vector3 posInFront) {
             if (isSpaceOpen(posInFront)) {
-                Debug.Log("space open in front");
                 return false;
             }
 
-            posInFront.y += 1;
-            Debug.Log("posInFront2: " + posInFront);
-            if (isSpaceOpen(posInFront)) {
-                gameObject.transform.position = posInFront;
-                return true;
+            foreach (GameObject playerBlock in playerBlocks) {
+                bool isBlockHighlighted = playerBlock.GetComponent<clickable_block>().isPlayerFacing;
+
+                if (playerBlock.transform.position == posInFront) {
+                    return isBlockHighlighted;
+                }
             }
 
-            return false;
+            posInFront.y += 1;
+            return isSpaceOpen(posInFront);
+        }
+
+        bool Jump(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            bool canJump = AttemptJump(posInFront);
+
+            posInFront.y += 1;
+            if (canJump) {
+                gameObject.transform.position = posInFront;
+            }
+
+            return canJump;
         }
 
         void InputProcess()
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosZ);
-                bool didJump = AttemptJump(Facing.PosZ);
+                bool didJump = Jump(Facing.PosZ);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -388,7 +403,7 @@ namespace Anonym.Isometric
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegZ);
-                bool didJump = AttemptJump(Facing.NegZ);
+                bool didJump = Jump(Facing.NegZ);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -400,7 +415,7 @@ namespace Anonym.Isometric
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosX);
-                bool didJump = AttemptJump(Facing.PosX);
+                bool didJump = Jump(Facing.PosX);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -412,7 +427,7 @@ namespace Anonym.Isometric
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegX);
-                bool didJump = AttemptJump(Facing.NegX);
+                bool didJump = Jump(Facing.NegX);
 
                 if (!didRotate && !didJump) {
                     inputProcess();

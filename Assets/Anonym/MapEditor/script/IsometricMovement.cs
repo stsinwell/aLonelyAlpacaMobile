@@ -407,7 +407,6 @@ namespace Anonym.Isometric
                     vDestinationCoordinates += v3TmpCoordinates;
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
-                        deathImage.enabled = true;
                         alive = false;
                         
                         //Get grid location where Player was standing before they fell to their doom.
@@ -509,6 +508,10 @@ namespace Anonym.Isometric
             vHorizontalMovement = Vector3.zero;
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
+
+            if (!alive) {
+                deathImage.enabled = true;
+            }
         }
 
         #endregion
