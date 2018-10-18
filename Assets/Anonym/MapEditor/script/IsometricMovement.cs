@@ -408,6 +408,11 @@ namespace Anonym.Isometric
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
                         alive = false;
+                        
+                        //Get grid location where Player was standing before they fell to their doom.
+                        var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+                        LoggingManager.instance.RecordEvent(2, "Player died from falling."); //Records an instance of death by falling.
+                        LoggingManager.instance.RecordEvent(3, "Player fell to their death at " + deathlocation); //Records where the player fell.
                     } 
                 }
             }

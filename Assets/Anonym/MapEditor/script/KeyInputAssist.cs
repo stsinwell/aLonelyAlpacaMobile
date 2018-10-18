@@ -153,6 +153,13 @@ namespace Anonym.Isometric
             return RoundVectorToInt(gameObject.transform.position);
         }
 
+        //method to access private GettCurrAlpacaLocation property
+        public Vector3 GetCurrAlpacaLocationProperty() {
+            
+            return GetCurrAlpacaLocation();
+    
+        }
+
         public void adjustedAlpacaSize(Vector3 pos) {
             newAlpacaPos = RoundVectorToInt(pos);
         }
@@ -392,6 +399,7 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
                 }
                 lastFacing = Facing.PosZ;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegZ);
@@ -403,6 +411,7 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
                 }
                 lastFacing = Facing.NegZ;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosX);
@@ -414,6 +423,7 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
                 }
                 lastFacing = Facing.PosX;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegX);
@@ -425,6 +435,7 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
                 }
                 lastFacing = Facing.NegX;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
             }
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {

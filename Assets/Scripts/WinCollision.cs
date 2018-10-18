@@ -19,6 +19,8 @@ public class WinCollision : MonoBehaviour {
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		if(hit.collider.tag == "Goal"){
 			SceneManager.LoadScene(nextLevel, LoadSceneMode.Single);
+			LoggingManager.instance.RecordLevelEnd(); //sends data to server that player won the level
+			Debug.Log("Player moving on to level " + nextLevel);
 		}
 	}
 
