@@ -43895,6 +43895,18 @@ Prefab:
       propertyPath: fJumpingHeightMultiplier
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 4001696493790762, guid: 36ef12859ce3e2642a2f143267618aab, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001696493790762, guid: 36ef12859ce3e2642a2f143267618aab, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4001696493790762, guid: 36ef12859ce3e2642a2f143267618aab, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -4.34
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36ef12859ce3e2642a2f143267618aab, type: 2}
   m_IsPrefabAsset: 0
