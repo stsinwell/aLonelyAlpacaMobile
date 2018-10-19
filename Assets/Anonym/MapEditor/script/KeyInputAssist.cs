@@ -394,6 +394,12 @@ namespace Anonym.Isometric
             posInFront.y += 1;
             if (canJump) {
                 gameObject.transform.position = posInFront;
+
+                if (!isBlockSelected()) { // if alpaca isnt holding a block
+                    foreach(GameObject playerBlock in playerBlocks) { 
+                        playerBlock.GetComponent<clickable_block>().dropBlock(); // make sure no block is highlighted when jumping
+                    }
+                }
             }
 
             return canJump;
