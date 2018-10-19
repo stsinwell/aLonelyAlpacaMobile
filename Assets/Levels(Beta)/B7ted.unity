@@ -2772,7 +2772,7 @@ GameObject:
   - component: {fileID: 370228271}
   m_Layer: 0
   m_Name: T_F-03_(06,-02)__winblock
-  m_TagString: Goal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11640,7 +11640,7 @@ GameObject:
   - component: {fileID: 1253436310}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20234,7 +20234,7 @@ Prefab:
     - target: {fileID: 114864010864009834, guid: 36ef12859ce3e2642a2f143267618aab,
         type: 2}
       propertyPath: nextLevel
-      value: B1
+      value: B8ted
       objectReference: {fileID: 0}
     - target: {fileID: 114034639328884674, guid: 36ef12859ce3e2642a2f143267618aab,
         type: 2}
