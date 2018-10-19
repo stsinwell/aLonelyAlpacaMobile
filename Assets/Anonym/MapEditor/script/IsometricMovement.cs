@@ -407,8 +407,12 @@ namespace Anonym.Isometric
                     vDestinationCoordinates += v3TmpCoordinates;
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
-                        deathImage.enabled = true;
                         alive = false;
+                        
+                        //Get grid location where Player was standing before they fell to their doom.
+                        var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+                        LoggingManager.instance.RecordEvent(2, "Player died from falling."); //Records an instance of death by falling.
+                        LoggingManager.instance.RecordEvent(3, "Player fell to their death at " + deathlocation); //Records where the player fell.
                     } 
                 }
             }
@@ -504,6 +508,10 @@ namespace Anonym.Isometric
             vHorizontalMovement = Vector3.zero;
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
+
+            if (!alive) {
+                deathImage.enabled = true;
+            }
         }
 
         #endregion

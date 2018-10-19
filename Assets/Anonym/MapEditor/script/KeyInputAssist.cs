@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +32,7 @@ namespace Anonym.Isometric
         Vector3 newAlpacaPos;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
+        float boardLowestY;
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -57,6 +59,14 @@ namespace Anonym.Isometric
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
+                boardLowestY = Math.Min(playerBlock.transform.position.y, boardLowestY);
+            }
+
+            GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in allObjs) {
+                if (obj.tag == "Untagged") {
+                    boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
+                }
             }
 
             StartCoroutine(InputListener());
@@ -152,6 +162,13 @@ namespace Anonym.Isometric
             return RoundVectorToInt(gameObject.transform.position);
         }
 
+        //method to access private GettCurrAlpacaLocation property
+        public Vector3 GetCurrAlpacaLocationProperty() {
+            
+            return GetCurrAlpacaLocation();
+    
+        }
+
         public void adjustedAlpacaSize(Vector3 pos) {
             newAlpacaPos = RoundVectorToInt(pos);
         }
@@ -212,7 +229,12 @@ namespace Anonym.Isometric
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
                     playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
-                } else if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
+                    yield break ;
+                }
+            }
+
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
                 } else {
                     playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
@@ -259,7 +281,7 @@ namespace Anonym.Isometric
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
-            if (lowestY == 0) return ;
+            if (lowestY == boardLowestY) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -272,7 +294,7 @@ namespace Anonym.Isometric
             float y = targetPos.y;
             bool isDroppable = true;
 
-            while (y > 0 && isDroppable) {
+            while (y > boardLowestY && isDroppable) {
                 isDroppable = isSpaceOpen(new Vector3(targetPos.x, y - 1, targetPos.z));
                 y = isDroppable ? y - 1 : y;
             }
@@ -350,29 +372,46 @@ namespace Anonym.Isometric
             return false;
         }
 
-        bool AttemptJump(Facing newFacing) {
-            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
-            Debug.Log("posInFront1: " + posInFront);
+        bool AttemptJump(Vector3 posInFront) {
             if (isSpaceOpen(posInFront)) {
-                Debug.Log("space open in front");
                 return false;
             }
 
-            posInFront.y += 1;
-            Debug.Log("posInFront2: " + posInFront);
-            if (isSpaceOpen(posInFront)) {
-                gameObject.transform.position = posInFront;
-                return true;
+            foreach (GameObject playerBlock in playerBlocks) {
+                bool isBlockHighlighted = playerBlock.GetComponent<clickable_block>().isPlayerFacing;
+
+                if (playerBlock.transform.position == posInFront) {
+                    return isBlockHighlighted || isBlockSelected();
+                }
             }
 
-            return false;
+            posInFront.y += 1;
+            return isSpaceOpen(posInFront);
+        }
+
+        bool Jump(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            bool canJump = AttemptJump(posInFront);
+
+            posInFront.y += 1;
+            if (canJump) {
+                gameObject.transform.position = posInFront;
+
+                if (!isBlockSelected()) { // if alpaca isnt holding a block
+                    foreach(GameObject playerBlock in playerBlocks) { 
+                        playerBlock.GetComponent<clickable_block>().dropBlock(); // make sure no block is highlighted when jumping
+                    }
+                }
+            }
+
+            return canJump;
         }
 
         void InputProcess()
         {
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosZ);
-                bool didJump = AttemptJump(Facing.PosZ);
+                bool didJump = Jump(Facing.PosZ);
 
 
                 if (!didRotate && !didJump) {
@@ -380,10 +419,11 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosZ));
                 }
                 lastFacing = Facing.PosZ;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
             }
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegZ);
-                bool didJump = AttemptJump(Facing.NegZ);
+                bool didJump = Jump(Facing.NegZ);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -391,10 +431,11 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegZ));
                 }
                 lastFacing = Facing.NegZ;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
             }
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosX);
-                bool didJump = AttemptJump(Facing.PosX);
+                bool didJump = Jump(Facing.PosX);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -402,10 +443,11 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.PosX));
                 }
                 lastFacing = Facing.PosX;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
             }
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
                 bool didRotate = RotateAlpaca(Facing.NegX);
-                bool didJump = AttemptJump(Facing.NegX);
+                bool didJump = Jump(Facing.NegX);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
@@ -413,6 +455,7 @@ namespace Anonym.Isometric
                     StartCoroutine(CheckIfFacingPlayerBlock(Facing.NegX));
                 }
                 lastFacing = Facing.NegX;
+                LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
             }
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {

@@ -17,6 +17,7 @@ public class Reset : MonoBehaviour {
 	void Update () {
         
         if (Input.GetKeyDown(KeyCode.R)) {
+			LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 		

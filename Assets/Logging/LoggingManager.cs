@@ -312,35 +312,13 @@ public class LoggingManager : MonoBehaviour
                 pageHost = "https";
             }
         }
-        LoggingManager.instance.Initialize(890, 0, false); //called when game first loads
+        
     }
 
     private void Start()
     {
-        LoggingManager.instance.RecordPageLoad();
         DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
     }
 
-    void OnEnable() {
-        //Tell OnLevelFinishedLoading to start listening for a scene change
-        //as soon as this script is enabled.
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
-    }
-
-    void OnDisable() {
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
-    }
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
-
-        //get last number of level name
-        //e.g. level B4 -> 4
-        Regex getNumber = new Regex(@"\d+$");
-        var levelNumber = Int32.Parse(getNumber.Match(scene.name).ToString());
-
-        //record level number and level name
-        LoggingManager.instance.RecordLevelStart(levelNumber, scene.name);
-    }
-    
 }
 
