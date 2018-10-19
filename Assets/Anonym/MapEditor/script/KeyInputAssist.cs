@@ -33,6 +33,8 @@ namespace Anonym.Isometric
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
+        public AudioClip soundEffect;
+        public AudioSource musicSource;
 
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
@@ -56,6 +58,8 @@ namespace Anonym.Isometric
                     boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
                 }
             }
+
+            musicSource.clip = soundEffect;
 
             StartCoroutine(InputListener());
         }
@@ -263,6 +267,7 @@ namespace Anonym.Isometric
         void PickUpBlock(GameObject playerBlock) {
             Vector3 alpacaPos = GetCurrAlpacaLocation();
             playerBlock.GetComponent<clickable_block>().pickedUpBlock();
+            musicSource.Play();
             playerBlock.transform.position = Vector3.zero;
             CFD.has_block = true;
         }
@@ -273,6 +278,7 @@ namespace Anonym.Isometric
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
+            musicSource.Play();
             newAlpacaPos = GetCurrAlpacaLocation();
             StartCoroutine(CheckIfFacingPlayerBlock(lastFacing));
             CFD.has_block = false;
@@ -335,7 +341,6 @@ namespace Anonym.Isometric
         void AttemptPickOrDropPlayerBlock() {
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
-                    Debug.Log("isSelected");
                     AttemptDropBlock(playerBlock);
                 } else if (!isBlockSelected() && playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
                     PickUpBlock(playerBlock);
