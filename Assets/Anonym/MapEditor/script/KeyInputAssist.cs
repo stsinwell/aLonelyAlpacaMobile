@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,7 +32,7 @@ namespace Anonym.Isometric
         Vector3 newAlpacaPos;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
-        bool isFacingPickableBlock;
+        float boardLowestY;
 
         public Button posXButton, negXButton, posZButton, negZButton;
 
@@ -54,10 +55,17 @@ namespace Anonym.Isometric
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
             newAlpacaPos = Vector3.zero;
-            isFacingPickableBlock = false;
         
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
+                boardLowestY = Math.Min(playerBlock.transform.position.y, boardLowestY);
+            }
+
+            GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in allObjs) {
+                if (obj.tag == "Untagged") {
+                    boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
+                }
             }
 
             StartCoroutine(InputListener());
@@ -216,14 +224,17 @@ namespace Anonym.Isometric
 
         IEnumerator CheckIfFacingPlayerBlock(Facing facing) {
             yield return new WaitUntil( () => newAlpacaPos != Vector3.zero);
-            isFacingPickableBlock = false;
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
                     playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
-                } else if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
+                    yield break ;
+                }
+            }
+
+            foreach(GameObject playerBlock in playerBlocks) {
+                if (isAlpacaFacingPlayableBlock(facing, playerBlock)) {
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
-                    isFacingPickableBlock = true;
                 } else {
                     playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
                 }
@@ -268,7 +279,7 @@ namespace Anonym.Isometric
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
-            if (lowestY == 0) return ;
+            if (lowestY == boardLowestY) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -280,7 +291,7 @@ namespace Anonym.Isometric
             float y = targetPos.y;
             bool isDroppable = true;
 
-            while (y > 0 && isDroppable) {
+            while (y > boardLowestY && isDroppable) {
                 isDroppable = isSpaceOpen(new Vector3(targetPos.x, y - 1, targetPos.z));
                 y = isDroppable ? y - 1 : y;
             }
@@ -368,7 +379,7 @@ namespace Anonym.Isometric
                 bool isBlockHighlighted = playerBlock.GetComponent<clickable_block>().isPlayerFacing;
 
                 if (playerBlock.transform.position == posInFront) {
-                    return isBlockHighlighted;
+                    return isBlockHighlighted || isBlockSelected();
                 }
             }
 
