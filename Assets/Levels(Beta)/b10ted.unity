@@ -1074,7 +1074,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2086,7 +2086,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 351889085}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 351889084}
   _so: {fileID: 351889083}
   _attachedList:
@@ -2651,7 +2651,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2755,7 +2755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 367061112}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 367061108}
   _so: {fileID: 367061111}
   _attachedList:
@@ -2830,7 +2830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 370380288}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 370380287}
   _so: {fileID: 370380286}
   _attachedList:
@@ -5481,7 +5481,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5599,7 +5599,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 813765335}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 813765334}
   _so: {fileID: 813765333}
   _attachedList:
@@ -5828,8 +5828,8 @@ GameObject:
   - component: {fileID: 823369664}
   - component: {fileID: 823369662}
   m_Layer: 0
-  m_Name: T_F-06_(02,00)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(02,00)__magma_block
+  m_TagString: FinishBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6061,7 +6061,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 872231981}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 872231980}
   _so: {fileID: 872231979}
   _attachedList:
@@ -6710,8 +6710,8 @@ GameObject:
   - component: {fileID: 960345645}
   - component: {fileID: 960345643}
   m_Layer: 0
-  m_Name: T_F-06_(02,01)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(02,01)__magma_block
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6728,7 +6728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 960345644}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 960345643}
   _so: {fileID: 960345642}
   _attachedList:
@@ -7221,7 +7221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1001157763}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1001157762}
   _so: {fileID: 1001157761}
   _attachedList:
@@ -7714,7 +7714,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1068347697}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1068347696}
   _so: {fileID: 1068347695}
   _attachedList:
@@ -7960,7 +7960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1087093771}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1087093770}
   _so: {fileID: 1087093769}
   _attachedList:
@@ -8360,7 +8360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1108951763}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1108951762}
   _so: {fileID: 1108951761}
   _attachedList:
@@ -8527,8 +8527,8 @@ GameObject:
   - component: {fileID: 1154088924}
   - component: {fileID: 1154088922}
   m_Layer: 0
-  m_Name: T_F-06_(03,02)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(03,02)__magma_block
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8889,7 +8889,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9511,8 +9511,8 @@ GameObject:
   - component: {fileID: 1261270459}
   - component: {fileID: 1261270457}
   m_Layer: 0
-  m_Name: T_F-06_(03,01)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(03,01)__magma_block
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10392,7 +10392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1427385502}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1427385501}
   _so: {fileID: 1427385500}
   _attachedList:
@@ -10774,8 +10774,8 @@ GameObject:
   - component: {fileID: 1495288833}
   - component: {fileID: 1495288831}
   m_Layer: 0
-  m_Name: T_F-06_(03,00)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(03,00)__magma_block
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10792,7 +10792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1495288832}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1495288831}
   _so: {fileID: 1495288830}
   _attachedList:
@@ -11124,6 +11124,7 @@ MonoBehaviour:
     width: 7
     height: 2
   _attachedList:
+  - {fileID: 1676820834}
   - {fileID: 1948128747}
   - {fileID: 2104595509}
   - {fileID: 1358954946}
@@ -11135,7 +11136,6 @@ MonoBehaviour:
   - {fileID: 992019274}
   - {fileID: 638463768}
   - {fileID: 1510951419}
-  - {fileID: 1676820834}
   - {fileID: 1166397607}
   - {fileID: 1854359876}
   - {fileID: 370380285}
@@ -11913,7 +11913,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1676820833}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: -0.99999976, z: 1}
+  m_LocalPosition: {x: 4, y: -1, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2133580385}
@@ -12786,7 +12786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1854359879}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1854359878}
   _so: {fileID: 1854359877}
   _attachedList:
@@ -13069,7 +13069,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13217,7 +13217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1926976683}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 1926976682}
   _so: {fileID: 1926976681}
   _attachedList:
@@ -13889,8 +13889,8 @@ GameObject:
   - component: {fileID: 2015164218}
   - component: {fileID: 2015164216}
   m_Layer: 0
-  m_Name: T_F-06_(02,02)__block_alpha 2
-  m_TagString: Untagged
+  m_Name: T_F-06_(02,02)__magma_block
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13907,7 +13907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2015164217}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 2015164216}
   _so: {fileID: 2015164215}
   _attachedList:
@@ -14430,7 +14430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2071422464}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1526979926}
   _autoName: {fileID: 2071422463}
   _so: {fileID: 2071422462}
   _attachedList:
