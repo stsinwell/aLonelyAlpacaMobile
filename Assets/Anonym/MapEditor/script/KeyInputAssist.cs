@@ -33,8 +33,8 @@ namespace Anonym.Isometric
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
-
-        public Button posXButton, negXButton, posZButton, negZButton;
+        public AudioClip soundEffect;
+        public AudioSource musicSource;
 
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
@@ -43,16 +43,6 @@ namespace Anonym.Isometric
         private void Start()
         {
             init();
-
-            // Set up the movement buttons
-            Button pXB = posXButton.GetComponent<Button>();
-            Button nXB = negXButton.GetComponent<Button>();
-            Button pZB = posZButton.GetComponent<Button>();
-            Button nZB = negZButton.GetComponent<Button>();
-            pXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RD_Move); });
-            nXB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LT_Move); });
-            pZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.RT_Move); });
-            nZB.onClick.AddListener(delegate { MoveToDir(InGameDirection.LD_Move); });
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
             newAlpacaPos = Vector3.zero;
@@ -68,6 +58,8 @@ namespace Anonym.Isometric
                     boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
                 }
             }
+
+            musicSource.clip = soundEffect;
 
             StartCoroutine(InputListener());
         }
@@ -228,7 +220,7 @@ namespace Anonym.Isometric
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
-                    playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
+                    //playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
                     yield break ;
                 }
             }
@@ -274,8 +266,9 @@ namespace Anonym.Isometric
 
         void PickUpBlock(GameObject playerBlock) {
             Vector3 alpacaPos = GetCurrAlpacaLocation();
-            playerBlock.transform.position = new Vector3(alpacaPos.x, alpacaPos.y + 1, alpacaPos.z);
             playerBlock.GetComponent<clickable_block>().pickedUpBlock();
+            musicSource.Play();
+            playerBlock.transform.position = Vector3.zero;
             CFD.has_block = true;
         }
 
@@ -285,6 +278,7 @@ namespace Anonym.Isometric
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
+            musicSource.Play();
             newAlpacaPos = GetCurrAlpacaLocation();
             StartCoroutine(CheckIfFacingPlayerBlock(lastFacing));
             CFD.has_block = false;
@@ -412,7 +406,6 @@ namespace Anonym.Isometric
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosZ);
                 bool didJump = Jump(Facing.PosZ);
-
 
                 if (!didRotate && !didJump) {
                     inputProcess();
