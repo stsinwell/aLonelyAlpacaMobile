@@ -6271,7 +6271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09f35656139840a4ea5b29685261b082, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: B2
+  nextLevel: b11ted
 --- !u!114 &883252804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6290,10 +6290,6 @@ MonoBehaviour:
   NMAgent: {fileID: 0}
   bUseClickToPathfinding: 1
   lastFacing: 2
-  posXButton: {fileID: 0}
-  negXButton: {fileID: 0}
-  posZButton: {fileID: 0}
-  negZButton: {fileID: 0}
   CFD: {fileID: 0}
 --- !u!114 &883252805
 MonoBehaviour:
@@ -6997,7 +6993,7 @@ GameObject:
   - component: {fileID: 974148685}
   m_Layer: 0
   m_Name: T_F-15_(06,01)__winblock
-  m_TagString: Goal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7671,7 +7667,7 @@ GameObject:
   - component: {fileID: 1061659327}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
