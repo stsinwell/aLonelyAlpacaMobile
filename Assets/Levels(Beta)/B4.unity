@@ -20381,6 +20381,7 @@ GameObject:
   - component: {fileID: 833339122}
   - component: {fileID: 833339124}
   - component: {fileID: 833339123}
+  - component: {fileID: 833339125}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -20463,6 +20464,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &833339125
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 833339121}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88dc7491c87f02e4cb184af4e8057414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &835274313
 GameObject:
   m_ObjectHideFlags: 0
@@ -23434,7 +23453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 973554250}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 325309185}
   _autoName: {fileID: 973554249}
   _so: {fileID: 973554248}
   _attachedList:
@@ -41760,15 +41779,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0.51
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -41795,6 +41814,11 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 2070351465}
+    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: nextLevel
+      value: B5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0

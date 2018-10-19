@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 32006934}
   - component: {fileID: 32006933}
   m_Layer: 0
-  m_Name: T_F-12_(-01,00)__block_alpha 2
+  m_Name: T_F-12_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -317,7 +317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -644,7 +644,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -736,7 +736,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ca3529bc1e1cd74b95944c0659a0b34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -828,7 +828,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -982,7 +982,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1171,7 +1171,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1271,7 +1271,7 @@ GameObject:
   - component: {fileID: 192403877}
   - component: {fileID: 192403875}
   m_Layer: 0
-  m_Name: T_F00_(00,01)__block_alpha_blue
+  m_Name: T_F00_(00,01)__interactable_block_rounded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1600,7 +1600,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1692,7 +1692,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1730,7 +1730,7 @@ GameObject:
   - component: {fileID: 261189597}
   - component: {fileID: 261189595}
   m_Layer: 0
-  m_Name: T_F-09_(04,00)__block_alpha 2
+  m_Name: T_F-09_(04,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2061,7 +2061,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ca3529bc1e1cd74b95944c0659a0b34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2228,7 +2228,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2340,7 +2340,7 @@ GameObject:
   - component: {fileID: 351889086}
   - component: {fileID: 351889084}
   m_Layer: 0
-  m_Name: T_F-06_(04,00)__block_alpha 2
+  m_Name: T_F-06_(04,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2555,7 +2555,7 @@ GameObject:
   - component: {fileID: 367061109}
   - component: {fileID: 367061108}
   m_Layer: 0
-  m_Name: T_F-06_(04,01)__block_alpha 2
+  m_Name: T_F-06_(04,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2678,7 +2678,7 @@ GameObject:
   - component: {fileID: 370380289}
   - component: {fileID: 370380287}
   m_Layer: 0
-  m_Name: T_F-03_(01,00)__block_alpha 2
+  m_Name: T_F-03_(01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2855,7 +2855,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2893,7 +2893,7 @@ GameObject:
   - component: {fileID: 385114024}
   - component: {fileID: 385114022}
   m_Layer: 0
-  m_Name: T_F-12_(04,02)__block_alpha 2
+  m_Name: T_F-12_(04,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3078,7 +3078,7 @@ GameObject:
   - component: {fileID: 392674925}
   - component: {fileID: 392674924}
   m_Layer: 0
-  m_Name: T_F-15_(04,02)__block_alpha 2
+  m_Name: T_F-15_(04,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3317,7 +3317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3355,7 +3355,7 @@ GameObject:
   - component: {fileID: 407957872}
   - component: {fileID: 407957870}
   m_Layer: 0
-  m_Name: T_F00_(00,02)__block_alpha 2
+  m_Name: T_F00_(00,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3594,7 +3594,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3686,7 +3686,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3778,7 +3778,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3936,6 +3936,7 @@ GameObject:
   - component: {fileID: 496972976}
   - component: {fileID: 496972978}
   - component: {fileID: 496972977}
+  - component: {fileID: 496972979}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -4018,6 +4019,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &496972979
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 496972975}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88dc7491c87f02e4cb184af4e8057414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &513059531
 GameObject:
   m_ObjectHideFlags: 0
@@ -4086,7 +4105,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4178,7 +4197,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4270,7 +4289,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4523,7 +4542,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4677,7 +4696,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ca3529bc1e1cd74b95944c0659a0b34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4715,7 +4734,7 @@ GameObject:
   - component: {fileID: 638463772}
   - component: {fileID: 638463770}
   m_Layer: 0
-  m_Name: T_F00_(-01,01)__block_alpha 2
+  m_Name: T_F00_(-01,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4900,7 +4919,7 @@ GameObject:
   - component: {fileID: 652122434}
   - component: {fileID: 652122433}
   m_Layer: 0
-  m_Name: T_F-15_(05,01)__block_alpha 2
+  m_Name: T_F-15_(05,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5077,7 +5096,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5115,7 +5134,7 @@ GameObject:
   - component: {fileID: 675297393}
   - component: {fileID: 675297391}
   m_Layer: 0
-  m_Name: T_F-09_(00,00)__block_alpha 2
+  m_Name: T_F-09_(00,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5354,7 +5373,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5546,7 +5565,7 @@ GameObject:
   - component: {fileID: 813765336}
   - component: {fileID: 813765334}
   m_Layer: 0
-  m_Name: T_F-06_(01,02)__block_alpha 2
+  m_Name: T_F-06_(01,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5970,7 +5989,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6008,7 +6027,7 @@ GameObject:
   - component: {fileID: 872231982}
   - component: {fileID: 872231980}
   m_Layer: 0
-  m_Name: T_F-06_(-01,00)__block_alpha 2
+  m_Name: T_F-06_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6247,7 +6266,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6779,7 +6798,7 @@ GameObject:
   - component: {fileID: 992019278}
   - component: {fileID: 992019276}
   m_Layer: 0
-  m_Name: T_F00_(-01,02)__block_alpha 2
+  m_Name: T_F00_(-01,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6902,7 +6921,7 @@ GameObject:
   - component: {fileID: 1001157764}
   - component: {fileID: 1001157762}
   m_Layer: 0
-  m_Name: T_F-03_(-01,00)__block_alpha 2
+  m_Name: T_F-03_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7025,7 +7044,7 @@ GameObject:
   - component: {fileID: 1037115789}
   - component: {fileID: 1037115787}
   m_Layer: 0
-  m_Name: T_F-09_(04,02)__block_alpha 2
+  m_Name: T_F-09_(04,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7148,7 +7167,7 @@ GameObject:
   - component: {fileID: 1039292919}
   - component: {fileID: 1039292917}
   m_Layer: 0
-  m_Name: T_F-15_(06,02)__block_alpha 2
+  m_Name: T_F-15_(06,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7395,7 +7414,7 @@ GameObject:
   - component: {fileID: 1068347698}
   - component: {fileID: 1068347696}
   m_Layer: 0
-  m_Name: T_F-09_(03,00)__block_alpha 2
+  m_Name: T_F-09_(03,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7518,7 +7537,7 @@ GameObject:
   - component: {fileID: 1086757985}
   - component: {fileID: 1086757983}
   m_Layer: 0
-  m_Name: T_F-06_(04,02)__block_alpha 2
+  m_Name: T_F-06_(04,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7641,7 +7660,7 @@ GameObject:
   - component: {fileID: 1087093772}
   - component: {fileID: 1087093770}
   m_Layer: 0
-  m_Name: T_F-06_(00,00)__block_alpha 2
+  m_Name: T_F-06_(00,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7818,7 +7837,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -7856,7 +7875,7 @@ GameObject:
   - component: {fileID: 1099020444}
   - component: {fileID: 1099020442}
   m_Layer: 0
-  m_Name: T_F-15_(-01,00)__block_alpha 2
+  m_Name: T_F-15_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8041,7 +8060,7 @@ GameObject:
   - component: {fileID: 1108951764}
   - component: {fileID: 1108951762}
   m_Layer: 0
-  m_Name: T_F-03_(00,00)__block_alpha 2
+  m_Name: T_F-03_(00,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8411,7 +8430,7 @@ GameObject:
   - component: {fileID: 1166397611}
   - component: {fileID: 1166397609}
   m_Layer: 0
-  m_Name: T_F-03_(01,02)__block_alpha 2
+  m_Name: T_F-03_(01,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8626,7 +8645,7 @@ GameObject:
   - component: {fileID: 1205554578}
   - component: {fileID: 1205554576}
   m_Layer: 0
-  m_Name: T_F-09_(-01,00)__block_alpha 2
+  m_Name: T_F-09_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8865,7 +8884,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8970,7 +8989,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -8995,7 +9014,7 @@ GameObject:
   - component: {fileID: 1231511724}
   - component: {fileID: 1231511722}
   m_Layer: 0
-  m_Name: T_F-15_(04,01)__block_alpha 2
+  m_Name: T_F-15_(04,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9172,7 +9191,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9511,7 +9530,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9611,7 +9630,7 @@ GameObject:
   - component: {fileID: 1339706125}
   - component: {fileID: 1339706124}
   m_Layer: 0
-  m_Name: T_F-15_(05,00)__block_alpha 2
+  m_Name: T_F-15_(05,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9788,7 +9807,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9826,7 +9845,7 @@ GameObject:
   - component: {fileID: 1358954950}
   - component: {fileID: 1358954948}
   m_Layer: 0
-  m_Name: T_F00_(01,02)__block_alpha 2
+  m_Name: T_F00_(01,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10073,7 +10092,7 @@ GameObject:
   - component: {fileID: 1427385503}
   - component: {fileID: 1427385501}
   m_Layer: 0
-  m_Name: T_F-06_(01,00)__block_alpha 2
+  m_Name: T_F-06_(01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10258,7 +10277,7 @@ GameObject:
   - component: {fileID: 1429948958}
   - component: {fileID: 1429948956}
   m_Layer: 0
-  m_Name: T_F-09_(01,00)__block_alpha 2
+  m_Name: T_F-09_(01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10495,7 +10514,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10643,7 +10662,7 @@ GameObject:
   - component: {fileID: 1510951423}
   - component: {fileID: 1510951421}
   m_Layer: 0
-  m_Name: T_F00_(-01,00)__block_alpha 2
+  m_Name: T_F00_(-01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11087,7 +11106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11187,7 +11206,7 @@ GameObject:
   - component: {fileID: 1608023546}
   - component: {fileID: 1608023544}
   m_Layer: 0
-  m_Name: T_F-12_(04,00)__block_alpha 2
+  m_Name: T_F-12_(04,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11372,7 +11391,7 @@ GameObject:
   - component: {fileID: 1654185161}
   - component: {fileID: 1654185160}
   m_Layer: 0
-  m_Name: T_F-15_(05,02)__block_alpha 2
+  m_Name: T_F-15_(05,02)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11557,7 +11576,7 @@ GameObject:
   - component: {fileID: 1676820838}
   - component: {fileID: 1676820836}
   m_Layer: 0
-  m_Name: T_F-03_(04,01)__block_alpha_blue
+  m_Name: T_F-03_(04,01)__interactable_block_rounded
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11734,7 +11753,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11826,7 +11845,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -11864,7 +11883,7 @@ GameObject:
   - component: {fileID: 1702072928}
   - component: {fileID: 1702072926}
   m_Layer: 0
-  m_Name: T_F00_(01,00)__block_alpha 2
+  m_Name: T_F00_(01,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12054,7 +12073,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12133,7 +12152,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12225,7 +12244,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12259,6 +12278,7 @@ GameObject:
   - component: {fileID: 1799262217}
   - component: {fileID: 1799262216}
   - component: {fileID: 1799262215}
+  - component: {fileID: 1799262218}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12302,6 +12322,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1799262218
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799262214}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: cc79929a9c3ab4bb99b0584e86ce725f, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1850911136
 GameObject:
   m_ObjectHideFlags: 0
@@ -12316,7 +12431,7 @@ GameObject:
   - component: {fileID: 1850911141}
   - component: {fileID: 1850911139}
   m_Layer: 0
-  m_Name: T_F-15_(04,00)__block_alpha 2
+  m_Name: T_F-15_(04,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12439,7 +12554,7 @@ GameObject:
   - component: {fileID: 1854359880}
   - component: {fileID: 1854359878}
   m_Layer: 0
-  m_Name: T_F-03_(01,01)__block_alpha 2
+  m_Name: T_F-03_(01,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12832,7 +12947,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -12870,7 +12985,7 @@ GameObject:
   - component: {fileID: 1926976684}
   - component: {fileID: 1926976682}
   m_Layer: 0
-  m_Name: T_F-09_(02,00)__block_alpha 2
+  m_Name: T_F-09_(02,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13232,7 +13347,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13270,7 +13385,7 @@ GameObject:
   - component: {fileID: 1948128751}
   - component: {fileID: 1948128749}
   m_Layer: 0
-  m_Name: T_F03_(00,02)__block_alpha_blue
+  m_Name: T_F03_(00,02)__interactable_block_rounded
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13792,7 +13907,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13946,7 +14061,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14051,7 +14166,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14138,7 +14253,7 @@ GameObject:
   - component: {fileID: 2071422465}
   - component: {fileID: 2071422463}
   m_Layer: 0
-  m_Name: T_F-06_(01,01)__block_alpha 2
+  m_Name: T_F-06_(01,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14315,7 +14430,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ca3529bc1e1cd74b95944c0659a0b34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14353,7 +14468,7 @@ GameObject:
   - component: {fileID: 2082829921}
   - component: {fileID: 2082829919}
   m_Layer: 0
-  m_Name: T_F-15_(06,00)__block_alpha 2
+  m_Name: T_F-15_(06,00)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14476,7 +14591,7 @@ GameObject:
   - component: {fileID: 2089481151}
   - component: {fileID: 2089481149}
   m_Layer: 0
-  m_Name: T_F-09_(04,01)__block_alpha 2
+  m_Name: T_F-09_(04,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14653,7 +14768,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14753,7 +14868,7 @@ GameObject:
   - component: {fileID: 2104595513}
   - component: {fileID: 2104595511}
   m_Layer: 0
-  m_Name: T_F03_(00,00)__block_alpha_blue
+  m_Name: T_F03_(00,00)__interactable_block_rounded
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14930,7 +15045,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -15220,7 +15335,7 @@ GameObject:
   - component: {fileID: 2134848020}
   - component: {fileID: 2134848018}
   m_Layer: 0
-  m_Name: T_F00_(01,01)__block_alpha 2
+  m_Name: T_F00_(01,01)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
