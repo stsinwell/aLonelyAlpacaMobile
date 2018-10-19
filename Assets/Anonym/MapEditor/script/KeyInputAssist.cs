@@ -228,7 +228,7 @@ namespace Anonym.Isometric
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
-                    playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
+                    //playerBlock.transform.position = new Vector3(newAlpacaPos.x, newAlpacaPos.y + 1, newAlpacaPos.z);
                     yield break ;
                 }
             }
@@ -274,8 +274,8 @@ namespace Anonym.Isometric
 
         void PickUpBlock(GameObject playerBlock) {
             Vector3 alpacaPos = GetCurrAlpacaLocation();
-            playerBlock.transform.position = new Vector3(alpacaPos.x, alpacaPos.y + 1, alpacaPos.z);
             playerBlock.GetComponent<clickable_block>().pickedUpBlock();
+            playerBlock.transform.position = Vector3.zero;
             CFD.has_block = true;
         }
 
@@ -347,6 +347,7 @@ namespace Anonym.Isometric
         void AttemptPickOrDropPlayerBlock() {
             foreach(GameObject playerBlock in playerBlocks) {
                 if (playerBlock.GetComponent<clickable_block>().isSelected) {
+                    Debug.Log("isSelected");
                     AttemptDropBlock(playerBlock);
                 } else if (!isBlockSelected() && playerBlock.GetComponent<clickable_block>().isPlayerFacing) {
                     PickUpBlock(playerBlock);
@@ -412,7 +413,6 @@ namespace Anonym.Isometric
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosZ);
                 bool didJump = Jump(Facing.PosZ);
-
 
                 if (!didRotate && !didJump) {
                     inputProcess();
