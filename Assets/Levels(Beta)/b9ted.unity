@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073993, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -32889,7 +32889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1258587817
 Animator:
   serializedVersion: 3
@@ -32921,10 +32921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   k: {fileID: 1258587821}
   animator: {fileID: 1258587817}
-  alpacaNE: {fileID: 21300000, guid: 439599db51fdb2b4798a3a35f97befb5, type: 3}
-  alpacaNW: {fileID: 21300000, guid: f9b2016c29f3f454e90fb3cac8e7ae14, type: 3}
-  alpacaSE: {fileID: 21300000, guid: e079c52e270d4534fa48002e93a4ec49, type: 3}
-  alpacaSW: {fileID: 21300000, guid: f0a70f71023c35a48b836d1bfb5c3229, type: 3}
+  fireBlockCollisionScript: {fileID: 0}
   has_block: 0
 --- !u!114 &1258587819
 MonoBehaviour:
@@ -32981,6 +32978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8767ee3611e716449a83869159a9b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireBlockCollisionScript: {fileID: 0}
   deathImage: {fileID: 1894945142}
   alive: 1
   CollisionLayerMask:
@@ -50370,6 +50368,53 @@ Transform:
   m_Father: {fileID: 203837777}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!1001 &1890582592
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.23911761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.36964384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.09904577
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.8923991
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1894945142}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1890855838
 GameObject:
   m_ObjectHideFlags: 0

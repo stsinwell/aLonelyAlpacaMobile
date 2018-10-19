@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7989,7 +7989,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &737374984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8022,6 +8022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8767ee3611e716449a83869159a9b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fireBlockCollisionScript: {fileID: 0}
   deathImage: {fileID: 2070351465}
   alive: 1
   CollisionLayerMask:
@@ -8208,10 +8209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   k: {fileID: 737374984}
   animator: {fileID: 737374993}
-  alpacaNE: {fileID: 21300000, guid: 439599db51fdb2b4798a3a35f97befb5, type: 3}
-  alpacaNW: {fileID: 21300000, guid: f9b2016c29f3f454e90fb3cac8e7ae14, type: 3}
-  alpacaSE: {fileID: 21300000, guid: e079c52e270d4534fa48002e93a4ec49, type: 3}
-  alpacaSW: {fileID: 21300000, guid: f0a70f71023c35a48b836d1bfb5c3229, type: 3}
+  fireBlockCollisionScript: {fileID: 0}
   has_block: 0
 --- !u!95 &737374993
 Animator:
@@ -10911,6 +10909,48 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &959638950
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &965732714
 GameObject:
   m_ObjectHideFlags: 0
@@ -19619,6 +19659,53 @@ Transform:
   m_Father: {fileID: 2062063517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!1001 &1758634550
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0.23911761
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.36964384
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.09904577
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.8923991
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 2070351465}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &1767695033
 GameObject:
   m_ObjectHideFlags: 0
@@ -21384,6 +21471,7 @@ GameObject:
   - component: {fileID: 1914218567}
   - component: {fileID: 1914218566}
   - component: {fileID: 1914218568}
+  - component: {fileID: 1914218569}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -21511,6 +21599,17 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1914218569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1914218565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9697f1ffb631a34e9fb6fd3f12febef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920483094
 GameObject:
   m_ObjectHideFlags: 0
