@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class fireBlockCollision : MonoBehaviour {
 
+    bool fireCollision = false;
 	// Use this for initialization
 	void Start () {
         
@@ -13,7 +14,6 @@ public class fireBlockCollision : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -21,7 +21,12 @@ public class fireBlockCollision : MonoBehaviour {
         
         if (hit.collider.tag == "FireBlock")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            fireCollision = true;
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+    }
+
+    public bool hasCollided(){
+        return fireCollision;
     }
 }

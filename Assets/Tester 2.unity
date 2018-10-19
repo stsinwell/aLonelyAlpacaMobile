@@ -2701,7 +2701,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2813,6 +2813,21 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224849005489380546, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 224849005489380546, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 285
+      objectReference: {fileID: 0}
+    - target: {fileID: 224849005489380546, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 2}
@@ -3800,7 +3815,7 @@ GameObject:
   - component: {fileID: 308852841}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4176,7 +4191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 345410220}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 346201489}
   _autoName: {fileID: 345410216}
   _so: {fileID: 345410219}
   _attachedList:
@@ -7430,7 +7445,7 @@ GameObject:
   - component: {fileID: 527280804}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12598,7 +12613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 826989383}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 826989379}
   _so: {fileID: 826989382}
   _attachedList:
@@ -13764,7 +13779,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a2ac6a442c9d24bc898d06a99e0dce84, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -17511,7 +17526,7 @@ GameObject:
   - component: {fileID: 1093975028}
   - component: {fileID: 1093975027}
   m_Layer: 0
-  m_Name: T_F00_(02,00)__block_alpha 2
+  m_Name: T_F00_(02,00)__magma_block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23990,6 +24005,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1489469886 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114701969332490966, guid: 36ef12859ce3e2642a2f143267618aab,
+    type: 2}
+  m_PrefabInternal: {fileID: 1522852636}
+  m_Script: {fileID: 11500000, guid: 417c018febaf04f449fb484f421a3b9f, type: 3}
 --- !u!1 &1491351655
 GameObject:
   m_ObjectHideFlags: 0
@@ -24070,7 +24091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1491351661}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1491351657}
   _so: {fileID: 1491351660}
   _attachedList:
@@ -24816,7 +24837,7 @@ Prefab:
     - target: {fileID: 114864010864009834, guid: 36ef12859ce3e2642a2f143267618aab,
         type: 2}
       propertyPath: nextLevel
-      value: B4
+      value: Levels(Beta)/B4
       objectReference: {fileID: 0}
     - target: {fileID: 114514986260716104, guid: 36ef12859ce3e2642a2f143267618aab,
         type: 2}
@@ -24828,6 +24849,16 @@ Prefab:
       propertyPath: has_block
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114034639328884674, guid: 36ef12859ce3e2642a2f143267618aab,
+        type: 2}
+      propertyPath: fireBlockCollisionScript
+      value: 
+      objectReference: {fileID: 1489469886}
+    - target: {fileID: 114242570033750822, guid: 36ef12859ce3e2642a2f143267618aab,
+        type: 2}
+      propertyPath: fireBlockCollisionScript
+      value: 
+      objectReference: {fileID: 1489469886}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36ef12859ce3e2642a2f143267618aab, type: 2}
   m_IsPrefabAsset: 0
@@ -28027,7 +28058,7 @@ GameObject:
   - component: {fileID: 1825950757}
   - component: {fileID: 1825950756}
   m_Layer: 0
-  m_Name: T_F00_(-01,-03)__block_alpha 2
+  m_Name: T_F00_(-01,-03)__magma_block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28093,7 +28124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1825950760}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1825950756}
   _so: {fileID: 1825950759}
   _attachedList:
@@ -28585,7 +28616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1841483765}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1841483761}
   _so: {fileID: 1841483764}
   _attachedList:
@@ -28924,7 +28955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1888671903}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1194972321}
   _autoName: {fileID: 1888671899}
   _so: {fileID: 1888671902}
   _attachedList:

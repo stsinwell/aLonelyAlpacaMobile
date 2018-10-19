@@ -35,6 +35,7 @@ namespace Anonym.Isometric
     public class IsometricMovement : MethodBTN_MonoBehaviour
     {
 
+        public fireBlockCollision fireBlockCollisionScript;
         public Image deathImage;
         public bool alive = true;
         const string Name_X_Axis_Param = "X-Dir";
@@ -407,6 +408,7 @@ namespace Anonym.Isometric
                     vDestinationCoordinates += v3TmpCoordinates;
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
+
                         alive = false;
                         
                         //Get grid location where Player was standing before they fell to their doom.
@@ -509,7 +511,8 @@ namespace Anonym.Isometric
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
 
-            if (!alive) {
+            if (!alive || fireBlockCollisionScript.hasCollided()) {
+                alive = false;
                 deathImage.enabled = true;
             }
         }
