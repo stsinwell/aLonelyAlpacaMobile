@@ -39,6 +39,7 @@ namespace Anonym.Isometric
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
 
+        public changeFacingDirection CFD;
         private void Start()
         {
             init();
@@ -275,6 +276,7 @@ namespace Anonym.Isometric
             Vector3 alpacaPos = GetCurrAlpacaLocation();
             playerBlock.transform.position = new Vector3(alpacaPos.x, alpacaPos.y + 1, alpacaPos.z);
             playerBlock.GetComponent<clickable_block>().pickedUpBlock();
+            CFD.has_block = true;
         }
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
@@ -285,6 +287,7 @@ namespace Anonym.Isometric
             selectedBlock.GetComponent<clickable_block>().dropBlock();
             newAlpacaPos = GetCurrAlpacaLocation();
             StartCoroutine(CheckIfFacingPlayerBlock(lastFacing));
+            CFD.has_block = false;
         }
 
         float GetLowestDropPossible(Vector3 targetPos) {
@@ -350,7 +353,6 @@ namespace Anonym.Isometric
                 } 
             }
         }
-
         bool isFacingEdge(Vector3 currLocation, Facing facing) {
             Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
             posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
@@ -410,6 +412,7 @@ namespace Anonym.Isometric
             if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
                 bool didRotate = RotateAlpaca(Facing.PosZ);
                 bool didJump = Jump(Facing.PosZ);
+
 
                 if (!didRotate && !didJump) {
                     inputProcess();
