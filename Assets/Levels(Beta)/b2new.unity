@@ -1957,7 +1957,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 164709704}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 4.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8007,10 +8007,6 @@ MonoBehaviour:
   NMAgent: {fileID: 0}
   bUseClickToPathfinding: 1
   lastFacing: 2
-  posXButton: {fileID: 995744424}
-  negXButton: {fileID: 1329283662}
-  posZButton: {fileID: 897340376}
-  negZButton: {fileID: 1239514631}
   CFD: {fileID: 737374992}
 --- !u!114 &737374985
 MonoBehaviour:
@@ -10018,12 +10014,6 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 61
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &897340376 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114913929680253640, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
-  m_PrefabInternal: {fileID: 204702104}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &901577757
 GameObject:
   m_ObjectHideFlags: 0
@@ -11009,12 +10999,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &995744424 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114931009330937580, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
-  m_PrefabInternal: {fileID: 204702104}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1001369224
 GameObject:
   m_ObjectHideFlags: 0
@@ -14093,12 +14077,6 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 73
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1239514631 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114894071853213164, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
-  m_PrefabInternal: {fileID: 204702104}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!114 &1244783222 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114355924275546482, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
@@ -14726,12 +14704,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1329283662 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114866231359288992, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
-  m_PrefabInternal: {fileID: 204702104}
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1341127719
 GameObject:
   m_ObjectHideFlags: 0
@@ -19581,7 +19553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1767695037}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1767695036}
   _so: {fileID: 1767695035}
   _attachedList:
@@ -21482,7 +21454,7 @@ GameObject:
   - component: {fileID: 1922004997}
   - component: {fileID: 1922004995}
   m_Layer: 0
-  m_Name: T_F06_(-01,00)__block_beta_grass
+  m_Name: T_F06_(-01,00)__interactable_block_rounded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21557,7 +21529,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1922004995}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1922004997
 MonoBehaviour:
   m_ObjectHideFlags: 0
