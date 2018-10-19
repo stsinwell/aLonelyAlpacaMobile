@@ -6,15 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Alpha.unity
-    guid: fbb8bca1d454a4acfa497bdbf65a49f9
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 0
-    path: Assets/Alpha2.unity
-    guid: 8caf17eb4430ba6498e65dc0dabe9469
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Levels(Beta)/B1.unity
     guid: ca315a053fe5ec941923920c21b37a20
-  - enabled: 1
+  - enabled: 0
     path: Assets/Levels(Beta)/B2.unity
     guid: 7e5326b80f2c3374a9e7978a0e762a67
   - enabled: 1
@@ -29,4 +29,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels(Beta)/B6.unity
     guid: c06547d0ca200d6458601257447f438c
+  - enabled: 1
+    path: Assets/Levels(Beta)/B7ted.unity
+    guid: c55d2be046dd54da9a2136442bd3c1b7
+  - enabled: 1
+    path: Assets/Levels(Beta)/B8ted.unity
+    guid: 95356057fad74480d97ae3344b25b0eb
+  - enabled: 1
+    path: Assets/Levels(Beta)/b9emily.unity
+    guid: 2628e2f6300b5458b907a9222951fb57
+  - enabled: 1
+    path: Assets/Levels(Beta)/b9ted.unity
+    guid: 3fe12451998ca49509b226b57eeefc8a
+  - enabled: 1
+    path: Assets/Levels(Beta)/b10ted.unity
+    guid: 3ace43d740272456bbf5a27aa82239c4
+  - enabled: 1
+    path: Assets/Levels(Beta)/b11ted.unity
+    guid: 5b965d1d53b3641cf94d5460bf66427f
   m_configObjects: {}
