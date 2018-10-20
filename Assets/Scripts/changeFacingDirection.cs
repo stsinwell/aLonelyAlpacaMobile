@@ -65,7 +65,10 @@ public class changeFacingDirection : MonoBehaviour {
 
         //Walking Anim Updates
         //NE
-        if(Input.GetKeyDown(KeyCode.W) && !animator.GetBool("walkne")){
+        if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !animator.GetBool("walkne")){
+            animator.SetBool("walkse", false);
+            animator.SetBool("walksw", false);
+            animator.SetBool("walknw", false);
             animator.SetBool("walkne", true);
             animator.SetInteger("countdown", 20);
         }
@@ -76,8 +79,11 @@ public class changeFacingDirection : MonoBehaviour {
             animator.SetBool("walkne", false);
         }
         //SW
-        if(Input.GetKeyDown(KeyCode.S) && !animator.GetBool("walksw")){
+        if((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && !animator.GetBool("walksw")){
+            animator.SetBool("walkse", false);
             animator.SetBool("walksw", true);
+            animator.SetBool("walknw", false);
+            animator.SetBool("walkne", false);
             animator.SetInteger("countdown", 20);
         }
         else if(animator.GetInteger("countdown")>0 && animator.GetBool("walksw")){
@@ -87,8 +93,11 @@ public class changeFacingDirection : MonoBehaviour {
             animator.SetBool("walksw", false);
         }
         //NW
-        if(Input.GetKeyDown(KeyCode.A) && !animator.GetBool("walknw")){
+        if((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) && !animator.GetBool("walknw")){
+            animator.SetBool("walkse", false);
+            animator.SetBool("walksw", false);
             animator.SetBool("walknw", true);
+            animator.SetBool("walkne", false);
             animator.SetInteger("countdown", 20);
         }
         else if(animator.GetInteger("countdown")>0 && animator.GetBool("walknw")){
@@ -98,8 +107,11 @@ public class changeFacingDirection : MonoBehaviour {
             animator.SetBool("walknw", false);
         }       
         //SE
-        if(Input.GetKeyDown(KeyCode.D) && !animator.GetBool("walkse")){
+        if((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && !animator.GetBool("walkse")){
             animator.SetBool("walkse", true);
+            animator.SetBool("walksw", false);
+            animator.SetBool("walknw", false);
+            animator.SetBool("walkne", false);
             animator.SetInteger("countdown", 20);
         }
         else if(animator.GetInteger("countdown")>0 && animator.GetBool("walkse")){

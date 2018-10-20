@@ -854,7 +854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 9596141}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 9596140}
   _so: {fileID: 9596139}
   _attachedList:
@@ -4540,7 +4540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 122425625}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 122425624}
   _so: {fileID: 122425623}
   _attachedList:
@@ -6763,8 +6763,8 @@ MonoBehaviour:
   - {fileID: 2070088578}
   - {fileID: 873599995}
   - {fileID: 481186953}
-  - {fileID: 734716486}
   - {fileID: 1107733956}
+  - {fileID: 734716486}
   - {fileID: 1441317038}
   - {fileID: 122425622}
   - {fileID: 733365281}
@@ -6903,27 +6903,18 @@ MonoBehaviour:
   - {fileID: 2042955751}
   - {fileID: 1934019997}
   - {fileID: 183570778}
-  - {fileID: 377051884}
-  - {fileID: 1998053842}
-  - {fileID: 1811409903}
   - {fileID: 1291533264}
   - {fileID: 498635703}
   - {fileID: 1089262810}
   - {fileID: 1295271120}
   - {fileID: 1551161968}
   - {fileID: 487557625}
-  - {fileID: 2035391191}
-  - {fileID: 601079075}
-  - {fileID: 737828410}
   - {fileID: 1142740266}
   - {fileID: 1377182383}
   - {fileID: 908785748}
   - {fileID: 128591741}
   - {fileID: 1419329082}
   - {fileID: 571813299}
-  - {fileID: 133621510}
-  - {fileID: 1488030699}
-  - {fileID: 899965241}
   - {fileID: 1506009924}
   - {fileID: 162298711}
   - {fileID: 346491807}
@@ -6939,6 +6930,15 @@ MonoBehaviour:
   - {fileID: 1544069352}
   - {fileID: 100380235}
   - {fileID: 603318342}
+  - {fileID: 377051884}
+  - {fileID: 1998053842}
+  - {fileID: 1811409903}
+  - {fileID: 2035391191}
+  - {fileID: 601079075}
+  - {fileID: 737828410}
+  - {fileID: 133621510}
+  - {fileID: 1488030699}
+  - {fileID: 899965241}
   _referenceTile: {fileID: 1046543167763804, guid: 9a3da0318e7dfbf42b6fd7d4f5931e99,
     type: 2}
   _bSensorOff_ChildChange: 0
@@ -8269,7 +8269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 225108130}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 225108129}
   _so: {fileID: 225108128}
   _attachedList:
@@ -10160,7 +10160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 291376892}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 291376891}
   _so: {fileID: 291376890}
   _attachedList:
@@ -10217,7 +10217,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 291376891}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &291376893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10480,7 +10480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 305059613}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 305059612}
   _so: {fileID: 305059611}
   _attachedList:
@@ -12266,7 +12266,7 @@ GameObject:
   - component: {fileID: 357647289}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12378,6 +12378,53 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &367228815
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1536626665}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &367719423
 GameObject:
   m_ObjectHideFlags: 0
@@ -12718,7 +12765,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 384925153}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 384925152}
   _so: {fileID: 384925151}
   _attachedList:
@@ -14147,7 +14194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 455052857}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 455052856}
   _so: {fileID: 455052855}
   _attachedList:
@@ -14764,7 +14811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 465455292}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 465455291}
   _so: {fileID: 465455290}
   _attachedList:
@@ -15547,7 +15594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 481186956}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 481186955}
   _so: {fileID: 481186954}
   _attachedList:
@@ -17894,7 +17941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 541087716}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 541087715}
   _so: {fileID: 541087714}
   _attachedList:
@@ -19546,7 +19593,7 @@ GameObject:
   - component: {fileID: 597360525}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24072,7 +24119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 733365284}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 733365283}
   _so: {fileID: 733365282}
   _attachedList:
@@ -25234,155 +25281,6 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 120
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &773576247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 773576250}
-  - component: {fileID: 773576249}
-  - component: {fileID: 773576248}
-  - component: {fileID: 773576251}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &773576248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773576247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9697f1ffb631a34e9fb6fd3f12febef, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &773576249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773576247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b43a188b653747b283deb07e0a96e19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathImage: {fileID: 1536626665}
---- !u!4 &773576250
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773576247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &773576251
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 773576247}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cc79929a9c3ab4bb99b0584e86ce725f, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &776900551
 GameObject:
   m_ObjectHideFlags: 0
@@ -28123,7 +28021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 873599998}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 873599997}
   _so: {fileID: 873599996}
   _attachedList:
@@ -28350,7 +28248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 880166507}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 880166506}
   _so: {fileID: 880166505}
   _attachedList:
@@ -28937,7 +28835,7 @@ GameObject:
   - component: {fileID: 898192372}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31371,7 +31269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 961754998}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 961754997}
   _so: {fileID: 961754996}
   _attachedList:
@@ -31762,7 +31660,7 @@ GameObject:
   - component: {fileID: 968193865}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31952,7 +31850,7 @@ GameObject:
   - component: {fileID: 974513521}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32630,7 +32528,7 @@ GameObject:
   - component: {fileID: 994950736}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34135,7 +34033,7 @@ GameObject:
   - component: {fileID: 1030959125}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34341,7 +34239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1039805886}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1039805885}
   _so: {fileID: 1039805884}
   _attachedList:
@@ -35858,7 +35756,7 @@ GameObject:
   - component: {fileID: 1082182344}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36926,7 +36824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1107733959}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1107733958}
   _so: {fileID: 1107733957}
   _attachedList:
@@ -37065,7 +36963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
@@ -37400,7 +37298,7 @@ GameObject:
   - component: {fileID: 1119491430}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39832,7 +39730,7 @@ GameObject:
   - component: {fileID: 1169516368}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43468,7 +43366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1290292699}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1290292698}
   _so: {fileID: 1290292697}
   _attachedList:
@@ -43849,7 +43747,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1297720585}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1297720584}
   _so: {fileID: 1297720583}
   _attachedList:
@@ -44200,7 +44098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1311540924}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1311540923}
   _so: {fileID: 1311540922}
   _attachedList:
@@ -47923,7 +47821,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1441317041}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1441317040}
   _so: {fileID: 1441317039}
   _attachedList:
@@ -48039,7 +47937,7 @@ RectTransform:
   - {fileID: 1841219212}
   - {fileID: 1799842014}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -49328,7 +49226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1502235914}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1502235913}
   _so: {fileID: 1502235912}
   _attachedList:
@@ -52784,7 +52682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1609967828}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1609967827}
   _so: {fileID: 1609967826}
   _attachedList:
@@ -53072,7 +52970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1613612671}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1613612670}
   _so: {fileID: 1613612669}
   _attachedList:
@@ -54851,7 +54749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1689573277}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1689573276}
   _so: {fileID: 1689573275}
   _attachedList:
@@ -58463,7 +58361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1823687417}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1823687416}
   _so: {fileID: 1823687415}
   _attachedList:
@@ -62387,7 +62285,7 @@ GameObject:
   - component: {fileID: 1979582677}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -64502,7 +64400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2025676346}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 2025676345}
   _so: {fileID: 2025676344}
   _attachedList:
@@ -66484,7 +66382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2070088581}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 2070088580}
   _so: {fileID: 2070088579}
   _attachedList:
@@ -68456,7 +68354,7 @@ GameObject:
   - component: {fileID: 2140391473}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
