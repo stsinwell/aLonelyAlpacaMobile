@@ -4,20 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 public class loggingInGameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		LoggingManager.instance.Initialize(890, 1, false);
-		LoggingManager.instance.RecordPageLoad(); //sends data to server indicating game has been loaded.
-
-
+		//LoggingManager.instance.RecordPageLoad();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	void OnEnable() {
@@ -30,8 +28,12 @@ public class loggingInGameManager : MonoBehaviour {
         SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
+    async Task PageLoadTask(){
+        LoggingManager.instance.RecordPageLoad();
+    }
 
+    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
+        await PageLoadTask();
         //get last number of level name
         //e.g. level B4 -> 4
         Regex getNumber = new Regex(@"\d+$");
