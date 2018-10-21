@@ -504,9 +504,6 @@ namespace Anonym.Isometric
 
         virtual protected void Arrival()
         {         
-            GameObject player = GameObject.FindWithTag("Player");
-            player.GetComponent<KeyInputAssist>().adjustedAlpacaSize(gameObject.transform.position);
-
             vHorizontalMovement = Vector3.zero;
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
