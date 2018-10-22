@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12415,7 +12415,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
         type: 2}
@@ -12531,7 +12531,7 @@ GameObject:
   - component: {fileID: 377051888}
   - component: {fileID: 377051886}
   m_Layer: 0
-  m_Name: T_F-57_(08,-07)__block_alpha 2
+  m_Name: T_F-57_(08,-07)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14681,7 +14681,7 @@ Transform:
   m_Children:
   - {fileID: 1369289663}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 30.000002, y: -15, z: 0}
 --- !u!82 &464005227
 AudioSource:
@@ -15956,7 +15956,7 @@ GameObject:
   - component: {fileID: 487557624}
   - component: {fileID: 487557623}
   m_Layer: 0
-  m_Name: T_F-54_(07,-06)__block_alpha 2
+  m_Name: T_F-54_(07,-06)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22203,7 +22203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725354321360248, guid: 2d6e5544ae374d54fbbb33de6f4148e9, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114080869328083372, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
         type: 2}
@@ -23762,7 +23762,7 @@ GameObject:
   - component: {fileID: 725417830}
   - component: {fileID: 725417829}
   m_Layer: 0
-  m_Name: T_F-42_(02,-03)__block_alpha 2
+  m_Name: T_F-42_(02,-03)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24462,7 +24462,7 @@ GameObject:
   - component: {fileID: 737828409}
   - component: {fileID: 737828408}
   m_Layer: 0
-  m_Name: T_F-57_(07,-09)__block_alpha 2
+  m_Name: T_F-57_(07,-09)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28961,7 +28961,7 @@ GameObject:
   - component: {fileID: 899965240}
   - component: {fileID: 899965239}
   m_Layer: 0
-  m_Name: T_F-57_(06,-09)__block_alpha 2
+  m_Name: T_F-57_(06,-09)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29069,7 +29069,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 899965239}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &904437929
 GameObject:
   m_ObjectHideFlags: 0
@@ -31836,7 +31836,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &974513519
 GameObject:
@@ -36963,7 +36963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
@@ -41701,7 +41701,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1250570725
 GameObject:
@@ -47937,7 +47937,7 @@ RectTransform:
   - {fileID: 1841219212}
   - {fileID: 1799842014}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -48961,7 +48961,7 @@ GameObject:
   - component: {fileID: 1488030698}
   - component: {fileID: 1488030697}
   m_Layer: 0
-  m_Name: T_F-57_(06,-08)__block_alpha 2
+  m_Name: T_F-57_(06,-08)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54168,48 +54168,6 @@ Transform:
   m_Father: {fileID: 946065601}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
---- !u!1001 &1654185564
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4922256722465194, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e8a4309d44f5f14bae2df6391bf781e, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &1657830710
 GameObject:
   m_ObjectHideFlags: 0
@@ -57850,7 +57808,7 @@ GameObject:
   - component: {fileID: 1811409902}
   - component: {fileID: 1811409901}
   m_Layer: 0
-  m_Name: T_F-57_(08,-09)__block_alpha 2
+  m_Name: T_F-57_(08,-09)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62873,7 +62831,7 @@ GameObject:
   - component: {fileID: 1998053846}
   - component: {fileID: 1998053844}
   m_Layer: 0
-  m_Name: T_F-57_(08,-08)__block_alpha 2
+  m_Name: T_F-57_(08,-08)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64977,7 +64935,7 @@ GameObject:
   - component: {fileID: 2035391190}
   - component: {fileID: 2035391189}
   m_Layer: 0
-  m_Name: T_F-57_(07,-07)__block_alpha 2
+  m_Name: T_F-57_(07,-07)__block_beta_grass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

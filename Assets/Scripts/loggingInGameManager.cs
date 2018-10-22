@@ -5,43 +5,50 @@ using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using UnityEditor;
 
 public class loggingInGameManager : MonoBehaviour {
 
+    static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-		//LoggingManager.instance.RecordPageLoad();
+        LoggingManager.instance.Initialize(890, 1, false);
+        LoggingManager.instance.RecordPageLoad();
+        DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+        if(SceneName != SceneManager.GetActiveScene().name && SceneManager.GetActiveScene().name != "B1"
+        && SceneManager.GetActiveScene().name != "privacything")
+        {
+            Debug.Log("active scene is " + SceneManager.GetActiveScene().name);
+            // New scene has been loaded
+            SceneName = SceneManager.GetActiveScene().name;
+            Debug.Log("SceneName is now " + SceneName);
+            OnLevelFinishedLoading(SceneName);
+        }
 	}
 
 	void OnEnable() {
         //Tell OnLevelFinishedLoading to start listening for a scene change
         //as soon as this script is enabled.
-        SceneManager.sceneLoaded += OnLevelFinishedLoading;
+        // SceneManager.sceneLoaded += OnLevelFinishedLoading;
     }
 
     void OnDisable() {
-        SceneManager.sceneLoaded -= OnLevelFinishedLoading;
+        // SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
-    async Task PageLoadTask(){
-        LoggingManager.instance.RecordPageLoad();
-    }
-
-    void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode){
-        await PageLoadTask();
+    public async Task OnLevelFinishedLoading(string sceneName){
         //get last number of level name
         //e.g. level B4 -> 4
         Regex getNumber = new Regex(@"\d+$");
-        var levelNumber = Int32.Parse(getNumber.Match(scene.name).ToString());
+        var levelNumber = Int32.Parse(getNumber.Match(sceneName).ToString());
 
         Debug.Log("level number is " + levelNumber);
         //record level number and level name
-        LoggingManager.instance.RecordLevelStart(levelNumber, scene.name);
+        LoggingManager.instance.RecordLevelStart(levelNumber, sceneName);
     }
 
     void OnApplicationQuit() {

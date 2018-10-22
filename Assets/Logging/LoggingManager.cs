@@ -22,7 +22,7 @@ public class LoggingManager : MonoBehaviour
     private bool isDebugging = false; // A convenience parameter which, when set to TRUE, disables logging. 
                                       // Make sure you set this to FALSE before you submit your game online!
     private int gameId = 890; // The game's specific ID number
-    private int versionId = 0; // Your game's current version number. You should change this number between releases, 
+    private int versionId = 1; // Your game's current version number. You should change this number between releases, 
                                // and after very large changes to your logging methods.
 
     private bool isLevelStarted = false; // Semaphore for assertion
@@ -175,6 +175,8 @@ public class LoggingManager : MonoBehaviour
         System.DateTime epochStart = new System.DateTime(1970, 1, 1, 0, 0, 0, System.DateTimeKind.Utc);
         long nowMilliSec = (long)(System.DateTime.UtcNow - epochStart).TotalSeconds * 1000;
 
+
+        Debug.Log(sessionId + "to be added to the server.");
         string requestData = "?game_id=" + gameId + "&version_id=" + versionId + "&client_timestamp=" + nowMilliSec + "&session_id=" + sessionId +
             "&session_seq_id=" + sessionSeqId + "&user_id=" + userId + "&quest_id=" + questId + "&quest_detail=" + questDetail;
 
