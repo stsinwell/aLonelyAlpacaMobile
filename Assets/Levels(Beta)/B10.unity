@@ -10217,7 +10217,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 291376891}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &291376893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32528,7 +32528,7 @@ GameObject:
   - component: {fileID: 994950736}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
