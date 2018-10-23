@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using UnityEditor;
 
 public class loggingInGameManager : MonoBehaviour {
@@ -40,7 +40,7 @@ public class loggingInGameManager : MonoBehaviour {
         // SceneManager.sceneLoaded -= OnLevelFinishedLoading;
     }
 
-    public async Task OnLevelFinishedLoading(string sceneName){
+    public void OnLevelFinishedLoading(string sceneName){
         //get last number of level name
         //e.g. level B4 -> 4
         Regex getNumber = new Regex(@"\d+$");
