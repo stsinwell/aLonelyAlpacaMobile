@@ -5,12 +5,14 @@ using UnityEngine;
 public class clickable_block : MonoBehaviour {
     public bool isSelected;
     public bool isPlayerFacing;
+    Color highlightedColor;
 	SpriteRenderer sr;
 
 	// initializer
 	void Start () {
         isSelected = false;
         isPlayerFacing = false;
+        highlightedColor = new Color(0.835f, 0.878f, 1.0f, 1.0f);
 		sr = GetComponentInChildren<SpriteRenderer>();
 	}
 
@@ -37,13 +39,21 @@ public class clickable_block : MonoBehaviour {
         isPlayerFacing = false;
         setBlockToRegularColor();
     }
+
+    public bool isBlockHighlighted() {
+        if (sr.color == highlightedColor) {
+            return true;
+        }
+
+        return false;
+    }
 	
     void setBlockToRegularColor() {
         sr.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
     void setBlockToHighlightColor() {
-        sr.color = new Color(0.835f, 0.878f, 1.0f, 1.0f);
+        sr.color = highlightedColor;
     }
 
     void setBlockToSelectedColor() {
