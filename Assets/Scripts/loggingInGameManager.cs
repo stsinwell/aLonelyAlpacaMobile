@@ -12,7 +12,7 @@ public class loggingInGameManager : MonoBehaviour {
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-        LoggingManager.instance.Initialize(890, 1, false);
+        LoggingManager.instance.Initialize(890, 1, true);
         LoggingManager.instance.RecordPageLoad();
         DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
 	}
