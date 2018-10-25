@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 using UnityEditor;
 
 public class loggingInGameManager : MonoBehaviour {
