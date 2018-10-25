@@ -16,7 +16,7 @@ public class Reset : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {        
         if (Input.GetKeyDown(KeyCode.R)) {
-			LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
+			//LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 		
