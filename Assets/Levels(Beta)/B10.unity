@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 8256553}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 9596142}
   m_Layer: 0
   m_Name: T_F-45_(10,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 16384753}
   m_Layer: 0
   m_Name: T_F-45_(06,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1810,7 +1810,7 @@ GameObject:
   - component: {fileID: 44840865}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2179,7 +2179,7 @@ GameObject:
   - component: {fileID: 47300876}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4523,7 +4523,7 @@ GameObject:
   - component: {fileID: 122425626}
   m_Layer: 0
   m_Name: T_F-45_(05,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5536,7 +5536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 153524567}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 153524566}
   _so: {fileID: 153524565}
   _attachedList:
@@ -8252,7 +8252,7 @@ GameObject:
   - component: {fileID: 225108131}
   m_Layer: 0
   m_Name: T_F-45_(09,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10143,7 +10143,7 @@ GameObject:
   - component: {fileID: 291376893}
   m_Layer: 0
   m_Name: T_F-45_(06,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10463,7 +10463,7 @@ GameObject:
   - component: {fileID: 305059614}
   m_Layer: 0
   m_Name: T_F-45_(08,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11331,7 +11331,7 @@ GameObject:
   - component: {fileID: 331957547}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12135,7 +12135,7 @@ GameObject:
   - component: {fileID: 354412280}
   m_Layer: 0
   m_Name: T_F-45_(08,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -12748,7 +12748,7 @@ GameObject:
   - component: {fileID: 384925154}
   m_Layer: 0
   m_Name: T_F-45_(09,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14177,7 +14177,7 @@ GameObject:
   - component: {fileID: 455052858}
   m_Layer: 0
   m_Name: T_F-45_(07,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14794,7 +14794,7 @@ GameObject:
   - component: {fileID: 465455293}
   m_Layer: 0
   m_Name: T_F-45_(11,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15577,7 +15577,7 @@ GameObject:
   - component: {fileID: 481186957}
   m_Layer: 0
   m_Name: T_F-45_(06,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17924,7 +17924,7 @@ GameObject:
   - component: {fileID: 541087717}
   m_Layer: 0
   m_Name: T_F-45_(09,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19008,7 +19008,7 @@ GameObject:
   - component: {fileID: 581626293}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20024,7 +20024,7 @@ GameObject:
   - component: {fileID: 604901473}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20999,7 +20999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 642054666}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 642054665}
   _so: {fileID: 642054664}
   _attachedList:
@@ -23452,7 +23452,7 @@ GameObject:
   - component: {fileID: 719633232}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24102,7 +24102,7 @@ GameObject:
   - component: {fileID: 733365285}
   m_Layer: 0
   m_Name: T_F-45_(05,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24237,7 +24237,7 @@ GameObject:
   - component: {fileID: 734716490}
   m_Layer: 0
   m_Name: T_F-45_(05,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24860,7 +24860,7 @@ GameObject:
   - component: {fileID: 761224261}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25723,7 +25723,7 @@ GameObject:
   - component: {fileID: 795977613}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25785,7 +25785,7 @@ GameObject:
   - component: {fileID: 797263644}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26369,7 +26369,7 @@ GameObject:
   - component: {fileID: 802661069}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28004,7 +28004,7 @@ GameObject:
   - component: {fileID: 873599999}
   m_Layer: 0
   m_Name: T_F-45_(06,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28231,7 +28231,7 @@ GameObject:
   - component: {fileID: 880166508}
   m_Layer: 0
   m_Name: T_F-45_(11,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28489,7 +28489,7 @@ GameObject:
   - component: {fileID: 895246751}
   m_Layer: 0
   m_Name: T_F-45_(08,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28506,7 +28506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 895246750}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 895246749}
   _so: {fileID: 895246748}
   _attachedList:
@@ -29947,7 +29947,7 @@ GameObject:
   - component: {fileID: 920198004}
   m_Layer: 0
   m_Name: T_F-45_(11,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30601,7 +30601,7 @@ GameObject:
   - component: {fileID: 944182003}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -31252,7 +31252,7 @@ GameObject:
   - component: {fileID: 961754999}
   m_Layer: 0
   m_Name: T_F-45_(11,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32528,7 +32528,7 @@ GameObject:
   - component: {fileID: 994950736}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -34222,7 +34222,7 @@ GameObject:
   - component: {fileID: 1039805887}
   m_Layer: 0
   m_Name: T_F-45_(07,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36807,7 +36807,7 @@ GameObject:
   - component: {fileID: 1107733960}
   m_Layer: 0
   m_Name: T_F-45_(05,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -37821,7 +37821,7 @@ GameObject:
   - component: {fileID: 1127050493}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38160,7 +38160,7 @@ GameObject:
   - component: {fileID: 1133155790}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -39042,7 +39042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1153936162}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1153936161}
   _so: {fileID: 1153936160}
   _attachedList:
@@ -39145,7 +39145,7 @@ GameObject:
   - component: {fileID: 1154589730}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41184,7 +41184,7 @@ GameObject:
   - component: {fileID: 1239431016}
   m_Layer: 0
   m_Name: T_F-45_(07,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -41869,7 +41869,7 @@ GameObject:
   - component: {fileID: 1253797560}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43349,7 +43349,7 @@ GameObject:
   - component: {fileID: 1290292700}
   m_Layer: 0
   m_Name: T_F-45_(05,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43730,7 +43730,7 @@ GameObject:
   - component: {fileID: 1297720586}
   m_Layer: 0
   m_Name: T_F-45_(09,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44081,7 +44081,7 @@ GameObject:
   - component: {fileID: 1311540925}
   m_Layer: 0
   m_Name: T_F-45_(08,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -44705,7 +44705,7 @@ GameObject:
   - component: {fileID: 1320274304}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45922,7 +45922,7 @@ GameObject:
   - component: {fileID: 1376196222}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -46231,7 +46231,7 @@ GameObject:
   - component: {fileID: 1384428074}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47804,7 +47804,7 @@ GameObject:
   - component: {fileID: 1441317042}
   m_Layer: 0
   m_Name: T_F-45_(05,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -47976,7 +47976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1455150433}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1455150432}
   _so: {fileID: 1455150431}
   _attachedList:
@@ -48325,7 +48325,7 @@ GameObject:
   - component: {fileID: 1462568150}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49209,7 +49209,7 @@ GameObject:
   - component: {fileID: 1502235915}
   m_Layer: 0
   m_Name: T_F-45_(10,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -49340,7 +49340,7 @@ GameObject:
   - component: {fileID: 1504418554}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -50538,7 +50538,7 @@ GameObject:
   - component: {fileID: 1543983719}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -52665,7 +52665,7 @@ GameObject:
   - component: {fileID: 1609967829}
   m_Layer: 0
   m_Name: T_F-45_(09,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -54350,7 +54350,7 @@ GameObject:
   - component: {fileID: 1667408852}
   m_Layer: 0
   m_Name: T_F-45_(07,-06)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -54367,7 +54367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1667408851}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 1667408850}
   _so: {fileID: 1667408849}
   _attachedList:
@@ -54732,7 +54732,7 @@ GameObject:
   - component: {fileID: 1689573278}
   m_Layer: 0
   m_Name: T_F-45_(11,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -55267,7 +55267,7 @@ GameObject:
   - component: {fileID: 1713112492}
   m_Layer: 0
   m_Name: T_F-45_(10,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -58344,7 +58344,7 @@ GameObject:
   - component: {fileID: 1823687418}
   m_Layer: 0
   m_Name: T_F-45_(10,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -59135,7 +59135,7 @@ GameObject:
   - component: {fileID: 1845695597}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -59416,7 +59416,7 @@ GameObject:
   - component: {fileID: 1850954693}
   m_Layer: 0
   m_Name: T_F-45_(07,-02)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -61793,7 +61793,7 @@ GameObject:
   - component: {fileID: 1964897294}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -64383,7 +64383,7 @@ GameObject:
   - component: {fileID: 2025676347}
   m_Layer: 0
   m_Name: T_F-45_(08,-03)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -64582,7 +64582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2027900519}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 2027900515}
   _so: {fileID: 2027900518}
   _attachedList:
@@ -65210,7 +65210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2039745204}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 2039745203}
   _so: {fileID: 2039745202}
   _attachedList:
@@ -65267,7 +65267,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 2039745203}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &2039745205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65436,7 +65436,7 @@ GameObject:
   - component: {fileID: 2042451447}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66365,7 +66365,7 @@ GameObject:
   - component: {fileID: 2070088582}
   m_Layer: 0
   m_Name: T_F-45_(06,-04)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66900,7 +66900,7 @@ GameObject:
   - component: {fileID: 2084858981}
   m_Layer: 0
   m_Name: T_F-45_(10,-05)__magma_block
-  m_TagString: FireBlock
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
