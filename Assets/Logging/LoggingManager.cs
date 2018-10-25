@@ -91,7 +91,7 @@ public class LoggingManager : MonoBehaviour
         }
 
         TestInitialization();
-        Debug.Assert(isLevelStarted, "Cannot record a player's action before a level start.");
+        //Debug.Assert(isLevelStarted, "Cannot record a player's action before a level start.");
         StartCoroutine(GetPlayerAction(actionId, actionDetail));
         sessionSeqId += 1;
         QuestSeqId += 1;
