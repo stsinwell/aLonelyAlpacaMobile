@@ -8,18 +8,14 @@ public class Reset : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		deathImage.enabled = false;
-		
 	}
 	
 	// Update is called once per frame
-	void Update () {
-        
-        if (Input.GetKeyDown(KeyCode.R)) {
-			LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        }
-		
+	void Update () {  
+		if (Input.GetKeyDown(KeyCode.R)) {
+				LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
+				SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
 	}
 }

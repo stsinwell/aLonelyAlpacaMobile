@@ -38,6 +38,8 @@ namespace Anonym.Isometric
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
 
+        bool isDead = false;
+
         public changeFacingDirection CFD;
         private void Start()
         {
@@ -350,39 +352,54 @@ namespace Anonym.Isometric
             return canJump;
         }
 
+        void HandleDeath(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            if (isSpaceOpen(posInFront)) {
+                float newY = GetLowestDropPossible(posInFront);
+
+                if (Math.Abs(GetCurrAlpacaLocation().y - newY) >= 3.0) {
+                    isDead = true;
+                }
+            }
+        }
+
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didJump = Jump(newFacing);
 
             if (!didRotate && !didJump) {
-                if (!ShouldHighlightPlayerBlock(newFacing))
+                if (!ShouldHighlightPlayerBlock(newFacing)) {
                     inputProcess();
+                    HandleDeath(newFacing); 
+                }
             }
             lastFacing = newFacing;
         }
 
         void InputProcess()
         {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                MovementKeyPressed(Facing.PosZ);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
-            }
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                MovementKeyPressed(Facing.NegZ);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
-            }
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                MovementKeyPressed(Facing.PosX);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
-            }
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                MovementKeyPressed(Facing.NegX);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
-            }
+            if (!isDead) {
+                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+                    MovementKeyPressed(Facing.PosZ);
+                    LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
+                }
+                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+                    MovementKeyPressed(Facing.NegZ);
+                    LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
+                }
+                if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                    MovementKeyPressed(Facing.PosX);
+                    LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
+                }
+                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                    MovementKeyPressed(Facing.NegX);
+                    LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
+                }
 
-            if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
-                AttemptPickOrDropPlayerBlock();
-                doubleClickDetected = false;
+                if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
+                    AttemptPickOrDropPlayerBlock();
+                    doubleClickDetected = false;
+                }
             }
 
             if (NMAgent != null && bUseClickToPathfinding)
