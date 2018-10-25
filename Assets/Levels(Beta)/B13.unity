@@ -55829,6 +55829,11 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 2018641413}
+    - target: {fileID: 82663024070068860, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
