@@ -341,8 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireBlockCollisionScript: {fileID: 114792523630827214}
-  deathImage: {fileID: 114891034970784902, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
+  deathImage: {fileID: 0}
   alive: 1
   CollisionLayerMask:
     serializedVersion: 2
