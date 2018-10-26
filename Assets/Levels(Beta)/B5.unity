@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1788660}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1788659}
   _so: {fileID: 1788658}
   _attachedList:
@@ -325,7 +325,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 6635262}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &6635264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,7 +448,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 13128315}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &13128317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 70989705}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &70989707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1926,7 +1926,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 95394458}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &95394460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2418,7 +2418,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 123840852}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &123840854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 141915156}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 141915155}
   _so: {fileID: 141915154}
   _attachedList:
@@ -3034,7 +3034,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 154914838}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &154914840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4087,7 +4087,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 219842027}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &219842029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4153,7 +4153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 224723585}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 224723584}
   _so: {fileID: 224723583}
   _attachedList:
@@ -4718,7 +4718,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 249800136}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &249800138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5398,7 +5398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 267254622}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 267254621}
   _so: {fileID: 267254620}
   _attachedList:
@@ -5521,7 +5521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 277050461}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 277050460}
   _so: {fileID: 277050459}
   _attachedList:
@@ -6082,6 +6082,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1220498918}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
@@ -6455,7 +6460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 310270047}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 310270046}
   _so: {fileID: 310270045}
   _attachedList:
@@ -8025,7 +8030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 361663455}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 361663454}
   _so: {fileID: 361663453}
   _attachedList:
@@ -8457,7 +8462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 382088337}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 382088336}
   _so: {fileID: 382088335}
   _attachedList:
@@ -9073,7 +9078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 402950507}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 402950506}
   _so: {fileID: 402950505}
   _attachedList:
@@ -11163,7 +11168,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 494254564}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &494254566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11378,7 +11383,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 507370432}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &507370434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12178,7 +12183,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 532866353}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &532866355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12885,7 +12890,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 556674912}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &556674914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14000,7 +14005,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 596456794}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 596456793}
   _so: {fileID: 596456792}
   _attachedList:
@@ -15131,16 +15136,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
-        type: 2}
-      propertyPath: nextLevel
-      value: B6
-      objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 1220498918}
+    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: nextLevel
+      value: B6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
@@ -15510,7 +15515,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 686651124}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &686651126
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15971,7 +15976,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 706212288}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &706212290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17330,7 +17335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 761474053}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 761474052}
   _so: {fileID: 761474051}
   _attachedList:
@@ -18131,7 +18136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 802337741}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 802337740}
   _so: {fileID: 802337739}
   _attachedList:
@@ -19388,7 +19393,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 841827958}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &841827960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20003,7 +20008,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 868302427}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &868302429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20530,7 +20535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 884441939}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 884441938}
   _so: {fileID: 884441937}
   _attachedList:
@@ -20930,7 +20935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 905192326}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 905192325}
   _so: {fileID: 905192324}
   _attachedList:
@@ -22370,7 +22375,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 933380576}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &933380578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22493,7 +22498,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 943051528}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &943051530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24628,7 +24633,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1062648041}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1062648043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25028,7 +25033,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1077542610}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1077542612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25959,7 +25964,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1115470230}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1115470232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27437,7 +27442,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1209321692}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1209321694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28089,7 +28094,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1227201108}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1227201110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28155,7 +28160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1230100918}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1230100917}
   _so: {fileID: 1230100916}
   _attachedList:
@@ -28716,7 +28721,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1275784634}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1275784636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29148,7 +29153,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1283439913}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1283439915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31117,7 +31122,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1383629533}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1383629535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31394,7 +31399,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1408080593}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1408080595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31917,7 +31922,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1427273265}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1427273267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32225,7 +32230,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1433449315}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1433449317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32445,7 +32450,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1437206450}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1437206449}
   _so: {fileID: 1437206448}
   _attachedList:
@@ -33585,7 +33590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1476347969}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1476347968}
   _so: {fileID: 1476347967}
   _attachedList:
@@ -33889,7 +33894,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1480974215}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1480974217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33955,7 +33960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1485952732}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1485952731}
   _so: {fileID: 1485952730}
   _attachedList:
@@ -35829,7 +35834,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1586420557}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1586420559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36740,7 +36745,7 @@ GameObject:
   - component: {fileID: 1651335209}
   - component: {fileID: 1651335207}
   m_Layer: 0
-  m_Name: T_F03_(-02,01)__block_beta_grass
+  m_Name: T_F03_(-02,01)__interactable_block_rounded
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37030,7 +37035,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1664410127}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1664410129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38015,7 +38020,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1709137418}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1709137420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38261,7 +38266,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1719478207}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1719478209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39798,7 +39803,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1792990868}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1792990870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39926,7 +39931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1809946276}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1809946275}
   _so: {fileID: 1809946274}
   _attachedList:
@@ -40106,7 +40111,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1825330051}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1825330053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41065,7 +41070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1865687094}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1865687093}
   _so: {fileID: 1865687092}
   _attachedList:
@@ -41166,6 +41171,7 @@ GameObject:
   - component: {fileID: 1866966481}
   - component: {fileID: 1866966480}
   - component: {fileID: 1866966479}
+  - component: {fileID: 1866966482}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -41248,6 +41254,24 @@ Transform:
   m_Father: {fileID: 964945171}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 1, y: -45.000004, z: 0}
+--- !u!95 &1866966482
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1866966478}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88dc7491c87f02e4cb184af4e8057414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1867248278
 GameObject:
   m_ObjectHideFlags: 0
@@ -43429,7 +43453,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1990734175}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1990734177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44541,7 +44565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2062182987}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 2062182986}
   _so: {fileID: 2062182985}
   _attachedList:
@@ -46168,7 +46192,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 2118333535}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &2118333537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46476,7 +46500,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 2125926704}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &2125926706
 MonoBehaviour:
   m_ObjectHideFlags: 0

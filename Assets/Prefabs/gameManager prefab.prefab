@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4081323894916140}
   - component: {fileID: 114267059788626970}
+  - component: {fileID: 114468995008167606}
   m_Layer: 0
   m_Name: gameManager prefab
   m_TagString: Untagged
@@ -53,3 +54,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathImage: {fileID: 114891034970784902, guid: a3c9e7f02adc60e449c6dfac7c23914c,
     type: 2}
+--- !u!114 &114468995008167606
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706221591544266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ab3d49c079a6f46bf47aac568a0898, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuLevel: privacything

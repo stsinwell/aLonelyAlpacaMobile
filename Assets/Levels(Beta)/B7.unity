@@ -15829,7 +15829,7 @@ GameObject:
   - component: {fileID: 1660077761}
   - component: {fileID: 1660077759}
   m_Layer: 0
-  m_Name: T_F12_(03,00)__interactable_block_rounded
+  m_Name: T_F12_(03,00)__block_alpha 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15904,7 +15904,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1660077759}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1660077761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19065,16 +19065,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
-        type: 2}
-      propertyPath: nextLevel
-      value: B8
-      objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 644058209}
+    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: nextLevel
+      value: B8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0

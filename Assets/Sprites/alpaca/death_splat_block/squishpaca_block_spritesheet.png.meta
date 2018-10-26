@@ -1,33 +1,27 @@
 fileFormatVersion: 2
-guid: d7492289ed9f16748ba3f531fb37587d
+guid: 5e236b6ebdd2c1541a0e316f29470a38
 TextureImporter:
   fileIDToRecycleName:
-    21300000: death_fire_back_0
-    21300002: death_fire_back_1
-    21300004: death_fire_back_2
-    21300006: death_fire_back_3
-    21300008: death_fire_back_4
-    21300010: death_fire_back_5
-    21300012: death_fire_back_6
-    21300014: death_fire_back_7
-    21300016: death_fire_back_8
-    21300018: death_fire_back_9
-    21300020: death_fire_back_10
-    21300022: death_fire_back_11
-    21300024: death_fire_back_12
-    21300026: death_fire_back_13
-    21300028: death_fire_back_14
-    21300030: death_fire_back_15
-    21300032: death_fire_back_16
-    21300034: death_fire_back_17
-    21300036: death_fire_back_18
-    21300038: death_fire_back_19
-    21300040: death_fire_back_20
-    21300042: death_fire_back_21
-    21300044: death_fire_back_22
-    21300046: death_fire_back_23
-    21300048: death_fire_back_24
-    21300050: death_fire_back_25
+    21300000: squishpaca_block_spritesheet_0
+    21300002: squishpaca_block_spritesheet_1
+    21300004: squishpaca_block_spritesheet_2
+    21300006: squishpaca_block_spritesheet_3
+    21300008: squishpaca_block_spritesheet_4
+    21300010: squishpaca_block_spritesheet_5
+    21300012: squishpaca_block_spritesheet_6
+    21300014: squishpaca_block_spritesheet_7
+    21300016: squishpaca_block_spritesheet_8
+    21300018: squishpaca_block_spritesheet_9
+    21300020: squishpaca_block_spritesheet_10
+    21300022: squishpaca_block_spritesheet_11
+    21300024: squishpaca_block_spritesheet_12
+    21300026: squishpaca_block_spritesheet_13
+    21300028: squishpaca_block_spritesheet_14
+    21300030: squishpaca_block_spritesheet_15
+    21300032: squishpaca_block_spritesheet_16
+    21300034: squishpaca_block_spritesheet_17
+    21300036: squishpaca_block_spritesheet_18
+    21300038: squishpaca_block_spritesheet_19
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -121,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: death_fire_back_0
+      name: squishpaca_block_spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,19 +129,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5275cfa9ca0a7b1418efa009be9752a2
+      spriteID: bf7cd3e82c98ed24b925c5fb1065e436
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_1
+      name: squishpaca_block_spritesheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 48
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,39 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5be7f4466daa0e46b5388529ca6250c
+      spriteID: d444c2ef78ffe374aa9ce8a9edaaaf6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f78fd14ab81d33742aa2ff8b31dc7114
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_3
+      name: squishpaca_block_spritesheet_2
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,19 +169,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79c64490f7063634bae266c7f7ee4d47
+      spriteID: 49545ae10af16bd428583a84c37b7832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_4
+      name: squishpaca_block_spritesheet_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 144
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,39 +189,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 311b70389f9eb1e48a8bb0182049ba22
+      spriteID: b9dd822526eae464fb95c061f1e5d9c9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e79ddf038c4dc43478bb6f1b556b95ce
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_6
+      name: squishpaca_block_spritesheet_4
       rect:
         serializedVersion: 2
         x: 192
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,19 +209,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e291ad27ef310940a9bfb2d85d50e87
+      spriteID: 8230974142cc0e34f87461d14332dba4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_7
+      name: squishpaca_block_spritesheet_5
       rect:
         serializedVersion: 2
-        x: 224
+        x: 240
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,39 +229,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa85ab27bacee8740a969749b591f0fa
+      spriteID: 97d1db8a1aee48d4f9ec77c113657c3e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_8
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7bd2758dc12ad6942824056d79970682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_9
+      name: squishpaca_block_spritesheet_6
       rect:
         serializedVersion: 2
         x: 288
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,19 +249,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98a5759f8c40d3840b35ddab5a1b8e16
+      spriteID: b67fd905e430e924b977d389bcc3cf2e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_10
+      name: squishpaca_block_spritesheet_7
       rect:
         serializedVersion: 2
-        x: 320
+        x: 336
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -335,39 +269,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b44a172596a6c6f4486270f6ffb13188
+      spriteID: 6564d364b741da749ad7484eb5c7ee7f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_11
-      rect:
-        serializedVersion: 2
-        x: 352
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 97c620dd6fcc2de49ab6dd0e46856aa7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_12
+      name: squishpaca_block_spritesheet_8
       rect:
         serializedVersion: 2
         x: 384
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -375,19 +289,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c2e5905868fe054b8f829e0b81dedc4
+      spriteID: 32e9ea3b58390a14e863b3e48dbe9aae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_13
+      name: squishpaca_block_spritesheet_9
       rect:
         serializedVersion: 2
-        x: 416
+        x: 432
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -395,39 +309,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2ab5e67d8b67244388004816147f4e0
+      spriteID: 6495ce9bf3cbd884b9150a2f4a7f9154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_14
-      rect:
-        serializedVersion: 2
-        x: 448
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e3f5c449e4aee5049a22b9f453e54041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_15
+      name: squishpaca_block_spritesheet_10
       rect:
         serializedVersion: 2
         x: 480
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -435,19 +329,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2952c096f1702a8418f12cba9766cf0e
+      spriteID: 0eab746f966174c4083d454ee6595b10
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_16
+      name: squishpaca_block_spritesheet_11
       rect:
         serializedVersion: 2
-        x: 512
+        x: 528
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,39 +349,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f56084517a71974fa7afe9c29f07ef7
+      spriteID: 422e7eba1b0d56746b4f86b8b6678539
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_17
-      rect:
-        serializedVersion: 2
-        x: 544
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6dc28fd5ce21f14bb99b9cddf430936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_18
+      name: squishpaca_block_spritesheet_12
       rect:
         serializedVersion: 2
         x: 576
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,19 +369,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4be0198f69e3be44aafe7f390f1a4e5
+      spriteID: 26021737d91de3843b579fb93492a18f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_19
+      name: squishpaca_block_spritesheet_13
       rect:
         serializedVersion: 2
-        x: 608
+        x: 624
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -515,39 +389,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 242245ba221259c45b3506c29562ec78
+      spriteID: c919b0232613d44408f8d025924b1ae5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_20
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f2c463f9913b458479db8d1e335fd346
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_21
+      name: squishpaca_block_spritesheet_14
       rect:
         serializedVersion: 2
         x: 672
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -555,19 +409,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c607f9f02084d9241bde4147464c8339
+      spriteID: 6f3b899f634c2824a8d914e2c4936b71
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_22
+      name: squishpaca_block_spritesheet_15
       rect:
         serializedVersion: 2
-        x: 704
+        x: 720
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -575,39 +429,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 015cdc3ca0d21df4cb8c16a1dbd304b8
+      spriteID: 7fca33740cca7ae408ca10a73805fb7e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_23
-      rect:
-        serializedVersion: 2
-        x: 736
-        y: 0
-        width: 32
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 762ec69e04dd6ce4f9f7bad26e18e74a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: death_fire_back_24
+      name: squishpaca_block_spritesheet_16
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -615,19 +449,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6f0f62c8ce19a0944a327897393e04db
+      spriteID: 4090064f4b0cc584fb920e7fdb544efe
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: death_fire_back_25
+      name: squishpaca_block_spritesheet_17
       rect:
         serializedVersion: 2
-        x: 800
+        x: 816
         y: 0
-        width: 32
-        height: 35
+        width: 48
+        height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,7 +469,47 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae70e117f9babaf4ebbb42917d7c8ed7
+      spriteID: 2281059832172bf4daa8dbd07722c748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squishpaca_block_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 247bf83acb8f847448fdbf7313820066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: squishpaca_block_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 48
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c737d1032753be41ac7678cc261121a
       vertices: []
       indices: 
       edges: []
@@ -643,7 +517,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 16942fdc4be173a4aab796affb683a53
+    spriteID: afc3fee8a80e17e4491d3fa0718f7726
     vertices: []
     indices: 
     edges: []

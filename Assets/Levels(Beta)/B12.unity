@@ -9083,7 +9083,7 @@ MonoBehaviour:
   _grid: {fileID: 1526979925}
   bSnapFree: 0
   _autoName: {fileID: 1231511722}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1231511724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10547,6 +10547,11 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 221925338}
+    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: nextLevel
+      value: B13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0

@@ -508,10 +508,10 @@ namespace Anonym.Isometric
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
 
-            if (!alive || fireBlockCollisionScript.hasCollided()) {
-                alive = false;
-                deathImage.enabled = true;
-            }
+            // if (!alive) {
+            //     alive = false;
+            //     deathImage.enabled = true;
+            // }
         }
 
         #endregion
@@ -548,6 +548,16 @@ namespace Anonym.Isometric
                 if (!bOnMoving && DirQ.Count > 0)
                 {
                     ExecuteDir(DirQ.Dequeue());
+                }
+                if (fireBlockCollisionScript.hasCollided() && alive){
+                    alive = false;
+                    //Get grid location where Player was standing before they fell to their doom.
+                    var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+                    //LoggingManager.instance.RecordEvent(2, "Player burned to death."); //Records an instance of death by falling.
+                    //LoggingManager.instance.RecordEvent(3, "Player got burned at " + deathlocation); //Records where the player fell.
+                }
+                if(!alive){
+                    deathImage.enabled = true;
                 }
                 ApplyMovement(GetMovementVector());
             }
