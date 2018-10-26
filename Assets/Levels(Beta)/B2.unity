@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1912,7 +1912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &164709705
 Light:
   m_ObjectHideFlags: 0
@@ -21192,7 +21192,7 @@ GameObject:
   - component: {fileID: 1922004997}
   - component: {fileID: 1922004995}
   m_Layer: 0
-  m_Name: T_F06_(-01,00)__interactable_block_rounded
+  m_Name: T_F06_(-01,00)__startblock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21267,7 +21267,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1922004995}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1922004997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23798,7 +23798,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb932e31aeb2118429b6d83b472f2478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

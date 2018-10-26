@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45140314, g: 0.5008927, b: 0.572315, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -24213,7 +24213,7 @@ GameObject:
   - component: {fileID: 948330965}
   - component: {fileID: 948330963}
   m_Layer: 0
-  m_Name: T_F00_(00,00)__IsoTile
+  m_Name: winblock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35120,7 +35120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &1339159039
 Light:
   m_ObjectHideFlags: 0
@@ -43649,7 +43649,7 @@ GameObject:
   - component: {fileID: 1658960515}
   - component: {fileID: 1658960513}
   m_Layer: 0
-  m_Name: T_F-12_(04,00)__interactable_block_rounded
+  m_Name: T_F-12_(04,00)__startblock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46258,7 +46258,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cb932e31aeb2118429b6d83b472f2478, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
