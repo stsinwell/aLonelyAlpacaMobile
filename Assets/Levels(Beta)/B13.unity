@@ -27116,7 +27116,7 @@ Prefab:
     - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
       propertyPath: nextLevel
-      value: privacything
+      value: B0 - Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
@@ -28010,7 +28010,7 @@ MonoBehaviour:
   _grid: {fileID: 515555254}
   bSnapFree: 0
   _autoName: {fileID: 997275744}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &997275746
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -11,12 +11,18 @@ public class PressSpaceToAdvance : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(Input.GetKeyDown(KeyCode.Space)) {
-			GameObject gmobjct = GameObject.FindWithTag("GameManager");
-			gmobjct.GetComponent<loggingInGameManager>().OnLevelFinishedLoading("B1");
-			SceneManager.LoadScene("B1", LoadSceneMode.Single);
-		}
+	// void Update () {
+	// 	if(Input.GetKeyDown(KeyCode.Space)) {
+	// 		GameObject gmobjct = GameObject.FindWithTag("GameManager");
+	// 		gmobjct.GetComponent<loggingInGameManager>().OnLevelFinishedLoading("B1");
+	// 		SceneManager.LoadScene("B1", LoadSceneMode.Single);
+	// 	}
 		
+	// }
+
+	public void startGame(){
+		GameObject gmobjct = GameObject.FindWithTag("GameManager");
+		gmobjct.GetComponent<loggingInGameManager>().OnLevelFinishedLoading("B1");
+		SceneManager.LoadScene("B1", LoadSceneMode.Single);
 	}
 }
