@@ -71,7 +71,7 @@ namespace Anonym.Isometric
         [SerializeField]
         float fDashSpeedMultiplier = 4f;
 
-        float fTickSpeed { get { return (bDashing ? fDashSpeedMultiplier : 1f) * fSpeed * Time.deltaTime; } }
+        float fTickSpeed { get { return (bDashing ? fDashSpeedMultiplier : 1f) * 7f * Time.deltaTime; } }
 
         [SerializeField]
         protected float fMaxDropHeight = 100f;

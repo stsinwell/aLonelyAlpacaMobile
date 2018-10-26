@@ -4055,7 +4055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 588565713}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 588565712}
   _so: {fileID: 588565711}
   _attachedList:
@@ -6012,7 +6012,7 @@ GameObject:
   - component: {fileID: 813864199}
   - component: {fileID: 813864197}
   m_Layer: 0
-  m_Name: T_F00_(00,00)__IsoTile
+  m_Name: alpha
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6087,7 +6087,7 @@ MonoBehaviour:
   _grid: {fileID: 1239014329}
   bSnapFree: 0
   _autoName: {fileID: 813864197}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &813864199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13136,7 +13136,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7da6e129287d4254faff67cfd8d1c4f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
