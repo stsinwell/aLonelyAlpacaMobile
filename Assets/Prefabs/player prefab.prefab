@@ -166,7 +166,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: a2d87974a11e2469aa1fb49839c7e2e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8a8846af7efbcd54a9fd79aed48a8768, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -315,7 +315,7 @@ MonoBehaviour:
   NMAgent: {fileID: 0}
   bUseClickToPathfinding: 1
   lastFacing: 2
-  soundEffect: {fileID: 8300000, guid: a2d87974a11e2469aa1fb49839c7e2e7, type: 3}
+  soundEffect: {fileID: 8300000, guid: 8a8846af7efbcd54a9fd79aed48a8768, type: 3}
   musicSource: {fileID: 82153808188872796}
   CFD: {fileID: 114256203280456702}
 --- !u!114 &114792523630827214
