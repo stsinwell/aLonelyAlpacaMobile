@@ -38,8 +38,6 @@ namespace Anonym.Isometric
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
 
-        bool isDead = false;
-
         public changeFacingDirection CFD;
         private void Start()
         {
@@ -190,6 +188,10 @@ namespace Anonym.Isometric
             return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
         }
 
+        Vector3 GetLocationInFront(Facing facing) {
+            return GetLocationInFront(GetCurrAlpacaLocation(), facing);
+        }
+
         Vector3 GetLocationInFront(Vector3 currLocation, Facing facing) {
             Vector3 targetPos = Vector3.zero;
 
@@ -282,37 +284,8 @@ namespace Anonym.Isometric
             }
         }
 
-        bool isFacingEdge(Vector3 currLocation, Facing facing) {
-            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
-            posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
-
-            if (posIfAlpacaMoved.y < GetCurrAlpacaLocation().y) {
-                return true;
-            }
-
-            return false;
-        }
-
-        bool isFacingLava(Vector3 currLocation, Facing facing) {
-            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
-            if (!isSpaceOpen(posIfAlpacaMoved)) return false;
-
-            Vector3 posBelowIfAlpacaMoved = new Vector3(posIfAlpacaMoved.x, posIfAlpacaMoved.y - 1, posIfAlpacaMoved.z);
-
-            GameObject[] fireBlocks =  GameObject.FindGameObjectsWithTag("FireBlockPos");
-            foreach (GameObject fireBlock in fireBlocks) {
-                if (isTwoPosEqual(fireBlock.transform.position, posBelowIfAlpacaMoved)) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         bool RotateAlpaca(Facing newFacing) {
-            if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
-                isFacingLava(GetCurrAlpacaLocation(), newFacing)) 
-                && newFacing != lastFacing) {
+            if (newFacing != lastFacing) {
                 return true;
             }
 
@@ -366,28 +339,26 @@ namespace Anonym.Isometric
 
         void InputProcess()
         {
-            if (!isDead) {
-                if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                    MovementKeyPressed(Facing.PosZ);
-                    LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
-                }
-                if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                    MovementKeyPressed(Facing.NegZ);
-                    LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
-                }
-                if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                    MovementKeyPressed(Facing.PosX);
-                    LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
-                }
-                if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                    MovementKeyPressed(Facing.NegX);
-                    LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
-                }
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+                MovementKeyPressed(Facing.PosZ);
+                LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
+            }
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+                MovementKeyPressed(Facing.NegZ);
+                LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
+            }
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                MovementKeyPressed(Facing.PosX);
+                LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                MovementKeyPressed(Facing.NegX);
+                LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
+            }
 
-                if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
-                    AttemptPickOrDropPlayerBlock();
-                    doubleClickDetected = false;
-                }
+            if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
+                AttemptPickOrDropPlayerBlock();
+                doubleClickDetected = false;
             }
 
             if (NMAgent != null && bUseClickToPathfinding)
