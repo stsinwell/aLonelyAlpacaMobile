@@ -39,7 +39,7 @@ public class changeFacingDirection : MonoBehaviour {
             animator.SetBool("is_falling", false);
             started_falling = false;
             //death_by_splat check
-            if(fall_accumulation > 2.5f){
+            if(fall_accumulation > 2.8f){
                 animator.SetBool("death_by_splat", true);
             }
             fall_accumulation = 0;
