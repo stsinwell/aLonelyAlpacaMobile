@@ -188,6 +188,10 @@ namespace Anonym.Isometric
             return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
         }
 
+        Vector3 GetLocationInFront(Facing facing) {
+            return GetLocationInFront(GetCurrAlpacaLocation(), facing);
+        }
+
         Vector3 GetLocationInFront(Vector3 currLocation, Facing facing) {
             Vector3 targetPos = Vector3.zero;
 
