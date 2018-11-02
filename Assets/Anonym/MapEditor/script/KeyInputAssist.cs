@@ -216,7 +216,7 @@ namespace Anonym.Isometric
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
-            if (lowestY == boardLowestY) return ;
+            if (Mathf.Approximately(lowestY, boardLowestY)) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -325,7 +325,7 @@ namespace Anonym.Isometric
             }
 
             foreach (GameObject playerBlock in playerBlocks) {
-                if (playerBlock.transform.position == posInFront) {
+                if (isTwoPosEqual(playerBlock.transform.position, posInFront)) {
                     return playerBlock.GetComponent<clickable_block>().isBlockHighlighted() || isAlpacaCarryingBlock();
                 }
             }

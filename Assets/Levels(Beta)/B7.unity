@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -513,7 +513,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 32975229}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &35954387
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +603,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 35954390}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &35954392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,7 +1785,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 139018944}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &139018946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2647,7 +2647,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 343775253}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &343775255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2803,7 +2803,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 349122541}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &370228269
 GameObject:
   m_ObjectHideFlags: 0
@@ -2926,7 +2926,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 370228271}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &371945739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3078,7 +3078,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 378817093}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &378817095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,7 +3386,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 385525373}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &385525375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4154,7 +4154,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 447948677}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &447948679
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,7 +4402,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 473927166}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &490266992
 GameObject:
   m_ObjectHideFlags: 0
@@ -4646,7 +4646,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 509639365}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &509639367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5109,7 +5109,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 544391902}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &547858003
 GameObject:
   m_ObjectHideFlags: 0
@@ -6221,7 +6221,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 680961133}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &703589524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6926,7 +6926,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 765254918}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &765254920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7635,7 +7635,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 836057839}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &858939090
 GameObject:
   m_ObjectHideFlags: 0
@@ -7940,7 +7940,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 868319498}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &868319500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8096,7 +8096,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 871204454}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &895092992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8928,7 +8928,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 980877230}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &984170189
 GameObject:
   m_ObjectHideFlags: 0
@@ -9172,7 +9172,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 993292962}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &993292964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9511,7 +9511,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1018557615}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1018557617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10375,7 +10375,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1095672847}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1105269196
 GameObject:
   m_ObjectHideFlags: 0
@@ -10742,7 +10742,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1144080367}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1144080369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11454,7 +11454,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1251277291}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1252061477
 GameObject:
   m_ObjectHideFlags: 0
@@ -11544,7 +11544,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1252061480}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1252061482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12231,7 +12231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1345948176}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 592544407}
   _autoName: {fileID: 1345948172}
   _so: {fileID: 1345948175}
   _attachedList:
@@ -12273,7 +12273,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1345948172}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1350501388
 GameObject:
   m_ObjectHideFlags: 0
@@ -12486,7 +12486,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1351736264}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1351736266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13933,7 +13933,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1503934070}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1503934072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13960,7 +13960,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1503934067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4, y: 0.9999999, z: -1}
+  m_LocalPosition: {x: 4, y: 1, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1332164890}
@@ -14921,7 +14921,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1607861184}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1620281840
 GameObject:
   m_ObjectHideFlags: 0
@@ -15044,7 +15044,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1620281842}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1630248625
 GameObject:
   m_ObjectHideFlags: 0
@@ -15229,7 +15229,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1635097332}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1640539145
 GameObject:
   m_ObjectHideFlags: 0
@@ -15352,7 +15352,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1640539147}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &1645308491
 GameObject:
   m_ObjectHideFlags: 0
@@ -15504,7 +15504,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1654393867}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1654393869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17226,7 +17226,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 1779964546}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1779964548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19797,7 +19797,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 2026372870}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &2030278123
 GameObject:
   m_ObjectHideFlags: 0
@@ -20043,7 +20043,7 @@ MonoBehaviour:
   _grid: {fileID: 592544406}
   bSnapFree: 0
   _autoName: {fileID: 2047064056}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &2084248633
 GameObject:
   m_ObjectHideFlags: 0
