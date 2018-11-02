@@ -352,17 +352,6 @@ namespace Anonym.Isometric
             return canJump;
         }
 
-        void HandleDeath(Facing newFacing) {
-            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
-            if (isSpaceOpen(posInFront)) {
-                float newY = GetLowestDropPossible(posInFront);
-
-                if (Math.Abs(GetCurrAlpacaLocation().y - newY) >= 3.0) {
-                    isDead = true;
-                }
-            }
-        }
-
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didJump = Jump(newFacing);
@@ -370,7 +359,6 @@ namespace Anonym.Isometric
             if (!didRotate && !didJump) {
                 if (!ShouldHighlightPlayerBlock(newFacing)) {
                     inputProcess();
-                    HandleDeath(newFacing); 
                 }
             }
             lastFacing = newFacing;
