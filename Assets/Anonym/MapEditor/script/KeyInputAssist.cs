@@ -282,37 +282,8 @@ namespace Anonym.Isometric
             }
         }
 
-        bool isFacingEdge(Vector3 currLocation, Facing facing) {
-            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
-            posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
-
-            if (posIfAlpacaMoved.y < GetCurrAlpacaLocation().y) {
-                return true;
-            }
-
-            return false;
-        }
-
-        bool isFacingLava(Vector3 currLocation, Facing facing) {
-            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
-            if (!isSpaceOpen(posIfAlpacaMoved)) return false;
-
-            Vector3 posBelowIfAlpacaMoved = new Vector3(posIfAlpacaMoved.x, posIfAlpacaMoved.y - 1, posIfAlpacaMoved.z);
-
-            GameObject[] fireBlocks =  GameObject.FindGameObjectsWithTag("FireBlockPos");
-            foreach (GameObject fireBlock in fireBlocks) {
-                if (isTwoPosEqual(fireBlock.transform.position, posBelowIfAlpacaMoved)) {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
         bool RotateAlpaca(Facing newFacing) {
-            if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
-                isFacingLava(GetCurrAlpacaLocation(), newFacing)) 
-                && newFacing != lastFacing) {
+            if (newFacing != lastFacing) {
                 return true;
             }
 
