@@ -9,6 +9,8 @@ using UnityEditor;
 
 public class loggingInGameManager : MonoBehaviour {
 
+    public int abValueToReference;
+
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
@@ -18,6 +20,7 @@ public class loggingInGameManager : MonoBehaviour {
 
         //Assigns players a test value of either 1 or 2
         var abTestValue = LoggingManager.instance.AssignABTestValue(UnityEngine.Random.Range(1,3));
+        abValueToReference = abTestValue;
         Debug.Log("A/B Test Value: " + abTestValue);
         LoggingManager.instance.RecordABTestValue();
        
