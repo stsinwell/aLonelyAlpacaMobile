@@ -9,17 +9,26 @@ using UnityEditor;
 
 public class loggingInGameManager : MonoBehaviour {
 
+    public int abValueToReference;
+
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-        LoggingManager.instance.Initialize(890, 2, false);
+        LoggingManager.instance.Initialize(890, 999, false);
         LoggingManager.instance.RecordPageLoad();
         DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
+
+        //Assigns players a test value of either 1 or 2
+        var abTestValue = LoggingManager.instance.AssignABTestValue(UnityEngine.Random.Range(1,3));
+        abValueToReference = abTestValue;
+        Debug.Log("A/B Test Value: " + abTestValue);
+        LoggingManager.instance.RecordABTestValue();
+       
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if(SceneName != SceneManager.GetActiveScene().name && SceneManager.GetActiveScene().name != "B1"
+        if(SceneName != SceneManager.GetActiveScene().name && SceneManager.GetActiveScene().name != "B0 - Menu"
         && SceneManager.GetActiveScene().name != "privacything")
         {
             Debug.Log("active scene is " + SceneManager.GetActiveScene().name);

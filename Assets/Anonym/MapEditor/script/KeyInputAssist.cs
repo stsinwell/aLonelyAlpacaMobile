@@ -151,8 +151,8 @@ namespace Anonym.Isometric
             return false;
         }
 
-        bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock) {
-            Vector3 posIfAlpacaMoved = GetCurrAlpacaLocation();
+        bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock, bool providedLocation, Vector3 forceAlpacaLocation) {
+            Vector3 posIfAlpacaMoved = providedLocation ? forceAlpacaLocation : GetCurrAlpacaLocation();
 
             if (facing == Facing.PosZ) {
                 posIfAlpacaMoved.z += 1;
@@ -167,13 +167,20 @@ namespace Anonym.Isometric
             return isTwoPosEqual(playerBlock.transform.position, posIfAlpacaMoved);
         }
 
-        bool ShouldHighlightPlayerBlock(Facing facing) {
+        void UnhighlightAllOtherPlayerBlocks() {
+            foreach(GameObject playerBlock in playerBlocks) {
+                playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
+            }
+        }
+
+        bool ShouldHighlightPlayerBlock(Facing facing, bool providedLocation, Vector3 forceAlpacaLocation) {
             if (isAlpacaCarryingBlock()) {
                 return false;
             }
 
             foreach(GameObject playerBlock in playerBlocks) {
-                if (isAlpacaFacingPlayableBlock(facing, playerBlock) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
+                if (isAlpacaFacingPlayableBlock(facing, playerBlock, providedLocation, forceAlpacaLocation) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
+                    UnhighlightAllOtherPlayerBlocks();
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
                     return true;
                 } else {
@@ -185,7 +192,7 @@ namespace Anonym.Isometric
         }
 
         Vector3 GetDropPosition() {
-            return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
+            return GetLocationInFront(lastFacing);
         }
 
         Vector3 GetLocationInFront(Facing facing) {
@@ -284,16 +291,67 @@ namespace Anonym.Isometric
             }
         }
 
-        bool RotateAlpaca(Facing newFacing) {
-            if (newFacing != lastFacing) {
+        bool isFacingEdge(Vector3 currLocation, Facing facing) {
+
+            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
+
+            posIfAlpacaMoved.y = GetLowestDropPossible(posIfAlpacaMoved);
+
+            if (posIfAlpacaMoved.y < GetCurrAlpacaLocation().y) {
                 return true;
             }
 
             return false;
         }
 
+        bool isFacingLava(Vector3 currLocation, Facing facing) {
+
+            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
+
+            if (!isSpaceOpen(posIfAlpacaMoved)) return false;
+
+            Vector3 posBelowIfAlpacaMoved = new Vector3(posIfAlpacaMoved.x, posIfAlpacaMoved.y - 1, posIfAlpacaMoved.z);
+            GameObject[] fireBlocks =  GameObject.FindGameObjectsWithTag("FireBlockPos");
+
+            foreach (GameObject fireBlock in fireBlocks) {
+                if (isTwoPosEqual(fireBlock.transform.position, posBelowIfAlpacaMoved)) {
+                    return true;
+                }
+            }
+             return false;
+        }
+
+        bool RotateAlpaca(Facing newFacing) {
+
+        GameObject loggingObject = GameObject.Find("GameObject");
+        int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
+
+            switch(abTestValue) {
+                case 1:
+                    if (newFacing != lastFacing) {
+                        return true;
+                    }
+
+                    return false;
+                case 2:
+                    if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
+                    isFacingLava(GetCurrAlpacaLocation(), newFacing)) 
+                    && newFacing != lastFacing) {
+                        return true;
+                    }
+
+                    return false;
+             }
+             return false;
+        }
+
         bool AttemptJump(Vector3 posInFront) {
-            if (isSpaceOpen(posInFront)) {
+            if (isSpaceOpen(posInFront)) { // Empty space in front of alpaca
+                return false;
+            }
+
+            Vector3 posAbovePosInFront = new Vector3(posInFront.x, posInFront.y + 1, posInFront.z);
+            if (!isSpaceOpen(posAbovePosInFront)) { // There is a block above one in front of the alpaca
                 return false;
             }
 
@@ -308,7 +366,7 @@ namespace Anonym.Isometric
         }
 
         bool Jump(Facing newFacing) {
-            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            Vector3 posInFront = GetLocationInFront(newFacing);
             bool canJump = AttemptJump(posInFront);
 
             if (canJump) {
@@ -330,10 +388,12 @@ namespace Anonym.Isometric
             bool didJump = Jump(newFacing);
 
             if (!didRotate && !didJump) {
-                if (!ShouldHighlightPlayerBlock(newFacing)) {
-                    inputProcess();
-                }
+                inputProcess();
+                ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
+            } else {
+                ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
             }
+
             lastFacing = newFacing;
         }
 
@@ -358,6 +418,7 @@ namespace Anonym.Isometric
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
+                ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 doubleClickDetected = false;
             }
 

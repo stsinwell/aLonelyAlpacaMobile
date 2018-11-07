@@ -56,6 +56,7 @@ public class changeFacingDirection : MonoBehaviour {
         if(fireBlockCollisionScript.hasCollided()){
             animator.SetBool("death_by_fire", true);
             if(animator.GetBool("death_by_splat")) animator.SetBool("death_by_splat", false);
+            LoggingManager.instance.RecordEvent(8, "Player has died by fire block.");
         }
 
         // dead state update
