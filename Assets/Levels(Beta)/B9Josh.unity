@@ -9692,7 +9692,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 362493596}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &362493598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16886,7 +16886,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 594868747}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &599324095
 GameObject:
   m_ObjectHideFlags: 0
@@ -17009,7 +17009,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 599324097}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &600019354
 GameObject:
   m_ObjectHideFlags: 0
@@ -21336,7 +21336,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 739589701}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &742537531
 GameObject:
   m_ObjectHideFlags: 0
@@ -29018,7 +29018,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1001266773}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1003345744
 GameObject:
   m_ObjectHideFlags: 0
@@ -49592,7 +49592,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1736383685}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1737600602
 GameObject:
   m_ObjectHideFlags: 0
@@ -49950,6 +49950,19 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 154537727}
+    - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+        type: 2}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
@@ -50844,7 +50857,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1782883618}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1784342326
 GameObject:
   m_ObjectHideFlags: 0

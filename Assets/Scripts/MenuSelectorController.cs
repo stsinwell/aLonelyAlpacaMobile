@@ -69,7 +69,7 @@ public class MenuSelectorController : MonoBehaviour {
 			case 0: 
 				break;
 			case 1:
-				SceneManager.LoadScene("B1", LoadSceneMode.Single);
+				SceneManager.LoadScene("B9Josh", LoadSceneMode.Single);
 				break;
 			case 2:
 				break;
