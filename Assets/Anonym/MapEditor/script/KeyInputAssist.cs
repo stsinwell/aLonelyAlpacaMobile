@@ -328,11 +328,6 @@ namespace Anonym.Isometric
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didJump = Jump(newFacing);
-            
-            //if (!didRotate) {
-                //ShouldHighlightPlayerBlock(newFacing);
-                //inputProcess();
-            //}
 
             if (!didRotate && !didJump) {
                 inputProcess();
