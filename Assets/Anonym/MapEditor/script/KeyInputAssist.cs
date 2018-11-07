@@ -151,8 +151,8 @@ namespace Anonym.Isometric
             return false;
         }
 
-        bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock) {
-            Vector3 posIfAlpacaMoved = GetCurrAlpacaLocation();
+        bool isAlpacaFacingPlayableBlock(Facing facing, GameObject playerBlock, bool providedLocation, Vector3 forceAlpacaLocation) {
+            Vector3 posIfAlpacaMoved = providedLocation ? forceAlpacaLocation : GetCurrAlpacaLocation();
 
             if (facing == Facing.PosZ) {
                 posIfAlpacaMoved.z += 1;
@@ -167,13 +167,13 @@ namespace Anonym.Isometric
             return isTwoPosEqual(playerBlock.transform.position, posIfAlpacaMoved);
         }
 
-        bool ShouldHighlightPlayerBlock(Facing facing) {
+        bool ShouldHighlightPlayerBlock(Facing facing, bool providedLocation, Vector3 forceAlpacaLocation) {
             if (isAlpacaCarryingBlock()) {
                 return false;
             }
 
             foreach(GameObject playerBlock in playerBlocks) {
-                if (isAlpacaFacingPlayableBlock(facing, playerBlock) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
+                if (isAlpacaFacingPlayableBlock(facing, playerBlock, providedLocation, forceAlpacaLocation) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
                     return true;
                 } else {
@@ -185,7 +185,7 @@ namespace Anonym.Isometric
         }
 
         Vector3 GetDropPosition() {
-            return GetLocationInFront(GetCurrAlpacaLocation(), lastFacing);
+            return GetLocationInFront(lastFacing);
         }
 
         Vector3 GetLocationInFront(Facing facing) {
@@ -308,7 +308,7 @@ namespace Anonym.Isometric
         }
 
         bool Jump(Facing newFacing) {
-            Vector3 posInFront = GetLocationInFront(GetCurrAlpacaLocation(), newFacing);
+            Vector3 posInFront = GetLocationInFront(newFacing);
             bool canJump = AttemptJump(posInFront);
 
             if (canJump) {
@@ -328,12 +328,19 @@ namespace Anonym.Isometric
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didJump = Jump(newFacing);
+            
+            //if (!didRotate) {
+                //ShouldHighlightPlayerBlock(newFacing);
+                //inputProcess();
+            //}
 
             if (!didRotate && !didJump) {
-                if (!ShouldHighlightPlayerBlock(newFacing)) {
-                    inputProcess();
-                }
+                inputProcess();
+                ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
+            } else {
+                ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
             }
+
             lastFacing = newFacing;
         }
 
@@ -358,6 +365,7 @@ namespace Anonym.Isometric
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
+                ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 doubleClickDetected = false;
             }
 
