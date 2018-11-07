@@ -235,7 +235,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 4700771}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &9438391
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 47433393}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -729,7 +729,7 @@ GameObject:
   - component: {fileID: 56911175}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1191,7 +1191,7 @@ GameObject:
   - component: {fileID: 99436744}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2764,7 +2764,7 @@ GameObject:
   - component: {fileID: 172108005}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3982,7 +3982,7 @@ GameObject:
   - component: {fileID: 305526637}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4444,7 +4444,7 @@ GameObject:
   - component: {fileID: 328244140}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5015,7 +5015,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 355535288}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &376385598
 GameObject:
   m_ObjectHideFlags: 0
@@ -7336,7 +7336,7 @@ GameObject:
   - component: {fileID: 555399817}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9633,7 +9633,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 720175850}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &725617931
 GameObject:
   m_ObjectHideFlags: 0
@@ -10895,7 +10895,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 816382217}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &826610136
 GameObject:
   m_ObjectHideFlags: 0
@@ -12638,7 +12638,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 971146201}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &984894425
 GameObject:
   m_ObjectHideFlags: 0
@@ -12899,7 +12899,7 @@ GameObject:
   - component: {fileID: 1012289071}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13996,7 +13996,7 @@ GameObject:
   - component: {fileID: 1070666637}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14352,7 +14352,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1079332842}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1081500251
 GameObject:
   m_ObjectHideFlags: 0
@@ -14565,7 +14565,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1083853558}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1083853560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14967,7 +14967,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1128278012}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1139323527
 GameObject:
   m_ObjectHideFlags: 0
@@ -16230,7 +16230,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1211403826}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1219719509
 GameObject:
   m_ObjectHideFlags: 0
@@ -16671,7 +16671,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1245186333}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1246934717
 GameObject:
   m_ObjectHideFlags: 0
@@ -16776,7 +16776,7 @@ GameObject:
   - component: {fileID: 1257905530}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17163,7 +17163,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1273839275}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1286977159
 GameObject:
   m_ObjectHideFlags: 0
@@ -18135,7 +18135,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1363208136}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1376878860
 GameObject:
   m_ObjectHideFlags: 0
@@ -18916,7 +18916,7 @@ GameObject:
   - component: {fileID: 1436937025}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21658,7 +21658,7 @@ GameObject:
   - component: {fileID: 1629271969}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21720,7 +21720,7 @@ GameObject:
   - component: {fileID: 1645668096}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23089,7 +23089,7 @@ GameObject:
   - component: {fileID: 1768103477}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: FireBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26615,7 +26615,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 2040420561}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &2042090274
 GameObject:
   m_ObjectHideFlags: 0
@@ -27277,7 +27277,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 2093890494}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &2112758260
 GameObject:
   m_ObjectHideFlags: 0
