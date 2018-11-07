@@ -300,7 +300,12 @@ namespace Anonym.Isometric
         }
 
         bool AttemptJump(Vector3 posInFront) {
-            if (isSpaceOpen(posInFront)) {
+            if (isSpaceOpen(posInFront)) { // Empty space in front of alpaca
+                return false;
+            }
+
+            Vector3 posAbovePosInFront = new Vector3(posInFront.x, posInFront.y + 1, posInFront.z);
+            if (!isSpaceOpen(posAbovePosInFront)) { // There is a block above one in front of the alpaca
                 return false;
             }
 
