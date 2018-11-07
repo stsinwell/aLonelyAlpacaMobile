@@ -167,6 +167,12 @@ namespace Anonym.Isometric
             return isTwoPosEqual(playerBlock.transform.position, posIfAlpacaMoved);
         }
 
+        void UnhighlightAllOtherPlayerBlocks() {
+            foreach(GameObject playerBlock in playerBlocks) {
+                playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
+            }
+        }
+
         bool ShouldHighlightPlayerBlock(Facing facing, bool providedLocation, Vector3 forceAlpacaLocation) {
             if (isAlpacaCarryingBlock()) {
                 return false;
@@ -174,6 +180,7 @@ namespace Anonym.Isometric
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (isAlpacaFacingPlayableBlock(facing, playerBlock, providedLocation, forceAlpacaLocation) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
+                    UnhighlightAllOtherPlayerBlocks();
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
                     return true;
                 } else {
