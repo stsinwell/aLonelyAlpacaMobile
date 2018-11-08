@@ -17,6 +17,7 @@ public class LevelMenuControllerScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
+		B1Button.interactable = true;
 		B2Button.interactable = false;
 		B3Button.interactable = false;
 		B4Button.interactable = false;
