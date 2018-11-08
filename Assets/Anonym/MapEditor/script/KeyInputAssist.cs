@@ -29,6 +29,7 @@ namespace Anonym.Isometric
         bool bUseClickToPathfinding = true;
 
         GameObject[] playerBlocks;
+        GameObject[] wallBlocks;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
@@ -55,6 +56,11 @@ namespace Anonym.Isometric
                 if (obj.tag == "Untagged" || obj.tag =="FireBlockPos") {
                     boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
                 }
+            }
+
+            wallBlocks = GameObject.FindGameObjectsWithTag("Wall");
+            foreach (GameObject wallBlock in wallBlocks) {
+                wallBlock.GetComponentInChildren<SpriteRenderer>().color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
             }
 
             musicSource.clip = soundEffect;
@@ -226,6 +232,8 @@ namespace Anonym.Isometric
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
             float lowestY = GetLowestDropPossible(targetPos);
             if (Mathf.Approximately(lowestY, boardLowestY)) return ;
+            Vector3 posBelowTargetPos = new Vector3(targetPos.x, lowestY - 1, targetPos.z);
+            if (isPosWall(posBelowTargetPos)) return ;
 
             selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
@@ -304,6 +312,27 @@ namespace Anonym.Isometric
             return false;
         }
 
+        bool isPosWall(Vector3 targetPos) {
+            foreach (GameObject wallBlock in wallBlocks) {
+                if (wallBlock.transform.position == targetPos) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        bool HittingWall(Facing newFacing) {
+            Vector3 posInFront = GetLocationInFront(newFacing);
+            return isPosWall(posInFront);
+        }
+
+        bool WallBelowAlpaca(Facing newFacing) {
+            Vector3 posInFrontLowest = GetLocationInFront(newFacing);
+            posInFrontLowest.y = GetLowestDropPossible(posInFrontLowest) - 1;
+            
+            return isPosWall(posInFrontLowest);
+        }
         bool isFacingLava(Vector3 currLocation, Facing facing) {
 
             Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
@@ -327,12 +356,15 @@ namespace Anonym.Isometric
         int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
 
             switch(abTestValue) {
+                //if abtestvalue is 1, player may pivot in place
                 case 1:
                     if (newFacing != lastFacing) {
                         return true;
                     }
 
                     return false;
+                
+                //if abtestvalue is 2, player cannot pivot in place
                 case 2:
                     if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
                     isFacingLava(GetCurrAlpacaLocation(), newFacing)) 
@@ -385,13 +417,18 @@ namespace Anonym.Isometric
 
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
-            bool didJump = Jump(newFacing);
+            bool didHitWall = HittingWall(newFacing);
+            bool isWallBelowMovement = WallBelowAlpaca(newFacing);
 
-            if (!didRotate && !didJump) {
-                inputProcess();
-                ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
-            } else {
-                ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
+            if (!didHitWall && !isWallBelowMovement) {
+                bool didJump = Jump(newFacing);
+
+                if (!didRotate && !didJump) {
+                    inputProcess();
+                    ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
+                } else {
+                    ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
+                }
             }
 
             lastFacing = newFacing;

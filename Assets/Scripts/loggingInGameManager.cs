@@ -14,27 +14,30 @@ public class loggingInGameManager : MonoBehaviour {
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-        LoggingManager.instance.Initialize(890, 999, false);
-        LoggingManager.instance.RecordPageLoad();
-        DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
+        GameObject selectorObject = GameObject.Find("Selector");
+        bool checkIfFirstTimePlaying = selectorObject.GetComponent<MenuSelectorController>().firstTimePlaying;
 
-        //Assigns players a test value of either 1 or 2
-        var abTestValue = LoggingManager.instance.AssignABTestValue(UnityEngine.Random.Range(1,3));
-        abValueToReference = abTestValue;
-        Debug.Log("A/B Test Value: " + abTestValue);
-        LoggingManager.instance.RecordABTestValue();
+        if(checkIfFirstTimePlaying == false){
+            LoggingManager.instance.Initialize(890, 999, false);
+            LoggingManager.instance.RecordPageLoad();
+            DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
+
+            //Assigns players a test value of either 1 or 2
+            var abTestValue = LoggingManager.instance.AssignABTestValue(UnityEngine.Random.Range(1,3));
+            abValueToReference = abTestValue;
+            Debug.Log("A/B Test Value: " + abTestValue);
+            LoggingManager.instance.RecordABTestValue();
+        }
        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if(SceneName != SceneManager.GetActiveScene().name && SceneManager.GetActiveScene().name != "B0 - Menu"
-        && SceneManager.GetActiveScene().name != "privacything")
+        && SceneManager.GetActiveScene().name != "privacything" && SceneManager.GetActiveScene().name != "Level Select Menu")
         {
-            Debug.Log("active scene is " + SceneManager.GetActiveScene().name);
             // New scene has been loaded
             SceneName = SceneManager.GetActiveScene().name;
-            Debug.Log("SceneName is now " + SceneName);
             OnLevelFinishedLoading(SceneName);
         }
 	}
