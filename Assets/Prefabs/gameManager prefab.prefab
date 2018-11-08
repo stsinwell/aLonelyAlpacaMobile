@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4081323894916140}
   - component: {fileID: 114267059788626970}
   - component: {fileID: 114468995008167606}
-  - component: {fileID: 114824065293360172}
+  - component: {fileID: 114329817668308066}
   m_Layer: 0
   m_Name: gameManager prefab
   m_TagString: Untagged
@@ -54,6 +54,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathImage: {fileID: 0}
+--- !u!114 &114329817668308066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706221591544266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  zAmount: 3
 --- !u!114 &114468995008167606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,16 +79,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   menuLevel: Level Select Menu
---- !u!114 &114824065293360172
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1706221591544266}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  ZOOM_AMNT: 8.5

@@ -34,7 +34,7 @@ public class Zoomer : MonoBehaviour {
 	}
 
 	/* Player toggled camera, update the state. */
-	void playerUpdateZState() {
+	public void toggleZoom() {
 		lerp_timer = 0;
 		switch(zState) {
 			case ZoomState.ZOOMING_IN:
@@ -86,11 +86,8 @@ public class Zoomer : MonoBehaviour {
 				break;
 		};
 	}
-	
+
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.Z)) {
-			playerUpdateZState();
-		}
 		resolveZoom();
 	}
 }
