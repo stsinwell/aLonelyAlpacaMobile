@@ -175,11 +175,13 @@ public class LevelMenuControllerScript : MonoBehaviour {
 	}
 
 	public void positionAlpacaOnRecentLevel(int mostRecentLevel) {
-		GameObject mostRecentStar = GameObject.Find("B" + mostRecentLevel.ToString() + "Button");
+		string findThisButton = "B" + mostRecentLevel.ToString() + "Button";
+		GameObject mostRecentStar = GameObject.Find(findThisButton);
 		Vector3 mostRecentStarPosition = mostRecentStar.GetComponent<RectTransform>().position;
 
 		GameObject alpacaSprite = GameObject.Find("AlpacaSprite");
 		alpacaSprite.GetComponent<RectTransform>().position = mostRecentStarPosition;
+		
 	}
 	
 	// Update is called once per frame
