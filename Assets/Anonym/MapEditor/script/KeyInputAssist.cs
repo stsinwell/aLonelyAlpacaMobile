@@ -356,12 +356,15 @@ namespace Anonym.Isometric
         int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
 
             switch(abTestValue) {
+                //if abtestvalue is 1, player may pivot in place
                 case 1:
                     if (newFacing != lastFacing) {
                         return true;
                     }
 
                     return false;
+                
+                //if abtestvalue is 2, player cannot pivot in place
                 case 2:
                     if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
                     isFacingLava(GetCurrAlpacaLocation(), newFacing)) 

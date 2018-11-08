@@ -11,6 +11,9 @@ public class MenuSelectorController : MonoBehaviour {
 	public GameObject PrivacyStatement;
 	private PrivacyStatementDisappear PSDScript;
 	private bool privacyUp;
+
+	public bool firstTimePlaying = false;
+
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform>();
@@ -69,9 +72,11 @@ public class MenuSelectorController : MonoBehaviour {
 			case 0: 
 				break;
 			case 1:
-				SceneManager.LoadScene("B9Josh", LoadSceneMode.Single);
+				firstTimePlaying = true;
+				SceneManager.LoadScene("B1", LoadSceneMode.Single);
 				break;
 			case 2:
+				SceneManager.LoadScene("Level Select Menu", LoadSceneMode.Single);
 				break;
 			case 3:
 				PSDScript.toggleEnable();
