@@ -145,9 +145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 34631626}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 34631625}
+  _so: {fileID: 34631624}
   _attachedList:
     bFoldout: 1
     childList:
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &42769283
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -324,7 +324,7 @@ Transform:
   m_GameObject: {fileID: 42769281}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1468112386}
   m_RootOrder: 0
@@ -390,9 +390,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -504,8 +504,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 70354382}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 70354381}
+  _so: {fileID: 70354380}
   _attachedList:
     bFoldout: 1
     childList:
@@ -675,8 +675,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 77094553}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 77094549}
+  _so: {fileID: 77094552}
   _attachedList:
     bFoldout: 1
     childList:
@@ -746,10 +746,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &92461021
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -804,7 +804,7 @@ Transform:
   m_GameObject: {fileID: 92461019}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1186408589}
   m_RootOrder: 0
@@ -838,10 +838,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &108755453
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -896,7 +896,7 @@ Transform:
   m_GameObject: {fileID: 108755451}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 835274314}
   m_RootOrder: 0
@@ -982,8 +982,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 109256530}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 109256526}
+  _so: {fileID: 109256529}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1105,8 +1105,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 111775830}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 111775826}
+  _so: {fileID: 111775829}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1228,8 +1228,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 113898779}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 113898775}
+  _so: {fileID: 113898778}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1295,7 +1295,7 @@ Transform:
   m_GameObject: {fileID: 123430875}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1598243418}
   m_RootOrder: 0
@@ -1312,10 +1312,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &123430878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1395,8 +1395,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 133408368}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 133408367}
+  _so: {fileID: 133408366}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1514,10 +1514,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &147764188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1572,7 +1572,7 @@ Transform:
   m_GameObject: {fileID: 147764186}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1514207947}
   m_RootOrder: 0
@@ -1610,8 +1610,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 155746920}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 155746919}
+  _so: {fileID: 155746918}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1743,9 +1743,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -1794,9 +1794,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 162109117}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 162109116}
+  _so: {fileID: 162109115}
   _attachedList:
     bFoldout: 1
     childList:
@@ -1994,9 +1994,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -2042,10 +2042,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &213510656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2100,7 +2100,7 @@ Transform:
   m_GameObject: {fileID: 213510654}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 632853065}
   m_RootOrder: 0
@@ -2137,9 +2137,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 238324020}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 238324019}
+  _so: {fileID: 238324018}
   _attachedList:
     bFoldout: 1
     childList:
@@ -2269,7 +2269,7 @@ Transform:
   m_GameObject: {fileID: 248545271}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1667545820}
   m_RootOrder: 0
@@ -2286,10 +2286,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &248545274
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2366,10 +2366,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &253166153
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2424,7 +2424,7 @@ Transform:
   m_GameObject: {fileID: 253166151}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 449209006}
   m_RootOrder: 0
@@ -2634,8 +2634,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 288756545}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 288756541}
+  _so: {fileID: 288756544}
   _attachedList:
     bFoldout: 1
     childList:
@@ -2701,7 +2701,7 @@ Transform:
   m_GameObject: {fileID: 292144055}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 602002254}
   m_RootOrder: 0
@@ -2718,10 +2718,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &292144058
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2811,9 +2811,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -2830,24 +2830,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!1 &292336398 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1706221591544266, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
-    type: 2}
-  m_PrefabInternal: {fileID: 576842713}
---- !u!114 &292336399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 292336398}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1932437458}
-  zAmount: 3
 --- !u!1 &301010410
 GameObject:
   m_ObjectHideFlags: 0
@@ -2891,9 +2873,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -2953,9 +2935,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3015,9 +2997,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3059,7 +3041,7 @@ Transform:
   m_GameObject: {fileID: 323801200}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1226192379}
   m_RootOrder: 0
@@ -3076,10 +3058,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &323801203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3155,10 +3137,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &324819622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3213,7 +3195,7 @@ Transform:
   m_GameObject: {fileID: 324819620}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1149645378}
   m_RootOrder: 0
@@ -3247,10 +3229,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &334725416
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3305,7 +3287,7 @@ Transform:
   m_GameObject: {fileID: 334725414}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 292293777}
   m_RootOrder: 0
@@ -3353,9 +3335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3397,7 +3379,7 @@ Transform:
   m_GameObject: {fileID: 349224099}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 343359127}
   m_RootOrder: 0
@@ -3414,10 +3396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &349224102
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3545,8 +3527,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 368930094}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 368930090}
+  _so: {fileID: 368930093}
   _attachedList:
     bFoldout: 1
     childList:
@@ -3630,9 +3612,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3682,8 +3664,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 406030811}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 406030810}
+  _so: {fileID: 406030809}
   _attachedList:
     bFoldout: 1
     childList:
@@ -3815,9 +3797,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3877,9 +3859,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -3910,7 +3892,7 @@ GameObject:
   - component: {fileID: 426565822}
   - component: {fileID: 426565821}
   m_Layer: 0
-  m_Name: T_F00_(00,00)__startblock
+  m_Name: start_block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3976,9 +3958,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 426565825}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 426565821}
+  _so: {fileID: 426565824}
   _attachedList:
     bFoldout: 1
     childList:
@@ -4017,7 +3999,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _grid: {fileID: 585693876}
   bSnapFree: 0
-  _autoName: {fileID: 0}
+  _autoName: {fileID: 426565821}
   bChangedforEditor: 1
 --- !u!1 &428972113
 GameObject:
@@ -4062,9 +4044,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -4106,7 +4088,7 @@ Transform:
   m_GameObject: {fileID: 447423185}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 301010411}
   m_RootOrder: 0
@@ -4123,10 +4105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &447423188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4216,9 +4198,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -4316,8 +4298,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 467445212}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 467445208}
+  _so: {fileID: 467445211}
   _attachedList:
     bFoldout: 1
     childList:
@@ -4383,7 +4365,7 @@ Transform:
   m_GameObject: {fileID: 467930869}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1839032429}
   m_RootOrder: 0
@@ -4400,10 +4382,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &467930872
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4475,7 +4457,7 @@ Transform:
   m_GameObject: {fileID: 485062860}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 2118395192}
   m_RootOrder: 0
@@ -4492,10 +4474,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &485062863
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4585,9 +4567,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -4637,8 +4619,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 519399611}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 519399610}
+  _so: {fileID: 519399609}
   _attachedList:
     bFoldout: 1
     childList:
@@ -4808,8 +4790,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 524886645}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 524886641}
+  _so: {fileID: 524886644}
   _attachedList:
     bFoldout: 1
     childList:
@@ -4883,8 +4865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 541026208}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 541026207}
+  _so: {fileID: 541026206}
   _attachedList:
     bFoldout: 1
     childList:
@@ -4998,7 +4980,7 @@ Transform:
   m_GameObject: {fileID: 551039123}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 187273550}
   m_RootOrder: 0
@@ -5015,10 +4997,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &551039126
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5108,9 +5090,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -5159,9 +5141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 563898675}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 563898674}
+  _so: {fileID: 563898673}
   _attachedList:
     bFoldout: 1
     childList:
@@ -5289,6 +5271,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1758634551}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: zAmount
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
@@ -5325,8 +5317,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 579720685}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 579720684}
+  _so: {fileID: 579720683}
   _attachedList:
     bFoldout: 1
     childList:
@@ -5428,7 +5420,7 @@ GameObject:
   - component: {fileID: 585693878}
   - component: {fileID: 585693877}
   m_Layer: 0
-  m_Name: T_F00_(00,00)__startblock_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_[null]_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_winblock_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_block_beta_grass_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16_abstractTile_16
+  m_Name: Iso_Bulk(Clone)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5531,10 +5523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 679569b6ee24e0b40b5d66ec49928ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bUseLocalGrid: 1
+  bUseLocalGrid: 0
   _TileSize: {x: 1, y: 1, z: 1}
   _GridInterval: {x: 1, y: 0.33333334, z: 1}
-  bChildUpdatedFlagForEditor: 0
+  bChildUpdatedFlagForEditor: 1
 --- !u!114 &585693877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5546,10 +5538,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af0d416f4e73f443bd3de41e879bd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  format: T_F{1:00}_({0:00},{2:00})
+  format: Bulk_F{1:00}({0:00},{2:00})
   bAutoName: 1
   bAutoNamed: 1
-  bPostfix_Sprite: 1
+  bPostfix_Sprite: 0
 --- !u!114 &585693878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5561,18 +5553,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dafa9240b0b03f40914dfba87b5eca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coordinates: {fileID: 0}
+  _coordinates: {fileID: 585693879}
   SizeXZ:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
-  _attachedList: []
-  _referenceTile: {fileID: 0}
+    x: -3
+    y: -3
+    width: 10
+    height: 6
+  _attachedList:
+  - {fileID: 1975727282}
+  - {fileID: 993190914}
+  - {fileID: 1207454532}
+  - {fileID: 113898777}
+  - {fileID: 1580498517}
+  - {fileID: 1132836031}
+  - {fileID: 1297149895}
+  - {fileID: 1119114817}
+  - {fileID: 2013017153}
+  - {fileID: 77094551}
+  - {fileID: 1220306381}
+  - {fileID: 1551995672}
+  - {fileID: 109256528}
+  - {fileID: 2119317350}
+  - {fileID: 1170262273}
+  - {fileID: 1961025072}
+  - {fileID: 524886643}
+  - {fileID: 683420116}
+  - {fileID: 1072895018}
+  - {fileID: 2008900891}
+  - {fileID: 1785620976}
+  - {fileID: 1144262823}
+  - {fileID: 1745441020}
+  - {fileID: 1975280815}
+  - {fileID: 1905201733}
+  - {fileID: 368930092}
+  - {fileID: 467445210}
+  - {fileID: 1836892717}
+  - {fileID: 1454173796}
+  - {fileID: 288756543}
+  - {fileID: 1139323531}
+  - {fileID: 1153395878}
+  - {fileID: 725617932}
+  - {fileID: 70354379}
+  - {fileID: 1197445822}
+  - {fileID: 1036764165}
+  - {fileID: 519399608}
+  - {fileID: 1552874882}
+  - {fileID: 1263392916}
+  - {fileID: 1880644115}
+  - {fileID: 162109114}
+  - {fileID: 133408365}
+  - {fileID: 737845040}
+  - {fileID: 1662070287}
+  - {fileID: 579720682}
+  - {fileID: 155746917}
+  - {fileID: 670881985}
+  - {fileID: 563898672}
+  - {fileID: 1165768904}
+  - {fileID: 1541557700}
+  - {fileID: 1973399894}
+  - {fileID: 1721019663}
+  - {fileID: 1516358030}
+  - {fileID: 792801798}
+  - {fileID: 1081500252}
+  - {fileID: 760740316}
+  - {fileID: 541026205}
+  - {fileID: 1376878861}
+  - {fileID: 34631623}
+  - {fileID: 1895176864}
+  - {fileID: 426565823}
+  - {fileID: 2089186915}
+  - {fileID: 1669578470}
+  - {fileID: 1920483095}
+  - {fileID: 406030808}
+  - {fileID: 741083208}
+  - {fileID: 238324017}
+  - {fileID: 1562833512}
+  - {fileID: 1876597066}
+  - {fileID: 111775828}
+  - {fileID: 1827722531}
+  - {fileID: 861184181}
+  - {fileID: 1263288109}
+  _referenceTile: {fileID: 1046543167763804, guid: 9a3da0318e7dfbf42b6fd7d4f5931e99,
+    type: 2}
   _bSensorOff_ChildChange: 0
   bAllowEmptyBulk: 0
-  bYFirstSort: 0
+  bYFirstSort: 1
 --- !u!114 &585693879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5586,7 +5652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _grid: {fileID: 1244783222}
   bSnapFree: 0
-  _autoName: {fileID: 0}
+  _autoName: {fileID: 585693877}
   bChangedforEditor: 1
 --- !u!1 &592864939
 GameObject:
@@ -5631,9 +5697,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -5693,9 +5759,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -5741,10 +5807,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &609715640
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5799,7 +5865,7 @@ Transform:
   m_GameObject: {fileID: 609715638}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1501213318}
   m_RootOrder: 0
@@ -5925,9 +5991,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -5969,7 +6035,7 @@ Transform:
   m_GameObject: {fileID: 642464573}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 839254713}
   m_RootOrder: 0
@@ -5986,10 +6052,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &642464576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6079,9 +6145,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -6130,9 +6196,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 670881988}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 670881987}
+  _so: {fileID: 670881986}
   _attachedList:
     bFoldout: 1
     childList:
@@ -6302,8 +6368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 683420118}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 683420114}
+  _so: {fileID: 683420117}
   _attachedList:
     bFoldout: 1
     childList:
@@ -6374,10 +6440,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &701377091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6432,7 +6498,7 @@ Transform:
   m_GameObject: {fileID: 701377089}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1479986343}
   m_RootOrder: 0
@@ -6487,9 +6553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 725617935}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 725617934}
+  _so: {fileID: 725617933}
   _attachedList:
     bFoldout: 1
     childList:
@@ -6621,9 +6687,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -6673,8 +6739,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 737845043}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 737845042}
+  _so: {fileID: 737845041}
   _attachedList:
     bFoldout: 1
     childList:
@@ -6795,9 +6861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 741083211}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 741083210}
+  _so: {fileID: 741083209}
   _attachedList:
     bFoldout: 1
     childList:
@@ -6929,9 +6995,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -6973,7 +7039,7 @@ Transform:
   m_GameObject: {fileID: 746197692}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 2136440725}
   m_RootOrder: 0
@@ -6990,10 +7056,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &746197695
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7073,8 +7139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 760740319}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 760740318}
+  _so: {fileID: 760740317}
   _attachedList:
     bFoldout: 1
     childList:
@@ -7206,9 +7272,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7268,9 +7334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7312,7 +7378,7 @@ Transform:
   m_GameObject: {fileID: 781914767}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1843728424}
   m_RootOrder: 0
@@ -7329,10 +7395,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &781914770
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7422,9 +7488,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7484,9 +7550,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7536,8 +7602,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 792801801}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 792801800}
+  _so: {fileID: 792801799}
   _attachedList:
     bFoldout: 1
     childList:
@@ -7651,7 +7717,7 @@ Transform:
   m_GameObject: {fileID: 797937185}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1713611512}
   m_RootOrder: 0
@@ -7668,10 +7734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &797937188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7747,10 +7813,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &805281050
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7805,7 +7871,7 @@ Transform:
   m_GameObject: {fileID: 805281048}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 428972114}
   m_RootOrder: 0
@@ -7853,9 +7919,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7915,9 +7981,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -7977,9 +8043,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -8025,10 +8091,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &846015986
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8083,7 +8149,7 @@ Transform:
   m_GameObject: {fileID: 846015984}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 2121861771}
   m_RootOrder: 0
@@ -8131,9 +8197,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -8182,9 +8248,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 861184184}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 861184183}
+  _so: {fileID: 861184182}
   _attachedList:
     bFoldout: 1
     childList:
@@ -8316,9 +8382,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -8378,9 +8444,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -8427,10 +8493,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &901577759
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8485,7 +8551,7 @@ Transform:
   m_GameObject: {fileID: 901577757}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1560805711}
   m_RootOrder: 0
@@ -8537,10 +8603,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &901842680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8595,7 +8661,7 @@ Transform:
   m_GameObject: {fileID: 901842678}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 984894426}
   m_RootOrder: 0
@@ -8629,10 +8695,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &916491831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8687,7 +8753,7 @@ Transform:
   m_GameObject: {fileID: 916491829}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1836656573}
   m_RootOrder: 0
@@ -8717,7 +8783,7 @@ Transform:
   m_GameObject: {fileID: 916700970}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1616186245}
   m_RootOrder: 0
@@ -8734,10 +8800,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &916700973
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8827,9 +8893,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -8871,7 +8937,7 @@ Transform:
   m_GameObject: {fileID: 951863172}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1204879742}
   m_RootOrder: 0
@@ -8888,10 +8954,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &951863175
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8981,9 +9047,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -9043,9 +9109,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -9105,9 +9171,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -9205,8 +9271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 993190916}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 993190912}
+  _so: {fileID: 993190915}
   _attachedList:
     bFoldout: 1
     childList:
@@ -9290,9 +9356,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -9334,7 +9400,7 @@ Transform:
   m_GameObject: {fileID: 1034520217}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 965732715}
   m_RootOrder: 0
@@ -9351,10 +9417,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1034520220
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9434,9 +9500,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1036764168}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1036764167}
+  _so: {fileID: 1036764166}
   _attachedList:
     bFoldout: 1
     childList:
@@ -9572,10 +9638,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1039562223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9630,7 +9696,7 @@ Transform:
   m_GameObject: {fileID: 1039562221}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 969297470}
   m_RootOrder: 0
@@ -9660,7 +9726,7 @@ Transform:
   m_GameObject: {fileID: 1041571219}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 867693154}
   m_RootOrder: 0
@@ -9677,10 +9743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1041571222
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9752,7 +9818,7 @@ Transform:
   m_GameObject: {fileID: 1048981657}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 409422134}
   m_RootOrder: 0
@@ -9769,10 +9835,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1048981660
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9862,9 +9928,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -9910,10 +9976,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1066157959
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9968,7 +10034,7 @@ Transform:
   m_GameObject: {fileID: 1066157957}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1505395559}
   m_RootOrder: 0
@@ -10002,10 +10068,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1069557133
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10060,7 +10126,7 @@ Transform:
   m_GameObject: {fileID: 1069557131}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 656571889}
   m_RootOrder: 0
@@ -10146,8 +10212,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1072895020}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1072895016}
+  _so: {fileID: 1072895019}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10221,8 +10287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1081500255}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1081500254}
+  _so: {fileID: 1081500253}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10340,10 +10406,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1097966850
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10398,7 +10464,7 @@ Transform:
   m_GameObject: {fileID: 1097966848}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 305526636}
   m_RootOrder: 0
@@ -10484,8 +10550,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1119114819}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1119114815}
+  _so: {fileID: 1119114818}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10607,8 +10673,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1132836033}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1132836029}
+  _so: {fileID: 1132836032}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10730,8 +10796,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1139323533}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1139323529}
+  _so: {fileID: 1139323532}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10853,8 +10919,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1144262825}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1144262821}
+  _so: {fileID: 1144262824}
   _attachedList:
     bFoldout: 1
     childList:
@@ -10938,9 +11004,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -11000,9 +11066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -11099,9 +11165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1153395880}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1153395876}
+  _so: {fileID: 1153395879}
   _attachedList:
     bFoldout: 1
     childList:
@@ -11174,9 +11240,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1165768907}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1165768906}
+  _so: {fileID: 1165768905}
   _attachedList:
     bFoldout: 1
     childList:
@@ -11346,8 +11412,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1170262275}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1170262271}
+  _so: {fileID: 1170262274}
   _attachedList:
     bFoldout: 1
     childList:
@@ -11413,7 +11479,7 @@ Transform:
   m_GameObject: {fileID: 1170712641}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 813514714}
   m_RootOrder: 0
@@ -11430,10 +11496,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1170712644
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11523,9 +11589,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -11574,9 +11640,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1197445825}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1197445824}
+  _so: {fileID: 1197445823}
   _attachedList:
     bFoldout: 1
     childList:
@@ -11708,9 +11774,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -11808,8 +11874,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1207454534}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1207454530}
+  _so: {fileID: 1207454533}
   _attachedList:
     bFoldout: 1
     childList:
@@ -11879,10 +11945,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1219719511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11937,7 +12003,7 @@ Transform:
   m_GameObject: {fileID: 1219719509}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1965376339}
   m_RootOrder: 0
@@ -12023,8 +12089,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1220306383}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1220306379}
+  _so: {fileID: 1220306382}
   _attachedList:
     bFoldout: 1
     childList:
@@ -12108,9 +12174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -12163,7 +12229,7 @@ Transform:
   m_GameObject: {fileID: 1246593365}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1910877520}
   m_RootOrder: 0
@@ -12180,10 +12246,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1246593368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12311,8 +12377,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1263288111}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1263288107}
+  _so: {fileID: 1263288110}
   _attachedList:
     bFoldout: 1
     childList:
@@ -12386,8 +12452,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1263392919}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1263392918}
+  _so: {fileID: 1263392917}
   _attachedList:
     bFoldout: 1
     childList:
@@ -12557,8 +12623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1297149897}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1297149893}
+  _so: {fileID: 1297149896}
   _attachedList:
     bFoldout: 1
     childList:
@@ -12624,7 +12690,7 @@ Transform:
   m_GameObject: {fileID: 1302519940}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 592864940}
   m_RootOrder: 0
@@ -12641,10 +12707,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1302519943
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12734,9 +12800,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -12783,10 +12849,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1345371406
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12841,7 +12907,7 @@ Transform:
   m_GameObject: {fileID: 1345371404}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 765546017}
   m_RootOrder: 0
@@ -12907,9 +12973,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -12959,8 +13025,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1376878864}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1376878863}
+  _so: {fileID: 1376878862}
   _attachedList:
     bFoldout: 1
     childList:
@@ -13078,10 +13144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1379150297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13136,7 +13202,7 @@ Transform:
   m_GameObject: {fileID: 1379150295}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 559500336}
   m_RootOrder: 0
@@ -13170,10 +13236,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1392366257
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13228,7 +13294,7 @@ Transform:
   m_GameObject: {fileID: 1392366255}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1597811875}
   m_RootOrder: 0
@@ -13276,9 +13342,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -13324,10 +13390,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1409239797
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13382,7 +13448,7 @@ Transform:
   m_GameObject: {fileID: 1409239795}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1629271968}
   m_RootOrder: 0
@@ -13416,10 +13482,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1410450600
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13474,7 +13540,7 @@ Transform:
   m_GameObject: {fileID: 1410450598}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 158911359}
   m_RootOrder: 0
@@ -13504,7 +13570,7 @@ Transform:
   m_GameObject: {fileID: 1448831725}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 782652872}
   m_RootOrder: 0
@@ -13521,10 +13587,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1448831728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13614,9 +13680,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -13713,9 +13779,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1454173798}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1454173794}
+  _so: {fileID: 1454173797}
   _attachedList:
     bFoldout: 1
     childList:
@@ -13799,9 +13865,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -13861,9 +13927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -13923,9 +13989,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -13967,7 +14033,7 @@ Transform:
   m_GameObject: {fileID: 1480409327}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1471197578}
   m_RootOrder: 0
@@ -13984,10 +14050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1480409330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14063,10 +14129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1489872584
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14121,7 +14187,7 @@ Transform:
   m_GameObject: {fileID: 1489872582}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1452996912}
   m_RootOrder: 0
@@ -14169,9 +14235,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -14231,9 +14297,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -14275,7 +14341,7 @@ Transform:
   m_GameObject: {fileID: 1505887483}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1336767446}
   m_RootOrder: 0
@@ -14292,10 +14358,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1505887486
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14385,9 +14451,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -14437,8 +14503,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1516358033}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1516358032}
+  _so: {fileID: 1516358031}
   _attachedList:
     bFoldout: 1
     childList:
@@ -14552,7 +14618,7 @@ Transform:
   m_GameObject: {fileID: 1536911240}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 730277225}
   m_RootOrder: 0
@@ -14569,10 +14635,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1536911243
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14648,10 +14714,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1537854895
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14706,7 +14772,7 @@ Transform:
   m_GameObject: {fileID: 1537854893}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 313822472}
   m_RootOrder: 0
@@ -14744,8 +14810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1541557703}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1541557702}
+  _so: {fileID: 1541557701}
   _attachedList:
     bFoldout: 1
     childList:
@@ -14915,8 +14981,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1551995674}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1551995670}
+  _so: {fileID: 1551995673}
   _attachedList:
     bFoldout: 1
     childList:
@@ -14990,8 +15056,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1552874885}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1552874884}
+  _so: {fileID: 1552874883}
   _attachedList:
     bFoldout: 1
     childList:
@@ -15105,7 +15171,7 @@ Transform:
   m_GameObject: {fileID: 1556448550}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1371836498}
   m_RootOrder: 0
@@ -15122,10 +15188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1556448553
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15201,10 +15267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1557592334
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15259,7 +15325,7 @@ Transform:
   m_GameObject: {fileID: 1557592332}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1610756244}
   m_RootOrder: 0
@@ -15307,9 +15373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -15358,9 +15424,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1562833515}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1562833514}
+  _so: {fileID: 1562833513}
   _attachedList:
     bFoldout: 1
     childList:
@@ -15492,9 +15558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -15536,7 +15602,7 @@ Transform:
   m_GameObject: {fileID: 1571803189}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 2058532305}
   m_RootOrder: 0
@@ -15553,10 +15619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1571803192
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15684,8 +15750,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1580498519}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1580498515}
+  _so: {fileID: 1580498518}
   _attachedList:
     bFoldout: 1
     childList:
@@ -15769,9 +15835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -15831,9 +15897,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -15893,9 +15959,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -15955,9 +16021,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -16017,9 +16083,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -16061,7 +16127,7 @@ Transform:
   m_GameObject: {fileID: 1650904586}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 56305278}
   m_RootOrder: 0
@@ -16078,10 +16144,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1650904589
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16161,8 +16227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1662070290}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1662070289}
+  _so: {fileID: 1662070288}
   _attachedList:
     bFoldout: 1
     childList:
@@ -16294,9 +16360,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -16345,9 +16411,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1669578473}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1669578472}
+  _so: {fileID: 1669578471}
   _attachedList:
     bFoldout: 1
     childList:
@@ -16461,7 +16527,7 @@ Transform:
   m_GameObject: {fileID: 1685976451}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 418309187}
   m_RootOrder: 0
@@ -16478,10 +16544,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1685976454
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16553,7 +16619,7 @@ Transform:
   m_GameObject: {fileID: 1698045864}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 852370651}
   m_RootOrder: 0
@@ -16570,10 +16636,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1698045867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16649,10 +16715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1709905923
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16707,7 +16773,7 @@ Transform:
   m_GameObject: {fileID: 1709905921}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1984182121}
   m_RootOrder: 0
@@ -16741,10 +16807,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1712138333
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -16799,7 +16865,7 @@ Transform:
   m_GameObject: {fileID: 1712138331}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1396922827}
   m_RootOrder: 0
@@ -16847,9 +16913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -16899,8 +16965,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1721019666}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1721019665}
+  _so: {fileID: 1721019664}
   _attachedList:
     bFoldout: 1
     childList:
@@ -17014,7 +17080,7 @@ Transform:
   m_GameObject: {fileID: 1728100839}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 950778572}
   m_RootOrder: 0
@@ -17031,10 +17097,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1728100842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17161,9 +17227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1745441022}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1745441018}
+  _so: {fileID: 1745441021}
   _attachedList:
     bFoldout: 1
     childList:
@@ -17250,15 +17316,20 @@ Prefab:
       objectReference: {fileID: 265324214}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.8
+      value: 3.2
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.8
+      value: 3.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!20 &1758634551 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758634550}
 --- !u!1 &1768103475
 GameObject:
   m_ObjectHideFlags: 0
@@ -17302,9 +17373,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -17402,8 +17473,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1785620978}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1785620974}
+  _so: {fileID: 1785620977}
   _attachedList:
     bFoldout: 1
     childList:
@@ -17487,9 +17558,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -17531,7 +17602,7 @@ Transform:
   m_GameObject: {fileID: 1815560952}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1768103476}
   m_RootOrder: 0
@@ -17548,10 +17619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1815560955
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17631,8 +17702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1827722534}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1827722533}
+  _so: {fileID: 1827722532}
   _attachedList:
     bFoldout: 1
     childList:
@@ -17764,9 +17835,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -17864,8 +17935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1836892719}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1836892715}
+  _so: {fileID: 1836892718}
   _attachedList:
     bFoldout: 1
     childList:
@@ -17949,9 +18020,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -17993,7 +18064,7 @@ Transform:
   m_GameObject: {fileID: 1841218407}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1567175002}
   m_RootOrder: 0
@@ -18010,10 +18081,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1841218410
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18103,9 +18174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -18151,10 +18222,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1864054912
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18209,7 +18280,7 @@ Transform:
   m_GameObject: {fileID: 1864054910}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1022481682}
   m_RootOrder: 0
@@ -18246,9 +18317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1876597069}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1876597068}
+  _so: {fileID: 1876597067}
   _attachedList:
     bFoldout: 1
     childList:
@@ -18370,8 +18441,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1880644118}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1880644117}
+  _so: {fileID: 1880644116}
   _attachedList:
     bFoldout: 1
     childList:
@@ -18492,9 +18563,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1895176867}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1895176866}
+  _so: {fileID: 1895176865}
   _attachedList:
     bFoldout: 1
     childList:
@@ -18664,8 +18735,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1905201735}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1905201731}
+  _so: {fileID: 1905201734}
   _attachedList:
     bFoldout: 1
     childList:
@@ -18749,9 +18820,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -18800,9 +18871,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1920483098}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 1920483097}
+  _so: {fileID: 1920483096}
   _attachedList:
     bFoldout: 1
     childList:
@@ -18891,11 +18962,6 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &1932437458 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
-    type: 2}
-  m_PrefabInternal: {fileID: 1758634550}
 --- !u!1 &1934625231
 GameObject:
   m_ObjectHideFlags: 0
@@ -18925,10 +18991,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1934625233
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18983,7 +19049,7 @@ Transform:
   m_GameObject: {fileID: 1934625231}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 493486560}
   m_RootOrder: 0
@@ -19069,8 +19135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1961025074}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1961025070}
+  _so: {fileID: 1961025073}
   _attachedList:
     bFoldout: 1
     childList:
@@ -19154,9 +19220,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -19198,7 +19264,7 @@ Transform:
   m_GameObject: {fileID: 1971074232}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 788552788}
   m_RootOrder: 0
@@ -19215,10 +19281,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1971074235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19298,8 +19364,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1973399897}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1973399896}
+  _so: {fileID: 1973399895}
   _attachedList:
     bFoldout: 1
     childList:
@@ -19469,8 +19535,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1975280817}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1975280813}
+  _so: {fileID: 1975280816}
   _attachedList:
     bFoldout: 1
     childList:
@@ -19592,8 +19658,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1975727284}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 1975727280}
+  _so: {fileID: 1975727283}
   _attachedList:
     bFoldout: 1
     childList:
@@ -19663,10 +19729,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1979805121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19721,7 +19787,7 @@ Transform:
   m_GameObject: {fileID: 1979805119}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 745517870}
   m_RootOrder: 0
@@ -19755,10 +19821,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &1980721260
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -19813,7 +19879,7 @@ Transform:
   m_GameObject: {fileID: 1980721258}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 776718537}
   m_RootOrder: 0
@@ -19861,9 +19927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -19961,8 +20027,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2008900893}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 2008900889}
+  _so: {fileID: 2008900892}
   _attachedList:
     bFoldout: 1
     childList:
@@ -20084,8 +20150,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2013017155}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 2013017151}
+  _so: {fileID: 2013017154}
   _attachedList:
     bFoldout: 1
     childList:
@@ -20155,10 +20221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &2014265948
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20213,7 +20279,7 @@ Transform:
   m_GameObject: {fileID: 2014265946}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 874160639}
   m_RootOrder: 0
@@ -20247,10 +20313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &2032287685
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20305,7 +20371,7 @@ Transform:
   m_GameObject: {fileID: 2032287683}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1053547783}
   m_RootOrder: 0
@@ -20339,10 +20405,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &2042090276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20397,7 +20463,7 @@ Transform:
   m_GameObject: {fileID: 2042090274}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1149017173}
   m_RootOrder: 0
@@ -20445,9 +20511,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -20489,7 +20555,7 @@ Transform:
   m_GameObject: {fileID: 2071119211}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 4.027194, y: 4.027194, z: 4.027194}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 1792432899}
   m_RootOrder: 0
@@ -20506,10 +20572,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 1.6875, y: 1.6875, z: 1.6875}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &2071119214
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20585,10 +20651,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   localRotation: {x: 0, y: 0, z: 0}
-  localScale: {x: 0.75, y: 0.75, z: 0.75}
-  _bApplyPPUScale: 1
-  fDepthFudge: -0.01
-  _Type: 0
+  localScale: {x: 1, y: 1, z: 1}
+  _bApplyPPUScale: 0
+  fDepthFudge: 0
+  _Type: 2
 --- !u!212 &2081823200
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -20643,7 +20709,7 @@ Transform:
   m_GameObject: {fileID: 2081823198}
   m_LocalRotation: {x: 0.23911761, y: -0.36964384, z: 0.09904577, w: 0.8923991}
   m_LocalPosition: {x: -0.006123725, y: -0.005, z: 0.0061237244}
-  m_LocalScale: {x: 0.7954951, y: 0.7954951, z: 0.7954951}
+  m_LocalScale: {x: 1.4142135, y: 1.4142135, z: 1.4142135}
   m_Children: []
   m_Father: {fileID: 400789962}
   m_RootOrder: 0
@@ -20681,9 +20747,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2089186918}
-  _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _bulk: {fileID: 585693878}
+  _autoName: {fileID: 2089186917}
+  _so: {fileID: 2089186916}
   _attachedList:
     bFoldout: 1
     childList:
@@ -20861,9 +20927,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -20961,8 +21027,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2119317352}
   _bulk: {fileID: 0}
-  _autoName: {fileID: 0}
-  _so: {fileID: 0}
+  _autoName: {fileID: 2119317348}
+  _so: {fileID: 2119317351}
   _attachedList:
     bFoldout: 1
     childList:
@@ -21046,9 +21112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
@@ -21108,9 +21174,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bApplyGridScale: 1
-  _localScale: {x: Infinity, y: Infinity, z: Infinity}
-  _localPosition: {x: Infinity, y: Infinity, z: Infinity}
-  _localCenter: {x: Infinity, y: Infinity, z: Infinity}
+  _localScale: {x: 1, y: 1, z: 1}
+  _localPosition: {x: 0, y: 0, z: 0}
+  _localCenter: {x: 0, y: 0, z: 0}
   _LastTileScale: {x: 1, y: 1, z: 1}
   _ISOBasis: {fileID: 0}
   ISOListForBackup: 
