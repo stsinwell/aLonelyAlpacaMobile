@@ -7691,6 +7691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1758634551}
+  zAmount: 3
 --- !u!1 &578360065
 GameObject:
   m_ObjectHideFlags: 0
@@ -22906,6 +22907,14 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 265324214}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0

@@ -16781,6 +16781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1758634551}
+  zAmount: 3
 --- !u!1 &594868745
 GameObject:
   m_ObjectHideFlags: 0
@@ -49978,6 +49979,18 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

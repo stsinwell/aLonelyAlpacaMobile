@@ -5,14 +5,18 @@ using UnityEngine;
 public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
+
 	/* The size of a non-zoomed camera. */
 	private float NO_ZOOM_AMNT;
 	/* The size of a zoomed-camera. */
 	private float ZOOM_AMNT;
 	/* How close the camera gets to the zoomed/non-zoomed thresholds. */
+
+	public float zAmount;
 	private float ZOOM_CLOSENESS = 0.0005f;
 	/* The speed of the camera zoom. */
 	private float ZOOM_SPEED = 0.5f;
+
 
 	/* The current state of the zooming. */
 	private enum ZoomState {
@@ -26,7 +30,7 @@ public class Zoomer : MonoBehaviour {
 
 	void Start () {
 		NO_ZOOM_AMNT = cam.orthographicSize;
-		ZOOM_AMNT = cam.orthographicSize + 3;
+		ZOOM_AMNT = cam.orthographicSize + zAmount;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
 	}

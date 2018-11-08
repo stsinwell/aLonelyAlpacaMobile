@@ -41058,26 +41058,27 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 2024383994}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1238247192}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: zAmount
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &940242293 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1706221591544266, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
-    type: 2}
-  m_PrefabInternal: {fileID: 940242292}
---- !u!114 &940242294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 940242293}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 1238247192}
 --- !u!1 &941016325
 GameObject:
   m_ObjectHideFlags: 0
@@ -55590,6 +55591,14 @@ Prefab:
         type: 2}
       propertyPath: nextLevel
       value: B9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
