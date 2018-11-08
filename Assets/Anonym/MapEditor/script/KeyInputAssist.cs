@@ -47,7 +47,7 @@ namespace Anonym.Isometric
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
             GameObject[] stickyBlocks = GameObject.FindGameObjectsWithTag("StickyBlock");
             playerBlocks = playerBlocks.Concat(stickyBlocks).ToArray();
-        
+
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
                 if (playerBlock.tag == "StickyBlock") {
@@ -239,9 +239,9 @@ namespace Anonym.Isometric
 
             float yDrop;
             if (selectedBlock.GetComponent<clickable_block>().isSticky) {
-                yDrop = GetLowestDropPossible(targetPos);
-            } else {
                 yDrop = GetStickyDropY(targetPos);
+            } else {
+                yDrop = GetLowestDropPossible(targetPos);
 
             }
             

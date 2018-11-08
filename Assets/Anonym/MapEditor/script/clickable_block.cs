@@ -10,11 +10,14 @@ public class clickable_block : MonoBehaviour {
     Color highlightedColor;
 	SpriteRenderer sr;
 
-	// initializer
-	void Start () {
+    void Awake() {
         isSelected = false;
         isSticky = false;
         isPlayerFacing = false;
+    }
+
+	// initializer
+	void Start () {
         highlightedColor = new Color(0.835f, 0.878f, 1.0f, 1.0f);
 		sr = GetComponentInChildren<SpriteRenderer>();
 	}
