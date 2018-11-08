@@ -11,6 +11,9 @@ public class LevelMenuControllerScript : MonoBehaviour {
 				  B13Button, B14Button, B15Button;
 	int levelPassed;
 
+	public Sprite alpacaLeft;
+	public Sprite alpacaRight;
+
 	// Use this for initialization
 	void Start () {
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
@@ -181,7 +184,9 @@ public class LevelMenuControllerScript : MonoBehaviour {
 
 		GameObject alpacaSprite = GameObject.Find("AlpacaSprite");
 		alpacaSprite.GetComponent<RectTransform>().position = mostRecentStarPosition;
-		
+		if (mostRecentLevel >= 1 && mostRecentLevel <= 6) alpacaSprite.GetComponent<Image>().sprite = alpacaLeft;
+		if (mostRecentLevel >= 7 && mostRecentLevel <= 14) alpacaSprite.GetComponent<Image>().sprite = alpacaRight;
+	
 	}
 	
 	// Update is called once per frame
