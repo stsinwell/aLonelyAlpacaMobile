@@ -21,4 +21,8 @@ public class PrivacyStatementDisappear : MonoBehaviour {
 	public void toggleEnable(){
 		privacyStatement.enabled = !privacyStatement.enabled;
 	}
+
+	public bool isEnabled(){
+		return privacyStatement.enabled;
+	}
 }

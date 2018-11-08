@@ -7,14 +7,13 @@ public class MusicChangeSprite : MonoBehaviour {
 
 	public Sprite musicOn;
 	public Sprite musicOff;
-	public bool isMusicOn;
+	static bool isMusicOn = true;
 	private Image musicImage;
 
 	// Use this for initialization
 	void Start () {
 		musicImage = GetComponent<Image>();
-		//musicImage.sprite = musicOn;
-		//isMusicOn = true;
+		musicImage.sprite = isMusicOn ? musicOn : musicOff;
 	}
 	
 	// Update is called once per frame
