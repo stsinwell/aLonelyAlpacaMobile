@@ -39,10 +39,14 @@ namespace Anonym.Isometric
         bool doubleClickDetected = false;
         private float doubleClickTimeLimit = 0.25f;
 
+        public bool illegalJump;
+
         public changeFacingDirection CFD;
         private void Start()
         {
             init();
+
+            illegalJump = false;
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
             GameObject[] stickyBlocks = GameObject.FindGameObjectsWithTag("StickyBlock");
@@ -402,6 +406,15 @@ namespace Anonym.Isometric
 
         bool AttemptJump(Vector3 posInFront) {
             if (isSpaceOpen(posInFront)) { // Empty space in front of alpaca
+                return false;
+            }
+
+            Vector3 spaceAbove = new Vector3(GetCurrAlpacaLocation().x,
+                                             GetCurrAlpacaLocation().y + 1,
+                                             GetCurrAlpacaLocation().z);
+
+            if (!isSpaceOpen(spaceAbove)) { // There's a block above the alpaca
+                illegalJump = true;
                 return false;
             }
 

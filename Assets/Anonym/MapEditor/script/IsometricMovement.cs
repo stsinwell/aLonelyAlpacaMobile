@@ -408,7 +408,11 @@ namespace Anonym.Isometric
                     vDestinationCoordinates += v3TmpCoordinates;
                     SetHorizontalMovement(v3TmpPosition - cTransform.position);
                     if (!bMove) {
-                        alive = false;
+
+                        if (!GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().illegalJump) {
+                            alive = false;
+                            GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().illegalJump = false;
+                        }
                         
                         //Get grid location where Player was standing before they fell to their doom.
                         var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
