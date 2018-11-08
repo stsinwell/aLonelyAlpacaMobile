@@ -65,7 +65,7 @@ namespace Anonym.Isometric
 
             musicSource.clip = soundEffect;
 
-            StartCoroutine(InputListener());
+            //StartCoroutine(InputListener());
         }
 
         //update called once per frame
