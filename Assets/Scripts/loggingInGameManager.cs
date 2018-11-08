@@ -14,7 +14,7 @@ public class loggingInGameManager : MonoBehaviour {
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-        GameObject selectorObject = GameObject.Find("Selector");
+        //GameObject selectorObject = GameObject.Find("Selector");
         //bool checkIfFirstTimePlaying = selectorObject.GetComponent<MenuSelectorController>().firstTimePlaying;
 
         //if(checkIfFirstTimePlaying == false){
@@ -34,7 +34,8 @@ public class loggingInGameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if(SceneName != SceneManager.GetActiveScene().name && SceneManager.GetActiveScene().name != "B0 - Menu"
-        && SceneManager.GetActiveScene().name != "privacything" && SceneManager.GetActiveScene().name != "Level Select Menu")
+        && SceneManager.GetActiveScene().name != "privacything" && SceneManager.GetActiveScene().name != "Level Select Menu"
+        && SceneManager.GetActiveScene().name != "Splash Screen")
         {
             // New scene has been loaded
             SceneName = SceneManager.GetActiveScene().name;

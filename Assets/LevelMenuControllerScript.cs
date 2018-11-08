@@ -179,7 +179,7 @@ public class LevelMenuControllerScript : MonoBehaviour {
 	}
 
 	public void positionAlpacaOnRecentLevel(int mostRecentLevel) {
-		string findThisButton = "B" + mostRecentLevel.ToString() + "Button";
+		string findThisButton = "B" + (mostRecentLevel + 1).ToString() + "Button";
 		GameObject mostRecentStar = GameObject.Find(findThisButton);
 		Vector3 mostRecentStarPosition = mostRecentStar.GetComponent<RectTransform>().position;
 
