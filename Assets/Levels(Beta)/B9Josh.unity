@@ -1112,6 +1112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &39668815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12142,6 +12143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &457776343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15235,6 +15237,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &575453070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16761,7 +16764,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &594295577 stripped
@@ -25428,6 +25432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &875336031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36990,6 +36995,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 594295578}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleZoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 2}
@@ -54172,6 +54187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &1899716044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57848,6 +57864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &2039244465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58387,6 +58404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &2055886134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59696,6 +59714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isSelected: 0
   isPlayerFacing: 0
+  isSticky: 0
 --- !u!114 &2102378973
 MonoBehaviour:
   m_ObjectHideFlags: 0
