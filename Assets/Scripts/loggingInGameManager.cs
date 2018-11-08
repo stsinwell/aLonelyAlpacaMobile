@@ -15,9 +15,9 @@ public class loggingInGameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         GameObject selectorObject = GameObject.Find("Selector");
-        bool checkIfFirstTimePlaying = selectorObject.GetComponent<MenuSelectorController>().firstTimePlaying;
+        //bool checkIfFirstTimePlaying = selectorObject.GetComponent<MenuSelectorController>().firstTimePlaying;
 
-        if(checkIfFirstTimePlaying == false){
+        //if(checkIfFirstTimePlaying == false){
             LoggingManager.instance.Initialize(890, 999, false);
             LoggingManager.instance.RecordPageLoad();
             DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
@@ -27,7 +27,7 @@ public class loggingInGameManager : MonoBehaviour {
             abValueToReference = abTestValue;
             Debug.Log("A/B Test Value: " + abTestValue);
             LoggingManager.instance.RecordABTestValue();
-        }
+        //}
        
 	}
 	
