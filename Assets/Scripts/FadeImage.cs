@@ -43,4 +43,6 @@ public class FadeImage : MonoBehaviour {
 	public void FadeIn(){
 		targetAlpha = 1.0f;
 	}
+
+	public bool getFadeOutEngaged(){ return fadeOutEngaged; }
 }

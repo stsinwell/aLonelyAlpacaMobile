@@ -14,27 +14,32 @@ public class CutsceneController : MonoBehaviour {
 	private Image curScene;
 	/** FadeImage Script for this Scene */
 	private FadeImage FIScript;
+	/** The scene to go to once the cutscene has finished */
+	public string endOfSceneLocation;
 	/** Amount of time the current scene should stay for before
 	    auto switching to the next */
 	public float currSceneTime;
+
+	/** Optional: true if want no fade out */
+	public bool skipFade;
+	/** Optional: true if want space to speed up the current image*/
+	public bool spaceToSpeedUp = true;
+
 	/** Accumulator of time passed between frames */
 	private float timeAccum;
 	/** True if actively fading Out */
 	private bool fadeActive = false;
-
+	/** True if cutscene image has been up/enabled */
 	private bool wasEnabled = false;
+	/** True if scene is finished, ensures scene doesn't run anymore */
 	private bool endScene = false;
 
-	private static int acc;
-	private int id;
 	// Use this for initialization
 	void Start () {
 		curScene = GetComponent<Image>();
 		if(nextScene != null)
 			nextSceneImage = nextScene.GetComponent<Image>();
 		FIScript = GetComponent<FadeImage>();
-		id = acc;
-		acc++;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -43,20 +48,22 @@ public class CutsceneController : MonoBehaviour {
 			if(!fadeActive){
 				timeAccum += Time.deltaTime;
 				if(timeAccum >= currSceneTime){
-					//print("calling fade out " + id);
+					if(skipFade)
+						curScene.enabled = false;
 					FIScript.FadeOut();
 					fadeActive = true;
-					nextSceneImage.enabled = true;
+					if(nextSceneImage!=null)
+						nextSceneImage.enabled = true;
 				}
+				else if(spaceToSpeedUp && Input.GetKeyDown(KeyCode.Space))
+					timeAccum = currSceneTime+1;
 			}
 		}
 		else if(!endScene && wasEnabled){
-			//print("disabled "+id);
 			endScene = true;
-			if(nextScene == null){
-				SceneManager.LoadScene("B1", LoadSceneMode.Single);
+			if(nextScene == null && endOfSceneLocation!=null){
+				SceneManager.LoadScene(endOfSceneLocation, LoadSceneMode.Single);
 			}
-			// else nextSceneImage.enabled = true;
 		}
 	}
 }
