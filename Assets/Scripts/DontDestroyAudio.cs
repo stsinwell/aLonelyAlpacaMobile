@@ -18,6 +18,11 @@ public class DontDestroyAudio : MonoBehaviour {
 			DontDestroyOnLoad (gameObject);
 			AudioBegin = true;
 		}
+
+		if (FindObjectsOfType(GetType()).Length > 1)
+         {
+             Destroy(gameObject);
+         }
 	}
 	
 	// Update is called once per frame
