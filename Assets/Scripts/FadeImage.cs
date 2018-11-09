@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class FadeImage : MonoBehaviour {
 
 	/** Rate to fade image **/	
-	private float fadeRate;
+	public float fadeRate;
 	/** Image being faded **/
 	private Image image;
 	/** Alpha value being targeted **/
@@ -17,9 +17,9 @@ public class FadeImage : MonoBehaviour {
 
 	// Use this for initialization
 	void Start (){
+		if(fadeRate<=0) fadeRate = 5.0f;
 	    image = GetComponent<Image>();
 		targetAlpha = image.color.a;
-		fadeRate = 5.0f;
 	}
 		
 	// Update is called once per frame
