@@ -6,9 +6,11 @@ public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
 	/* The size of a non-zoomed camera. */
-	private int NO_ZOOM_AMNT = 6; 
-	/* The size of a zoomed-camera. */
-	private int ZOOM_AMNT = 9;
+	private float NO_ZOOM_AMNT;
+	/* The size of a zoomed camera. */
+	private float ZOOM_AMNT;
+	/* The increase to the camera size that produces a zoom. */
+	public float zAmount;
 	/* How close the camera gets to the zoomed/non-zoomed thresholds. */
 	private float ZOOM_CLOSENESS = 0.0005f;
 	/* The speed of the camera zoom. */
@@ -25,12 +27,14 @@ public class Zoomer : MonoBehaviour {
 	private float lerp_timer;
 
 	void Start () {
+		NO_ZOOM_AMNT = cam.orthographicSize;
+		ZOOM_AMNT = cam.orthographicSize + zAmount;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
 	}
 
 	/* Player toggled camera, update the state. */
-	void playerUpdateZState() {
+	public void toggleZoom() {
 		lerp_timer = 0;
 		switch(zState) {
 			case ZoomState.ZOOMING_IN:
@@ -82,11 +86,8 @@ public class Zoomer : MonoBehaviour {
 				break;
 		};
 	}
-	
+
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.Z)) {
-			playerUpdateZState();
-		}
 		resolveZoom();
 	}
 }

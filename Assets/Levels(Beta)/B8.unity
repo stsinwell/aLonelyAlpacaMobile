@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073993, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11955,7 +11955,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 273936515}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &273936517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16112,7 +16112,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 384269745}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &385367617
 GameObject:
   m_ObjectHideFlags: 0
@@ -41058,9 +41058,38 @@ Prefab:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 2024383994}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1238247192}
+    - target: {fileID: 114824065293360172, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: zAmount
+      value: 3.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4081323894916140, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 2}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1238247192}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39b01fccbc744354eb2d2b1e3110ea5a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &940242293 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+    type: 2}
+  m_PrefabInternal: {fileID: 940242292}
+  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
 --- !u!1 &941016325
 GameObject:
   m_ObjectHideFlags: 0
@@ -55574,9 +55603,22 @@ Prefab:
       propertyPath: nextLevel
       value: B9
       objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
+--- !u!20 &1238247192 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1238247191}
 --- !u!1 &1243356997
 GameObject:
   m_ObjectHideFlags: 0
@@ -89981,6 +90023,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 940242293}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleZoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 2}

@@ -15,9 +15,12 @@ public class MenuSelectorController : MonoBehaviour {
 	private PrivacyStatementDisappear PSDScript;
 	public GameObject CreditsPopUp;
 	private CreditsDisappear CDScript;
+<<<<<<< HEAD
 
 
 	public bool firstTimePlaying = false;
+=======
+>>>>>>> 458b664b3b9bd21c09b36ce8c9632febd755e922
 
 	// Use this for initialization
 	void Start () {
@@ -91,11 +94,18 @@ public class MenuSelectorController : MonoBehaviour {
 			case 0: // Credits
 				CDScript.toggleEnable();
 				break;
+<<<<<<< HEAD
 			case 1:
 				firstTimePlaying = true;
 				SceneManager.LoadScene("B0.5 - Intro", LoadSceneMode.Single);
 				break;
 			case 2: // Levels
+=======
+			case 1: //Start
+				SceneManager.LoadScene("B1", LoadSceneMode.Single);
+				break;
+			case 2: //Levels
+>>>>>>> 458b664b3b9bd21c09b36ce8c9632febd755e922
 				SceneManager.LoadScene("Level Select Menu", LoadSceneMode.Single);
 				break;
 			case 3: // Policy Statement

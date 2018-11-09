@@ -45,9 +45,15 @@ namespace Anonym.Isometric
             init();
 
             playerBlocks = GameObject.FindGameObjectsWithTag("Clickable");
-        
+            GameObject[] stickyBlocks = GameObject.FindGameObjectsWithTag("StickyBlock");
+            playerBlocks = playerBlocks.Concat(stickyBlocks).ToArray();
+
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.AddComponent<clickable_block>();
+                if (playerBlock.tag == "StickyBlock") {
+                    playerBlock.GetComponent<clickable_block>().isSticky = true;
+                    
+                }
                 boardLowestY = Math.Min(playerBlock.transform.position.y, boardLowestY);
             }
 
@@ -65,7 +71,7 @@ namespace Anonym.Isometric
 
             musicSource.clip = soundEffect;
 
-            StartCoroutine(InputListener());
+            //StartCoroutine(InputListener());
         }
 
         //update called once per frame
@@ -230,15 +236,31 @@ namespace Anonym.Isometric
         }
 
         void DropBlock(GameObject selectedBlock, Vector3 targetPos) {
-            float lowestY = GetLowestDropPossible(targetPos);
-            if (Mathf.Approximately(lowestY, boardLowestY)) return ;
-            Vector3 posBelowTargetPos = new Vector3(targetPos.x, lowestY - 1, targetPos.z);
+
+            float yDrop;
+            if (selectedBlock.GetComponent<clickable_block>().isSticky) {
+                yDrop = GetStickyDropY(targetPos);
+            } else {
+                yDrop = GetLowestDropPossible(targetPos);
+
+            }
+            
+            if (Mathf.Approximately(yDrop, boardLowestY)) return ;
+            Vector3 posBelowTargetPos = new Vector3(targetPos.x, yDrop - 1, targetPos.z);
             if (isPosWall(posBelowTargetPos)) return ;
 
-            selectedBlock.transform.position = new Vector3(targetPos.x, lowestY, targetPos.z);
+            selectedBlock.transform.position = new Vector3(targetPos.x, yDrop, targetPos.z);
             selectedBlock.GetComponent<clickable_block>().dropBlock();
             musicSource.Play();
             CFD.has_block = false;
+        }
+
+        float GetStickyDropY(Vector3 targetPos) {
+            if (isSpaceOpen(new Vector3(targetPos.x, targetPos.y - 1, targetPos.z))) {
+                return targetPos.y - 1;
+            } else {
+                return targetPos.y;
+            }
         }
 
         float GetLowestDropPossible(Vector3 targetPos) {
@@ -258,7 +280,8 @@ namespace Anonym.Isometric
 
             // can't if there's a normal block at desired drop pos
             foreach (GameObject obj in allObjs) {
-                if (obj.tag == "Untagged" || obj.tag == "FireBlockPos" || obj.tag == "Clickable") {
+                if (obj.tag == "Untagged" || obj.tag == "FireBlockPos" || 
+                    obj.tag == "Clickable" || obj.tag == "StickyBlock") {
                     if (isTwoPosEqual(obj.transform.position, targetPos)) {
                         return false;
                     }

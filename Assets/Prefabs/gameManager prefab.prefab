@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4081323894916140}
   - component: {fileID: 114267059788626970}
   - component: {fileID: 114468995008167606}
+  - component: {fileID: 114329817668308066}
   m_Layer: 0
   m_Name: gameManager prefab
   m_TagString: Untagged
@@ -52,8 +53,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b43a188b653747b283deb07e0a96e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathImage: {fileID: 114891034970784902, guid: a3c9e7f02adc60e449c6dfac7c23914c,
-    type: 2}
+  deathImage: {fileID: 0}
+--- !u!114 &114329817668308066
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1706221591544266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  zAmount: 3
 --- !u!114 &114468995008167606
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -65,4 +78,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9ab3d49c079a6f46bf47aac568a0898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuLevel: Level Select Menu
+  menuLevel: B0 - Menu
+  levelSelect: Level Select Menu
