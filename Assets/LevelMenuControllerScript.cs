@@ -1,22 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class LevelMenuControllerScript : MonoBehaviour {
 
 	public Button B1Button, B2Button, B3Button, B4Button, B5Button, B6Button, 
 				  B7Button, B8Button, B9Button, B10Button, B11Button, B12Button,
 				  B13Button, B14Button, B15Button;
-	int levelPassed;
+	public int levelPassed;
 
 	public Sprite alpacaLeft;
 	public Sprite alpacaRight;
 
+	//public Image levelBanner;
+
 	// Use this for initialization
 	void Start () {
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
+		//levelBanner = GameObject.Find("LevelBanner").GetComponent<Image>();
+
 		B1Button.interactable = true;
 		B2Button.interactable = false;
 		B3Button.interactable = false;
@@ -189,6 +195,12 @@ public class LevelMenuControllerScript : MonoBehaviour {
 		if (mostRecentLevel >= 7 && mostRecentLevel <= 14) alpacaSprite.GetComponent<Image>().sprite = alpacaRight;
 	
 	}
+
+	/* public void ChangeLevelBanner(BaseEventData BaseEventData) {
+		string getLevelNumber = Regex.Match(BaseEventData.selectedObject.name, @"\d+").Value;
+		Debug.Log("get level number is " + getLevelNumber);
+		levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+	}*/
 	
 	// Update is called once per frame
 	void Update () {
