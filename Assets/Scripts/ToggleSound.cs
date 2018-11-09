@@ -13,7 +13,6 @@ public class ToggleSound : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print(t);
 	}
 
 	public void toggle(){

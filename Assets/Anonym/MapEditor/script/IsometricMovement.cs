@@ -37,6 +37,7 @@ namespace Anonym.Isometric
 
         public fireBlockCollision fireBlockCollisionScript;
         public Image deathImage;
+        public AudioSource deathSong;
         public bool alive = true;
         const string Name_X_Axis_Param = "X-Dir";
         const string Name_Z_Axis_Param = "Z-Dir";
@@ -532,6 +533,7 @@ namespace Anonym.Isometric
 
             //if (destination)
             //    vDestinationCoordinates = SnapPosition(destination.transform.position, bSnapToGroundGrid);
+        
         }
 
         protected void SetMinMoveDistance(float _fMin)
@@ -555,8 +557,14 @@ namespace Anonym.Isometric
                     //LoggingManager.instance.RecordEvent(2, "Player burned to death."); //Records an instance of death by falling.
                     //LoggingManager.instance.RecordEvent(3, "Player got burned at " + deathlocation); //Records where the player fell.
                 }
+                
                 if(!alive){
                     deathImage.enabled = true;
+                    print("playing");
+                    if(!deathSong.isPlaying){
+                        //GameObject.Find("MusicTime").GetComponent<AudioSource>().Pause();
+                        deathSong.Play();
+                    }
                 }
                 ApplyMovement(GetMovementVector());
             }

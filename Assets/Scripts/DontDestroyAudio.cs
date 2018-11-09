@@ -5,8 +5,8 @@ using UnityEngine.Playables;
 
 public class DontDestroyAudio : MonoBehaviour {
 
-	static bool AudioBegin = false;
-
+	bool AudioBegin = false;
+	public bool actuallyDestroyAfterAll;
 	// Use this for initialization
 	void Start () {
 		
@@ -15,7 +15,8 @@ public class DontDestroyAudio : MonoBehaviour {
 	void Awake() {
 		if (!AudioBegin) {
 			GetComponent<AudioSource>().Play();
-			DontDestroyOnLoad (gameObject);
+			if(!actuallyDestroyAfterAll) 
+				DontDestroyOnLoad (this);
 			AudioBegin = true;
 		}
 

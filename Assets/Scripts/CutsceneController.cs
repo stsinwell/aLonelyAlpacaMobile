@@ -60,6 +60,8 @@ public class CutsceneController : MonoBehaviour {
 					timeAccum = currSceneTime+1;
 				}
 			}
+			else if(spaceToSpeedUp && Input.GetKeyDown(KeyCode.Space))
+					FIScript.fadeRate = 10.0f;
 		}
 		else if(!endScene && wasEnabled){
 			endScene = true;
