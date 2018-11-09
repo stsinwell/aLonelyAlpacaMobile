@@ -184,7 +184,7 @@ public class LevelMenuControllerScript : MonoBehaviour {
 		Vector3 mostRecentStarPosition = mostRecentStar.GetComponent<RectTransform>().position;
 
 		GameObject alpacaSprite = GameObject.Find("AlpacaSprite");
-		alpacaSprite.GetComponent<RectTransform>().position = mostRecentStarPosition;
+		alpacaSprite.GetComponent<RectTransform>().position = mostRecentStarPosition + new Vector3(0, 40, 0);
 		if (mostRecentLevel >= 1 && mostRecentLevel <= 6) alpacaSprite.GetComponent<Image>().sprite = alpacaLeft;
 		if (mostRecentLevel >= 7 && mostRecentLevel <= 14) alpacaSprite.GetComponent<Image>().sprite = alpacaRight;
 	
