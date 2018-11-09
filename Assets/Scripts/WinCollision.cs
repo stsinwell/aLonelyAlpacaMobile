@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class WinCollision : MonoBehaviour {
 
 	public string nextLevel;
-	public AudioSource winSound;
+	//public AudioSource winSound;
 	int sceneIndex, levelPassed;
 
 	// Use this for initialization
@@ -19,7 +19,7 @@ public class WinCollision : MonoBehaviour {
 
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		if(hit.collider.tag == "Goal"){
-			winSound.Play();
+			//winSound.Play();
 			sceneIndex = SceneManager.GetActiveScene().buildIndex;
 			levelPassed = PlayerPrefs.GetInt("LevelPassed");
 			Debug.Log("sceneIndex: " + sceneIndex +", levelPassed: " + levelPassed);

@@ -14,11 +14,9 @@ public class loggingInGameManager : MonoBehaviour {
     static string SceneName = null;
 	// Use this for initialization
 	void Start () {
-        //GameObject selectorObject = GameObject.Find("Selector");
-        //bool checkIfFirstTimePlaying = selectorObject.GetComponent<MenuSelectorController>().firstTimePlaying;
 
         //if(checkIfFirstTimePlaying == false){
-            LoggingManager.instance.Initialize(890, 999, false);
+            LoggingManager.instance.Initialize(890, 4, false);
             LoggingManager.instance.RecordPageLoad();
             DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
 
