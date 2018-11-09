@@ -19253,7 +19253,7 @@ GameObject:
   - component: {fileID: 759077592}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25207,7 +25207,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1059618794}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1059618796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29810,7 +29810,7 @@ GameObject:
   - component: {fileID: 1238694957}
   m_Layer: 0
   m_Name: T_F30_(09,04)__winblock
-  m_TagString: Goal
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
