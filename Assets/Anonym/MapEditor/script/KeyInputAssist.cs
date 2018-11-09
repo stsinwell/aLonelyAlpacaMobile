@@ -381,6 +381,7 @@ namespace Anonym.Isometric
 
         GameObject loggingObject = GameObject.Find("GameObject");
         int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
+        //int abTestValue = 2;
             switch(abTestValue) {
                 //if abtestvalue is 1, player may pivot in place
                 case 1:
@@ -457,13 +458,14 @@ namespace Anonym.Isometric
 
             GameObject loggingObject = GameObject.Find("GameObject");
             int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
+            //int abTestValue = 2;
 
             if (!didHitWall && !isWallBelowMovement) {
                 bool didJump = Jump(newFacing);
 
                 if (!didRotate && !didJump) {
                     inputProcess();
-                    if (abTestValue == 2) { // rotate in place
+                    if (abTestValue == 1) { // rotate in place
                         ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
                     } else { // not rotate in place
                        bool didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
