@@ -8,7 +8,6 @@ public class Reset : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		deathImage.enabled = false;
 		
 	}
@@ -23,6 +22,8 @@ public class Reset : MonoBehaviour {
 
 	public void Restart() {
 		LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
+		//if(!GameObject.Find("MusicTime").GetComponent<AudioSource>().isPlaying)
+		//	GameObject.Find("MusicTime").GetComponent<AudioSource>().UnPause();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
 }

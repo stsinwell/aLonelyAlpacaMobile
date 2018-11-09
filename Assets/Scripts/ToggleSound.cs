@@ -5,16 +5,14 @@ using UnityEngine;
 public class ToggleSound : MonoBehaviour {
 
 	//private AudioListener audioListener;
-	private bool t;
+	static bool t = true;
 
 	// Use this for initialization
 	void Start () {
-		t = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
 	}
 
 	public void toggle(){

@@ -89,7 +89,8 @@ public class MenuSelectorController : MonoBehaviour {
 				CDScript.toggleEnable();
 				break;
 			case 1: //Start
-				SceneManager.LoadScene("B1", LoadSceneMode.Single);
+     			Destroy (GameObject.Find("MusicTime"));
+				SceneManager.LoadScene("B0.5 - Intro", LoadSceneMode.Single);
 				break;
 			case 2: //Levels
 				SceneManager.LoadScene("Level Select Menu", LoadSceneMode.Single);
