@@ -7412,7 +7412,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 240201647}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &240201649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12477,7 +12477,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 481963067}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &481963069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17916,7 +17916,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 713917193}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &713917195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18046,6 +18046,16 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1378289340}
+    - target: {fileID: 114178595373478844, guid: a3c9e7f02adc60e449c6dfac7c23914c,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: toggleZoom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3c9e7f02adc60e449c6dfac7c23914c, type: 2}
@@ -26544,7 +26554,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1104225205}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1104225207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36052,7 +36062,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1481245396}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1481245398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45112,7 +45122,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1866432887}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1866432889
 MonoBehaviour:
   m_ObjectHideFlags: 0
