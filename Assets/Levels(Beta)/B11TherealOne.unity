@@ -42434,16 +42434,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
-        type: 2}
-      propertyPath: deathImage
-      value: 
-      objectReference: {fileID: 1323403258}
-    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
-        type: 2}
-      propertyPath: nextLevel
-      value: B12
-      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.x
       value: 3.2
@@ -42452,9 +42442,13 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 3.2
       objectReference: {fileID: 0}
-    - target: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+    - target: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
