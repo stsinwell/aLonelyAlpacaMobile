@@ -14922,12 +14922,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa7a0165ddeb54b7aaa0298415d110c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4884de401db6f3746b76e799e9972858, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.85333335, y: 1.7066667}
+  m_Size: {x: 3.4, y: 2.55}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -16822,6 +16822,7 @@ MonoBehaviour:
   lastFacing: 2
   soundEffect: {fileID: 8300000, guid: 8a8846af7efbcd54a9fd79aed48a8768, type: 3}
   musicSource: {fileID: 1575738162}
+  illegalJump: 0
   CFD: {fileID: 1575738164}
 --- !u!114 &1575738168
 MonoBehaviour:
@@ -16837,6 +16838,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireBlockCollisionScript: {fileID: 1575738165}
   deathImage: {fileID: 0}
+  deathSong: {fileID: 0}
   alive: 1
   CollisionLayerMask:
     serializedVersion: 2
