@@ -15,10 +15,14 @@ public class EndCreditsController : MonoBehaviour {
 	private RectTransform rt;
 	private float moveSpeed;
 	private bool done;
+	private bool started;
+	private float timeAccum;
 	//private bool speedyCreds;
-	private const float initial_speed = 55f;
+	public float initial_speed;
 	private const float initial_pos = -968f;
 	private const float final_position = 968f;
+	private const float time_delay = 1f;
+
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform>();
@@ -31,31 +35,39 @@ public class EndCreditsController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!done){
-			Vector3 temp = rt.position; 
-			if(Input.GetKey(KeyCode.Space)){
-				moveSpeed = initial_speed*4;
-				//moveSpeed = speedyCreds ? initial_speed : (initial_speed*3);
-				//speedyCreds = !speedyCreds;
-			}
-			else if(rt.position.y >= (final_position*0.8f)){
-				moveSpeed-= 2.5f*Time.deltaTime;
-				if(moveSpeed<=20) moveSpeed = 20;
-			}
-			else moveSpeed = initial_speed;
-			temp.y += moveSpeed*Time.deltaTime;
-			rt.position = temp;
-			if(rt.position.y >= final_position){
-				temp.y = final_position;
-				rt.position = temp;
-				done = true;
+		if(!started){
+			timeAccum += Time.deltaTime;
+			if(timeAccum>=time_delay){
+				started = true;
 			}
 		}
 		else{
-			StartCoroutine(FadeAfterTime(endPauseTime));
-		}
-		if(!creditsImage.enabled){
-			firstScreenAfterCredsCutsceneController.enabled = true;
+			if(!done){
+				Vector3 temp = rt.position; 
+				if(Input.GetKey(KeyCode.Space)){
+					moveSpeed = initial_speed*4;
+					//moveSpeed = speedyCreds ? initial_speed : (initial_speed*3);
+					//speedyCreds = !speedyCreds;
+				}
+				else if(rt.position.y >= (final_position*0.8f)){
+					moveSpeed-= 2.5f*Time.deltaTime;
+					if(moveSpeed<=20) moveSpeed = 20;
+				}
+				else moveSpeed = initial_speed;
+				temp.y += moveSpeed*Time.deltaTime;
+				rt.position = temp;
+				if(rt.position.y >= final_position){
+					temp.y = final_position;
+					rt.position = temp;
+					done = true;
+				}
+			}
+			else{
+				StartCoroutine(FadeAfterTime(endPauseTime));
+			}
+			if(!creditsImage.enabled){
+				firstScreenAfterCredsCutsceneController.enabled = true;
+			}
 		}
 	}
 

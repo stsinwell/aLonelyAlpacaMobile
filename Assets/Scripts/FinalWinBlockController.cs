@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class FinalWinBlockController : MonoBehaviour {
 
+	private AudioSource endSong;
 	public GameObject star_obj;
 	public GameObject star_Iso2d;
 	public GameObject Background;
-	private FadeImage FIScript;
+	private FadeOutWSprite FIScript;
+	public float time_till_fade_to_fin;
 	public float FIN_time;
 	private Animator star_animator;
 	private Transform star_tf;
@@ -18,19 +20,24 @@ public class FinalWinBlockController : MonoBehaviour {
 	private bool moveItStar;
 	private bool moveItCam;
 	private const float moveSpeed = 3f;
-	private const float final_pan_pos = 16.2f;
+	private const float final_pan_pos = 16.91f;
 	private const float final_pan_pos_c = 18.4f;
 
 	// Use this for initialization
 	void Start () {
+		Destroy (GameObject.Find("MusicTime"));
+		endSong =GameObject.Find("EndMusicTime").GetComponent<AudioSource>();
+		endSong.Stop();
 		star_animator = star_Iso2d.GetComponent<Animator>();
 		star_tf = star_obj.GetComponent<Transform>();
 		cam_tf = cam.GetComponent<Transform>();
+		FIScript = Background.GetComponent<FadeOutWSprite>();
 	}
 	
 	// Update is called once per frame
 	void OnControllerColliderHit(ControllerColliderHit hit){
 		if(hit.collider.tag == "Goal"){
+			endSong.Play();
 			star_animator.speed = 2;
 			moveItStar = true;
 			moveItCam = true;
@@ -77,13 +84,17 @@ public class FinalWinBlockController : MonoBehaviour {
 			}
 		}
 		else if (done && donec){
-			StartCoroutine(FadeAfterTime(FIN_time));
+			StartCoroutine(FadeAfterTime(time_till_fade_to_fin));
 		}
 	}	
 
 	IEnumerator FadeAfterTime(float time){
     	yield return new WaitForSeconds(time);
+		FIScript.FadeOut(); 
+		StartCoroutine(CredsAfterTime(FIN_time));
+ 	}
+	IEnumerator CredsAfterTime(float time){ 
+		yield return new WaitForSeconds(time);
 		SceneManager.LoadScene("End Credits", LoadSceneMode.Single);
-     	//FIScript.FadeOut(); 
  	}
 }
