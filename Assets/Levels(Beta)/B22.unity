@@ -65014,7 +65014,7 @@ GameObject:
   - component: {fileID: 911813843}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -119077,7 +119077,7 @@ Prefab:
     - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
       propertyPath: nextLevel
-      value: Level Select Menu
+      value: B0 - Menu
       objectReference: {fileID: 0}
     - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}

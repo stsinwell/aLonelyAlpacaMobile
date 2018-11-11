@@ -9,8 +9,8 @@ public class EndCreditsController : MonoBehaviour {
 	private bool done;
 	//private bool speedyCreds;
 	private const float initial_speed = 55f;
-	private const float initial_pos = -600f;
-	private const float final_position = 1200f;
+	private const float initial_pos = -968f;
+	private const float final_position = 968f;
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform>();
