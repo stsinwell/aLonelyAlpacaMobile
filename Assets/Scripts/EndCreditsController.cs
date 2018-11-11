@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndCreditsController : MonoBehaviour {
 
+	private Image creditsImage;
+	public GameObject firstScreenAfterCreds;
+	private Image firstScreenAfterCredsImage;
+	private CutsceneController firstScreenAfterCredsCutsceneController;
+
+	public float endPauseTime;
+	private FadeImage FIScript;
 	private RectTransform rt;
 	private float moveSpeed;
 	private bool done;
@@ -14,6 +22,10 @@ public class EndCreditsController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rt = GetComponent<RectTransform>();
+		FIScript = GetComponent<FadeImage>();
+		creditsImage = GetComponent<Image>();
+		firstScreenAfterCredsImage = firstScreenAfterCreds.GetComponent<Image>();
+		firstScreenAfterCredsCutsceneController = firstScreenAfterCreds.GetComponent<CutsceneController>();
 		moveSpeed = initial_speed;
 	}
 	
@@ -26,8 +38,8 @@ public class EndCreditsController : MonoBehaviour {
 				//moveSpeed = speedyCreds ? initial_speed : (initial_speed*3);
 				//speedyCreds = !speedyCreds;
 			}
-			else if(rt.position.y >= (final_position*0.65f)){
-				moveSpeed-= 2*Time.deltaTime;
+			else if(rt.position.y >= (final_position*0.8f)){
+				moveSpeed-= 2.5f*Time.deltaTime;
 				if(moveSpeed<=20) moveSpeed = 20;
 			}
 			else moveSpeed = initial_speed;
@@ -38,8 +50,21 @@ public class EndCreditsController : MonoBehaviour {
 				rt.position = temp;
 				done = true;
 			}
-		}	
+		}
+		else{
+			StartCoroutine(FadeAfterTime(endPauseTime));
+		}
+		if(!creditsImage.enabled){
+			firstScreenAfterCredsCutsceneController.enabled = true;
+		}
 	}
 
 	public bool isDone() { return done; }
+
+	/* waits for time seconds, then fades out */
+	IEnumerator FadeAfterTime(float time){
+    	yield return new WaitForSeconds(time);
+     	FIScript.FadeOut(); 
+		firstScreenAfterCredsImage.enabled = true;
+ 	}
 }
