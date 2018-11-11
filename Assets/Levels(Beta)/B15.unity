@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 137885974}
   m_Layer: 0
   m_Name: Regualr_Collider_Union
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4843,7 +4843,7 @@ GameObject:
   - component: {fileID: 184837279}
   m_Layer: 0
   m_Name: T_F-45_(04,-13)__winblock
-  m_TagString: Untagged
+  m_TagString: Goal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22796,6 +22796,7 @@ GameObject:
   - component: {fileID: 1038181805}
   - component: {fileID: 1038181807}
   - component: {fileID: 1038181806}
+  - component: {fileID: 1038181808}
   m_Layer: 0
   m_Name: Iso2DObject_Union
   m_TagString: Untagged
@@ -22878,6 +22879,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1038181808
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1038181804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88dc7491c87f02e4cb184af4e8057414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1040964816
 GameObject:
   m_ObjectHideFlags: 0
