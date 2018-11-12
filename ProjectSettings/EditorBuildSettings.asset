@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels(Beta)/B5.unity
     guid: 95356057fad74480d97ae3344b25b0eb
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Levels(Beta)/B6.unity
+    guid: 676174e1af39d0249a193eb17a42a743
   - enabled: 1
     path: Assets/Levels(Beta)/B7.unity
     guid: c55d2be046dd54da9a2136442bd3c1b7
@@ -33,20 +33,23 @@ EditorBuildSettings:
     path: Assets/Levels(Beta)/B8.unity
     guid: 874d9974c1a0b014ea3c37e594a01fab
   - enabled: 1
+    path: Assets/Levels(Beta)/B9.unity
+    guid: 3fe12451998ca49509b226b57eeefc8a
+  - enabled: 1
     path: Assets/Levels(Beta)/B10.unity
     guid: 89672aeb6d4884635bf9020eee19b5e8
-  - enabled: 1
-    path: Assets/Levels(Beta)/B12.unity
-    guid: 2628e2f6300b5458b907a9222951fb57
   - enabled: 1
     path: Assets/Levels(Beta)/B11.unity
     guid: 4f3b15d616a2a1545bd4862fcbcd4551
   - enabled: 1
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Levels(Beta)/B12.unity
+    guid: 2628e2f6300b5458b907a9222951fb57
   - enabled: 1
     path: Assets/Levels(Beta)/B13.unity
     guid: a0cd1bb1dd422124aa84e9b24482c056
+  - enabled: 1
+    path: Assets/Levels(Beta)/B14.unity
+    guid: 7f992bf5c3b60b8408d686ea635c295f
   - enabled: 1
     path: Assets/Levels(Beta)/B15.unity
     guid: 4d7757274acc53d4cab6af763db2ed09
@@ -72,14 +75,8 @@ EditorBuildSettings:
     path: Assets/Levels(Beta)/B22.unity
     guid: cfefe32bd1fbe514aae660d84648f6d5
   - enabled: 1
-    path: Assets/Levels(Beta)/B14.unity
-    guid: 7f992bf5c3b60b8408d686ea635c295f
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Levels(Beta)/B99.unity
+    guid: a18838358f75c204183890894f04f11c
   - enabled: 1
     path: Assets/Levels(Beta)/End Credits.unity
     guid: 30ebc46f634a41144a4b22210de39451
@@ -92,7 +89,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels(Beta)/B0.5 - Intro.unity
     guid: 5684dcf2c3107354fb75f058f17d667d
-  - enabled: 1
-    path: Assets/Levels(Beta)/B99.unity
-    guid: a18838358f75c204183890894f04f11c
   m_configObjects: {}
