@@ -38,6 +38,7 @@ namespace Anonym.Isometric
         public fireBlockCollision fireBlockCollisionScript;
         public Image deathImage;
         public AudioSource deathSong;
+        private AudioSource music;
         public bool alive = true;
         const string Name_X_Axis_Param = "X-Dir";
         const string Name_Z_Axis_Param = "Z-Dir";
@@ -523,6 +524,7 @@ namespace Anonym.Isometric
         #region GameObject
         virtual public void Start()
         {
+            music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
             if (animator == null)
                 animator = gameObject.GetComponent<Animator>();
             if (animator == null)
@@ -566,7 +568,8 @@ namespace Anonym.Isometric
                     deathImage.enabled = true;
                     print("playing");
                     if(!deathSong.isPlaying){
-                        //GameObject.Find("MusicTime").GetComponent<AudioSource>().Pause();
+                        //music.Pause();
+                        music.volume = 0.015f;
                         deathSong.Play();
                     }
                 }
