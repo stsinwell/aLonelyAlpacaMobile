@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Anonym.Isometric;
 
 public class FinalWinBlockController : MonoBehaviour {
 
@@ -9,6 +10,7 @@ public class FinalWinBlockController : MonoBehaviour {
 	public GameObject star_obj;
 	public GameObject star_Iso2d;
 	public GameObject Background;
+	private KeyInputAssist KIAScript; 
 	private FadeOutWSprite FIScript;
 	public float time_till_fade_to_fin;
 	public float FIN_time;
@@ -32,6 +34,7 @@ public class FinalWinBlockController : MonoBehaviour {
 		star_tf = star_obj.GetComponent<Transform>();
 		cam_tf = cam.GetComponent<Transform>();
 		FIScript = Background.GetComponent<FadeOutWSprite>();
+		KIAScript = GetComponent<KeyInputAssist>();
 	}
 	
 	// Update is called once per frame
@@ -41,6 +44,7 @@ public class FinalWinBlockController : MonoBehaviour {
 			star_animator.speed = 2;
 			moveItStar = true;
 			moveItCam = true;
+			KIAScript.enabled = false;
 			// sceneIndex = SceneManager.GetActiveScene().buildIndex;
 			// levelPassed = PlayerPrefs.GetInt("LevelPassed");
 			// Debug.Log("sceneIndex: " + sceneIndex +", levelPassed: " + levelPassed);

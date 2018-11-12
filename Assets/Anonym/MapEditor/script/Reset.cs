@@ -23,7 +23,7 @@ public class Reset : MonoBehaviour {
 	public void Restart() {
 		LoggingManager.instance.RecordEvent(1, "Player pressed Restart button.");
 		//if(!GameObject.Find("MusicTime").GetComponent<AudioSource>().isPlaying)
-		music.volume = 0.1f;
+		if(music!=null) music.volume = 0.1f;
 		// if(!music.isPlaying)
 		// 	music.UnPause();
 		SceneManager.LoadScene(SceneManager.GetActiveScene().name);

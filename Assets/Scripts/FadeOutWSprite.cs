@@ -36,7 +36,7 @@ public class FadeOutWSprite : MonoBehaviour {
 	}
 
 	public void FadeOut(){
-		print("fadinnn");
+		//print("fadinnn");
 		targetAlpha = 0.0f;
 		fadeOutEngaged = true;
 	}

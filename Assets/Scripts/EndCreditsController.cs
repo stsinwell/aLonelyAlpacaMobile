@@ -76,7 +76,7 @@ public class EndCreditsController : MonoBehaviour {
 	/* waits for time seconds, then fades out */
 	IEnumerator FadeAfterTime(float time){
     	yield return new WaitForSeconds(time);
-     	FIScript.FadeOut(); 
+     	FIScript.FadeOut();
 		firstScreenAfterCredsImage.enabled = true;
  	}
 }

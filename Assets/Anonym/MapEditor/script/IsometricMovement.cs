@@ -524,7 +524,6 @@ namespace Anonym.Isometric
         #region GameObject
         virtual public void Start()
         {
-            music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
             if (animator == null)
                 animator = gameObject.GetComponent<Animator>();
             if (animator == null)
@@ -539,7 +538,8 @@ namespace Anonym.Isometric
 
             //if (destination)
             //    vDestinationCoordinates = SnapPosition(destination.transform.position, bSnapToGroundGrid);
-        
+            music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
+
         }
 
         protected void SetMinMoveDistance(float _fMin)
@@ -565,11 +565,12 @@ namespace Anonym.Isometric
                 }
                 
                 if(!alive){
+                    print(alive);
                     deathImage.enabled = true;
-                    print("playing");
+                    //print("playing");
                     if(!deathSong.isPlaying){
                         //music.Pause();
-                        music.volume = 0.015f;
+                        if(music!=null) music.volume = 0.015f;
                         deathSong.Play();
                     }
                 }
