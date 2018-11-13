@@ -456,11 +456,10 @@ namespace Anonym.Isometric
             foreach (GameObject playerBlock in playerBlocks) {
                 if (isTwoPosEqual(GetLocationInFront(newFacing), playerBlock.transform.position) && 
                     (didHighlight || (!didHighlight && isPlayerBlockBelowOtherPlayerBlocks(playerBlock)))) {
-                    Debug.Log("true - big if");
                     return true;
                 }
             }
-            Debug.Log("false - default");
+
             return false;
         }
 
@@ -501,7 +500,6 @@ namespace Anonym.Isometric
                     }
 
                     if (!didRamIntoPlayableBlock(didHighlight, newFacing)) {
-                        Debug.Log("inputProcess()");
                         inputProcess();
                     }
                 } else {
