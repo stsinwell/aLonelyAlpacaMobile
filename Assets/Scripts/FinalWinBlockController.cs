@@ -27,8 +27,9 @@ public class FinalWinBlockController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Destroy (GameObject.Find("MusicTime"));
+		Destroy(GameObject.Find("MusicTime"));
 		endSong =GameObject.Find("EndMusicTime").GetComponent<AudioSource>();
+		DontDestroyOnLoad(endSong);
 		endSong.Stop();
 		star_animator = star_Iso2d.GetComponent<Animator>();
 		star_tf = star_obj.GetComponent<Transform>();

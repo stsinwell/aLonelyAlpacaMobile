@@ -29796,7 +29796,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1782789816}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: -0.00000017881393, z: 3}
+  m_LocalPosition: {x: 3, y: 0, z: 3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1521239976}
@@ -30527,7 +30527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1837148629}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 1837148625}
   _so: {fileID: 1837148628}
   _attachedList:
@@ -35755,7 +35755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2107446937}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 2107446936}
   _so: {fileID: 2107446935}
   _attachedList:
@@ -35878,7 +35878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2114062153}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 585693878}
   _autoName: {fileID: 2114062152}
   _so: {fileID: 2114062151}
   _attachedList:

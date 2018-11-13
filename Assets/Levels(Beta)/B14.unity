@@ -9376,7 +9376,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 379255584}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &379255586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12286,7 +12286,7 @@ GameObject:
   - component: {fileID: 519508961}
   m_Layer: 0
   m_Name: T_F-36_(10,-06)__block_beta_grass
-  m_TagString: Clickable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43597,7 +43597,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 1999924923}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1999924925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45231,7 +45231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 2075533646}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 175586212}
   _autoName: {fileID: 2075533645}
   _so: {fileID: 2075533644}
   _attachedList:

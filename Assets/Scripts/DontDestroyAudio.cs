@@ -22,7 +22,7 @@ public class DontDestroyAudio : MonoBehaviour {
 
 		if (FindObjectsOfType(GetType()).Length > 1)
          {
-             Destroy(gameObject);
+            // Destroy(gameObject);
          }
 	}
 	

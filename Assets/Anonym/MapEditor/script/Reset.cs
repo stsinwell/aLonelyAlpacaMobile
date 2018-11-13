@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class Reset : MonoBehaviour {
 
-	public Image deathImage;
+	//public Image deathImage;
 	private AudioSource music;
 	// Use this for initialization
 	void Start () {
