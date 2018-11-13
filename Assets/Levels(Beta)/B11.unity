@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -560,7 +560,7 @@ GameObject:
   - component: {fileID: 32396289}
   m_Layer: 0
   m_Name: T_F-21_(02,01)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4883,7 +4883,7 @@ GameObject:
   - component: {fileID: 212348267}
   m_Layer: 0
   m_Name: T_F-21_(02,-01)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7501,7 +7501,7 @@ GameObject:
   - component: {fileID: 332327487}
   m_Layer: 0
   m_Name: T_F-21_(02,00)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7716,7 +7716,7 @@ GameObject:
   - component: {fileID: 336408843}
   m_Layer: 0
   m_Name: T_F-21_(04,00)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11706,7 +11706,7 @@ GameObject:
   - component: {fileID: 557075773}
   m_Layer: 0
   m_Name: T_F-21_(03,00)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11780,7 +11780,7 @@ MonoBehaviour:
   _grid: {fileID: 1239014329}
   bSnapFree: 0
   _autoName: {fileID: 557075773}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &557075775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13459,7 +13459,7 @@ GameObject:
   - component: {fileID: 626140462}
   m_Layer: 0
   m_Name: T_F-21_(04,01)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26282,7 +26282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coordinates: {fileID: 1168466295}
-  _bulk: {fileID: 0}
+  _bulk: {fileID: 1239014330}
   _autoName: {fileID: 1168466294}
   _so: {fileID: 1168466293}
   _attachedList:
@@ -37541,7 +37541,7 @@ GameObject:
   - component: {fileID: 1685355047}
   m_Layer: 0
   m_Name: T_F-21_(03,-01)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45601,7 +45601,7 @@ GameObject:
   - component: {fileID: 2067180449}
   m_Layer: 0
   m_Name: T_F-21_(03,01)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
