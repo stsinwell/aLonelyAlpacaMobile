@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -837,7 +837,7 @@ GameObject:
   - component: {fileID: 9596142}
   m_Layer: 0
   m_Name: T_F-45_(10,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1157,7 +1157,7 @@ GameObject:
   - component: {fileID: 16384753}
   m_Layer: 0
   m_Name: T_F-45_(06,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4800,7 +4800,7 @@ GameObject:
   - component: {fileID: 122425626}
   m_Layer: 0
   m_Name: T_F-45_(05,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9106,7 +9106,7 @@ GameObject:
   - component: {fileID: 225108131}
   m_Layer: 0
   m_Name: T_F-45_(09,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11120,7 +11120,7 @@ GameObject:
   - component: {fileID: 291376893}
   m_Layer: 0
   m_Name: T_F-45_(06,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11686,7 +11686,7 @@ GameObject:
   - component: {fileID: 305059614}
   m_Layer: 0
   m_Name: T_F-45_(08,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -13481,7 +13481,7 @@ GameObject:
   - component: {fileID: 354412280}
   m_Layer: 0
   m_Name: T_F-45_(08,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14108,7 +14108,7 @@ GameObject:
   - component: {fileID: 384925154}
   m_Layer: 0
   m_Name: T_F-45_(09,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15752,7 +15752,7 @@ GameObject:
   - component: {fileID: 455052858}
   m_Layer: 0
   m_Name: T_F-45_(07,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15887,7 +15887,7 @@ GameObject:
   - component: {fileID: 465455293}
   m_Layer: 0
   m_Name: T_F-45_(11,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16732,7 +16732,7 @@ GameObject:
   - component: {fileID: 481186957}
   m_Layer: 0
   m_Name: T_F-45_(06,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -19326,7 +19326,7 @@ GameObject:
   - component: {fileID: 541087717}
   m_Layer: 0
   m_Name: T_F-45_(09,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26149,7 +26149,7 @@ GameObject:
   - component: {fileID: 733365285}
   m_Layer: 0
   m_Name: T_F-45_(05,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26284,7 +26284,7 @@ GameObject:
   - component: {fileID: 734716490}
   m_Layer: 0
   m_Name: T_F-45_(05,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30020,7 +30020,7 @@ GameObject:
   - component: {fileID: 873599999}
   m_Layer: 0
   m_Name: T_F-45_(06,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -30094,7 +30094,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 873599997}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &873599999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30247,7 +30247,7 @@ GameObject:
   - component: {fileID: 880166508}
   m_Layer: 0
   m_Name: T_F-45_(11,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -32117,7 +32117,7 @@ GameObject:
   - component: {fileID: 920198004}
   m_Layer: 0
   m_Name: T_F-45_(11,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -33330,7 +33330,7 @@ GameObject:
   - component: {fileID: 961754999}
   m_Layer: 0
   m_Name: T_F-45_(11,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -36332,7 +36332,7 @@ GameObject:
   - component: {fileID: 1039805887}
   m_Layer: 0
   m_Name: T_F-45_(07,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -38917,7 +38917,7 @@ GameObject:
   - component: {fileID: 1107733960}
   m_Layer: 0
   m_Name: T_F-45_(05,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -43343,7 +43343,7 @@ GameObject:
   - component: {fileID: 1239431016}
   m_Layer: 0
   m_Name: T_F-45_(07,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -45724,7 +45724,7 @@ GameObject:
   - component: {fileID: 1290292700}
   m_Layer: 0
   m_Name: T_F-45_(05,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -46074,7 +46074,7 @@ GameObject:
   - component: {fileID: 1297720586}
   m_Layer: 0
   m_Name: T_F-45_(09,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -46363,7 +46363,7 @@ GameObject:
   - component: {fileID: 1311540925}
   m_Layer: 0
   m_Name: T_F-45_(08,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -50225,7 +50225,7 @@ GameObject:
   - component: {fileID: 1441317042}
   m_Layer: 0
   m_Name: T_F-45_(05,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -51376,7 +51376,7 @@ GameObject:
   - component: {fileID: 1502235915}
   m_Layer: 0
   m_Name: T_F-45_(10,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -54661,7 +54661,7 @@ GameObject:
   - component: {fileID: 1609967829}
   m_Layer: 0
   m_Name: T_F-45_(09,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -56518,7 +56518,7 @@ GameObject:
   - component: {fileID: 1667408852}
   m_Layer: 0
   m_Name: T_F-45_(07,-06)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -56900,7 +56900,7 @@ GameObject:
   - component: {fileID: 1689573278}
   m_Layer: 0
   m_Name: T_F-45_(11,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -57650,7 +57650,7 @@ GameObject:
   - component: {fileID: 1713112492}
   m_Layer: 0
   m_Name: T_F-45_(10,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -60806,7 +60806,7 @@ GameObject:
   - component: {fileID: 1823687418}
   m_Layer: 0
   m_Name: T_F-45_(10,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -61741,7 +61741,7 @@ GameObject:
   - component: {fileID: 1850954693}
   m_Layer: 0
   m_Name: T_F-45_(07,-02)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -66678,7 +66678,7 @@ GameObject:
   - component: {fileID: 2025676347}
   m_Layer: 0
   m_Name: T_F-45_(08,-03)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -68660,7 +68660,7 @@ GameObject:
   - component: {fileID: 2070088582}
   m_Layer: 0
   m_Name: T_F-45_(06,-04)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -69195,7 +69195,7 @@ GameObject:
   - component: {fileID: 2084858981}
   m_Layer: 0
   m_Name: T_F-45_(10,-05)__magma_block
-  m_TagString: Untagged
+  m_TagString: FireBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

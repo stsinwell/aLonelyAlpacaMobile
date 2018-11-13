@@ -451,6 +451,32 @@ namespace Anonym.Isometric
             return canJump;
         }
 
+        bool didRamIntoPlayableBlock(bool didHighlight, Facing newFacing) {
+
+            foreach (GameObject playerBlock in playerBlocks) {
+                if (isTwoPosEqual(GetLocationInFront(newFacing), playerBlock.transform.position) && 
+                    (didHighlight || (!didHighlight && isPlayerBlockBelowOtherPlayerBlocks(playerBlock)))) {
+                    Debug.Log("true - big if");
+                    return true;
+                }
+            }
+            Debug.Log("false - default");
+            return false;
+        }
+
+        bool isGoingToHitUnjumpableStaticBlock(Facing newFacing, bool didJump) {
+            if (didJump) return false;
+
+            GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in allObjs) {
+                if (obj.tag == "Untagged" && isTwoPosEqual(obj.transform.position, GetLocationInFront(newFacing))) {
+                     return true;
+                }
+            }
+
+            return false;
+        }
+
         void MovementKeyPressed(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didHitWall = HittingWall(newFacing);
@@ -458,23 +484,28 @@ namespace Anonym.Isometric
 
             GameObject loggingObject = GameObject.Find("GameObject");
             int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
-            //int abTestValue = 2;
 
             if (!didHitWall && !isWallBelowMovement) {
                 bool didJump = Jump(newFacing);
+                bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
+                bool didHighlight = false;
 
-                if (!didRotate && !didJump) {
-                    inputProcess();
+                if (!didRotate && !didJump && !didHitUnjumpableStaticBlock) {
                     if (abTestValue == 1) { // rotate in place
-                        ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
+                        didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
                     } else { // not rotate in place
-                       bool didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
-                       if (!didHighlight) {
-                           ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
-                       }
+                        didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
+                        if (!didHighlight) {
+                          didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
+                        }
+                    }
+
+                    if (!didRamIntoPlayableBlock(didHighlight, newFacing)) {
+                        Debug.Log("inputProcess()");
+                        inputProcess();
                     }
                 } else {
-                    ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
+                    didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
                 }
             }
 
