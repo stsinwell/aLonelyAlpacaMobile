@@ -35,6 +35,7 @@ namespace Anonym.Isometric
     public class IsometricMovement : MethodBTN_MonoBehaviour
     {
 
+        private bool isMoving;
         public fireBlockCollision fireBlockCollisionScript;
         public Image deathImage;
         public AudioSource deathSong;
@@ -321,7 +322,9 @@ namespace Anonym.Isometric
             if (DirQ.Count >= iMaxQSize)
                 return false;
 
-            DirQ.Enqueue(dir);
+            if (!isMoving) {
+                DirQ.Enqueue(dir);
+            }
             return true;
         }
 
@@ -355,6 +358,7 @@ namespace Anonym.Isometric
 
         protected void ExecuteDir(InGameDirection dir)
         {
+            isMoving = true;
             bool bMove = dir > 0 && alive;
             if (!bMove)
             {
@@ -509,6 +513,7 @@ namespace Anonym.Isometric
 
         virtual protected void Arrival()
         {         
+            isMoving = false;
             vHorizontalMovement = Vector3.zero;
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
@@ -524,6 +529,7 @@ namespace Anonym.Isometric
         #region GameObject
         virtual public void Start()
         {
+            isMoving = false;
             if (animator == null)
                 animator = gameObject.GetComponent<Animator>();
             if (animator == null)
