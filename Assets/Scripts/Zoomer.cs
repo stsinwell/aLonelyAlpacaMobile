@@ -16,6 +16,14 @@ public class Zoomer : MonoBehaviour {
 	/* The speed of the camera zoom. */
 	private float ZOOM_SPEED = 0.5f;
 
+	/* The background, which needs to get scaled. */
+	public GameObject background;
+	public GameObject background2;
+	private float origBgScaleX;
+	private float origBgScaleY;
+
+	public float bgScaleAmnt;
+
 	/* The current state of the zooming. */
 	private enum ZoomState {
 		ZOOMING_OUT,
@@ -31,6 +39,8 @@ public class Zoomer : MonoBehaviour {
 		ZOOM_AMNT = cam.orthographicSize + zAmount;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
+		origBgScaleX = background.GetComponent<Transform>().localScale.x;
+		origBgScaleY = background.GetComponent<Transform>().localScale.y;
 	}
 
 	/* Player toggled camera, update the state. */
@@ -55,6 +65,13 @@ public class Zoomer : MonoBehaviour {
 	/* Lerp the camera from [start] to [end]. */
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);
+		float scaleProp = cam.orthographicSize / NO_ZOOM_AMNT;
+		float newX = origBgScaleX + scaleProp - 1;
+		float newY = origBgScaleY + scaleProp - 1;
+		float oldZ = background.GetComponent<Transform>().localScale.z;
+		background.GetComponent<Transform>().localScale = new Vector3(newX, newY, oldZ);
+		background2.GetComponent<Transform>().localScale = new Vector3(newX, newY, oldZ);
+
 	}
 
 	/* The camera is close enough to its destination, so we can
