@@ -360,48 +360,26 @@ namespace Anonym.Isometric
             
             return isPosWall(posInFrontLowest);
         }
-        bool isFacingLava(Vector3 currLocation, Facing facing) {
-
-            Vector3 posIfAlpacaMoved = GetLocationInFront(GetCurrAlpacaLocation(), facing);
-
-            if (!isSpaceOpen(posIfAlpacaMoved)) return false;
-
-            Vector3 posBelowIfAlpacaMoved = new Vector3(posIfAlpacaMoved.x, posIfAlpacaMoved.y - 1, posIfAlpacaMoved.z);
-            GameObject[] fireBlocks =  GameObject.FindGameObjectsWithTag("FireBlockPos");
-
-            foreach (GameObject fireBlock in fireBlocks) {
-                if (isTwoPosEqual(fireBlock.transform.position, posBelowIfAlpacaMoved)) {
-                    return true;
-                }
-            }
-             return false;
-        }
 
         bool RotateAlpaca(Facing newFacing) {
 
         GameObject loggingObject = GameObject.Find("GameObject");
-        int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
-        //int abTestValue = 2;
-            switch(abTestValue) {
-                //if abtestvalue is 1, player may pivot in place
-                case 1:
-                    if (newFacing != lastFacing) {
-                        return true;
-                    }
+        //int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
+        if (newFacing != lastFacing) {
+            return true;
+        }
 
-                    return false;
-                
-                //if abtestvalue is 2, player cannot pivot in place
-                case 2:
-                    if ( (isFacingEdge(GetCurrAlpacaLocation(), newFacing) || 
-                    isFacingLava(GetCurrAlpacaLocation(), newFacing)) 
-                    && newFacing != lastFacing) {
-                        return true;
-                    }
-
-                    return false;
-             }
-             return false;
+        return false;
+//        int abTestValue = 1;
+//            switch(abTestValue) {
+//                //if abtestvalue is 1, player may pivot in place
+//                case 1:
+//                    if (newFacing != lastFacing) {
+//                        return true;
+//                    }
+//
+//                    return false;
+//             return false;
         }
 
         bool AttemptJump(Vector3 posInFront) {
@@ -481,23 +459,13 @@ namespace Anonym.Isometric
             bool didHitWall = HittingWall(newFacing);
             bool isWallBelowMovement = WallBelowAlpaca(newFacing);
 
-            GameObject loggingObject = GameObject.Find("GameObject");
-            int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
-
             if (!didHitWall && !isWallBelowMovement) {
                 bool didJump = Jump(newFacing);
                 bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
                 bool didHighlight = false;
 
                 if (!didRotate && !didJump && !didHitUnjumpableStaticBlock) {
-                    if (abTestValue == 1) { // rotate in place
-                        didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
-                    } else { // not rotate in place
-                        didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
-                        if (!didHighlight) {
-                          didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
-                        }
-                    }
+                    didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
 
                     if (!didRamIntoPlayableBlock(didHighlight, newFacing)) {
                         inputProcess();
