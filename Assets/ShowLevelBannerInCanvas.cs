@@ -19,15 +19,25 @@ public class ShowLevelBannerInCanvas : MonoBehaviour {
 		//Get Level Number
 		sceneName = SceneManager.GetActiveScene().name;
 		Regex getNumber = new Regex(@"\d+$");
-        var levelNumber = Int32.Parse(getNumber.Match(sceneName).ToString());
-		Debug.Log("level banner numebr is " + levelNumber);
-
+        var levelNumber = Int32.Parse(getNumber.Match(sceneName).ToString());	
 		uiImage.sprite = LevelBannerList[levelNumber - 1];
+
+		//Begin Fading
+		StartCoroutine(fadeOut(true));
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+	IEnumerator fadeOut(bool fadeAway) {
+		yield return new WaitForSeconds(3);
+		if (fadeAway)
+        {
+            // loop over 1 second backwards
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                // set color with i as alpha
+                uiImage.color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+        }
 	}
 }
