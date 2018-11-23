@@ -157,7 +157,7 @@ namespace Anonym.Isometric
         Vector3 BoundAlpacaToBlock() {
             Vector3 newLoc = RoundLocation(gameObject.transform.position);
             
-            if (oldLoc == newLoc) { //should move at least one
+            if (oldLoc == newLoc && !blockInFront(lastFacing)) { //should move at least one
                 newLoc = GetLocationInFront(newLoc, lastFacing);
             }
             
