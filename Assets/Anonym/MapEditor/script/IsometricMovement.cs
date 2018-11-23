@@ -333,7 +333,7 @@ namespace Anonym.Isometric
             Bounds bounds = GetBounds();
             var vRadius = bounds.extents;
             var vDir = vTranslate.normalized;
-            vTranslate = vTranslate * fSpeed;
+            vTranslate = vTranslate * 4f;
             if (Grounding(bounds.center + vTranslate + vDir * (vRadius.x + vRadius.z) * 0.5f, fMaxDropHeight))
                 SetHorizontalMovement(vTranslate);
         }

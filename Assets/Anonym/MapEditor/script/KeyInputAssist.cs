@@ -33,6 +33,10 @@ namespace Anonym.Isometric
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
+        bool continuousMovement;
+        bool continuousMovementSecondCheck;
+        Vector3 oldLoc;
+        
         public AudioClip soundEffect;
         public AudioSource musicSource;
 
@@ -67,6 +71,9 @@ namespace Anonym.Isometric
                     boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
                 }
             }
+            
+            lastFacing = Facing.PosX;
+            continuousMovement = false;
 
             wallBlocks = GameObject.FindGameObjectsWithTag("Wall");
             foreach (GameObject wallBlock in wallBlocks) {
@@ -138,9 +145,23 @@ namespace Anonym.Isometric
                 AddAnchor(destination);
         }
 
+        Vector3 RoundLocation(Vector3 vec) {
+            return new Vector3(Mathf.RoundToInt(vec.x), Mathf.RoundToInt(vec.y), Mathf.RoundToInt(vec.z));
+        }
+
         Vector3 GetCurrAlpacaLocation() {
             Vector3 vec = gameObject.transform.position;
-            return new Vector3(Mathf.RoundToInt(vec.x), Mathf.RoundToInt(vec.y), Mathf.RoundToInt(vec.z));
+            return RoundLocation(vec);
+        }
+        
+        Vector3 BoundAlpacaToBlock() {
+            Vector3 newLoc = RoundLocation(gameObject.transform.position);
+            
+            if (oldLoc == newLoc) { //should move at least one
+                newLoc = GetLocationInFront(newLoc, lastFacing);
+            }
+            
+            return new Vector3(newLoc.x, newLoc.y - 0.22f, newLoc.z);
         }
 
         //method to access private GettCurrAlpacaLocation property
@@ -455,46 +476,95 @@ namespace Anonym.Isometric
         }
 
         void MovementKeyPressed(Facing newFacing) {
+            bool didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
+            if (!didHighlight) {
+                inputProcess();
+            }
+        }
+        
+        bool isFalling(Facing newFacing) {
+            Vector3 locInFront = GetLocationInFront(newFacing);
+            Vector3 locInFrontOneBelow = new Vector3(locInFront.x, locInFront.y - 1, locInFront.z);
+            
+            return isSpaceOpen(locInFront) && isSpaceOpen(locInFrontOneBelow);
+        }
+        
+        bool blockInFront(Facing newFacing) {
+            Vector3 locInFront = GetLocationInFront(newFacing);
+            
+            return !isSpaceOpen(locInFront);
+        }
+        
+        bool NonMovement(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
+            bool didJump = Jump(newFacing);
+            bool didHighlight = false;
             bool didHitWall = HittingWall(newFacing);
             bool isWallBelowMovement = WallBelowAlpaca(newFacing);
-
+            //bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
+            
             if (!didHitWall && !isWallBelowMovement) {
-                bool didJump = Jump(newFacing);
-                bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
-                bool didHighlight = false;
-
-                if (!didRotate && !didJump && !didHitUnjumpableStaticBlock) {
-                    didHighlight = ShouldHighlightPlayerBlock(newFacing, true, GetLocationInFront(newFacing));
-
-                    if (!didRamIntoPlayableBlock(didHighlight, newFacing)) {
-                        inputProcess();
-                    }
-                } else {
+                //if (!didJump && !didHitUnjumpableStaticBlock) {
+                if (!didJump) {
                     didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
                 }
             }
-
+            
             lastFacing = newFacing;
+            oldLoc = GetCurrAlpacaLocation();
+            continuousMovementSecondCheck = !isFalling(newFacing) && !blockInFront(newFacing);
+            return didHitWall || isWallBelowMovement || didRotate || didJump || didHighlight;
+            //return didRotate || didJump || didHitUnjumpableStaticBlock || didHighlight;
+        }
+        
+        void KeyPressedOnce() {
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
+                continuousMovement = !NonMovement(Facing.PosZ);
+                //LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
+            }
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
+                continuousMovement = !NonMovement(Facing.NegZ);
+                //LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
+            }
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
+                continuousMovement = !NonMovement(Facing.PosX);
+                //inputProcess();
+                //LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
+            }
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
+                continuousMovement = !NonMovement(Facing.NegX);
+                //LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
+            }
         }
 
         void InputProcess()
-        {
-            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) {
-                MovementKeyPressed(Facing.PosZ);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
-            }
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) {
-                MovementKeyPressed(Facing.NegZ);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
-            }
-            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) {
-                MovementKeyPressed(Facing.PosX);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
-            }
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow)) {
-                MovementKeyPressed(Facing.NegX);
-                LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
+        {            
+            KeyPressedOnce();
+            
+            if (continuousMovement) {
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
+                    MovementKeyPressed(Facing.PosZ);
+                    //LoggingManager.instance.RecordEvent(6, "Player took a step with W/Up key.");
+                }
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) {
+                    MovementKeyPressed(Facing.NegZ);
+                    //LoggingManager.instance.RecordEvent(6, "Player took a step with S/Down key.");
+                }
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) {
+                    MovementKeyPressed(Facing.PosX);
+                    //LoggingManager.instance.RecordEvent(6, "Player took a step with D/Right key.");
+                }
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) {
+                    MovementKeyPressed(Facing.NegX);
+                    //LoggingManager.instance.RecordEvent(6, "Player took a step with A/Left key.");
+                }
+
+                if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) ||
+                    Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow) ||
+                    Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
+                    Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow) ) {
+                    gameObject.transform.position = BoundAlpacaToBlock();
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
@@ -529,7 +599,7 @@ namespace Anonym.Isometric
             bool bShifted = Input.GetKey(KeyCode.LeftShift);
             System.Action<InGameDirection> Do;
             System.Func<KeyCode, bool> GetKeyMethod;
-            if (target.bContinuousMovement){
+            if (continuousMovementSecondCheck) {//(target.bContinuousMovement){
                 Do = ContinuousMove;
                 GetKeyMethod = Input.GetKey;
             } else {
