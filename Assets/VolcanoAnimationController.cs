@@ -20,17 +20,17 @@ public class VolcanoAnimationController : MonoBehaviour {
 		//StartCoroutine(playAnimation());
 		position = gameObject.transform.position.x;
 		Destroy (gameObject, this.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay); 
-		StartCoroutine(stopMovement());
+		//StartCoroutine(stopMovement());
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		position = Mathf.Sin(Time.time * speed) * amount;
 	}
-	public IEnumerator stopMovement() {
+	/* public IEnumerator stopMovement() {
 		player.GetComponent<IsometricMovement>().canMove = false;
     	yield return new WaitForSeconds(3f);
 		player.GetComponent<IsometricMovement>().canMove = true;
  
-	}
+	}*/
 }
