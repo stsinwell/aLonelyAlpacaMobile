@@ -54,7 +54,7 @@ public class clickable_block : MonoBehaviour {
         return false;
     }
 	
-    void setBlockToRegularColor() {
+    public void setBlockToRegularColor() {
         sr.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
     }
 
@@ -64,5 +64,9 @@ public class clickable_block : MonoBehaviour {
 
     void setBlockToSelectedColor() {
         sr.color = new Color(0.78f, 0.80f, 1.0f, 1.0f);
+    }
+    
+    public void setCanBeDroppedOnColor() {
+        sr.color = new Color(0.5f, 0.5f, 1.0f, 1.0f);
     }
 }

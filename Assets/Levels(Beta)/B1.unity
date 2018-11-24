@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,9 +250,10 @@ GameObject:
   - component: {fileID: 34631623}
   - component: {fileID: 34631627}
   - component: {fileID: 34631625}
+  - component: {fileID: 34631629}
   m_Layer: 0
   m_Name: T_F00_(00,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -360,6 +361,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &34631629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 34631622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &42223201 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1706221591544266, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
@@ -844,9 +856,10 @@ GameObject:
   - component: {fileID: 70354379}
   - component: {fileID: 70354383}
   - component: {fileID: 70354381}
+  - component: {fileID: 70354385}
   m_Layer: 0
   m_Name: T_F00_(05,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -954,6 +967,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &70354385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70354378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &77094547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1459,9 +1483,10 @@ GameObject:
   - component: {fileID: 111775828}
   - component: {fileID: 111775827}
   - component: {fileID: 111775826}
+  - component: {fileID: 111775831}
   m_Layer: 0
   m_Name: T_F00_(-02,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1569,6 +1594,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 111775826}
   bChangedforEditor: 1
+--- !u!114 &111775831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 111775824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &113898773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,9 +1833,10 @@ GameObject:
   - component: {fileID: 133408365}
   - component: {fileID: 133408369}
   - component: {fileID: 133408367}
+  - component: {fileID: 133408371}
   m_Layer: 0
   m_Name: T_F00_(04,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1907,6 +1944,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &133408371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 133408364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136334829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2510,9 +2558,10 @@ GameObject:
   - component: {fileID: 155746917}
   - component: {fileID: 155746921}
   - component: {fileID: 155746919}
+  - component: {fileID: 155746923}
   m_Layer: 0
   m_Name: T_F00_(03,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2620,6 +2669,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &155746923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155746916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &158911358
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,9 +2755,10 @@ GameObject:
   - component: {fileID: 162109114}
   - component: {fileID: 162109118}
   - component: {fileID: 162109116}
+  - component: {fileID: 162109120}
   m_Layer: 0
   m_Name: T_F00_(04,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2805,6 +2866,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &162109120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 162109113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &162608571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,9 +3387,10 @@ GameObject:
   - component: {fileID: 238324017}
   - component: {fileID: 238324021}
   - component: {fileID: 238324019}
+  - component: {fileID: 238324023}
   m_Layer: 0
   m_Name: T_F00_(-01,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3425,6 +3498,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &238324023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 238324016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242082422 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1316831233524218, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
@@ -4321,9 +4405,10 @@ GameObject:
   - component: {fileID: 288756543}
   - component: {fileID: 288756542}
   - component: {fileID: 288756541}
+  - component: {fileID: 288756546}
   m_Layer: 0
   m_Name: T_F00_(06,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4431,6 +4516,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 288756541}
   bChangedforEditor: 1
+--- !u!114 &288756546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 288756539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &292144055
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,9 +5619,10 @@ GameObject:
   - component: {fileID: 406030808}
   - component: {fileID: 406030812}
   - component: {fileID: 406030810}
+  - component: {fileID: 406030814}
   m_Layer: 0
   m_Name: T_F00_(-01,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5633,6 +5730,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &406030814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406030807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409422133
 GameObject:
   m_ObjectHideFlags: 0
@@ -5924,9 +6032,10 @@ GameObject:
   - component: {fileID: 426565823}
   - component: {fileID: 426565822}
   - component: {fileID: 426565821}
+  - component: {fileID: 426565826}
   m_Layer: 0
   m_Name: start_block
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6033,7 +6142,18 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 426565821}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
+--- !u!114 &426565826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 426565819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &428972113
 GameObject:
   m_ObjectHideFlags: 0
@@ -6878,9 +6998,10 @@ GameObject:
   - component: {fileID: 519399608}
   - component: {fileID: 519399612}
   - component: {fileID: 519399610}
+  - component: {fileID: 519399614}
   m_Layer: 0
   m_Name: T_F00_(05,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6988,6 +7109,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519399614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 519399607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &524886639
 GameObject:
   m_ObjectHideFlags: 0
@@ -7124,9 +7256,10 @@ GameObject:
   - component: {fileID: 541026205}
   - component: {fileID: 541026209}
   - component: {fileID: 541026207}
+  - component: {fileID: 541026211}
   m_Layer: 0
   m_Name: T_F00_(01,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7234,6 +7367,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &541026211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 541026204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &551039123
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,9 +7545,10 @@ GameObject:
   - component: {fileID: 563898672}
   - component: {fileID: 563898676}
   - component: {fileID: 563898674}
+  - component: {fileID: 563898678}
   m_Layer: 0
   m_Name: T_F00_(03,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7511,6 +7656,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563898678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563898671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &573689352
 GameObject:
   m_ObjectHideFlags: 0
@@ -7629,9 +7785,10 @@ GameObject:
   - component: {fileID: 579720682}
   - component: {fileID: 579720686}
   - component: {fileID: 579720684}
+  - component: {fileID: 579720688}
   m_Layer: 0
   m_Name: T_F00_(03,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -7739,6 +7896,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &579720688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 579720681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &585693874
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,9 +8917,10 @@ GameObject:
   - component: {fileID: 670881985}
   - component: {fileID: 670881989}
   - component: {fileID: 670881987}
+  - component: {fileID: 670881991}
   m_Layer: 0
   m_Name: T_F00_(03,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8859,6 +9028,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &670881991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 670881984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &683420112
 GameObject:
   m_ObjectHideFlags: 0
@@ -9229,9 +9409,10 @@ GameObject:
   - component: {fileID: 725617932}
   - component: {fileID: 725617936}
   - component: {fileID: 725617934}
+  - component: {fileID: 725617938}
   m_Layer: 0
   m_Name: T_F00_(06,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9339,6 +9520,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &725617938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 725617931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &730277224
 GameObject:
   m_ObjectHideFlags: 0
@@ -9414,9 +9606,10 @@ GameObject:
   - component: {fileID: 737845040}
   - component: {fileID: 737845044}
   - component: {fileID: 737845042}
+  - component: {fileID: 737845046}
   m_Layer: 0
   m_Name: T_F00_(04,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9524,6 +9717,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737845046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737845039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &741083207
 GameObject:
   m_ObjectHideFlags: 0
@@ -9537,9 +9741,10 @@ GameObject:
   - component: {fileID: 741083208}
   - component: {fileID: 741083212}
   - component: {fileID: 741083210}
+  - component: {fileID: 741083214}
   m_Layer: 0
   m_Name: T_F00_(-01,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9647,6 +9852,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &741083214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 741083207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &745517869
 GameObject:
   m_ObjectHideFlags: 0
@@ -9814,9 +10030,10 @@ GameObject:
   - component: {fileID: 760740316}
   - component: {fileID: 760740320}
   - component: {fileID: 760740318}
+  - component: {fileID: 760740322}
   m_Layer: 0
   m_Name: T_F00_(01,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -9924,6 +10141,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &760740322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 760740315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &765546016
 GameObject:
   m_ObjectHideFlags: 0
@@ -10277,9 +10505,10 @@ GameObject:
   - component: {fileID: 792801798}
   - component: {fileID: 792801802}
   - component: {fileID: 792801800}
+  - component: {fileID: 792801804}
   m_Layer: 0
   m_Name: T_F00_(01,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -10387,6 +10616,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &792801804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 792801797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &797937185
 GameObject:
   m_ObjectHideFlags: 0
@@ -11232,9 +11472,10 @@ GameObject:
   - component: {fileID: 861184181}
   - component: {fileID: 861184185}
   - component: {fileID: 861184183}
+  - component: {fileID: 861184187}
   m_Layer: 0
   m_Name: T_F00_(-02,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -11342,6 +11583,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &861184187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 861184180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &862087099
 GameObject:
   m_ObjectHideFlags: 0
@@ -14346,9 +14598,10 @@ GameObject:
   - component: {fileID: 1081500252}
   - component: {fileID: 1081500256}
   - component: {fileID: 1081500254}
+  - component: {fileID: 1081500258}
   m_Layer: 0
   m_Name: T_F00_(01,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -14456,6 +14709,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1081500258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1081500251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097966848
 GameObject:
   m_ObjectHideFlags: 0
@@ -14899,9 +15163,10 @@ GameObject:
   - component: {fileID: 1139323531}
   - component: {fileID: 1139323530}
   - component: {fileID: 1139323529}
+  - component: {fileID: 1139323534}
   m_Layer: 0
   m_Name: T_F00_(06,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15009,6 +15274,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1139323529}
   bChangedforEditor: 1
+--- !u!114 &1139323534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1139323527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1140762878
 GameObject:
   m_ObjectHideFlags: 0
@@ -15393,9 +15669,10 @@ GameObject:
   - component: {fileID: 1153395878}
   - component: {fileID: 1153395877}
   - component: {fileID: 1153395876}
+  - component: {fileID: 1153395881}
   m_Layer: 0
   m_Name: T_F00_(06,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15503,6 +15780,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1153395876}
   bChangedforEditor: 1
+--- !u!114 &1153395881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1153395874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1165768903
 GameObject:
   m_ObjectHideFlags: 0
@@ -15516,9 +15804,10 @@ GameObject:
   - component: {fileID: 1165768904}
   - component: {fileID: 1165768908}
   - component: {fileID: 1165768906}
+  - component: {fileID: 1165768910}
   m_Layer: 0
   m_Name: T_F00_(02,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -15626,6 +15915,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1165768910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165768903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1170262269
 GameObject:
   m_ObjectHideFlags: 0
@@ -15916,9 +16216,10 @@ GameObject:
   - component: {fileID: 1197445822}
   - component: {fileID: 1197445826}
   - component: {fileID: 1197445824}
+  - component: {fileID: 1197445828}
   m_Layer: 0
   m_Name: T_F00_(05,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -16026,6 +16327,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197445828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197445821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1204879741
 GameObject:
   m_ObjectHideFlags: 0
@@ -17018,9 +17330,10 @@ GameObject:
   - component: {fileID: 1263288109}
   - component: {fileID: 1263288108}
   - component: {fileID: 1263288107}
+  - component: {fileID: 1263288112}
   m_Layer: 0
   m_Name: T_F00_(-02,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17128,6 +17441,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1263288107}
   bChangedforEditor: 1
+--- !u!114 &1263288112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263288105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1263392915
 GameObject:
   m_ObjectHideFlags: 0
@@ -17141,9 +17465,10 @@ GameObject:
   - component: {fileID: 1263392916}
   - component: {fileID: 1263392920}
   - component: {fileID: 1263392918}
+  - component: {fileID: 1263392922}
   m_Layer: 0
   m_Name: T_F00_(04,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17251,6 +17576,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1263392922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263392915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1280778146
 GameObject:
   m_ObjectHideFlags: 0
@@ -17929,9 +18265,10 @@ GameObject:
   - component: {fileID: 1376878861}
   - component: {fileID: 1376878865}
   - component: {fileID: 1376878863}
+  - component: {fileID: 1376878867}
   m_Layer: 0
   m_Name: T_F00_(01,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18039,6 +18376,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1376878867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1376878860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1379150295
 GameObject:
   m_ObjectHideFlags: 0
@@ -18790,9 +19138,10 @@ GameObject:
   - component: {fileID: 1454173796}
   - component: {fileID: 1454173795}
   - component: {fileID: 1454173794}
+  - component: {fileID: 1454173799}
   m_Layer: 0
   m_Name: T_F00_(06,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -18900,6 +19249,17 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1454173794}
   bChangedforEditor: 1
+--- !u!114 &1454173799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1454173792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1465666830
 GameObject:
   m_ObjectHideFlags: 0
@@ -20054,9 +20414,10 @@ GameObject:
   - component: {fileID: 1516358030}
   - component: {fileID: 1516358034}
   - component: {fileID: 1516358032}
+  - component: {fileID: 1516358036}
   m_Layer: 0
   m_Name: T_F00_(02,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20164,6 +20525,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1516358036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1516358029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536911240
 GameObject:
   m_ObjectHideFlags: 0
@@ -20453,9 +20825,10 @@ GameObject:
   - component: {fileID: 1541557700}
   - component: {fileID: 1541557704}
   - component: {fileID: 1541557702}
+  - component: {fileID: 1541557706}
   m_Layer: 0
   m_Name: T_F00_(02,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20563,6 +20936,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1541557706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1541557699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1551995668
 GameObject:
   m_ObjectHideFlags: 0
@@ -20699,9 +21083,10 @@ GameObject:
   - component: {fileID: 1552874882}
   - component: {fileID: 1552874886}
   - component: {fileID: 1552874884}
+  - component: {fileID: 1552874888}
   m_Layer: 0
   m_Name: T_F00_(05,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -20809,6 +21194,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552874888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1552874881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1556448550
 GameObject:
   m_ObjectHideFlags: 0
@@ -21191,9 +21587,10 @@ GameObject:
   - component: {fileID: 1562833512}
   - component: {fileID: 1562833516}
   - component: {fileID: 1562833514}
+  - component: {fileID: 1562833518}
   m_Layer: 0
   m_Name: T_F00_(-01,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -21301,6 +21698,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1562833518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1562833511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1567175001
 GameObject:
   m_ObjectHideFlags: 0
@@ -22239,9 +22647,10 @@ GameObject:
   - component: {fileID: 1662070287}
   - component: {fileID: 1662070291}
   - component: {fileID: 1662070289}
+  - component: {fileID: 1662070293}
   m_Layer: 0
   m_Name: T_F00_(03,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22349,6 +22758,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1662070293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1662070286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1663348328
 GameObject:
   m_ObjectHideFlags: 0
@@ -22547,9 +22967,10 @@ GameObject:
   - component: {fileID: 1669578470}
   - component: {fileID: 1669578474}
   - component: {fileID: 1669578472}
+  - component: {fileID: 1669578476}
   m_Layer: 0
   m_Name: T_F00_(00,-02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -22657,6 +23078,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669578476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669578469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1684111674
 GameObject:
   m_ObjectHideFlags: 0
@@ -23254,9 +23686,10 @@ GameObject:
   - component: {fileID: 1721019663}
   - component: {fileID: 1721019667}
   - component: {fileID: 1721019665}
+  - component: {fileID: 1721019669}
   m_Layer: 0
   m_Name: T_F00_(02,-01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -23364,6 +23797,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1721019669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1721019662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1728100839
 GameObject:
   m_ObjectHideFlags: 0
@@ -24361,9 +24805,10 @@ GameObject:
   - component: {fileID: 1827722531}
   - component: {fileID: 1827722535}
   - component: {fileID: 1827722533}
+  - component: {fileID: 1827722537}
   m_Layer: 0
   m_Name: T_F00_(-02,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -24471,6 +24916,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1827722537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1827722530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1836656572
 GameObject:
   m_ObjectHideFlags: 0
@@ -24977,9 +25433,10 @@ GameObject:
   - component: {fileID: 1876597066}
   - component: {fileID: 1876597070}
   - component: {fileID: 1876597068}
+  - component: {fileID: 1876597072}
   m_Layer: 0
   m_Name: T_F00_(-02,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25087,6 +25544,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876597072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1876597065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1877733410
 GameObject:
   m_ObjectHideFlags: 0
@@ -25223,9 +25691,10 @@ GameObject:
   - component: {fileID: 1880644115}
   - component: {fileID: 1880644119}
   - component: {fileID: 1880644117}
+  - component: {fileID: 1880644121}
   m_Layer: 0
   m_Name: T_F00_(04,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25333,6 +25802,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1880644121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1880644114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895176863
 GameObject:
   m_ObjectHideFlags: 0
@@ -25346,9 +25826,10 @@ GameObject:
   - component: {fileID: 1895176864}
   - component: {fileID: 1895176868}
   - component: {fileID: 1895176866}
+  - component: {fileID: 1895176870}
   m_Layer: 0
   m_Name: T_F00_(00,01)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25456,6 +25937,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1895176870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1895176863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1905201729
 GameObject:
   m_ObjectHideFlags: 0
@@ -25654,9 +26146,10 @@ GameObject:
   - component: {fileID: 1920483095}
   - component: {fileID: 1920483099}
   - component: {fileID: 1920483097}
+  - component: {fileID: 1920483101}
   m_Layer: 0
   m_Name: T_F00_(-01,02)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -25764,6 +26257,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1920483101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1920483094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934625231
 GameObject:
   m_ObjectHideFlags: 0
@@ -26208,9 +26712,10 @@ GameObject:
   - component: {fileID: 1973399894}
   - component: {fileID: 1973399898}
   - component: {fileID: 1973399896}
+  - component: {fileID: 1973399900}
   m_Layer: 0
   m_Name: T_F00_(02,00)__block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -26318,6 +26823,17 @@ Transform:
   m_Father: {fileID: 585693875}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1973399900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1973399893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1975280811
 GameObject:
   m_ObjectHideFlags: 0
@@ -28269,9 +28785,10 @@ GameObject:
   - component: {fileID: 2089186919}
   - component: {fileID: 2089186917}
   - component: {fileID: 2089186921}
+  - component: {fileID: 2089186922}
   m_Layer: 0
   m_Name: T_F00_(00,-01)__[null]_block_beta_grass
-  m_TagString: Untagged
+  m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -28425,6 +28942,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2089186922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2089186914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2092732503
 GameObject:
   m_ObjectHideFlags: 0
