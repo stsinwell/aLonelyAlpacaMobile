@@ -159,6 +159,7 @@ namespace Anonym.Isometric
             
             if (oldLoc == newLoc && !blockInFront(lastFacing)) { //should move at least one
                 newLoc = GetLocationInFront(newLoc, lastFacing);
+                ShouldHighlightPlayerBlock(lastFacing, true, GetLocationInFront(lastFacing));
             }
             
             return new Vector3(newLoc.x, newLoc.y - 0.22f, newLoc.z);
