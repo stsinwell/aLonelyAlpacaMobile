@@ -30,6 +30,7 @@ namespace Anonym.Isometric
 
         GameObject[] playerBlocks;
         GameObject[] wallBlocks;
+        GameObject[] nonInteractiveBlocks;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
@@ -65,9 +66,10 @@ namespace Anonym.Isometric
                 boardLowestY = Math.Min(playerBlock.transform.position.y, boardLowestY);
             }
 
+            nonInteractiveBlocks = GameObject.FindGameObjectsWithTag("NonInteractable");
             GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
             foreach (GameObject obj in allObjs) {
-                if (obj.tag == "Untagged" || obj.tag =="FireBlockPos") {
+                if (obj.tag == "NonInteractable" || obj.tag == "FireBlockPos") {
                     boardLowestY = Math.Min(obj.transform.position.y, boardLowestY);
                 }
             }
@@ -229,10 +231,6 @@ namespace Anonym.Isometric
             return false;
         }
 
-        Vector3 GetDropPosition() {
-            return GetLocationInFront(lastFacing);
-        }
-
         Vector3 GetLocationInFront(Facing facing) {
             return GetLocationInFront(GetCurrAlpacaLocation(), facing);
         }
@@ -306,7 +304,7 @@ namespace Anonym.Isometric
 
             // can't if there's a normal block at desired drop pos
             foreach (GameObject obj in allObjs) {
-                if (obj.tag == "Untagged" || obj.tag == "FireBlockPos" || 
+                if (obj.tag == "NonInteractable" || obj.tag == "FireBlockPos" || 
                     obj.tag == "Clickable" || obj.tag == "StickyBlock") {
                     if (isTwoPosEqual(obj.transform.position, targetPos)) {
                         return false;
@@ -318,7 +316,7 @@ namespace Anonym.Isometric
         }
 
         void AttemptDropBlock(GameObject selectedBlock) {
-            Vector3 targetPos = GetDropPosition();
+            Vector3 targetPos = GetLocationInFront(lastFacing);
             bool canPlace = isSpaceOpen(targetPos);
 
             if (canPlace) {
@@ -344,6 +342,59 @@ namespace Anonym.Isometric
                 } else if (!isAlpacaCarryingBlock() && playerBlock.GetComponent<clickable_block>().isPlayerFacing 
                             && playerBlock.GetComponent<clickable_block>().isBlockHighlighted()) {
                     PickUpBlock(playerBlock);
+                } 
+            }
+        }
+        
+        void HighlightNonInteractableBlock(Vector3 targetPos) {
+            foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
+                if (isTwoPosEqual(nonInteractiveBlock.transform.position, targetPos)) {
+                     nonInteractiveBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+                }
+            }
+        }
+        
+        void UnHighlightNonInteracableBlocks() {
+            foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
+                nonInteractiveBlock.GetComponent<Unclickable>().setNormalColor();
+            }
+        }
+        
+        void HighlightWhereToDrop() {
+            UnHighlightNonInteracableBlocks();
+            if (isAlpacaCarryingBlock()) {
+                Vector3 posX = GetLocationInFront(Facing.PosX);
+                Vector3 negX = GetLocationInFront(Facing.NegX);
+                Vector3 posZ = GetLocationInFront(Facing.PosZ);
+                Vector3 negZ = GetLocationInFront(Facing.NegZ);
+                
+                float lowestYposX = GetLowestDropPossible(posX);
+                float lowestYnegX = GetLowestDropPossible(negX);
+                float lowestYposZ = GetLowestDropPossible(posZ);
+                float lowestYnegZ = GetLowestDropPossible(negZ);
+                
+                if (!(Mathf.Approximately(lowestYposX, boardLowestY))) {
+                    Vector3 vec = new Vector3(posX.x, lowestYposX - 1, posX.z);
+                    Debug.Log("posX: " + vec);
+                    HighlightNonInteractableBlock(vec);
+                } 
+                
+                if (!(Mathf.Approximately(lowestYnegX, boardLowestY))) {
+                    Vector3 vec = new Vector3(negX.x, lowestYnegX - 1, negX.z);
+                    Debug.Log("negX: " + vec);
+                    HighlightNonInteractableBlock(vec);
+                } 
+                
+                if (!(Mathf.Approximately(lowestYposZ, boardLowestY))) {
+                    Vector3 vec = new Vector3(posZ.x, lowestYposZ - 1, posZ.z);
+                    Debug.Log("posZ: " + vec);
+                    HighlightNonInteractableBlock(vec);
+                } 
+                
+                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY))) {
+                    Vector3 vec = new Vector3(negZ.x, lowestYnegZ - 1, negZ.z);
+                    Debug.Log("negZ: " + vec);
+                    HighlightNonInteractableBlock(vec);
                 } 
             }
         }
@@ -468,7 +519,7 @@ namespace Anonym.Isometric
 
             GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
             foreach (GameObject obj in allObjs) {
-                if (obj.tag == "Untagged" && isTwoPosEqual(obj.transform.position, GetLocationInFront(newFacing))) {
+                if (obj.tag == "NonInteractable" && isTwoPosEqual(obj.transform.position, GetLocationInFront(newFacing))) {
                      return true;
                 }
             }
@@ -541,6 +592,7 @@ namespace Anonym.Isometric
         void InputProcess()
         {            
             KeyPressedOnce();
+            HighlightWhereToDrop();
             
             if (continuousMovement) {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
