@@ -31,6 +31,7 @@ namespace Anonym.Isometric
         GameObject[] playerBlocks;
         GameObject[] wallBlocks;
         GameObject[] nonInteractiveBlocks;
+        GameObject[] fireBlocks;
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
@@ -67,6 +68,7 @@ namespace Anonym.Isometric
             }
 
             nonInteractiveBlocks = GameObject.FindGameObjectsWithTag("NonInteractable");
+            fireBlocks = GameObject.FindGameObjectsWithTag("FireBlockPos");
             GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
             foreach (GameObject obj in allObjs) {
                 if (obj.tag == "NonInteractable" || obj.tag == "FireBlockPos") {
@@ -156,7 +158,7 @@ namespace Anonym.Isometric
             return RoundLocation(vec);
         }
         
-        Vector3 BoundAlpacaToBlock() {
+        public Vector3 BoundAlpacaToBlock() {
             Vector3 newLoc = RoundLocation(gameObject.transform.position);
             
             if (oldLoc == newLoc && !blockInFront(lastFacing)) { //should move at least one
@@ -164,7 +166,9 @@ namespace Anonym.Isometric
                 ShouldHighlightPlayerBlock(lastFacing, true, GetLocationInFront(lastFacing));
             }
             
-            return new Vector3(newLoc.x, newLoc.y - 0.22f, newLoc.z);
+            Vector3 vec = new Vector3(newLoc.x, newLoc.y - 0.22f, newLoc.z);
+
+            return vec;
         }
 
         //method to access private GettCurrAlpacaLocation property
@@ -176,6 +180,24 @@ namespace Anonym.Isometric
             return Mathf.Approximately(pos1.x, pos2.x) && 
                    Mathf.Approximately(pos1.y, pos2.y) && 
                    Mathf.Approximately(pos1.z, pos2.z);
+        }
+        
+        bool isBlockBelowOtherBlocks(GameObject blockInQuestion) {
+            Vector3 adjustedBlockPos = blockInQuestion.transform.position;
+            //Debug.Log("blockInQuestion: " + adjustedBlockPos);
+            adjustedBlockPos.y += 1;
+            
+            GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
+            foreach (GameObject obj in allObjs) {
+                if (obj.tag == "NonInteractable" || obj.tag == "FireBlockPos" || obj.tag == "Clickable" || obj.tag == "StickyBlock") {
+                    if(isTwoPosEqual(obj.transform.position, adjustedBlockPos)) {
+                        //Debug.Log("true");
+                        return true;
+                    }
+                }
+            }
+            //Debug.Log("false");
+            return false;
         }
 
         bool isPlayerBlockBelowOtherPlayerBlocks(GameObject blockInQuestion) {
@@ -207,7 +229,7 @@ namespace Anonym.Isometric
             return isTwoPosEqual(playerBlock.transform.position, posIfAlpacaMoved);
         }
 
-        void UnhighlightAllOtherPlayerBlocks() {
+        void UnhighlightAllPlayerBlocks() {
             foreach(GameObject playerBlock in playerBlocks) {
                 playerBlock.GetComponent<clickable_block>().setPlayerNotFacing();
             }
@@ -220,7 +242,7 @@ namespace Anonym.Isometric
 
             foreach(GameObject playerBlock in playerBlocks) {
                 if (isAlpacaFacingPlayableBlock(facing, playerBlock, providedLocation, forceAlpacaLocation) && !isPlayerBlockBelowOtherPlayerBlocks(playerBlock)) {
-                    UnhighlightAllOtherPlayerBlocks();
+                    UnhighlightAllPlayerBlocks();
                     playerBlock.GetComponent<clickable_block>().setPlayerFacing();
                     return true;
                 } else {
@@ -346,22 +368,45 @@ namespace Anonym.Isometric
             }
         }
         
-        void HighlightNonInteractableBlock(Vector3 targetPos) {
+        void HighlightDropHelperBlock(Vector3 targetPos) {
             foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
-                if (isTwoPosEqual(nonInteractiveBlock.transform.position, targetPos)) {
+                if (isTwoPosEqual(nonInteractiveBlock.transform.position, targetPos) &&
+                    !isBlockBelowOtherBlocks(nonInteractiveBlock)) {
                      nonInteractiveBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+                }
+            }
+            
+            foreach (GameObject fireBlock in fireBlocks) {
+                if (isTwoPosEqual(fireBlock.transform.position, targetPos) &&
+                    !isBlockBelowOtherBlocks(fireBlock)) {
+                     fireBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+                }
+            }
+            
+            foreach (GameObject playerBlock in playerBlocks) {
+                if (isTwoPosEqual(playerBlock.transform.position, targetPos) &&
+                    !isBlockBelowOtherBlocks(playerBlock)) {
+                     playerBlock.GetComponent<clickable_block>().setCanBeDroppedOnColor();
                 }
             }
         }
         
-        void UnHighlightNonInteracableBlocks() {
+        void UnHighlightDropHelperBlocks() {
             foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
                 nonInteractiveBlock.GetComponent<Unclickable>().setNormalColor();
+            }
+            
+            foreach (GameObject fireBlock in fireBlocks) {
+                fireBlock.GetComponent<Unclickable>().setNormalColor();
+            }
+            
+            if (isAlpacaCarryingBlock()) {
+                UnhighlightAllPlayerBlocks();
             }
         }
         
         void HighlightWhereToDrop() {
-            UnHighlightNonInteracableBlocks();
+            UnHighlightDropHelperBlocks();
             if (isAlpacaCarryingBlock()) {
                 Vector3 posX = GetLocationInFront(Facing.PosX);
                 Vector3 negX = GetLocationInFront(Facing.NegX);
@@ -373,28 +418,24 @@ namespace Anonym.Isometric
                 float lowestYposZ = GetLowestDropPossible(posZ);
                 float lowestYnegZ = GetLowestDropPossible(negZ);
                 
-                if (!(Mathf.Approximately(lowestYposX, boardLowestY))) {
+                if ((!(Mathf.Approximately(lowestYposX, boardLowestY))) && isSpaceOpen(posX)) {
                     Vector3 vec = new Vector3(posX.x, lowestYposX - 1, posX.z);
-                    Debug.Log("posX: " + vec);
-                    HighlightNonInteractableBlock(vec);
+                    HighlightDropHelperBlock(vec);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYnegX, boardLowestY))) {
+                if ((!(Mathf.Approximately(lowestYnegX, boardLowestY))) && isSpaceOpen(negX)) {
                     Vector3 vec = new Vector3(negX.x, lowestYnegX - 1, negX.z);
-                    Debug.Log("negX: " + vec);
-                    HighlightNonInteractableBlock(vec);
+                    HighlightDropHelperBlock(vec);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYposZ, boardLowestY))) {
+                if (!(Mathf.Approximately(lowestYposZ, boardLowestY)) && isSpaceOpen(posZ)) {
                     Vector3 vec = new Vector3(posZ.x, lowestYposZ - 1, posZ.z);
-                    Debug.Log("posZ: " + vec);
-                    HighlightNonInteractableBlock(vec);
+                    HighlightDropHelperBlock(vec);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY))) {
+                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY)) && isSpaceOpen(negZ)) {
                     Vector3 vec = new Vector3(negZ.x, lowestYnegZ - 1, negZ.z);
-                    Debug.Log("negZ: " + vec);
-                    HighlightNonInteractableBlock(vec);
+                    HighlightDropHelperBlock(vec);
                 } 
             }
         }
@@ -616,7 +657,7 @@ namespace Anonym.Isometric
                     Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow) ||
                     Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
                     Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow) ) {
-                    gameObject.transform.position = BoundAlpacaToBlock();
+                    ShouldHighlightPlayerBlock(lastFacing, true, GetLocationInFront(lastFacing));
                 }
             }
 

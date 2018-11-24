@@ -517,6 +517,9 @@ namespace Anonym.Isometric
             vHorizontalMovement = Vector3.zero;
             bOnMoving = bDashing = false;
             UpdateAnimatorParams();
+            
+            GameObject player = GameObject.FindWithTag("Player");
+            player.transform.position = player.GetComponent<KeyInputAssist>().BoundAlpacaToBlock();
 
             // if (!alive) {
             //     alive = false;
