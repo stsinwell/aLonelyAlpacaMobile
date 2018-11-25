@@ -418,22 +418,30 @@ namespace Anonym.Isometric
                 float lowestYposZ = GetLowestDropPossible(posZ);
                 float lowestYnegZ = GetLowestDropPossible(negZ);
                 
-                if ((!(Mathf.Approximately(lowestYposX, boardLowestY))) && isSpaceOpen(posX)) {
+                if ((!(Mathf.Approximately(lowestYposX, boardLowestY))) 
+                    && isSpaceOpen(posX)
+                    && lastFacing == Facing.PosX) {
                     Vector3 vec = new Vector3(posX.x, lowestYposX - 1, posX.z);
                     HighlightDropHelperBlock(vec);
                 } 
                 
-                if ((!(Mathf.Approximately(lowestYnegX, boardLowestY))) && isSpaceOpen(negX)) {
+                if ((!(Mathf.Approximately(lowestYnegX, boardLowestY))) 
+                    && isSpaceOpen(negX)
+                    && lastFacing == Facing.NegX) {
                     Vector3 vec = new Vector3(negX.x, lowestYnegX - 1, negX.z);
                     HighlightDropHelperBlock(vec);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYposZ, boardLowestY)) && isSpaceOpen(posZ)) {
+                if (!(Mathf.Approximately(lowestYposZ, boardLowestY)) 
+                    && isSpaceOpen(posZ)
+                    && lastFacing == Facing.PosZ) {
                     Vector3 vec = new Vector3(posZ.x, lowestYposZ - 1, posZ.z);
                     HighlightDropHelperBlock(vec);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY)) && isSpaceOpen(negZ)) {
+                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY)) 
+                    && isSpaceOpen(negZ)
+                    && lastFacing == Facing.NegZ) {
                     Vector3 vec = new Vector3(negZ.x, lowestYnegZ - 1, negZ.z);
                     HighlightDropHelperBlock(vec);
                 } 
