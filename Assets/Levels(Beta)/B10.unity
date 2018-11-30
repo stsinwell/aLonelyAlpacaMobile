@@ -8467,7 +8467,7 @@ GameObject:
   - component: {fileID: 974148685}
   m_Layer: 0
   m_Name: T_F-15_(06,01)__winblock
-  m_TagString: Untagged
+  m_TagString: WinBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -8574,7 +8574,7 @@ MonoBehaviour:
   _grid: {fileID: 1526979925}
   bSnapFree: 0
   _autoName: {fileID: 974148685}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &982465766
 GameObject:
   m_ObjectHideFlags: 0

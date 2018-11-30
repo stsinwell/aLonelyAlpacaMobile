@@ -8040,7 +8040,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 234656360}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &234656362
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17859,7 +17859,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 616722799}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &616722801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33764,7 +33764,7 @@ GameObject:
   - component: {fileID: 1238694957}
   m_Layer: 0
   m_Name: T_F30_(09,04)__winblock
-  m_TagString: Untagged
+  m_TagString: WinBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -33838,7 +33838,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1238694957}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1238694959
 MonoBehaviour:
   m_ObjectHideFlags: 0

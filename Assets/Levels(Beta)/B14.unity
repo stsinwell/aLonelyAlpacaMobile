@@ -4919,7 +4919,7 @@ GameObject:
   - component: {fileID: 184837279}
   m_Layer: 0
   m_Name: T_F-45_(04,-13)__winblock
-  m_TagString: Goal
+  m_TagString: WinBlockPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5026,7 +5026,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 184837279}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!1 &189330489
 GameObject:
   m_ObjectHideFlags: 0
@@ -6885,7 +6885,7 @@ GameObject:
   - component: {fileID: 256893001}
   - component: {fileID: 256893005}
   m_Layer: 0
-  m_Name: T_F-42_(03,-04)__block_beta_grass
+  m_Name: T_F-42_(03,-04)__startblock
   m_TagString: NonInteractable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6960,7 +6960,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 256893001}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &256893003
 MonoBehaviour:
   m_ObjectHideFlags: 0
