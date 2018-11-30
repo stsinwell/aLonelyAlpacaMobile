@@ -11,7 +11,8 @@ public class LevelMenuControllerScript : MonoBehaviour {
 	public Button B1Button, B2Button, B3Button, B4Button, B5Button, B6Button, 
 				  B7Button, B8Button, B9Button, B10Button, B11Button, B12Button,
 				  B13Button, B14Button, B15Button, B16Button, B17Button, B18Button, 
-				  B19Button, B20Button, B21Button, B22Button;
+				  B19Button, B20Button, B21Button, B22Button, B23Button, B24Button, 
+				  B25Button;
 	public int levelPassed;
 
 	public Sprite alpacaLeft;
@@ -340,6 +341,81 @@ public class LevelMenuControllerScript : MonoBehaviour {
 				B20Button.interactable = true;
 				B21Button.interactable = true;
 				B22Button.interactable = true;
+				break;
+			case 23:
+				B2Button.interactable = true;
+				B3Button.interactable = true;
+				B4Button.interactable = true;
+				B5Button.interactable = true;
+				B6Button.interactable = true;
+				B7Button.interactable = true;
+				B8Button.interactable = true;
+				B9Button.interactable = true;
+				B10Button.interactable = true;
+				B11Button.interactable = true;
+				B12Button.interactable = true;
+				B13Button.interactable = true;
+				B14Button.interactable = true;
+				B15Button.interactable = true;
+				B16Button.interactable = true;
+				B17Button.interactable = true;
+				B18Button.interactable = true;
+				B19Button.interactable = true;
+				B20Button.interactable = true;
+				B21Button.interactable = true;
+				B22Button.interactable = true;
+				B23Button.interactable = true;
+				break;
+			case 24:
+				B2Button.interactable = true;
+				B3Button.interactable = true;
+				B4Button.interactable = true;
+				B5Button.interactable = true;
+				B6Button.interactable = true;
+				B7Button.interactable = true;
+				B8Button.interactable = true;
+				B9Button.interactable = true;
+				B10Button.interactable = true;
+				B11Button.interactable = true;
+				B12Button.interactable = true;
+				B13Button.interactable = true;
+				B14Button.interactable = true;
+				B15Button.interactable = true;
+				B16Button.interactable = true;
+				B17Button.interactable = true;
+				B18Button.interactable = true;
+				B19Button.interactable = true;
+				B20Button.interactable = true;
+				B21Button.interactable = true;
+				B22Button.interactable = true;
+				B23Button.interactable = true;
+				B24Button.interactable = true;
+				break;
+			case 25:
+				B2Button.interactable = true;
+				B3Button.interactable = true;
+				B4Button.interactable = true;
+				B5Button.interactable = true;
+				B6Button.interactable = true;
+				B7Button.interactable = true;
+				B8Button.interactable = true;
+				B9Button.interactable = true;
+				B10Button.interactable = true;
+				B11Button.interactable = true;
+				B12Button.interactable = true;
+				B13Button.interactable = true;
+				B14Button.interactable = true;
+				B15Button.interactable = true;
+				B16Button.interactable = true;
+				B17Button.interactable = true;
+				B18Button.interactable = true;
+				B19Button.interactable = true;
+				B20Button.interactable = true;
+				B21Button.interactable = true;
+				B22Button.interactable = true;
+				B23Button.interactable = true;
+				B24Button.interactable = true;
+				B25Button.interactable = true;
 				break;
 		}
 			
