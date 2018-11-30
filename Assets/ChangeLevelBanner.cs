@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 
 public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
 	public Image levelBanner;
+	public Image levelImagePreview;
 	int defaultLevelNumber;
 	int levelPassed;
 
@@ -17,6 +18,9 @@ public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
 		if(levelPassed == 22) defaultLevelNumber = levelPassed;
 		levelBanner = GameObject.Find("LevelBanner").GetComponent<Image>();
 		levelBanner.sprite = GameObject.Find("banner" + defaultLevelNumber).GetComponent<SpriteRenderer>().sprite;
+
+		levelImagePreview = GameObject.Find("ImagePreview").GetComponent<Image>();
+		levelImagePreview.sprite = GameObject.Find("level" + defaultLevelNumber).GetComponent<SpriteRenderer>().sprite;
 	}
 	
 	// Update is called once per frame
@@ -28,5 +32,6 @@ public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
      {
         string getLevelNumber = Regex.Match(gameObject.name, @"\d+").Value;
 		levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+		levelImagePreview.sprite = GameObject.Find("level" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
      }
 }
