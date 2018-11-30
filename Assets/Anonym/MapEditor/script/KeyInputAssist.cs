@@ -300,6 +300,11 @@ namespace Anonym.Isometric
             musicSource.Play();
             CFD.has_block = false;
         }
+        
+//        bool isWinBlock(Vector3 targetPos) {
+//            Vector3 blockBelow = new Vector3(targetPos.x, targetPos.y - 1.0f, targetPos.z);
+//            GameObject winBlock = GameObject.FindWithTag(   )
+//        }
 
         float GetStickyDropY(Vector3 targetPos) {
             if (isSpaceOpen(new Vector3(targetPos.x, targetPos.y - 1, targetPos.z))) {
@@ -339,7 +344,7 @@ namespace Anonym.Isometric
 
         void AttemptDropBlock(GameObject selectedBlock) {
             Vector3 targetPos = GetLocationInFront(lastFacing);
-            bool canPlace = isSpaceOpen(targetPos);
+            bool canPlace = isSpaceOpen(targetPos) && !(gameObject.GetComponent<IsometricMovement>().isMoving) && gameObject.GetComponent<IsometricMovement>().alive;
 
             if (canPlace) {
                 DropBlock(selectedBlock, targetPos);

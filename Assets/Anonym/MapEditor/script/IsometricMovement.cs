@@ -35,7 +35,7 @@ namespace Anonym.Isometric
     public class IsometricMovement : MethodBTN_MonoBehaviour
     {
 
-        private bool isMoving;
+        public bool isMoving;
         public fireBlockCollision fireBlockCollisionScript;
         public Image deathImage;
         public AudioSource deathSong;
