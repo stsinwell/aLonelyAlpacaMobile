@@ -390,8 +390,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 138887602}
   zAmount: 3
-  background: {fileID: 0}
-  background2: {fileID: 0}
+  background: {fileID: 1786641676}
+  background2: {fileID: 1971496519}
   bgScaleAmnt: 0
 --- !u!1 &42769281
 GameObject:
@@ -13888,7 +13888,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1036764167}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1036764169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24142,6 +24142,22 @@ Prefab:
       propertyPath: nextLevel
       value: B2
       objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
@@ -24330,6 +24346,11 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1785620974}
   bChangedforEditor: 1
+--- !u!1 &1786641676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758634550}
 --- !u!1 &1792432898
 GameObject:
   m_ObjectHideFlags: 0
@@ -26637,6 +26658,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1971496519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758634550}
 --- !u!1 &1972293422
 GameObject:
   m_ObjectHideFlags: 0
