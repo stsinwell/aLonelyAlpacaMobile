@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073993, b: 0.3587269, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12566,8 +12566,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1890582593}
   zAmount: 3
-  background: {fileID: 0}
-  background2: {fileID: 0}
+  background: {fileID: 1890582595}
+  background2: {fileID: 1890582594}
   bgScaleAmnt: 0
 --- !u!1 &379319101
 GameObject:
@@ -29798,7 +29798,7 @@ MonoBehaviour:
   _grid: {fileID: 1971292625}
   bSnapFree: 0
   _autoName: {fileID: 948330963}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &948330965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63525,11 +63525,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3.2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
@@ -63537,6 +63545,16 @@ Prefab:
 --- !u!20 &1890582593 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1890582592}
+--- !u!1 &1890582594 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1890582592}
+--- !u!1 &1890582595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
     type: 2}
   m_PrefabInternal: {fileID: 1890582592}
 --- !u!1 &1890855838

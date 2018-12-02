@@ -48738,11 +48738,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 95093271680838662, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
@@ -48771,12 +48771,30 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!20 &1699188399 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1699188398}
+--- !u!1 &1699188400 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1699188398}
+--- !u!1 &1699188401 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
     type: 2}
   m_PrefabInternal: {fileID: 1699188398}
 --- !u!1 &1713062024
@@ -49270,6 +49288,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1699188399}
   zAmount: 3
+  background: {fileID: 1699188401}
+  background2: {fileID: 1699188400}
+  bgScaleAmnt: 0
 --- !u!1 &1721661929
 GameObject:
   m_ObjectHideFlags: 0
