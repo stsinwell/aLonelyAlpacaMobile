@@ -22,6 +22,9 @@ public class KongregateAPIBehaviour : MonoBehaviour {
 			kongregateUnitySupport.initAPI('KongregateAPI', 'OnKongregateAPILoaded');
 		};"
 		);
+
+		//submits instance of successful loading to Kong server
+		Application.ExternalCall("kongregate.stats.submit", "initialized", 1);
 	}
 
 	public void OnKongregateAPILoaded(string userInfoString) {
