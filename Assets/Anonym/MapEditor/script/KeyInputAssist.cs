@@ -668,7 +668,7 @@ namespace Anonym.Isometric
         
         Vector3 GetFallenPosition(Facing newFacing) {
             Vector3 locInFront = GetLocationInFront(newFacing);
-            float yDrop = GetLowestDropPossible(locInFront);
+            float yDrop = GetLowestDropPossible(locInFront) - 1.0f;
 
             return new Vector3(locInFront.x, yDrop, locInFront.z);
         }
@@ -742,12 +742,7 @@ namespace Anonym.Isometric
                     Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
                     Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow) ) {
                     
-                    if (didFall) {
-                        ShouldHighlightPlayerBlock(lastFacing, true, GetFallenPosition(lastFacing));
-                    } else {
-                        ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
-                    }
-                    didFall = false;
+                    ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 }
             }
 
