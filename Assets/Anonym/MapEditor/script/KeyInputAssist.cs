@@ -550,24 +550,12 @@ namespace Anonym.Isometric
         }
 
         bool RotateAlpaca(Facing newFacing) {
+            GameObject loggingObject = GameObject.Find("GameObject");
+            if (newFacing != lastFacing) {
+                return true;
+            }
 
-        GameObject loggingObject = GameObject.Find("GameObject");
-        //int abTestValue = loggingObject.GetComponent<loggingInGameManager>().abValueToReference;
-        if (newFacing != lastFacing) {
-            return true;
-        }
-
-        return false;
-//        int abTestValue = 1;
-//            switch(abTestValue) {
-//                //if abtestvalue is 1, player may pivot in place
-//                case 1:
-//                    if (newFacing != lastFacing) {
-//                        return true;
-//                    }
-//
-//                    return false;
-//             return false;
+            return false;
         }
 
         bool AttemptJump(Vector3 posInFront) {
