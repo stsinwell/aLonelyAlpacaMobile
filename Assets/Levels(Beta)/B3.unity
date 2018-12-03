@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.3587269, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17669,7 +17669,7 @@ MonoBehaviour:
   _grid: {fileID: 1194972319}
   bSnapFree: 0
   _autoName: {fileID: 729835233}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &729835235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35849,6 +35849,7 @@ GameObject:
   - component: {fileID: 1393489212}
   - component: {fileID: 1393489211}
   - component: {fileID: 1393489216}
+  - component: {fileID: 1393489217}
   m_Layer: 0
   m_Name: T_F00_(01,-01)__winblock
   m_TagString: Goal
@@ -35958,7 +35959,7 @@ MonoBehaviour:
   _grid: {fileID: 1194972319}
   bSnapFree: 0
   _autoName: {fileID: 1393489211}
-  bChangedforEditor: 1
+  bChangedforEditor: 0
 --- !u!114 &1393489216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35970,6 +35971,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1393489217
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1393489209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 88dc7491c87f02e4cb184af4e8057414, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1393836326
 GameObject:
   m_ObjectHideFlags: 0
