@@ -16,7 +16,7 @@ public class loggingInGameManager : MonoBehaviour {
 	void Start () {
 
         //if(checkIfFirstTimePlaying == false){
-            LoggingManager.instance.Initialize(890, 4, false);
+            LoggingManager.instance.Initialize(890, 6, false);
             LoggingManager.instance.RecordPageLoad();
             DontDestroyOnLoad(gameObject); // Prevent the logging manager been destroyed accidentally.
 
