@@ -414,45 +414,39 @@ namespace Anonym.Isometric
             }
         }
         
+        Vector3 getAdjacentBlock(Facing facing) {
+            Vector3 vec = GetLocationInFront(facing);
+            float lowestY = GetLowestDropPossible(vec);
+            
+             if (!(Mathf.Approximately(lowestY, boardLowestY)) && isSpaceOpen(vec)) {
+                return new Vector3(vec.x, lowestY - 1, vec.z);
+             } 
+            
+            return new Vector3(0, boardLowestY - 1, vec.z);
+        }
+        
         void HighlightWhereToDrop() {
             UnHighlightDropHelperBlocks();
             if (isAlpacaCarryingBlock()) {
-                Vector3 posX = GetLocationInFront(Facing.PosX);
-                Vector3 negX = GetLocationInFront(Facing.NegX);
-                Vector3 posZ = GetLocationInFront(Facing.PosZ);
-                Vector3 negZ = GetLocationInFront(Facing.NegZ);
+                Vector3 posX = getAdjacentBlock(Facing.PosX);
+                Vector3 negX = getAdjacentBlock(Facing.NegX);
+                Vector3 posZ = getAdjacentBlock(Facing.PosZ);
+                Vector3 negZ = getAdjacentBlock(Facing.NegZ);
                 
-                float lowestYposX = GetLowestDropPossible(posX);
-                float lowestYnegX = GetLowestDropPossible(negX);
-                float lowestYposZ = GetLowestDropPossible(posZ);
-                float lowestYnegZ = GetLowestDropPossible(negZ);
-                
-                if ((!(Mathf.Approximately(lowestYposX, boardLowestY))) 
-                    && isSpaceOpen(posX)
-                    && lastFacing == Facing.PosX) {
-                    Vector3 vec = new Vector3(posX.x, lowestYposX - 1, posX.z);
-                    HighlightDropHelperBlock(vec);
+                if (posX.y != boardLowestY - 1 && lastFacing == Facing.PosX) {
+                    HighlightDropHelperBlock(posX);
                 } 
                 
-                if ((!(Mathf.Approximately(lowestYnegX, boardLowestY))) 
-                    && isSpaceOpen(negX)
-                    && lastFacing == Facing.NegX) {
-                    Vector3 vec = new Vector3(negX.x, lowestYnegX - 1, negX.z);
-                    HighlightDropHelperBlock(vec);
+                if (negX.y != boardLowestY - 1 && lastFacing == Facing.NegX) {
+                    HighlightDropHelperBlock(negX);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYposZ, boardLowestY)) 
-                    && isSpaceOpen(posZ)
-                    && lastFacing == Facing.PosZ) {
-                    Vector3 vec = new Vector3(posZ.x, lowestYposZ - 1, posZ.z);
-                    HighlightDropHelperBlock(vec);
+                if (posZ.y != boardLowestY - 1 && lastFacing == Facing.PosZ) {
+                    HighlightDropHelperBlock(posZ);
                 } 
                 
-                if (!(Mathf.Approximately(lowestYnegZ, boardLowestY)) 
-                    && isSpaceOpen(negZ)
-                    && lastFacing == Facing.NegZ) {
-                    Vector3 vec = new Vector3(negZ.x, lowestYnegZ - 1, negZ.z);
-                    HighlightDropHelperBlock(vec);
+                if (negZ.y != boardLowestY - 1 && lastFacing == Facing.NegZ) {
+                    HighlightDropHelperBlock(negZ);
                 } 
             }
         }
