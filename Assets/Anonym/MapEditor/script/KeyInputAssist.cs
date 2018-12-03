@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace Anonym.Isometric
 {
@@ -184,19 +185,17 @@ namespace Anonym.Isometric
         
         bool isBlockBelowOtherBlocks(GameObject blockInQuestion) {
             Vector3 adjustedBlockPos = blockInQuestion.transform.position;
-            //Debug.Log("blockInQuestion: " + adjustedBlockPos);
             adjustedBlockPos.y += 1;
             
             GameObject[] allObjs =  UnityEngine.Object.FindObjectsOfType<GameObject>();
             foreach (GameObject obj in allObjs) {
                 if (obj.tag == "NonInteractable" || obj.tag == "FireBlockPos" || obj.tag == "Clickable" || obj.tag == "StickyBlock") {
                     if(isTwoPosEqual(obj.transform.position, adjustedBlockPos)) {
-                        //Debug.Log("true");
                         return true;
                     }
                 }
             }
-            //Debug.Log("false");
+            
             return false;
         }
 
@@ -377,26 +376,54 @@ namespace Anonym.Isometric
             }
         }
         
-        void HighlightDropHelperBlock(Vector3 targetPos) {
+        GameObject getNonInteractableBlock(Vector3 pos) {
             foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
-                if (isTwoPosEqual(nonInteractiveBlock.transform.position, targetPos) &&
+                if (isTwoPosEqual(nonInteractiveBlock.transform.position, pos) &&
                     !isBlockBelowOtherBlocks(nonInteractiveBlock)) {
-                     nonInteractiveBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+                     return nonInteractiveBlock;
                 }
             }
             
+            return null;
+        }
+        
+        GameObject getFireBlock(Vector3 pos) {
             foreach (GameObject fireBlock in fireBlocks) {
-                if (isTwoPosEqual(fireBlock.transform.position, targetPos) &&
+                if (isTwoPosEqual(fireBlock.transform.position, pos) &&
                     !isBlockBelowOtherBlocks(fireBlock)) {
-                     fireBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+                     return fireBlock;
                 }
             }
             
+            return null;
+        }
+        
+        GameObject getPlayerBlock(Vector3 pos) {
             foreach (GameObject playerBlock in playerBlocks) {
-                if (isTwoPosEqual(playerBlock.transform.position, targetPos) &&
+                if (isTwoPosEqual(playerBlock.transform.position, pos) &&
                     !isBlockBelowOtherBlocks(playerBlock)) {
-                     playerBlock.GetComponent<clickable_block>().setCanBeDroppedOnColor();
+                     return playerBlock;
                 }
+            }
+            
+            return null;
+        }
+        
+        void HighlightDropHelperBlock(Vector3 targetPos) {
+            GameObject nonInteractableBlock = getNonInteractableBlock(targetPos);
+            GameObject fireBlock = getFireBlock(targetPos);
+            GameObject playerBlock = getPlayerBlock(targetPos);
+            
+            if (nonInteractableBlock != null) {
+                nonInteractableBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+            }
+            
+            if (fireBlock != null) {
+                fireBlock.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+            }
+
+            if (playerBlock != null) {
+                playerBlock.GetComponent<clickable_block>().setCanBeDroppedOnColor();
             }
         }
         
@@ -414,24 +441,13 @@ namespace Anonym.Isometric
             }
         }
         
-        Vector3 getAdjacentBlock(Facing facing) {
-            Vector3 vec = GetLocationInFront(facing);
-            float lowestY = GetLowestDropPossible(vec);
-            
-             if (!(Mathf.Approximately(lowestY, boardLowestY)) && isSpaceOpen(vec)) {
-                return new Vector3(vec.x, lowestY - 1, vec.z);
-             } 
-            
-            return new Vector3(0, boardLowestY - 1, vec.z);
-        }
-        
         void HighlightWhereToDrop() {
             UnHighlightDropHelperBlocks();
             if (isAlpacaCarryingBlock()) {
-                Vector3 posX = getAdjacentBlock(Facing.PosX);
-                Vector3 negX = getAdjacentBlock(Facing.NegX);
-                Vector3 posZ = getAdjacentBlock(Facing.PosZ);
-                Vector3 negZ = getAdjacentBlock(Facing.NegZ);
+                Vector3 posX = getAdjacentBlockPos(Facing.PosX);
+                Vector3 negX = getAdjacentBlockPos(Facing.NegX);
+                Vector3 posZ = getAdjacentBlockPos(Facing.PosZ);
+                Vector3 negZ = getAdjacentBlockPos(Facing.NegZ);
                 
                 if (posX.y != boardLowestY - 1 && lastFacing == Facing.PosX) {
                     HighlightDropHelperBlock(posX);
@@ -448,6 +464,53 @@ namespace Anonym.Isometric
                 if (negZ.y != boardLowestY - 1 && lastFacing == Facing.NegZ) {
                     HighlightDropHelperBlock(negZ);
                 } 
+            }
+        }
+        
+        Vector3 getAdjacentBlockPos(Facing facing) {
+            Vector3 vec = GetLocationInFront(facing);
+            float lowestY = GetLowestDropPossible(vec);
+            
+             if (!(Mathf.Approximately(lowestY, boardLowestY)) && isSpaceOpen(vec)) {
+                return new Vector3(vec.x, lowestY - 1, vec.z);
+             } 
+            
+            return new Vector3(0, boardLowestY - 1, vec.z);
+        }
+        
+        void LevelsOneToFiveSetNormalSprites() {
+            foreach (GameObject nonInteractiveBlock in nonInteractiveBlocks) {
+                nonInteractiveBlock.GetComponent<Unclickable>().setNormalSprite();
+            }
+            
+            foreach (GameObject playerBlock in playerBlocks) {
+                playerBlock.GetComponent<clickable_block>().setNormalSprite();
+            }
+        }
+        
+        void setWASD(Vector3 pos, Facing facing) {
+            GameObject nonInteractableBlock = getNonInteractableBlock(pos);
+            GameObject playerBlock = getPlayerBlock(pos);
+            
+            if (nonInteractableBlock != null) {
+                nonInteractableBlock.GetComponent<Unclickable>().setWASDsprite((int) facing);
+            }
+            
+            if (playerBlock != null) {
+                playerBlock.GetComponent<clickable_block>().setWASDsprite((int) facing);
+            }
+        }
+        
+        void LevelsOneToFiveHelper() {
+            string levelName = SceneManager.GetActiveScene().name;
+            
+            if (levelName.Equals("B1") || levelName.Equals("B2") || levelName.Equals("B3") || levelName.Equals("B4") || levelName.Equals("B5")) {
+                LevelsOneToFiveSetNormalSprites();
+
+                setWASD(getAdjacentBlockPos(Facing.PosX), Facing.PosX);
+                setWASD(getAdjacentBlockPos(Facing.NegX), Facing.NegX);
+                setWASD(getAdjacentBlockPos(Facing.PosZ), Facing.PosZ);
+                setWASD(getAdjacentBlockPos(Facing.NegZ), Facing.NegZ);
             }
         }
 
@@ -645,6 +708,7 @@ namespace Anonym.Isometric
         {            
             KeyPressedOnce();
             HighlightWhereToDrop();
+            LevelsOneToFiveHelper();
             
             if (continuousMovement) {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
