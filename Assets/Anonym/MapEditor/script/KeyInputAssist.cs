@@ -738,7 +738,7 @@ namespace Anonym.Isometric
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
-                ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+                //ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 doubleClickDetected = false;
             }
 
