@@ -35,7 +35,7 @@ public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
 			levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
 			levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
 		}
-		else{
+		else {
 			levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
 			levelImagePreview.sprite = GameObject.Find("level" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
 		}
