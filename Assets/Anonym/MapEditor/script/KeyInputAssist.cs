@@ -606,6 +606,7 @@ namespace Anonym.Isometric
             if (canJump) {
                 posInFront.y += 1;
                 gameObject.transform.position = posInFront;
+                
 
                 if (!isAlpacaCarryingBlock()) { 
                     foreach(GameObject playerBlock in playerBlocks) { 
@@ -668,13 +669,10 @@ namespace Anonym.Isometric
             bool didHighlight = false;
             bool didHitWall = HittingWall(newFacing);
             bool isWallBelowMovement = WallBelowAlpaca(newFacing);
-            //bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
+            bool didHitUnjumpableStaticBlock = isGoingToHitUnjumpableStaticBlock(newFacing, didJump);
             
-            if (!didHitWall && !isWallBelowMovement) {
-                //if (!didJump && !didHitUnjumpableStaticBlock) {
-                if (!didJump) {
-                    didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
-                }
+            if (!didHitWall && !isWallBelowMovement && !didHitUnjumpableStaticBlock) {
+                didHighlight = ShouldHighlightPlayerBlock(newFacing, false, Vector3.zero);
             }
             
             lastFacing = newFacing;
@@ -738,7 +736,7 @@ namespace Anonym.Isometric
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
-                //ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+                ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 doubleClickDetected = false;
             }
 

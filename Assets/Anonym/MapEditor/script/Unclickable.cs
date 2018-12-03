@@ -17,7 +17,7 @@ public class Unclickable : MonoBehaviour {
 	void Start () {
 		sr = GetComponentInChildren<SpriteRenderer>();
         normalColor = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-        canBeDroppedOnColor = new Color(0.5f, 0.5f, 1.0f, 1.0f);
+        canBeDroppedOnColor = new Color(0.85f, 0.85f, 0.85f, 1.0f);
         
         normal = Resources.Load<Sprite>("Sprites/normal_unclick");
         wSprite = Resources.Load<Sprite>("Sprites/W_Unclick");
