@@ -644,7 +644,7 @@ namespace Anonym.Isometric
         void InputProcess()
         {            
             KeyPressedOnce();
-            HighlightWhereToDrop();
+            //HighlightWhereToDrop();
             
             if (continuousMovement) {
                 if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) {
@@ -674,7 +674,7 @@ namespace Anonym.Isometric
 
             if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected) {
                 AttemptPickOrDropPlayerBlock();
-                ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+                //ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                 doubleClickDetected = false;
             }
 
