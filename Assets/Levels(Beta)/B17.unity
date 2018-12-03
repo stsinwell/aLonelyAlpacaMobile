@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8686,7 +8686,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 332348903}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &332348905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16238,8 +16238,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 1758634551}
   zAmount: 3
-  background: {fileID: 0}
-  background2: {fileID: 0}
+  background: {fileID: 1758634553}
+  background2: {fileID: 1758634552}
   bgScaleAmnt: 0
 --- !u!1 &578360065
 GameObject:
@@ -32631,7 +32631,7 @@ MonoBehaviour:
   _grid: {fileID: 585693876}
   bSnapFree: 0
   _autoName: {fileID: 1154560276}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &1156866900
 GameObject:
   m_ObjectHideFlags: 0
@@ -48073,11 +48073,11 @@ Prefab:
       objectReference: {fileID: 265324214}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3.2
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
         type: 2}
@@ -48088,12 +48088,30 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
 --- !u!20 &1758634551 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758634550}
+--- !u!1 &1758634552 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1758634550}
+--- !u!1 &1758634553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e,
     type: 2}
   m_PrefabInternal: {fileID: 1758634550}
 --- !u!1 &1766144907
