@@ -88,7 +88,6 @@ public class clickable_block : MonoBehaviour {
     }
     
     public void setWASDsprite(int facingVal) {
-        Debug.Log("setWASDsprite: " + facingVal);
         if (facingVal == 0) {
             sr.sprite = wSprite;
         } else if (facingVal == 1) {
