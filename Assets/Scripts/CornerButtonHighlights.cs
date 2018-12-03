@@ -37,19 +37,19 @@ public class CornerButtonHighlights : MonoBehaviour {
 			S_butt_im.color = defaultColor;
 			D_butt_im.color = defaultColor;
 		}
-		elif(Input.GetKey(KeyCode.A)){
+		else if(Input.GetKey(KeyCode.A)){
 			W_butt_im.color = defaultColor;
 			A_butt_im.color = highlightedColor;
 			S_butt_im.color = defaultColor;
 			D_butt_im.color = defaultColor;
 		}
-		elif(Input.GetKey(KeyCode.S)){
+		else if(Input.GetKey(KeyCode.S)){
 			W_butt_im.color = defaultColor;
 			A_butt_im.color = defaultColor;
 			S_butt_im.color = highlightedColor;
 			D_butt_im.color = defaultColor;
 		}
-		elif(Input.GetKey(KeyCode.D)){
+		else if(Input.GetKey(KeyCode.D)){
 			W_butt_im.color = defaultColor;
 			A_butt_im.color = defaultColor;
 			S_butt_im.color = defaultColor;
