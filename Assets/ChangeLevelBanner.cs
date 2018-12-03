@@ -31,7 +31,13 @@ public class ChangeLevelBanner : MonoBehaviour, IPointerEnterHandler {
 	public void OnPointerEnter(PointerEventData eventData)
      {
         string getLevelNumber = Regex.Match(gameObject.name, @"\d+").Value;
-		levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
-		levelImagePreview.sprite = GameObject.Find("level" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+		if (defaultLevelNumber < int.Parse(getLevelNumber)){
+			levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+			levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
+		}
+		else{
+			levelBanner.sprite = GameObject.Find("banner" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+			levelImagePreview.sprite = GameObject.Find("level" + getLevelNumber).GetComponent<SpriteRenderer>().sprite;
+		}
      }
 }
