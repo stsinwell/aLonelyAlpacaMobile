@@ -30225,7 +30225,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 576326425}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!1 &577217893
 GameObject:
   m_ObjectHideFlags: 0
@@ -66337,6 +66337,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1535350428743942, guid: a766938edf27ac3478ad5627f052337e, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 2}
   m_IsPrefabAsset: 0
@@ -99248,7 +99252,7 @@ MonoBehaviour:
   _grid: {fileID: 175586211}
   bSnapFree: 0
   _autoName: {fileID: 1841177736}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &1841177738
 MonoBehaviour:
   m_ObjectHideFlags: 0
