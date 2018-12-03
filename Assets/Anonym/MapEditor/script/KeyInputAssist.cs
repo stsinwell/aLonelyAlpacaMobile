@@ -36,6 +36,7 @@ namespace Anonym.Isometric
         public enum Facing {PosZ, NegZ, PosX, NegX};
         public Facing lastFacing;
         float boardLowestY;
+        bool didFall;
         bool continuousMovement;
         bool continuousMovementSecondCheck;
         Vector3 oldLoc;
@@ -79,6 +80,7 @@ namespace Anonym.Isometric
             
             lastFacing = Facing.PosX;
             continuousMovement = false;
+            didFall = false;
 
             wallBlocks = GameObject.FindGameObjectsWithTag("Wall");
             foreach (GameObject wallBlock in wallBlocks) {
@@ -651,9 +653,18 @@ namespace Anonym.Isometric
             return !isSpaceOpen(locInFront);
         }
         
+        Vector3 GetFallenPosition(Facing newFacing) {
+            Vector3 locInFront = GetLocationInFront(newFacing);
+            float yDrop = GetLowestDropPossible(locInFront);
+            Debug.Log("fallen pos: " + (new Vector3(locInFront.x, yDrop, locInFront.z)));
+
+            return new Vector3(locInFront.x, yDrop, locInFront.z);
+        }
+        
         bool NonMovement(Facing newFacing) {
             bool didRotate = RotateAlpaca(newFacing);
             bool didJump = Jump(newFacing);
+            didFall = isFalling(newFacing);
             bool didHighlight = false;
             bool didHitWall = HittingWall(newFacing);
             bool isWallBelowMovement = WallBelowAlpaca(newFacing);
@@ -718,7 +729,16 @@ namespace Anonym.Isometric
                     Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow) ||
                     Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
                     Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow) ) {
-                    ShouldHighlightPlayerBlock(lastFacing, true, GetLocationInFront(lastFacing));
+                    
+                    Debug.Log("didFall: " + didFall);
+                    if (didFall) {
+                        Debug.Log("pos: " + GetFallenPosition(lastFacing));
+                        ShouldHighlightPlayerBlock(lastFacing, true, GetFallenPosition(lastFacing));
+                    } 
+                    else {
+                        ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+                    }
+                    didFall = false;
                 }
             }
 
