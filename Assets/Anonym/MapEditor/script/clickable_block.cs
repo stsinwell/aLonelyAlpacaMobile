@@ -29,14 +29,10 @@ public class clickable_block : MonoBehaviour {
 		sr = GetComponentInChildren<SpriteRenderer>();
         
         normal = Resources.Load<Sprite>("Sprites/normal_click");
-        wSprite = Resources.Load<Sprite>("Sprites/normal_click");
-        aSprite = Resources.Load<Sprite>("Sprites/normal_click");
-        sSprite = Resources.Load<Sprite>("Sprites/normal_click");
-        dSprite = Resources.Load<Sprite>("Sprites/normal_click");
-//        wSprite = Resources.Load<Sprite>("Sprites/W_Click");
-//        aSprite = Resources.Load<Sprite>("Sprites/A_Click");
-//        sSprite = Resources.Load<Sprite>("Sprites/S_Click");
-//        dSprite = Resources.Load<Sprite>("Sprites/D_Click");
+        wSprite = Resources.Load<Sprite>("Sprites/W_Click");
+        aSprite = Resources.Load<Sprite>("Sprites/A_Click");
+        sSprite = Resources.Load<Sprite>("Sprites/S_Click");
+        dSprite = Resources.Load<Sprite>("Sprites/D_Click");
 	}
 
 	// Update is called once per frame
@@ -92,6 +88,7 @@ public class clickable_block : MonoBehaviour {
     }
     
     public void setWASDsprite(int facingVal) {
+        Debug.Log("setWASDsprite: " + facingVal);
         if (facingVal == 0) {
             sr.sprite = wSprite;
         } else if (facingVal == 1) {

@@ -407,7 +407,7 @@ namespace Anonym.Isometric
                      return playerBlock;
                 }
             }
-            
+      
             return null;
         }
         
@@ -446,10 +446,10 @@ namespace Anonym.Isometric
         void HighlightWhereToDrop() {
             UnHighlightDropHelperBlocks();
             if (isAlpacaCarryingBlock()) {
-                Vector3 posX = getAdjacentBlockPos(Facing.PosX);
-                Vector3 negX = getAdjacentBlockPos(Facing.NegX);
-                Vector3 posZ = getAdjacentBlockPos(Facing.PosZ);
-                Vector3 negZ = getAdjacentBlockPos(Facing.NegZ);
+                Vector3 posX = getAdjacentBlockDropPos(Facing.PosX);
+                Vector3 negX = getAdjacentBlockDropPos(Facing.NegX);
+                Vector3 posZ = getAdjacentBlockDropPos(Facing.PosZ);
+                Vector3 negZ = getAdjacentBlockDropPos(Facing.NegZ);
                 
                 if (posX.y != boardLowestY - 1 && lastFacing == Facing.PosX) {
                     HighlightDropHelperBlock(posX);
@@ -469,7 +469,7 @@ namespace Anonym.Isometric
             }
         }
         
-        Vector3 getAdjacentBlockPos(Facing facing) {
+        Vector3 getAdjacentBlockDropPos(Facing facing) {
             Vector3 vec = GetLocationInFront(facing);
             float lowestY = GetLowestDropPossible(vec);
             
@@ -490,16 +490,29 @@ namespace Anonym.Isometric
             }
         }
         
-        void setWASD(Vector3 pos, Facing facing) {
+        void setWASD(Facing facing) {            
+            Vector3 pos = getAdjacentBlockDropPos(facing);
+            Vector3 posAbove = GetLocationInFront(facing);
+        
             GameObject nonInteractableBlock = getNonInteractableBlock(pos);
+            GameObject nonInteractableBlockAbove = getNonInteractableBlock(posAbove);
             GameObject playerBlock = getPlayerBlock(pos);
+            GameObject playerBlockAbove = getPlayerBlock(posAbove);
             
             if (nonInteractableBlock != null) {
                 nonInteractableBlock.GetComponent<Unclickable>().setWASDsprite((int) facing);
             }
             
+            if (nonInteractableBlockAbove != null) {
+                nonInteractableBlockAbove.GetComponent<Unclickable>().setWASDsprite((int) facing);
+            }
+            
             if (playerBlock != null) {
                 playerBlock.GetComponent<clickable_block>().setWASDsprite((int) facing);
+            }
+            
+            if (playerBlockAbove != null) {
+                playerBlockAbove.GetComponent<clickable_block>().setWASDsprite((int) facing);
             }
         }
         
@@ -509,10 +522,10 @@ namespace Anonym.Isometric
             if (levelName.Equals("B1") || levelName.Equals("B2") || levelName.Equals("B3") || levelName.Equals("B4") || levelName.Equals("B5")) {
                 LevelsOneToFiveSetNormalSprites();
 
-                setWASD(getAdjacentBlockPos(Facing.PosX), Facing.PosX);
-                setWASD(getAdjacentBlockPos(Facing.NegX), Facing.NegX);
-                setWASD(getAdjacentBlockPos(Facing.PosZ), Facing.PosZ);
-                setWASD(getAdjacentBlockPos(Facing.NegZ), Facing.NegZ);
+                setWASD(Facing.PosX);
+                setWASD(Facing.NegX);
+                setWASD(Facing.PosZ);
+                setWASD(Facing.NegZ);
             }
         }
 
@@ -656,7 +669,6 @@ namespace Anonym.Isometric
         Vector3 GetFallenPosition(Facing newFacing) {
             Vector3 locInFront = GetLocationInFront(newFacing);
             float yDrop = GetLowestDropPossible(locInFront);
-            Debug.Log("fallen pos: " + (new Vector3(locInFront.x, yDrop, locInFront.z)));
 
             return new Vector3(locInFront.x, yDrop, locInFront.z);
         }
@@ -730,12 +742,9 @@ namespace Anonym.Isometric
                     Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
                     Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow) ) {
                     
-                    Debug.Log("didFall: " + didFall);
                     if (didFall) {
-                        Debug.Log("pos: " + GetFallenPosition(lastFacing));
                         ShouldHighlightPlayerBlock(lastFacing, true, GetFallenPosition(lastFacing));
-                    } 
-                    else {
+                    } else {
                         ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
                     }
                     didFall = false;
