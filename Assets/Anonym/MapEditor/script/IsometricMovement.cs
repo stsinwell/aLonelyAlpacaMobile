@@ -40,7 +40,11 @@ namespace Anonym.Isometric
         public Image deathImage;
         public AudioSource deathSong;
         private AudioSource music;
+        //public changeFacingDirections CFDScript;
         public bool alive = true;
+        public const int deathByFalling = 1;
+        public const int deathByFire = 2;
+        public int deathType;
         const string Name_X_Axis_Param = "X-Dir";
         const string Name_Z_Axis_Param = "Z-Dir";
         const string Name_Moving_Param = "OnMoving";
@@ -421,6 +425,7 @@ namespace Anonym.Isometric
                         }
                         
                         //Get grid location where Player was standing before they fell to their doom.
+                        deathType = deathByFalling;
                         var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
                         LoggingManager.instance.RecordEvent(2, "Player died from falling."); //Records an instance of death by falling.
                         LoggingManager.instance.RecordEvent(3, "Player fell to their death at " + deathlocation); //Records where the player fell.
@@ -565,8 +570,9 @@ namespace Anonym.Isometric
                 {
                     ExecuteDir(DirQ.Dequeue());
                 }
-                if (fireBlockCollisionScript.hasCollided() && alive){
+                if (fireBlockCollisionScript.hasCollided() && (alive || deathType==deathByFalling)){
                     alive = false;
+                    deathType = deathByFire; // deathType sent to animator
                     //Get grid location where Player was standing before they fell to their doom.
                     var deathlocation =  GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
                     //LoggingManager.instance.RecordEvent(2, "Player burned to death."); //Records an instance of death by falling.
@@ -574,11 +580,9 @@ namespace Anonym.Isometric
                 }
                 
                 if(!alive){
-                    print(alive);
+                   // print("deddd");
                     deathImage.enabled = true;
-                    //print("playing");
                     if(!deathSong.isPlaying){
-                        //music.Pause();
                         if(music!=null) music.volume = 0.015f;
                         deathSong.Play();
                     }
