@@ -556,7 +556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   k: {fileID: 114638408064215584}
   animator: {fileID: 95444562070212910}
-  fireBlockCollisionScript: {fileID: 114792523630827214}
+  IsometricMovementScript: {fileID: 114882778652291180}
   has_block: 0
 --- !u!114 &114638408064215584
 MonoBehaviour:
@@ -602,10 +602,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8767ee3611e716449a83869159a9b7ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
   fireBlockCollisionScript: {fileID: 114792523630827214}
   deathImage: {fileID: 0}
   deathSong: {fileID: 82234210983772764}
   alive: 1
+  deathType: 0
   CollisionLayerMask:
     serializedVersion: 2
     m_Bits: 0

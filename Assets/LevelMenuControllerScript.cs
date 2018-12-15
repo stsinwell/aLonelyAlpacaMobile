@@ -12,7 +12,7 @@ public class LevelMenuControllerScript : MonoBehaviour {
 				  B7Button, B8Button, B9Button, B10Button, B11Button, B12Button,
 				  B13Button, B14Button, B15Button, B16Button, B17Button, B18Button, 
 				  B19Button, B20Button, B21Button, B22Button, B23Button, B24Button, 
-				  B25Button;
+				  B25Button, B26Button;
 	public int levelPassed;
 	public int moveAlpacaAround;
 
@@ -52,6 +52,10 @@ public class LevelMenuControllerScript : MonoBehaviour {
 		B20Button.interactable = false;
 		B21Button.interactable = false;
 		B22Button.interactable = false;
+		B23Button.interactable = false;
+		B24Button.interactable = false;
+		B25Button.interactable = false;
+		B26Button.interactable = false;
 
 		switch(levelPassed){
 			case 1:
@@ -424,6 +428,33 @@ public class LevelMenuControllerScript : MonoBehaviour {
 				B23Button.interactable = true;
 				B24Button.interactable = true;
 				B25Button.interactable = true;
+				break;
+			case 26:
+				B2Button.interactable = true;
+				B3Button.interactable = true;
+				B4Button.interactable = true;
+				B5Button.interactable = true;
+				B6Button.interactable = true;
+				B7Button.interactable = true;
+				B8Button.interactable = true;
+				B9Button.interactable = true;
+				B10Button.interactable = true;
+				B11Button.interactable = true;
+				B12Button.interactable = true;
+				B13Button.interactable = true;
+				B14Button.interactable = true;
+				B15Button.interactable = true;
+				B16Button.interactable = true;
+				B17Button.interactable = true;
+				B18Button.interactable = true;
+				B19Button.interactable = true;
+				B20Button.interactable = true;
+				B21Button.interactable = true;
+				B22Button.interactable = true;
+				B23Button.interactable = true;
+				B24Button.interactable = true;
+				B25Button.interactable = true;
+				B26Button.interactable = true;
 				break;
 		}
 			
