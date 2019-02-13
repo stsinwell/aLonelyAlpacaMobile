@@ -467,8 +467,6 @@ public class LevelMenuControllerScript : MonoBehaviour
 
   public void levelToLoad(int level)
   {
-    //LoggingManager.instance.RecordLevelStart(level, "Selected from Level Select Menu.");
-    if (SceneManager.GetActiveScene().name != "B0 - Menu") LoggingManager.instance.RecordLevelEnd();
     SceneManager.LoadScene(level);
   }
 

@@ -22,7 +22,6 @@ public class GoHome : MonoBehaviour
   public void goHome()
   {
     SceneManager.LoadScene(menuLevel, LoadSceneMode.Single);
-    LoggingManager.instance.RecordEvent(7, "Player pressed HOME button.");
   }
 
   public void goToLevelSelect()
@@ -33,7 +32,6 @@ public class GoHome : MonoBehaviour
     Debug.Log("current level name: " + currentLevelScript.currentLevelNameString);
 
     SceneManager.LoadScene(levelSelect, LoadSceneMode.Single);
-    LoggingManager.instance.RecordEvent(7, "Player pressed LEVEL SELECT button.");
   }
 
   public void goBackToPreviousLevel()
