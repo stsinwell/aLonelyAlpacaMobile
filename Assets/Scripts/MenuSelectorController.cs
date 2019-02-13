@@ -11,8 +11,8 @@ public class MenuSelectorController : MonoBehaviour {
 	private RectTransform rt;
 
 	private Vector3[] posArray;
-	public GameObject PrivacyStatementPopUp;
-	private PrivacyStatementDisappear PSDScript;
+	//public GameObject PrivacyStatementPopUp;
+	//private PrivacyStatementDisappear PSDScript;
 	public GameObject CreditsPopUp;
 	private CreditsDisappear CDScript;
 
@@ -23,14 +23,11 @@ public class MenuSelectorController : MonoBehaviour {
 		posArray[0] = new Vector3( 106f, 18f, 0f); // Credits Button Pos
 		posArray[1] = new Vector3( 190f, 102f, 0f);// Start Button Pos
 		posArray[2] = new Vector3( 420f, 102f, 0f);// Levels Button Pos
-		posArray[3] = new Vector3( 640f, 18f, 0f); // Privacy Statement Button Pos
-		// posArray[0] = new Vector3( -294f, -282f, 0f);
-		// posArray[1] = new Vector3( -210f, -198f, 0f);
-		// posArray[2] = new Vector3( 20f, -198f, 0f);
-		// posArray[2] = new Vector3( 240f, -282f, 0f);
+		//posArray[3] = new Vector3( 640f, 18f, 0f); // Privacy Statement Button Pos
+
 		selection = 1;
 		rt.position = posArray[selection];
-		PSDScript = PrivacyStatementPopUp.GetComponent<PrivacyStatementDisappear>();
+		//PSDScript = PrivacyStatementPopUp.GetComponent<PrivacyStatementDisappear>();
 		CDScript = CreditsPopUp.GetComponent<CreditsDisappear>();
 
 	}
@@ -41,10 +38,10 @@ public class MenuSelectorController : MonoBehaviour {
 			// Move the selector 
 			changeSelection(false);
 			// Turn of banner if it is up
-			if(PSDScript.isEnabled()){
-				PSDScript.toggleEnable();
-			}
-			else if(CDScript.isEnabled()){
+			// if(PSDScript.isEnabled()){
+			// 	PSDScript.toggleEnable();
+			// }
+			 if(CDScript.isEnabled()){
 				CDScript.toggleEnable();
 			}
 		}
@@ -52,10 +49,10 @@ public class MenuSelectorController : MonoBehaviour {
 			// Move the selector 
 			changeSelection(true);
 			// Turn of banner if it is up
-			if(PSDScript.isEnabled()){
-				PSDScript.toggleEnable();
-			}
-			else if(CDScript.isEnabled()){
+			// if(PSDScript.isEnabled()){
+			// 	PSDScript.toggleEnable();
+			// }
+			 if(CDScript.isEnabled()){
 				CDScript.toggleEnable();
 			}
 		}
@@ -69,8 +66,8 @@ public class MenuSelectorController : MonoBehaviour {
 	 */
 	public void changeSelection(bool inc){
 		if(inc){
-			if(selection<3) selection++;
-			else selection = 3;
+			if(selection<2) selection++;
+			else selection = 2;
 		}
 		else{
 			if(selection>0) selection--;
@@ -96,9 +93,9 @@ public class MenuSelectorController : MonoBehaviour {
 			case 2: //Levels
 				SceneManager.LoadScene("Level Select Menu", LoadSceneMode.Single);
 				break;
-			case 3: // Policy Statement
-				PSDScript.toggleEnable();
-				break;
+			// case 3: // Policy Statement
+			// 	PSDScript.toggleEnable();
+			// 	break;
 			default: break;
 		}
 	}
