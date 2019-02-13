@@ -677,7 +677,6 @@ namespace Anonym.Isometric
 
     bool RotateAlpaca(Facing newFacing)
     {
-      GameObject loggingObject = GameObject.Find("GameObject");
       if (newFacing != lastFacing)
       {
         return true;
