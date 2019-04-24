@@ -55,12 +55,12 @@ public class CutsceneController : MonoBehaviour {
 					if(nextSceneImage!=null)
 						nextSceneImage.enabled = true;
 				}
-				else if(spaceToSpeedUp && Input.GetKeyDown(KeyCode.Space)){
+                else if(spaceToSpeedUp && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))){
 					FIScript.fadeRate = 10.0f;
 					timeAccum = currSceneTime+1;
 				}
 			}
-			else if(spaceToSpeedUp && Input.GetKeyDown(KeyCode.Space))
+            else if(spaceToSpeedUp && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
 					FIScript.fadeRate = 10.0f;
 		}
 		else if(!endScene && wasEnabled){

@@ -90,7 +90,7 @@ namespace Anonym.Isometric
 
         public void Move(Vector3 _coord, string _undoName = "Coordinates:Move")
         {
-            Move(_coord.x, _coord.y, _coord.z, _undoName);
+            Move(Mathf.RoundToInt(_coord.x), Mathf.RoundToInt(_coord.y), Mathf.RoundToInt(_coord.z), _undoName);
         }
 
         public void Move(float _x, float _y, float _z, string _undoName = "Coordinates:Move")
@@ -205,6 +205,10 @@ namespace Anonym.Isometric
             {
                 _lastLocalPosition = transform.localPosition;
                 Rename();
+                if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
+                    WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
+                    world.AddBlock(name, _lastXYZ);
+                }
             }
         }
 

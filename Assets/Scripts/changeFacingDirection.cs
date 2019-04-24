@@ -31,6 +31,30 @@ public class changeFacingDirection : MonoBehaviour
   {
     pos_y_prev = transform.position.y;
   }
+    int middle_w = Screen.width / 2;
+    int middle_h = Screen.height / 2;
+
+    bool KeyToMouse(KeyCode key) {
+        if (!Input.GetMouseButton(0)) return false;
+        Vector2 click = Input.mousePosition;
+        if (key == KeyCode.W && ((click.x > middle_w) && (click.y > middle_h)))
+        {
+            return true;
+        }
+        else if (key == KeyCode.A && ((click.x < middle_w) && (click.y > middle_h)))
+        {
+            return true;
+        }
+        else if (key == KeyCode.S && ((click.x < middle_w) && (click.y < middle_h)))
+        {
+            return true;
+        }
+        else if (key == KeyCode.D && ((click.x > middle_w) && (click.y < middle_h)))
+        {
+            return true;
+        }
+        return false;
+    }
 
   // Update is called once per frame
   void Update()
@@ -53,7 +77,6 @@ public class changeFacingDirection : MonoBehaviour
     }
     else if (fall_diff < 0.1f)
     {
-      print("not falling");
       animator.SetBool("is_falling", false);
       started_falling = false;
       fall_accumulation = 0;
@@ -95,7 +118,7 @@ public class changeFacingDirection : MonoBehaviour
 
     //Walking Anim Updates
     //NE
-    if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) && !animator.GetBool("walkne"))
+        if ((Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow) || KeyToMouse(KeyCode.W)) && !animator.GetBool("walkne"))
     {
       animator.SetInteger("countdown", 1);
       animator.SetBool("walkse", false);
@@ -108,7 +131,7 @@ public class changeFacingDirection : MonoBehaviour
       animator.SetBool("walkne", false);
 
     //SW
-    if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) && !animator.GetBool("walksw"))
+        if ((Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || KeyToMouse(KeyCode.S)) && !animator.GetBool("walksw"))
     {
       animator.SetBool("walkse", false);
       animator.SetBool("walksw", true);
@@ -121,7 +144,7 @@ public class changeFacingDirection : MonoBehaviour
       animator.SetBool("walksw", false);
 
     //NW
-    if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && !animator.GetBool("walknw"))
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow) || KeyToMouse(KeyCode.A)) && !animator.GetBool("walknw"))
     {
       animator.SetBool("walkse", false);
       animator.SetBool("walksw", false);
@@ -134,7 +157,7 @@ public class changeFacingDirection : MonoBehaviour
       animator.SetBool("walknw", false);
 
     //SE
-    if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && !animator.GetBool("walkse"))
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow) || KeyToMouse(KeyCode.D)) && !animator.GetBool("walkse"))
     {
       animator.SetBool("walkse", true);
       animator.SetBool("walksw", false);

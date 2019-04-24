@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Assertions;
 
 namespace Anonym.Isometric
 {
@@ -129,7 +130,8 @@ namespace Anonym.Isometric
 
     void Update()
     {
-      if (target != null && Application.isPlaying)
+    timeCurrent = Time.fixedTime;
+    if (target != null && Application.isPlaying)
       {
         InputProcess();
       }
@@ -620,17 +622,17 @@ namespace Anonym.Isometric
 
     void LevelsOneToFiveHelper()
     {
-      string levelName = SceneManager.GetActiveScene().name;
+      //string levelName = SceneManager.GetActiveScene().name;
 
-      if (levelName.Equals("B1") || levelName.Equals("B2") || levelName.Equals("B3") || levelName.Equals("B4") || levelName.Equals("B5"))
-      {
-        LevelsOneToFiveSetNormalSprites();
+      //if (levelName.Equals("B1") || levelName.Equals("B2") || levelName.Equals("B3") || levelName.Equals("B4") || levelName.Equals("B5"))
+      //{
+      //  LevelsOneToFiveSetNormalSprites();
 
-        setWASD(Facing.PosX);
-        setWASD(Facing.NegX);
-        setWASD(Facing.PosZ);
-        setWASD(Facing.NegZ);
-      }
+      //  setWASD(Facing.PosX);
+      //  setWASD(Facing.NegX);
+      //  setWASD(Facing.PosZ);
+      //  setWASD(Facing.NegZ);
+      //}
     }
 
     bool isFacingEdge(Vector3 currLocation, Facing facing)
@@ -828,63 +830,103 @@ namespace Anonym.Isometric
       //return didRotate || didJump || didHitUnjumpableStaticBlock || didHighlight;
     }
 
-    void KeyPressedOnce()
-    {
-      if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-      {
-        continuousMovement = !NonMovement(Facing.PosZ);
-      }
-      if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-      {
-        continuousMovement = !NonMovement(Facing.NegZ);
-      }
-      if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-      {
-        continuousMovement = !NonMovement(Facing.PosX);
-        //inputProcess();
-      }
-      if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-      {
-        continuousMovement = !NonMovement(Facing.NegX);
-      }
-    }
 
-    void InputProcess()
-    {
-      KeyPressedOnce();
-      HighlightWhereToDrop();
-      LevelsOneToFiveHelper();
+        int middle_w = Screen.width / 2;
+        int middle_h = Screen.height / 2;
 
-      if (continuousMovement)
-      {
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
-        {
-          MovementKeyPressed(Facing.PosZ);
-        }
-        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
-        {
-          MovementKeyPressed(Facing.NegZ);
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-          MovementKeyPressed(Facing.PosX);
-        }
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-          MovementKeyPressed(Facing.NegX);
+        bool ClickedW() {
+            if (Input.GetMouseButton(0) && !doubleClickDetected)
+            {
+                Vector2 click = Input.mousePosition;
+                return (click.x > middle_w) && (click.y > middle_h) ;
+            }
+            return false;
         }
 
-        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) ||
-            Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow) ||
-            Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
-            Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
-        {
-
-          ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+        bool ClickedS() {
+            if (Input.GetMouseButton(0) && !doubleClickDetected)
+            {
+                Vector2 click = Input.mousePosition;
+                return (click.x < middle_w) && (click.y < middle_h);
+            }
+            return false;
         }
-      }
 
-      if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected)
+        bool ClickedD() {
+            if (Input.GetMouseButton(0) && !doubleClickDetected)
+            {
+                Vector2 click = Input.mousePosition;
+                return (click.x > middle_w) && (click.y < middle_h);
+            }
+            return false;
+        }
+
+        bool ClickedA() {
+            if (Input.GetMouseButton(0) && !doubleClickDetected)
+            {
+                Vector2 click = Input.mousePosition;
+                return (click.x < middle_w) && (click.y > middle_h);
+            }
+            return false;
+        }
+
+        void KeyPressedOnce()
+        {
+            if (ClickedW() || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                continuousMovement = !NonMovement(Facing.PosZ);
+            }
+            if (ClickedS() || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                continuousMovement = !NonMovement(Facing.NegZ);
+            }
+            if (ClickedD() || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                continuousMovement = !NonMovement(Facing.PosX);
+            }
+            if (ClickedA() || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                continuousMovement = !NonMovement(Facing.NegX);
+            }
+        }
+
+        void InputProcess()
+        {
+            KeyPressedOnce();
+            HighlightWhereToDrop();
+            LevelsOneToFiveHelper();
+
+            if (continuousMovement)
+            {
+
+                if (ClickedW() || Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+                {
+                    MovementKeyPressed(Facing.PosZ);
+                }
+                if (ClickedS() || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    MovementKeyPressed(Facing.NegZ);
+                }
+                if (ClickedD() || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    MovementKeyPressed(Facing.PosX);
+                }
+                if (ClickedA() || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    MovementKeyPressed(Facing.NegX);
+                }
+
+                if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow) ||
+                    Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.DownArrow) ||
+                    Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.RightArrow) ||
+                    Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.LeftArrow))
+                {
+
+                    ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
+                }
+            }
+
+    if (Input.GetKeyDown(KeyCode.Space) || doubleClickDetected)
       {
         AttemptPickOrDropPlayerBlock();
         ShouldHighlightPlayerBlock(lastFacing, false, Vector3.zero);
@@ -895,12 +937,23 @@ namespace Anonym.Isometric
         ClickToMove();
     }
 
-    bool keyMacro(InGameDirection direction, bool bShift,
-        System.Func<IEnumerable<KeyCode>, System.Func<KeyCode, bool>, bool> action,
-        System.Func<KeyCode, bool> subAction,
-        System.Action<InGameDirection> Do,
-        params KeyCode[] codes)
+    bool prevClicked = false;
+    float timeCurrent;
+    float timeAtButtonDown;
+    float timeAtButtonUp;
+    float timeButtonHeld = 0;
+    bool draggable = false;
+
+    bool keyMacro(InGameDirection direction, 
+              bool bShift,
+              System.Func<IEnumerable<KeyCode>, 
+              System.Func<KeyCode, bool>, bool> action,
+              System.Func<KeyCode, bool> subAction,
+              System.Func<int, bool> keyCheck,
+              System.Action<InGameDirection> Do,
+              params KeyCode[] codes)
     {
+
       if (bShift) // Rotate
         direction = (InGameDirection)(-1 * (int)direction);
 
@@ -909,65 +962,80 @@ namespace Anonym.Isometric
         Do(direction);
         return true;
       }
-      return false;
+    
+    Console.WriteLine(keyCheck(0));
+    if (keyCheck(0)) {
+                Vector2 click = Input.mousePosition;
+                if (codes[1] == KeyCode.W && ((click.x > middle_w) && (click.y > middle_h))) {
+                    Do(direction);
+                    return true;
+                } else if(codes[1] == KeyCode.A && ((click.x < middle_w) && (click.y > middle_h))) {
+                    Do(direction);
+                    return true;
+                } else if(codes[1] == KeyCode.S && ((click.x < middle_w) && (click.y < middle_h))) {
+                    Do(direction);
+                    return true;
+                } else if (codes[1] == KeyCode.D && ((click.x > middle_w) && (click.y < middle_h))) {
+                    Do(direction); 
+                    return true;
+                }
+            }
+            return false;
     }
 
-    void inputProcess()
+        float timer = 0;
+
+        void inputProcess()
     {
-      bool bShifted = Input.GetKey(KeyCode.LeftShift);
+            bool bShifted = false;//.GetKey(KeyCode.LeftShift);
       System.Action<InGameDirection> Do;
       System.Func<KeyCode, bool> GetKeyMethod;
+      System.Func<int, bool> GetClickMethod;
       if (continuousMovementSecondCheck)
       {//(target.bContinuousMovement){
         Do = ContinuousMove;
         GetKeyMethod = Input.GetKey;
+        GetClickMethod = Input.GetMouseButtonDown;
       }
       else
       {
         Do = EnQueueTo;
         GetKeyMethod = Input.GetKeyDown;
+        GetClickMethod = Input.GetMouseButtonDown;
       }
 
-      if (target.b8DirectionalMovement)
-      {
-        bool bSelected = false;
-        if (bUseDiagonalKey)
+        if(Input.GetMouseButtonDown(0))
         {
-          if (keyMacro(InGameDirection.LT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad7, KeyCode.Q) ||
-              keyMacro(InGameDirection.RD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad3, KeyCode.C) ||
-              keyMacro(InGameDirection.RT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad9, KeyCode.E) ||
-              keyMacro(InGameDirection.LD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad1, KeyCode.Z))
-            bSelected = true;
-        }
-        else
-        {
-          if (keyMacro(InGameDirection.LT_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.LeftArrow, KeyCode.UpArrow) ||
-              keyMacro(InGameDirection.RD_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.RightArrow, KeyCode.DownArrow) ||
-              keyMacro(InGameDirection.RT_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.RightArrow, KeyCode.UpArrow) ||
-              keyMacro(InGameDirection.LD_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.LeftArrow, KeyCode.DownArrow) ||
-              keyMacro(InGameDirection.LT_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.A, KeyCode.W) ||
-              keyMacro(InGameDirection.RD_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.D, KeyCode.S) ||
-              keyMacro(InGameDirection.RT_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.D, KeyCode.W) ||
-              keyMacro(InGameDirection.LD_Move, bShifted, Enumerable.All<KeyCode>, GetKeyMethod, Do, KeyCode.A, KeyCode.S))
-            bSelected = true;
-        }
+            timeAtButtonDown = timeCurrent;
+       }
 
-        if (bSelected == false)
+            else
         {
-          keyMacro(InGameDirection.Left_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad4, KeyCode.LeftArrow, KeyCode.A);
-          keyMacro(InGameDirection.Right_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad6, KeyCode.RightArrow, KeyCode.D);
-          keyMacro(InGameDirection.Top_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad8, KeyCode.UpArrow, KeyCode.W);
-          keyMacro(InGameDirection.Down_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.Keypad2, KeyCode.DownArrow, KeyCode.X, KeyCode.S);
+                timeAtButtonUp = timeCurrent;
+                timeButtonHeld = timeAtButtonUp - timeAtButtonDown;
+            }
+
+            keyMacro(InGameDirection.LT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, GetClickMethod, Do, KeyCode.LeftArrow, KeyCode.A);
+            keyMacro(InGameDirection.RD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, GetClickMethod, Do, KeyCode.RightArrow, KeyCode.D);
+            keyMacro(InGameDirection.RT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, GetClickMethod, Do, KeyCode.UpArrow, KeyCode.W);
+            keyMacro(InGameDirection.LD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, GetClickMethod, Do, KeyCode.DownArrow, KeyCode.S);
+
+            if (timer > 0.1 && timer < 0.4)
+            {
+                timer += Time.deltaTime;
+                if (Input.GetMouseButtonDown(0))
+                {
+                    doubleClickDetected = true;
+                }
+            }
+            if (timer < 1) {
+                timer += Time.deltaTime;
+            } else
+            {
+                timer = 0;
+            }
+            //}
         }
-      }
-      else
-      {
-        keyMacro(InGameDirection.LT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.LeftArrow, KeyCode.A);
-        keyMacro(InGameDirection.RD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.RightArrow, KeyCode.D);
-        keyMacro(InGameDirection.RT_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.UpArrow, KeyCode.W);
-        keyMacro(InGameDirection.LD_Move, bShifted, Enumerable.Any<KeyCode>, GetKeyMethod, Do, KeyCode.DownArrow, KeyCode.S);
-      }
-    }
 
     void EnQueueTo(InGameDirection direction)
     {
@@ -1013,5 +1081,7 @@ namespace Anonym.Isometric
     {
       bUseDiagonalKey = bFlag;
     }
-  }
+
+    
+}
 }

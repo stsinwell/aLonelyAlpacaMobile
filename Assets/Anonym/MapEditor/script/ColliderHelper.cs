@@ -54,16 +54,16 @@ namespace Anonym.Isometric
                 new Vector3(_bound.max.x, _bound.min.y, _bound.min.z),  new Vector3(_bound.max.x, _bound.min.y, _bound.max.z)};
 
             float fMax = 0;
-            foreach (var position in vPoints)
-            {
-                var col = _go.fAboveGround(position, ref fMax, _fMaxHeight, queryTriggerInteraction);
-                //IsoTile tile = _go.GetComponentInParent<IsoTile>();
-                //if (tile != null)
-                //{
-                //    Bounds _tile_bounds = tile.GetBounds_SideOnly();
-                //    fDistanceToTriggerBox = position.y - _tile_bounds.max.y;
-                //}
-            }
+            // foreach (var position in vPoints)
+            // {
+            //     var col = _go.fAboveGround(position, ref fMax, _fMaxHeight, queryTriggerInteraction);
+            //     //IsoTile tile = _go.GetComponentInParent<IsoTile>();
+            //     //if (tile != null)
+            //     //{
+            //     //    Bounds _tile_bounds = tile.GetBounds_SideOnly();
+            //     //    fDistanceToTriggerBox = position.y - _tile_bounds.max.y;
+            //     //}
+            // }
 
             if (fMax >= 0)
                 fMax -= fTipHeight;
