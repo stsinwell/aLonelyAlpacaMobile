@@ -432,7 +432,7 @@ namespace Anonym.Isometric
 
             //Get grid location where Player was standing before they fell to their doom.
             deathType = deathByFalling;
-            var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+            // var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
           }
         }
       }
@@ -579,7 +579,7 @@ namespace Anonym.Isometric
           alive = false;
           deathType = deathByFire; // deathType sent to animator
                                    //Get grid location where Player was standing before they fell to their doom.
-          var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
+          // var deathlocation = GameObject.FindWithTag("Player").GetComponent<KeyInputAssist>().GetCurrAlpacaLocationProperty();
         }
 
         if (!alive)

@@ -49,9 +49,9 @@ namespace Anonym.Isometric
             float fTipHeight = 0.1f;
             _bound.center += Vector3.up * fTipHeight;
             _bound.extents = Vector3.Scale(new Vector3(0.9f, 1, 0.9f), _bound.extents);
-            Vector3[] vPoints = new Vector3[]{  new Vector3(_bound.center.x, _bound.min.y, _bound.center.z),
-                new Vector3(_bound.min.x, _bound.min.y, _bound.min.z),  new Vector3(_bound.min.x, _bound.min.y, _bound.max.z),
-                new Vector3(_bound.max.x, _bound.min.y, _bound.min.z),  new Vector3(_bound.max.x, _bound.min.y, _bound.max.z)};
+            // Vector3[] vPoints = new Vector3[]{  new Vector3(_bound.center.x, _bound.min.y, _bound.center.z),
+            //     new Vector3(_bound.min.x, _bound.min.y, _bound.min.z),  new Vector3(_bound.min.x, _bound.min.y, _bound.max.z),
+            //     new Vector3(_bound.max.x, _bound.min.y, _bound.min.z),  new Vector3(_bound.max.x, _bound.min.y, _bound.max.z)};
 
             float fMax = 0;
             // foreach (var position in vPoints)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Anonym.Isometric;
+using UnityEngine.EventSystems;
 
 public class changeFacingDirection : MonoBehaviour
 {
@@ -35,7 +36,7 @@ public class changeFacingDirection : MonoBehaviour
     int middle_h = Screen.height / 2;
 
     bool KeyToMouse(KeyCode key) {
-        if (!Input.GetMouseButton(0)) return false;
+        if (!Input.GetMouseButton(0) || EventSystem.current.IsPointerOverGameObject()) return false;
         Vector2 click = Input.mousePosition;
         if (key == KeyCode.W && ((click.x > middle_w) && (click.y > middle_h)))
         {

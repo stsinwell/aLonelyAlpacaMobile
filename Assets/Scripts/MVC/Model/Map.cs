@@ -6,7 +6,7 @@ using UnityEngine;
  */
 public class Map {
 
-    Dictionary<Vector2Int, List<Block>> map; 
+    Dictionary<Vector3Int, Block> map; 
 
     /* Creates a Map model. 
      * 
@@ -14,10 +14,10 @@ public class Map {
      * y_w = width in y axis
      */
     public Map(int x_w, int y_w) {
-        map = new Dictionary<Vector2Int, List<Block>>();
+        map = new Dictionary<Vector3Int, Block>();
     }
 
-    public void AddBlock(string name, Vector3 coords) {
+    public void AddBlock(string name, Vector3 last, Vector3 coords) {
         Block.BlockType bt = Block.BlockType.NONE;
         if (name.Contains("grass") || name.Contains("start")) {
             bt = Block.BlockType.GRASS;
@@ -29,17 +29,34 @@ public class Map {
             bt = Block.BlockType.WIN;
         }
 
-        if(bt != Block.BlockType.NONE) {
-            Debug.Log(bt);
+        Vector3Int xyz;
+
+        // if(name.Contains("start")) {
+            Debug.Log(name);
             Debug.Log(coords);
+            Debug.Log(bt);
+        // }
+
+        // Add new block object
+        if(bt != Block.BlockType.NONE) {
             Block block = new Block(bt, coords);
-            Vector2Int xy = new Vector2Int((int)coords.x, (int)coords.y);
-            if(!map.ContainsKey(xy)) {
-                map.Add(xy, new List<Block>());
-            }
-            List<Block> z;
-            map.TryGetValue(xy, out z);
-            z.Add(block);
+            xyz = new Vector3Int((int)coords.x, (int)coords.y, (int)coords.z);
+            map.Remove(xyz);
+            map.Add(xyz, block);
+
+            // // Remove old
+            // xyz = new Vector3Int((int)last.x, (int)last.y, (int) last.z);
+            // map.Remove(xyz);
         }
+    }
+
+    public Block GetBlock(Vector3 coords) {
+        // Debug.Log(coords);
+        Vector3Int xyz = new Vector3Int((int)coords.x, (int)coords.y, (int) coords.z);
+        Block get;
+        if(map.TryGetValue(xyz, out get)) {
+            return get;
+        }
+        return null;
     }
 }
