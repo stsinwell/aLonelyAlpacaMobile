@@ -174,17 +174,25 @@ namespace Anonym.Isometric
 
         public bool bChangedforEditor = false;
         bool bIgnoreTransformChanged = false;
+        bool setWorld = false;
 
         void Start()
         {
             if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
                 WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
-                world.AddBlock(name, _lastLocalPosition, transform.localPosition);
+                world.AddBlock(name, _lastLocalPosition, transform.localPosition, this);
+                setWorld = true;
             }
         }
 
         void Update()
         {
+            Debug.Log("grid coord");
+            // if(true)
+            //     if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
+                    // WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
+                    // world.AddBlock(name, _lastLocalPosition, transform.localPosition);
+            //     }
 			if (!Application.isEditor || Application.isPlaying || !enabled)
                 // ||  gameObject.transform.root == gameObject.transform)
 				return;
