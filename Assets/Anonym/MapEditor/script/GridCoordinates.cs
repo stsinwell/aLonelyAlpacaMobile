@@ -174,14 +174,12 @@ namespace Anonym.Isometric
 
         public bool bChangedforEditor = false;
         bool bIgnoreTransformChanged = false;
-        bool setWorld = false;
-
+#endif
         void Start()
         {
             if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
                 WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
-                world.AddBlock(name, _lastLocalPosition, transform.localPosition, this);
-                setWorld = true;
+                world.AddBlock(name, new Vector3(0,0,0), gameObject.transform.position, this);
             }
         }
 
@@ -196,7 +194,7 @@ namespace Anonym.Isometric
 			if (!Application.isEditor || Application.isPlaying || !enabled)
                 // ||  gameObject.transform.root == gameObject.transform)
 				return;
-			
+#if UNITY_EDITOR
             if (transform.hasChanged)
             {
                 if (bIgnoreTransformChanged == true)
@@ -204,8 +202,10 @@ namespace Anonym.Isometric
                 else
                     Update_TransformChanged();
             }
+#endif
 		}
 
+#if UNITY_EDITOR
         public void Update_TransformChanged()
         {
             Apply_SnapToGrid();

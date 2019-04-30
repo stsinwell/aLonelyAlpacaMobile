@@ -78,6 +78,8 @@ public class WorldScript : MonoBehaviour {
 		return map.GetBlock(loc);
 	}
 
+	float timer = 0;
+
 	void ProcessCurrBlock() {
 		Block currBlock = GetBlockBelow(alpaca.GetCurrAlpacaLocation());
 		if(currBlock == null) {
@@ -90,17 +92,21 @@ public class WorldScript : MonoBehaviour {
 			case Block.BlockType.LAVA:
 				break;
 			case Block.BlockType.WIN:
-				winSound.Play();
-				int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-				int levelPassed = PlayerPrefs.GetInt("LevelPassed");
-				Debug.Log("sceneIndex: " + sceneIndex + ", levelPassed: " + levelPassed);
-				if (levelPassed < sceneIndex)
-				{
-					Debug.Log("levelPassed < sceneIndex :^0");
-					PlayerPrefs.SetInt("LevelPassed", sceneIndex);
-				}
-				SceneManager.LoadScene("B" + (sceneIndex+1), LoadSceneMode.Single);
-				Debug.Log("Player moving on to level " + "B" + (sceneIndex+1));
+				if(timer == 0)
+					winSound.Play();
+				timer += Time.deltaTime;
+				if(timer > 0.2f) {
+					int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+					int levelPassed = PlayerPrefs.GetInt("LevelPassed");
+					Debug.Log("sceneIndex: " + sceneIndex + ", levelPassed: " + levelPassed);
+					if (levelPassed < sceneIndex)
+					{
+						Debug.Log("levelPassed < sceneIndex :^0");
+						PlayerPrefs.SetInt("LevelPassed", sceneIndex);
+					}
+						SceneManager.LoadScene("B" + (sceneIndex+1), LoadSceneMode.Single);
+						Debug.Log("Player moving on to level " + "B" + (sceneIndex+1));
+					}
 				break;
 			case Block.BlockType.GRASS: 
 			case Block.BlockType.MOVEABLE:
