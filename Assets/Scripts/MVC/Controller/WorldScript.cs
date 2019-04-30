@@ -57,8 +57,6 @@ public class WorldScript : MonoBehaviour {
 
 	/**
 	 * Get the block below the given location.
-	 * 
-	 * @param {loc}
 	 */
 	Block GetBlockBelow(Vector3 loc) {
 		loc.y--;
@@ -66,20 +64,28 @@ public class WorldScript : MonoBehaviour {
 		return map.GetBlock(loc);
 	}
 
+	/**
+	 * Get the block at the given location.
+	 */
 	Block GetBlockAt(Vector3 loc) {
-		// loc.y = (float)Math.Ceiling(loc.y);
-		// Debug.Log("Get block at " + loc);
 		return map.GetBlock(loc);
 	}
 
+	/**
+	 * Get the block above the given location.
+	 */
 	Block GetBlockAbove(Vector3 loc) {
 		loc.y++;
 		loc.y = (float)Math.Ceiling(loc.y);
 		return map.GetBlock(loc);
 	}
 
-	float timer = 0;
+	float timer = 0; // used to delay level transition before wind sound plays
 
+	/**
+	 * Checks what block the alpaca is on currently and handles its logic.
+	 * (Dies for lava and wins for win block.)
+	 */
 	void ProcessCurrBlock() {
 		Block currBlock = GetBlockBelow(alpaca.GetCurrAlpacaLocation());
 		if(currBlock == null) {
@@ -87,7 +93,6 @@ public class WorldScript : MonoBehaviour {
 			// Debug.Log("Current block alpaca is on is null!");
 			return;
 		}
-		//{GRASS, LAVA, MOVEABLE, WIN, NONE}
 		switch(currBlock.b_type) {
 			case Block.BlockType.LAVA:
 				break;
@@ -118,10 +123,23 @@ public class WorldScript : MonoBehaviour {
 		}
 	}
 
+	int lastClickedWhere = 2; // used to check if should just change direction or walk
+							  // see ClickedWhere() for more
+
+	/**
+	 * Changes the alpaca's coordinates depending on the click location, and
+	 * the surrounding blocks.
+	 */
 	void MoveOnClick() {
+		int where = ClickedWhere();
+		// change facing direction before walking in that direction
+		if( lastClickedWhere != where) {
+			lastClickedWhere = where;
+			return;
+		}
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
-    	switch(ClickedWhere()) {
+    	switch(where) {
     		case 0:
     			dest.x--;
     			break;
@@ -166,8 +184,13 @@ public class WorldScript : MonoBehaviour {
 				}
 			}
 		}
+		lastClickedWhere = where;
     }
 
+    /**
+     * Picks up a block if there's a moveable on in front,
+     * or drops a block if the alpaca has one and there's a platform it can fall on.
+     */
     bool AttemptPickUpOrPlaceBlock() {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
@@ -194,42 +217,45 @@ public class WorldScript : MonoBehaviour {
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
-	Vector2 clickPos;
-	bool didClick = false;
-	float lastTimeClicked = 0;
+	Vector2 clickPos; // Position of click on this update, if is clicking right now
+	bool didClick = false; // Whether there was a click the last update (click start/end detection)
+	float lastTimeClicked = 0; // Duration of a click, if currently active. 100+ otherwise.
 
-    int middle_x = Screen.width / 2;
-    int middle_y = Screen.height / 2;
-
+	/**
+	 * Processes the input for this update. In charge of:
+	 * - Moving alpaca
+	 * - Picking up/setting down blocks
+	 */
     void ProcessInput() {
-    	if(ClickedNow() && !didClick) {
-    		// click just started
-    		// if(Input.touches.Length > 0)
-    		// 	clickPos = Input.GetTouch(0).position; 
-    		// else 
-    		clickPos = Input.mousePosition;
-    		// lastTimeClicked = 0;
-    	} else if(!ClickedNow() && didClick) {
-    		// click just ended
+    	if(!ClickedNow() && didClick) { // click just ended
     		if(lastTimeClicked < 100) //did not pick up block
     			MoveOnClick();
     		lastTimeClicked = 0;
-    	} else if(ClickedNow()) {
+    	} else if(ClickedNow()) { // click is happening
+    		clickPos = Input.mousePosition;
     		// check if pick up block
     		lastTimeClicked += Time.deltaTime;
-    		if(lastTimeClicked > 0.5f && lastTimeClicked < 100) {
+    		if(lastTimeClicked > 0.5f && lastTimeClicked < 100) { // timer reached
     			if(AttemptPickUpOrPlaceBlock())
-    				lastTimeClicked = 100;
+    				lastTimeClicked = 100; // don't allow any more attempts for this click
     		}
     	}
     	didClick = ClickedNow();
 	}
 
+	/**
+	 * Returns true iff there was a click during this update.
+	 */
 	bool ClickedNow() {
 		return Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject();	
 	}
 
+	// Used to determine which quadrant is clicked
+    int middle_x = Screen.width / 2;
+    int middle_y = Screen.height / 2;
+
     /**
+     * Returns which quadrant the click this update was on.
      *  -----------
 	 * |  0  |  1  |
 	 * |-----------

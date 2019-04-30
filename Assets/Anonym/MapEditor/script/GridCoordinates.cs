@@ -185,7 +185,6 @@ namespace Anonym.Isometric
 
         void Update()
         {
-            Debug.Log("grid coord");
             // if(true)
             //     if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
                     // WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();

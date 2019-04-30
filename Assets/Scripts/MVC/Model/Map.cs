@@ -12,7 +12,8 @@ public class Map {
     Block held_block;
     static Vector3 hideCoords = new Vector3(-100, -100, -100);
 
-    /* Creates a Map model. 
+    /**
+     * Creates a Map model. 
      * 
      * x_w = width in x axis
      * y_w = width in y axis
@@ -21,6 +22,13 @@ public class Map {
         map = new Dictionary<Vector2Int, SortedList<int, Block>>();
     }
 
+    /**
+     * Adds a block
+     * @param {[type]} string          name   [Name of block object (has type)]
+     * @param {[type]} Vector3         last   [The previous coords of this block]
+     * @param {[type]} Vector3         coords [Coords of this block now]
+     * @param {[type]} GridCoordinates obj    [Grid coordinates obj tied to this block (for movement)]
+     */
     public void AddBlock(string name, Vector3 last, Vector3 coords, GridCoordinates obj) {
         Block.BlockType bt = Block.BlockType.NONE;
         if (name.Contains("grass") || name.Contains("start") || name.Contains("warning")) {
@@ -67,6 +75,11 @@ public class Map {
         }
     }
 
+    /**
+     * Returns block at coordinate. Null of there is no block there.
+     * 
+     * @param {[type]} Vector3 coords [Desired block coordinates]
+     */
     public Block GetBlock(Vector3 coords) {
         coords.x = (float)Math.Round(coords.x);
         coords.y = (float)Math.Round(coords.y);
@@ -82,6 +95,16 @@ public class Map {
         return null;
     }
 
+    /**
+     * If a block is already held, try to place a block at coords.
+     * (If there is no block at coords, put it at any block below coords.
+     * If there is no block below it, then do not drop the block.)
+     *
+     * If a block is not held, see if there is a moveable block at coords
+     * and if so pick it up.
+     * 
+     * @param {[type]} Vector3 coords [Attempted coordinate]
+     */
     public bool TryHoldOrPlaceBlock(Vector3 coords) {
         coords.x = (float)Math.Round(coords.x);
         coords.y = (float)Math.Round(coords.y);
@@ -124,6 +147,13 @@ public class Map {
         return false;
     }
 
+    /**
+     * Get the highest block that is no higher than coords. If there
+     * is a block at coords, return that one. If there isn't, return
+     * the highest one below it (null if non).
+     * 
+     * @param {[type]} Vector3 coords [Attempted coordinate.]
+     */
     public Block GetHighestBlockBelow(Vector3 coords) {
         // Debug.Log("Get highest block below " + coords);
         Vector2Int xz = new Vector2Int((int)coords.x,(int) coords.z);
