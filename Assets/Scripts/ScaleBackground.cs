@@ -25,7 +25,8 @@ public class ScaleBackground : MonoBehaviour
 
 		var worldScreenWidth = Camera.main.orthographicSize * 2 + s*1.5f;
 		var worldScreenHeight = (worldScreenWidth / Screen.width) * Screen.height;
-		Vector3 scale = new Vector3((float) worldScreenWidth / width, (float) worldScreenHeight / height,1);
+
+		Vector3 scale = new Vector3((float) worldScreenWidth / width, (float) worldScreenWidth / width,1);
 		transform.localScale = scale;
 	}
 

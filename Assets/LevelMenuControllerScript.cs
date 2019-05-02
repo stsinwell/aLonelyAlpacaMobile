@@ -20,47 +20,24 @@ public class LevelMenuControllerScript : MonoBehaviour
   public Sprite alpacaLeft;
   public Sprite alpacaRight;
 
-  public Image levelBanner;
-  public Image levelImagePreview;
+  private Image levelBanner;
+  private Image levelImagePreview;
 
   // Use this for initialization
   void Start()
   {
     levelPassed = PlayerPrefs.GetInt("LevelPassed");
+    if(levelPassed > 26 || levelPassed < 0)
+        levelPassed = 0;
     moveAlpacaAround = levelPassed;
 
     levelBanner = GameObject.Find("LevelBanner").GetComponent<Image>();
     levelImagePreview = GameObject.Find("ImagePreview").GetComponent<Image>();
 
     B1Button.interactable = true;
-    B2Button.interactable = false;
-    B3Button.interactable = false;
-    B4Button.interactable = false;
-    B5Button.interactable = false;
-    B6Button.interactable = false;
-    B7Button.interactable = false;
-    B8Button.interactable = false;
-    B9Button.interactable = false;
-    B10Button.interactable = false;
-    B11Button.interactable = false;
-    B12Button.interactable = false;
-    B13Button.interactable = false;
-    B14Button.interactable = false;
-    B15Button.interactable = false;
-    B16Button.interactable = false;
-    B17Button.interactable = false;
-    B18Button.interactable = false;
-    B19Button.interactable = false;
-    B20Button.interactable = false;
-    B21Button.interactable = false;
-    B22Button.interactable = false;
-    B23Button.interactable = false;
-    B24Button.interactable = false;
-    B25Button.interactable = false;
-    B26Button.interactable = false;
 
     switch (levelPassed)
-    {
+    {  
       case 1:
         B2Button.interactable = true;
         break;
@@ -467,7 +444,7 @@ public class LevelMenuControllerScript : MonoBehaviour
 
   public void levelToLoad(int level)
   {
-    SceneManager.LoadScene(level);
+    SceneManager.LoadScene("B" + level, LoadSceneMode.Single);
   }
 
   public void positionAlpacaOnRecentLevel(int mostRecentLevel)

@@ -51,7 +51,7 @@ public class Alpaca : MonoBehaviour {
 			}
 		}
 
-		if(!dead) {
+		if(!dead && dest_y == -100) {
 			UpdateWalk();
 		}
 
