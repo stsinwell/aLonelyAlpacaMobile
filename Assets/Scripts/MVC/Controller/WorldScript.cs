@@ -104,6 +104,9 @@ public class WorldScript : MonoBehaviour {
 				timer += Time.deltaTime;
 				if(timer > 0.2f) {
 					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
+					if(PlayerPrefs.GetInt("LevelPassed") < level) {
+						PlayerPrefs.SetInt("LevelPassed", level);
+					}
 					if(level < 26)
 						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
 					else {

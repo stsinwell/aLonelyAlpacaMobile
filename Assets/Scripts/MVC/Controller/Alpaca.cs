@@ -23,6 +23,11 @@ public class Alpaca : MonoBehaviour {
 
         if(GameObject.Find("MusicTime") != null)
         	music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
+
+    	if (music != null) 
+			music.volume = 1f;
+
+		dest_y = -100;
 	}
 	
 	// Update is called once per frame
@@ -34,7 +39,7 @@ public class Alpaca : MonoBehaviour {
 			// Debug.Log("falling " + coords.y);
 			gameObject.transform.position = coords;
 			SetFalling(true);
-		} else if(gameObject.transform.position.y <= dest_y) {
+		} else if(dest_y != -100 && gameObject.transform.position.y <= dest_y) {
 			Vector3 coords = gameObject.transform.position;
 			coords.y = dest_y;
 			gameObject.transform.position = coords;

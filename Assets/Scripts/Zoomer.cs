@@ -65,8 +65,9 @@ public class Zoomer : MonoBehaviour {
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);
 		float scaleProp = 1 / cam.orthographicSize;
-		background.GetComponent<ScaleBackground>().Scale(scaleProp);
-		background2.GetComponent<ScaleBackground>().Scale(scaleProp);
+		// Debug.Log(scaleProp);
+		background.GetComponent<ScaleBackground>().Scale2(scaleProp);
+		background2.GetComponent<ScaleBackground>().Scale2(scaleProp);
 	}
 
 	/* The camera is close enough to its destination, so we can
@@ -93,9 +94,9 @@ public class Zoomer : MonoBehaviour {
 				}
 				break;
 			case ZoomState.ZOOMED_IN:
-				float scaleProp = 1 / cam.orthographicSize;
-				background.GetComponent<ScaleBackground>().Scale(scaleProp);
-				background2.GetComponent<ScaleBackground>().Scale(scaleProp);
+				// float scaleProp = 1 / cam.orthographicSize;
+				// background.GetComponent<ScaleBackground>().Scale(scaleProp);
+				// background2.GetComponent<ScaleBackground>().Scale(scaleProp);
 				lerp_timer = 0;
 				break;
 			case ZoomState.ZOOMED_OUT:
