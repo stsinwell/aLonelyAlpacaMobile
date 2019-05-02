@@ -41062,6 +41062,7 @@ MonoBehaviour:
   background: {fileID: 1758634553}
   background2: {fileID: 1758634552}
   bgScaleAmnt: 0
+  timer: 0
 --- !u!1 &1379656210
 GameObject:
   m_ObjectHideFlags: 0
@@ -50475,6 +50476,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 715276988}
     - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -19.25

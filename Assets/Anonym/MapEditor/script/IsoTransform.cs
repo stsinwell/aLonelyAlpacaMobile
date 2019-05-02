@@ -29,12 +29,12 @@ namespace Anonym.Isometric
 
         public void AdjustRotation()
         {
-            adjustRotation();
+            // adjustRotation();
         }
 
         protected void adjustRotation()
         {
-            transform.eulerAngles = localRotation + (Vector3) IsoMap.instance.TileAngle;
+            // transform.eulerAngles = localRotation + (Vector3) IsoMap.instance.TileAngle;
         }
 
         virtual public void AdjustScale()

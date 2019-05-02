@@ -7,7 +7,7 @@ using Anonym.Isometric;
 /* Model of a single block in the game.
  */
 public class Block : IComparable {
-    public enum BlockType {GRASS, LAVA, MOVEABLE, WIN, NONE};
+    public enum BlockType {GRASS, LAVA, MOVEABLE, WIN, NONE, WALL};
     public BlockType b_type;
     public int p_x; public int p_y; public int p_z; // position
     public GridCoordinates coord_obj;

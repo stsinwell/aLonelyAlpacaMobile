@@ -191,6 +191,7 @@ MonoBehaviour:
   background: {fileID: 1430026100}
   background2: {fileID: 1430026099}
   bgScaleAmnt: 0
+  timer: 0
 --- !u!1 &32006931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,7 +2040,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb52eb47a87e14e40a1fb1f91f31fd16, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 01085657058264793ad8d954297e9159, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -10897,6 +10898,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 221925338}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
 --- !u!20 &1430026098 stripped
@@ -12366,7 +12372,7 @@ GameObject:
   - component: {fileID: 1676820838}
   - component: {fileID: 1676820836}
   m_Layer: 0
-  m_Name: T_F-03_(04,01)__interactable_block_rounded
+  m_Name: T_F-03_(04,01)__block_beta_grass
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

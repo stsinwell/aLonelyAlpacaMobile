@@ -20,17 +20,18 @@ public class ShowLevelBannerInCanvas : MonoBehaviour {
 		sceneName = SceneManager.GetActiveScene().name;
 		Regex getNumber = new Regex(@"\d+$");
         var levelNumber = Int32.Parse(getNumber.Match(sceneName).ToString());	
-		uiImage.sprite = LevelBannerList[levelNumber - 1];
+		uiImage.overrideSprite = LevelBannerList[levelNumber - 1];
 
 		//Begin Fading
 		StartCoroutine(fadeOut(true));
-		
+		Debug.Log("HERE");
 	}
 
 	IEnumerator fadeOut(bool fadeAway) {
-		yield return new WaitForSeconds(3);
+		yield return new WaitForSeconds(1);
 		if (fadeAway)
         {
+        	Debug.Log("HERE 2");
             // loop over 1 second backwards
             for (float i = 1; i >= 0; i -= Time.deltaTime)
             {

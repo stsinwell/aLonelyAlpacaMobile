@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4806721770704938}
   - component: {fileID: 212177191304012578}
   - component: {fileID: 95477693485211306}
+  - component: {fileID: 2308080165609818513}
   m_Layer: 0
   m_Name: Background_peaks
   m_TagString: Untagged
@@ -99,6 +100,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2308080165609818513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001249598812184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d93924abf8b24c678837eae12875831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 212177191304012578}
 --- !u!1 &1431581352955236
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +207,7 @@ GameObject:
   - component: {fileID: 4499786355736964}
   - component: {fileID: 212413659681596994}
   - component: {fileID: 95093271680838662}
+  - component: {fileID: 8460393891351706234}
   m_Layer: 0
   m_Name: Background_mid_mtns
   m_TagString: Untagged
@@ -281,6 +296,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8460393891351706234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490323226699094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d93924abf8b24c678837eae12875831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  render: {fileID: 212413659681596994}
 --- !u!1 &1535350428743942
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,3 +896,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 95444562070212910}
+  deathImage: {fileID: 0}
+  deathSong: {fileID: 82234210983772764}

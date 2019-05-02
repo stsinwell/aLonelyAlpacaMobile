@@ -31,7 +31,7 @@ public class Map {
      */
     public void AddBlock(string name, Vector3 last, Vector3 coords, GridCoordinates obj) {
         Block.BlockType bt = Block.BlockType.NONE;
-        if (name.Contains("grass") || name.Contains("start") || name.Contains("warning")) {
+        if (name.Contains("grass") || name.Contains("start")) {
             bt = Block.BlockType.GRASS;
         } else if (name.Contains("magma")) {
             bt = Block.BlockType.LAVA;
@@ -39,6 +39,8 @@ public class Map {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
+        } else if (name.Contains("warning")) {
+            bt = Block.BlockType.WALL;
         }
 
         Vector2Int xz;
@@ -65,12 +67,12 @@ public class Map {
                 get.Add((int)coords.y, block);
             }
             // if(name.Contains("start")) {
-                Debug.Log(name + " " + block.getCoords() + " " + block.b_type);
-                Block get_b;
-                if(get.TryGetValue((int)coords.y, out get_b)) {
-                    Debug.Log("get block in block block: " + get_b.getCoords());
-                    Debug.Log("get block in block block: " + get_b.b_type);
-                }
+                // Debug.Log(name + " " + block.getCoords() + " " + block.b_type);
+                // Block get_b;
+                // if(get.TryGetValue((int)coords.y, out get_b)) {
+                //     Debug.Log("get block in block block: " + get_b.getCoords());
+                //     Debug.Log("get block in block block: " + get_b.b_type);
+                // }
             // }
         }
     }
@@ -163,7 +165,7 @@ public class Map {
             // Debug.Log("Get highest block below 1" + get.Count);
             Block topBlock = null;
             foreach(KeyValuePair<int, Block> pair in get) {
-                Debug.Log(pair + " " + y);
+                // Debug.Log(pair + " " + y);
                 if (pair.Key <= y) {
                     // Debug.Log("HERE");
                     topBlock = pair.Value;
@@ -172,5 +174,9 @@ public class Map {
             return topBlock;
         }
         return null;
+    }
+
+    public bool IsBlockHeld() {
+        return held_block != null;
     }
 }

@@ -30114,6 +30114,7 @@ MonoBehaviour:
   background: {fileID: 1758634553}
   background2: {fileID: 1758634552}
   bgScaleAmnt: 0
+  timer: 0
 --- !u!1 &594721964
 GameObject:
   m_ObjectHideFlags: 0
@@ -81857,6 +81858,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -81915,11 +81921,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
-      propertyPath: orthographic size
-      value: 4
-      objectReference: {fileID: 0}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1643696681}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
 --- !u!20 &1758634551 stripped

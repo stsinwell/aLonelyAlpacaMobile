@@ -41410,6 +41410,7 @@ MonoBehaviour:
   background: {fileID: 1863656071}
   background2: {fileID: 1863656070}
   bgScaleAmnt: 0
+  timer: 0
 --- !u!1 &1396032371
 GameObject:
   m_ObjectHideFlags: 0
@@ -55317,6 +55318,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 1724265807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
 --- !u!20 &1863656069 stripped

@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System;
+using System.Text.RegularExpressions;
 using Anonym.Isometric;
 
 public class WorldScript : MonoBehaviour {
@@ -95,23 +96,22 @@ public class WorldScript : MonoBehaviour {
 		}
 		switch(currBlock.b_type) {
 			case Block.BlockType.LAVA:
+				alpaca.SetFlamed();
 				break;
 			case Block.BlockType.WIN:
 				if(timer == 0)
 					winSound.Play();
 				timer += Time.deltaTime;
 				if(timer > 0.2f) {
-					int sceneIndex = SceneManager.GetActiveScene().buildIndex;
-					int levelPassed = PlayerPrefs.GetInt("LevelPassed");
-					Debug.Log("sceneIndex: " + sceneIndex + ", levelPassed: " + levelPassed);
-					if (levelPassed < sceneIndex)
-					{
-						Debug.Log("levelPassed < sceneIndex :^0");
-						PlayerPrefs.SetInt("LevelPassed", sceneIndex);
+					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
+					if(level < 26)
+						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
+					else {
+						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
+						final.BeatFinalLevel();
+						currBlock.b_type = Block.BlockType.NONE; // stop processing this block
 					}
-						SceneManager.LoadScene("B" + (sceneIndex+1), LoadSceneMode.Single);
-						Debug.Log("Player moving on to level " + "B" + (sceneIndex+1));
-					}
+				}
 				break;
 			case Block.BlockType.GRASS: 
 			case Block.BlockType.MOVEABLE:
@@ -156,9 +156,9 @@ public class WorldScript : MonoBehaviour {
     			return;
     	}
 		if(GetBlockAt(dest) != null) { // Is there a block right in front? --> climb mode
-			Debug.Log("1" + GetBlockAt(dest).b_type + " " + dest);
-			Debug.Log("alpaca at " + curr);
-			if(GetBlockAt(curr) != null) // Is there a block above alpaca?
+			// Debug.Log("1" + GetBlockAt(dest).b_type + " " + dest);
+			// Debug.Log("alpaca at " + curr);
+			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
 				return;
 			else {
 				if(GetBlockAbove(dest) != null) // Is there a block the one right in front?
@@ -169,18 +169,19 @@ public class WorldScript : MonoBehaviour {
 				}
 			}
 		} else {
-			Debug.Log("2");
+			// Debug.Log("2");
 			if(GetBlockBelow(dest) != null) { // Is there a block that can walk on straight?
-				Debug.Log("2.5");
-				alpaca.Move(dest);
+				// Debug.Log("2.5");
+				if(GetBlockBelow(dest).b_type != Block.BlockType.WALL)	// Is it a block to not walk on? --> don't move
+					alpaca.Move(dest);
 			} else {
-				Debug.Log("3");
+				// Debug.Log("3");
 				Block top = map.GetHighestBlockBelow(dest);
 				if(top != null) { // Is there a block alpaca can fall on?
 					dest = top.getCoords();
 					dest.y++;
 					alpaca.Move(dest);
-					Debug.Log("4");
+					// Debug.Log("4");
 				}
 			}
 		}
@@ -210,7 +211,10 @@ public class WorldScript : MonoBehaviour {
     		default:
     			return false;
     	}
-    	return (map.TryHoldOrPlaceBlock(dest));
+    	bool temp = (map.TryHoldOrPlaceBlock(dest));
+    	if(temp)
+    		alpaca.SetBlock(map.IsBlockHeld());
+    	return temp;
     }
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
@@ -227,11 +231,14 @@ public class WorldScript : MonoBehaviour {
 	 * - Picking up/setting down blocks
 	 */
     void ProcessInput() {
+    	if(alpaca.IsDead()) 
+    		return;
     	if(!ClickedNow() && didClick) { // click just ended
     		if(lastTimeClicked < 100) //did not pick up block
     			MoveOnClick();
     		lastTimeClicked = 0;
     	} else if(ClickedNow()) { // click is happening
+    		alpaca.SetFacingDirection(ClickedWhere());
     		clickPos = Input.mousePosition;
     		// check if pick up block
     		lastTimeClicked += Time.deltaTime;
@@ -247,7 +254,13 @@ public class WorldScript : MonoBehaviour {
 	 * Returns true iff there was a click during this update.
 	 */
 	bool ClickedNow() {
-		return Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject();	
+		// check if is on ui button (this version works for mobile too)
+		PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+		eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+		List<RaycastResult> results = new List<RaycastResult>();
+		EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+		
+		return Input.GetMouseButton(0) && !(results.Count > 0);	
 	}
 
 	// Used to determine which quadrant is clicked

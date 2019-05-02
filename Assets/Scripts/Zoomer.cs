@@ -23,6 +23,7 @@ public class Zoomer : MonoBehaviour {
 	private float origBgScaleY;
 
 	public float bgScaleAmnt;
+	public float timer = 0;
 
 	/* The current state of the zooming. */
 	private enum ZoomState {
@@ -39,8 +40,6 @@ public class Zoomer : MonoBehaviour {
 		ZOOM_AMNT = cam.orthographicSize + zAmount;
 		zState = ZoomState.ZOOMED_IN;
 		lerp_timer = 0;
-		origBgScaleX = background.GetComponent<Transform>().localScale.x;
-		origBgScaleY = background.GetComponent<Transform>().localScale.y;
 	}
 
 	/* Player toggled camera, update the state. */
@@ -65,13 +64,9 @@ public class Zoomer : MonoBehaviour {
 	/* Lerp the camera from [start] to [end]. */
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);
-		float scaleProp = cam.orthographicSize / NO_ZOOM_AMNT;
-		float newX = origBgScaleX + scaleProp - 1;
-		float newY = origBgScaleY + scaleProp - 1;
-		float oldZ = background.GetComponent<Transform>().localScale.z;
-		background.GetComponent<Transform>().localScale = new Vector3(newX, newY, oldZ);
-		background2.GetComponent<Transform>().localScale = new Vector3(newX, newY, oldZ);
-
+		float scaleProp = 1 / cam.orthographicSize;
+		background.GetComponent<ScaleBackground>().Scale(scaleProp);
+		background2.GetComponent<ScaleBackground>().Scale(scaleProp);
 	}
 
 	/* The camera is close enough to its destination, so we can
@@ -97,8 +92,13 @@ public class Zoomer : MonoBehaviour {
 					zState = ZoomState.ZOOMED_IN;
 				}
 				break;
-			case ZoomState.ZOOMED_OUT:
 			case ZoomState.ZOOMED_IN:
+				float scaleProp = 1 / cam.orthographicSize;
+				background.GetComponent<ScaleBackground>().Scale(scaleProp);
+				background2.GetComponent<ScaleBackground>().Scale(scaleProp);
+				lerp_timer = 0;
+				break;
+			case ZoomState.ZOOMED_OUT:
 				lerp_timer = 0;
 				break;
 		};
