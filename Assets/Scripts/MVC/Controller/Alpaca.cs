@@ -144,6 +144,7 @@ public class Alpaca : MonoBehaviour {
 		animator.SetBool("walksw", false);
 		animator.SetBool("walknw", false);
 		animator.SetBool("walkne", false);
+		animator.SetBool("death_by_fire", false);
 		animator.SetBool("death_by_splat", true);
 		animator.SetBool("dead", true);
 
@@ -156,6 +157,7 @@ public class Alpaca : MonoBehaviour {
 		animator.SetBool("walksw", false);
 		animator.SetBool("walknw", false);
 		animator.SetBool("walkne", false);
+		animator.SetBool("death_by_splat", false);
 		animator.SetBool("death_by_fire", true);
 		animator.SetBool("dead", true);
 

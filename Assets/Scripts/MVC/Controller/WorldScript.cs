@@ -1,24 +1,66 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System;
 using System.Text.RegularExpressions;
 using Anonym.Isometric;
 
+
 public class WorldScript : MonoBehaviour {
 
     public AudioSource winSound;
 	Map map;
 	Alpaca alpaca;
+	// used to highlight four quadrants
+	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
+	private Image[] quadrants;
 
 	// Use this for initialization
 	void Start () {
 		if(map == null) {
 			map = new Map(100, 100);
 		}
+		quadrants = new Image[4]{quadrant_0.GetComponent<Image>(), 
+										quadrant_1.GetComponent<Image>(), 
+										quadrant_2.GetComponent<Image>(), 
+										quadrant_3.GetComponent<Image>()};
+		quadrants[0].enabled = false;
+		quadrants[1].enabled = false;
+		quadrants[2].enabled = false;
+		quadrants[3].enabled = false;
+
+		clickedWhere = lastClickedWhere = 2;
 	}
+
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+	/**
+	 * Remove all highlights from screen
+	 */
+	void ClearHighlights() {
+		quadrants[0].enabled = false;
+		quadrants[1].enabled = false;
+		quadrants[2].enabled = false;
+		quadrants[3].enabled = false;
+    }
+
+    /**
+     * Makes the current click position highlighted
+     */
+    void HighlightQuadrant() {
+    	Debug.Log(clickedWhere);
+    	ClearHighlights();
+    	quadrants[clickedWhere].enabled = true;
+    }
+
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	
 	/**
 	 * Adds a block to the map.
@@ -126,23 +168,19 @@ public class WorldScript : MonoBehaviour {
 		}
 	}
 
-	int lastClickedWhere = 2; // used to check if should just change direction or walk
-							  // see ClickedWhere() for more
-
 	/**
 	 * Changes the alpaca's coordinates depending on the click location, and
 	 * the surrounding blocks.
 	 */
 	void MoveOnClick() {
-		int where = ClickedWhere();
 		// change facing direction before walking in that direction
-		if( lastClickedWhere != where) {
-			lastClickedWhere = where;
+		if( lastClickedWhere != clickedWhere) {
+			lastClickedWhere = clickedWhere;
 			return;
 		}
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
-    	switch(where) {
+    	switch(clickedWhere) {
     		case 0:
     			dest.x--;
     			break;
@@ -188,7 +226,7 @@ public class WorldScript : MonoBehaviour {
 				}
 			}
 		}
-		lastClickedWhere = where;
+		lastClickedWhere = clickedWhere;
     }
 
     /**
@@ -198,7 +236,7 @@ public class WorldScript : MonoBehaviour {
     bool AttemptPickUpOrPlaceBlock() {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
-    	switch(ClickedWhere()) {
+    	switch(clickedWhere) {
     		case 0:
     			dest.x--;
     			break;
@@ -227,6 +265,9 @@ public class WorldScript : MonoBehaviour {
 	Vector2 clickPos; // Position of click on this update, if is clicking right now
 	bool didClick = false; // Whether there was a click the last update (click start/end detection)
 	float lastTimeClicked = 0; // Duration of a click, if currently active. 100+ otherwise.
+	int clickedWhere = 2;
+	int lastClickedWhere = 2; // used to check if should just change direction or walk
+							  // see ClickedWhere() for more
 
 	/**
 	 * Processes the input for this update. In charge of:
@@ -234,18 +275,26 @@ public class WorldScript : MonoBehaviour {
 	 * - Picking up/setting down blocks
 	 */
     void ProcessInput() {
-    	if(alpaca.IsDead()) 
+    	if(alpaca.IsDead()) {
+    		ProcessCurrBlock(); // if squashed and burn, do burn.
     		return;
+    	}
+    	if(ClickedNow() && !didClick) { // click just started
+    		clickedWhere = ClickedWhere();
+    	}
     	if(!ClickedNow() && didClick) { // click just ended
     		if(lastTimeClicked < 100) //did not pick up block
     			MoveOnClick();
     		lastTimeClicked = 0;
+    		ClearHighlights();
     	} else if(ClickedNow()) { // click is happening
-    		alpaca.SetFacingDirection(ClickedWhere());
     		clickPos = Input.mousePosition;
+    		clickedWhere = ClickedWhere();
+    		HighlightQuadrant();
+    		alpaca.SetFacingDirection(clickedWhere);
     		// check if pick up block
     		lastTimeClicked += Time.deltaTime;
-    		if(lastTimeClicked > 0.5f && lastTimeClicked < 100) { // timer reached
+    		if(lastTimeClicked > 0.4f && lastTimeClicked < 100) { // timer reached
     			if(AttemptPickUpOrPlaceBlock())
     				lastTimeClicked = 100; // don't allow any more attempts for this click
     		}
