@@ -53,7 +53,7 @@ public class WorldScript : MonoBehaviour {
      * Makes the current click position highlighted
      */
     void HighlightQuadrant() {
-    	Debug.Log(clickedWhere);
+    	// Debug.Log(clickedWhere);
     	ClearHighlights();
     	quadrants[clickedWhere].enabled = true;
     }
@@ -175,6 +175,7 @@ public class WorldScript : MonoBehaviour {
 	void MoveOnClick() {
 		// change facing direction before walking in that direction
 		if( lastClickedWhere != clickedWhere) {
+			alpaca.UpdateWalk();
 			lastClickedWhere = clickedWhere;
 			return;
 		}
@@ -253,8 +254,39 @@ public class WorldScript : MonoBehaviour {
     			return false;
     	}
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
-    	if(temp)
+    	if(temp) {
     		alpaca.SetBlock(map.IsBlockHeld());
+    	} else {
+    		map.LoadTryHoldBlock(dest, false);
+    	}
+    	return temp;
+    }
+
+     /**
+     * Picks up a block if there's a moveable on in front,
+     * or drops a block if the alpaca has one and there's a platform it can fall on.
+     */
+    bool LoadTryHoldBlock(bool set) {
+    	Vector3 curr = alpaca.GetCurrAlpacaLocation();
+    	Vector3 dest = curr;
+    	Debug.Log("in world " + set);
+    	switch(clickedWhere) {
+    		case 0:
+    			dest.x--;
+    			break;
+    		case 1:
+    			dest.z++;
+    			break;
+    		case 2:
+    			dest.x++;
+    			break;
+    		case 3:
+    			dest.z--;
+    			break;
+    		default:
+    			return false;
+    	}
+    	bool temp = (map.LoadTryHoldBlock(dest, set));
     	return temp;
     }
 
@@ -268,7 +300,7 @@ public class WorldScript : MonoBehaviour {
 	int clickedWhere = 2;
 	int lastClickedWhere = 2; // used to check if should just change direction or walk
 							  // see ClickedWhere() for more
-
+	bool flag = true; // only start the block pick up animation once
 	/**
 	 * Processes the input for this update. In charge of:
 	 * - Moving alpaca
@@ -283,10 +315,14 @@ public class WorldScript : MonoBehaviour {
     		clickedWhere = ClickedWhere();
     	}
     	if(!ClickedNow() && didClick) { // click just ended
-    		if(lastTimeClicked < 100) //did not pick up block
+    		if(lastTimeClicked < 100) { //did not pick up block
     			MoveOnClick();
+    			map.LoadTryHoldBlock(new Vector3(0,0,0), false);
+    		}
     		lastTimeClicked = 0;
     		ClearHighlights();
+    		alpaca.StopWalk();
+    		flag = true;
     	} else if(ClickedNow()) { // click is happening
     		clickPos = Input.mousePosition;
     		clickedWhere = ClickedWhere();
@@ -294,10 +330,16 @@ public class WorldScript : MonoBehaviour {
     		alpaca.SetFacingDirection(clickedWhere);
     		// check if pick up block
     		lastTimeClicked += Time.deltaTime;
-    		if(lastTimeClicked > 0.4f && lastTimeClicked < 100) { // timer reached
+    		if(flag && lastTimeClicked > 0.2f) {
+    			LoadTryHoldBlock(true);
+    			flag = false;
+    		}
+    		if(lastTimeClicked > 0.7f && lastTimeClicked < 90) { // timer reached
+    			alpaca.StopWalk();
     			if(AttemptPickUpOrPlaceBlock())
     				lastTimeClicked = 100; // don't allow any more attempts for this click
     		}
+    		alpaca.UpdateWalk();
     	}
     	didClick = ClickedNow();
 	}

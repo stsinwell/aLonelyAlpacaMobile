@@ -9,7 +9,8 @@ using Anonym.Isometric;
 public class Map {
 
     Dictionary<Vector2Int, SortedList<int, Block>> map; 
-    Block held_block;
+    Block held_block = null;
+    Block try_held_block = null;
     static Vector3 hideCoords = new Vector3(-100, -100, -100);
 
     /**
@@ -98,6 +99,31 @@ public class Map {
     }
 
     /**
+     * 
+     */
+    public bool LoadTryHoldBlock(Vector3 coords, bool set) {
+        if(held_block != null) return false;
+        if(set && try_held_block == null) {
+            Vector2Int xz = new Vector2Int((int)coords.x,(int) coords.z);
+            SortedList<int, Block> get;
+            if(map.TryGetValue(xz, out get)) {
+                Block get_b;
+                if(get.TryGetValue((int)coords.y, out get_b)) {
+                    if(get_b.b_type == Block.BlockType.MOVEABLE) {
+                        try_held_block = get_b;
+                        get_b.SetAnim(true);
+                        return true;
+                    }
+                }
+            }
+        } else if(try_held_block != null) {
+            try_held_block.SetAnim(false);
+            try_held_block = null;
+        }
+        return false;
+    }
+
+    /**
      * If a block is already held, try to place a block at coords.
      * (If there is no block at coords, put it at any block below coords.
      * If there is no block below it, then do not drop the block.)
@@ -108,6 +134,10 @@ public class Map {
      * @param {[type]} Vector3 coords [Attempted coordinate]
      */
     public bool TryHoldOrPlaceBlock(Vector3 coords) {
+        if(try_held_block != null) {
+            try_held_block.SetAnim(false);
+            try_held_block = null;
+        }
         coords.x = (float)Math.Round(coords.x);
         coords.y = (float)Math.Round(coords.y);
         coords.z = (float)Math.Round(coords.z);

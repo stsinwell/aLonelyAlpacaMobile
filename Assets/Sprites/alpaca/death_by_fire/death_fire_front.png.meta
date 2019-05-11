@@ -1,35 +1,87 @@
 fileFormatVersion: 2
 guid: 37f47b97259611148b3da78f47ee33a5
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: death_fire_front_0
-    21300002: death_fire_front_1
-    21300004: death_fire_front_2
-    21300006: death_fire_front_3
-    21300008: death_fire_front_4
-    21300010: death_fire_front_5
-    21300012: death_fire_front_6
-    21300014: death_fire_front_7
-    21300016: death_fire_front_8
-    21300018: death_fire_front_9
-    21300020: death_fire_front_10
-    21300022: death_fire_front_11
-    21300024: death_fire_front_12
-    21300026: death_fire_front_13
-    21300028: death_fire_front_14
-    21300030: death_fire_front_15
-    21300032: death_fire_front_16
-    21300034: death_fire_front_17
-    21300036: death_fire_front_18
-    21300038: death_fire_front_19
-    21300040: death_fire_front_20
-    21300042: death_fire_front_21
-    21300044: death_fire_front_22
-    21300046: death_fire_front_23
-    21300048: death_fire_front_24
-    21300050: death_fire_front_25
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: death_fire_front_0
+  - first:
+      213: 21300002
+    second: death_fire_front_1
+  - first:
+      213: 21300004
+    second: death_fire_front_2
+  - first:
+      213: 21300006
+    second: death_fire_front_3
+  - first:
+      213: 21300008
+    second: death_fire_front_4
+  - first:
+      213: 21300010
+    second: death_fire_front_5
+  - first:
+      213: 21300012
+    second: death_fire_front_6
+  - first:
+      213: 21300014
+    second: death_fire_front_7
+  - first:
+      213: 21300016
+    second: death_fire_front_8
+  - first:
+      213: 21300018
+    second: death_fire_front_9
+  - first:
+      213: 21300020
+    second: death_fire_front_10
+  - first:
+      213: 21300022
+    second: death_fire_front_11
+  - first:
+      213: 21300024
+    second: death_fire_front_12
+  - first:
+      213: 21300026
+    second: death_fire_front_13
+  - first:
+      213: 21300028
+    second: death_fire_front_14
+  - first:
+      213: 21300030
+    second: death_fire_front_15
+  - first:
+      213: 21300032
+    second: death_fire_front_16
+  - first:
+      213: 21300034
+    second: death_fire_front_17
+  - first:
+      213: 21300036
+    second: death_fire_front_18
+  - first:
+      213: 21300038
+    second: death_fire_front_19
+  - first:
+      213: 21300040
+    second: death_fire_front_20
+  - first:
+      213: 21300042
+    second: death_fire_front_21
+  - first:
+      213: 21300044
+    second: death_fire_front_22
+  - first:
+      213: 21300046
+    second: death_fire_front_23
+  - first:
+      213: 21300048
+    second: death_fire_front_24
+  - first:
+      213: 21300050
+    second: death_fire_front_25
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -126,16 +178,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cc1aca4a542926546bc7293244c196e6
+      spriteID: 2b1fa6c72a2f84aebb5eee04f6bd98c6
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -144,18 +197,19 @@ TextureImporter:
       name: death_fire_front_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 48
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d134eee0368dc1948b7e160223de314c
+      spriteID: 5f53943dcdb994b99a35e4877754e632
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -164,18 +218,19 @@ TextureImporter:
       name: death_fire_front_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 96
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00cf0126420cd947bc65d9ce0b57091
+      spriteID: 2bf7c6f095ac04d94881e2777a7c726b
+      internalID: 21300004
       vertices: []
       indices: 
       edges: []
@@ -184,18 +239,19 @@ TextureImporter:
       name: death_fire_front_3
       rect:
         serializedVersion: 2
-        x: 105
+        x: 144
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abd68c810f484f54da74776ce84de609
+      spriteID: 923638f46cf1e4ac5aad0559b4b5ee9e
+      internalID: 21300006
       vertices: []
       indices: 
       edges: []
@@ -204,18 +260,19 @@ TextureImporter:
       name: death_fire_front_4
       rect:
         serializedVersion: 2
-        x: 140
+        x: 192
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b1c769c6130f86840ab3d31a3627a7f8
+      spriteID: 07ba359eb29ff45aaa77183299a4b8c9
+      internalID: 21300008
       vertices: []
       indices: 
       edges: []
@@ -224,18 +281,19 @@ TextureImporter:
       name: death_fire_front_5
       rect:
         serializedVersion: 2
-        x: 175
+        x: 240
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab4f63b7813da3c4c8ed1bd61da9a789
+      spriteID: d0f944c53d08c4197aaeffd467b77273
+      internalID: 21300010
       vertices: []
       indices: 
       edges: []
@@ -244,18 +302,19 @@ TextureImporter:
       name: death_fire_front_6
       rect:
         serializedVersion: 2
-        x: 210
+        x: 288
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c8d82ac258662c499c070c440e89eba
+      spriteID: 47ba5e361589743e1ac385196c3ad7ec
+      internalID: 21300012
       vertices: []
       indices: 
       edges: []
@@ -264,18 +323,19 @@ TextureImporter:
       name: death_fire_front_7
       rect:
         serializedVersion: 2
-        x: 245
+        x: 336
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b14652399adb3c4282167864cb4954a
+      spriteID: d8257cd9f707c417d89c4949cb0d08d6
+      internalID: 21300014
       vertices: []
       indices: 
       edges: []
@@ -284,18 +344,19 @@ TextureImporter:
       name: death_fire_front_8
       rect:
         serializedVersion: 2
-        x: 280
+        x: 384
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a35b95bdf3ce74cb4fb15ea72d7659
+      spriteID: c8342d0d341e34198bb749e316aaab72
+      internalID: 21300016
       vertices: []
       indices: 
       edges: []
@@ -304,18 +365,19 @@ TextureImporter:
       name: death_fire_front_9
       rect:
         serializedVersion: 2
-        x: 315
+        x: 432
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4f70540d5925a3d45b697566bd171bdb
+      spriteID: 989792694ea0a47a39897fd5f46f41bc
+      internalID: 21300018
       vertices: []
       indices: 
       edges: []
@@ -324,18 +386,19 @@ TextureImporter:
       name: death_fire_front_10
       rect:
         serializedVersion: 2
-        x: 350
+        x: 480
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e44f3ccb9c39df4f9d7950b9e3efdbb
+      spriteID: b843fd9982da848988b860f92d57816c
+      internalID: 21300020
       vertices: []
       indices: 
       edges: []
@@ -344,18 +407,19 @@ TextureImporter:
       name: death_fire_front_11
       rect:
         serializedVersion: 2
-        x: 385
+        x: 528
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5c7a4d3f5147c344be17a1b4292426b
+      spriteID: 70767b5ad30aa47d590480b9b83cf14e
+      internalID: 21300022
       vertices: []
       indices: 
       edges: []
@@ -364,18 +428,19 @@ TextureImporter:
       name: death_fire_front_12
       rect:
         serializedVersion: 2
-        x: 420
+        x: 576
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 128374e2f21e2e74aa92ebaf9b94756d
+      spriteID: 940e04d56bf3147ab83b16eb4032f56f
+      internalID: 21300024
       vertices: []
       indices: 
       edges: []
@@ -384,18 +449,19 @@ TextureImporter:
       name: death_fire_front_13
       rect:
         serializedVersion: 2
-        x: 455
+        x: 624
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a5f3bc043d466746aaf5ae2bade956c
+      spriteID: 425a8e9656d9548759518aaabb8fb9bc
+      internalID: 21300026
       vertices: []
       indices: 
       edges: []
@@ -404,18 +470,19 @@ TextureImporter:
       name: death_fire_front_14
       rect:
         serializedVersion: 2
-        x: 490
+        x: 672
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52fa3a2aa35f7a8489dff5225f45e5e1
+      spriteID: 492d734811d964666a80f2d34aa2c1f0
+      internalID: 21300028
       vertices: []
       indices: 
       edges: []
@@ -424,18 +491,19 @@ TextureImporter:
       name: death_fire_front_15
       rect:
         serializedVersion: 2
-        x: 525
+        x: 720
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5362ec86765fa604eb8aa1903e2180c5
+      spriteID: c7627e293afb24ea7ae98f28ab5a4839
+      internalID: 21300030
       vertices: []
       indices: 
       edges: []
@@ -444,18 +512,19 @@ TextureImporter:
       name: death_fire_front_16
       rect:
         serializedVersion: 2
-        x: 560
+        x: 768
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a64725b4f2583ea45a7cc3d374e37195
+      spriteID: ad19be6aeef2e46f3bf3ec76e62810b9
+      internalID: 21300032
       vertices: []
       indices: 
       edges: []
@@ -464,18 +533,19 @@ TextureImporter:
       name: death_fire_front_17
       rect:
         serializedVersion: 2
-        x: 595
+        x: 816
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5abf3658c2f462e4e9c06fe1d9df9695
+      spriteID: 350420c9ebdd442448e5adf49c116e47
+      internalID: 21300034
       vertices: []
       indices: 
       edges: []
@@ -484,18 +554,19 @@ TextureImporter:
       name: death_fire_front_18
       rect:
         serializedVersion: 2
-        x: 630
+        x: 864
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bb5ae1e32ce235549afe3f9c65550522
+      spriteID: 4b6d445fa89c14862accb6a959a15ae8
+      internalID: 21300036
       vertices: []
       indices: 
       edges: []
@@ -504,18 +575,19 @@ TextureImporter:
       name: death_fire_front_19
       rect:
         serializedVersion: 2
-        x: 665
+        x: 912
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71380d1d2a7e9e248a8c8ddc7324c81d
+      spriteID: a0cd4eef887ab486fb8e2c9fe27ff491
+      internalID: 21300038
       vertices: []
       indices: 
       edges: []
@@ -524,18 +596,19 @@ TextureImporter:
       name: death_fire_front_20
       rect:
         serializedVersion: 2
-        x: 700
+        x: 960
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a36c18a64b552345a4d97372b376d3d
+      spriteID: f4319a57820804ae18eead44b7acc97c
+      internalID: 21300040
       vertices: []
       indices: 
       edges: []
@@ -544,18 +617,19 @@ TextureImporter:
       name: death_fire_front_21
       rect:
         serializedVersion: 2
-        x: 735
+        x: 1008
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3019f014e1d94a4f8512c987c5bea89
+      spriteID: 0a70064e1694b4426ac31a3b834c05ca
+      internalID: 21300042
       vertices: []
       indices: 
       edges: []
@@ -564,18 +638,19 @@ TextureImporter:
       name: death_fire_front_22
       rect:
         serializedVersion: 2
-        x: 770
+        x: 1056
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5623297ea9cf8340bd0d473e88e93e4
+      spriteID: e701827ddb3be484a9807c05097e5e74
+      internalID: 21300044
       vertices: []
       indices: 
       edges: []
@@ -584,18 +659,19 @@ TextureImporter:
       name: death_fire_front_23
       rect:
         serializedVersion: 2
-        x: 805
+        x: 1104
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 72628a004bb0edb4cbd5ea483c4710ca
+      spriteID: c223f8d781b5e4a1a96de01919b31759
+      internalID: 21300046
       vertices: []
       indices: 
       edges: []
@@ -604,18 +680,19 @@ TextureImporter:
       name: death_fire_front_24
       rect:
         serializedVersion: 2
-        x: 840
+        x: 1152
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049297c3d6bc37b479e4e735b2daf40a
+      spriteID: f547ef993b6264af78aef7b0763477fd
+      internalID: 21300048
       vertices: []
       indices: 
       edges: []
@@ -624,18 +701,19 @@ TextureImporter:
       name: death_fire_front_25
       rect:
         serializedVersion: 2
-        x: 875
+        x: 1200
         y: 0
-        width: 35
-        height: 33
+        width: 48
+        height: 53
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2937908d3cbfdf54385de8f76bc16ad5
+      spriteID: 9102990d052364caaa6362b9138bd87a
+      internalID: 21300050
       vertices: []
       indices: 
       edges: []
@@ -644,10 +722,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 3eb12592d802efa4e8c0301a908d37fb
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

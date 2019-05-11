@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: c7b1c8bfce8970f42b1f7449fede1f2d
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: deathbanner_0
-    21300002: deathbanner_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: deathbanner_0
+  - first:
+      213: 21300002
+    second: deathbanner_1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -103,7 +107,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 258
-        height: 112
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,7 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3b02902f50898b48a95bd91441c3299
+      spriteID: 05a8da3461b33438c8496de2bc52f466
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -123,7 +128,7 @@ TextureImporter:
         x: 258
         y: 0
         width: 258
-        height: 112
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e40ac03c1f6676a4694a537e17b50251
+      spriteID: 10bf18dc01d5547dca7b5f5aed7b611b
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -140,10 +146,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: c649864c6797d7148b66ce34de0ada34
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -15,25 +15,7 @@
 			"file": "Assets/Scripts/MVC/Controller/WorldScript.cs",
 			"settings":
 			{
-				"buffer_size": 7158,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Anonym/MapEditor/script/KeyInputAssist.cs",
-			"settings":
-			{
-				"buffer_size": 31095,
-				"encoding": "UTF-8 with BOM",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
-			"settings":
-			{
-				"buffer_size": 6785,
+				"buffer_size": 10804,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -42,7 +24,43 @@
 			"file": "Assets/Scripts/MVC/Model/Map.cs",
 			"settings":
 			{
-				"buffer_size": 6436,
+				"buffer_size": 7337,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MVC/Model/Block.cs",
+			"settings":
+			{
+				"buffer_size": 1803,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/FinalWinBlockController.cs",
+			"settings":
+			{
+				"buffer_size": 2727,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Anonym/MapEditor/script/Reset.cs",
+			"settings":
+			{
+				"buffer_size": 764,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
+			"settings":
+			{
+				"buffer_size": 7835,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -52,6 +70,15 @@
 			"settings":
 			{
 				"buffer_size": 5996,
+				"encoding": "UTF-8 with BOM",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Assets/LevelMenuControllerScript.cs",
+			"settings":
+			{
+				"buffer_size": 18462,
 				"encoding": "UTF-8 with BOM",
 				"line_ending": "Unix"
 			}
@@ -106,16 +133,22 @@
 	],
 	"file_history":
 	[
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/KeyInputAssist.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsoTransform.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/ScaleBackground.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/Zoomer.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/SkipNonInteractable.cs",
+		"/Users/alpacz/Documents/git.nosync/cude/Assets/Scripts/Zoomer.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/changeFacingDirection.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/Alpaca.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/Map.cs",
+		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/WorldScript.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsometricMovement.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/fireBlockCollision.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/changeFacingDirection.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/KeyInputAssist.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/Map.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsometricCharacterController.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/MoveableBlock.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Model/Block.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/GridCoordinates.cs",
-		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/MVC/Controller/WorldScript.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Scripts/WinCollision.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsoLightReciver.cs",
 		"/Users/alpacz/Documents/git.nosync/aLonelyAlpacaMobile/Assets/Anonym/MapEditor/script/IsoTile.cs",
@@ -152,6 +185,45 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isblockheld",
+			"music",
+			"SetBlock",
+			"UpdateWalk",
+			"walk_coun",
+			"countdown",
+			"is_block",
+			"bloc",
+			"clickedWhere = ",
+			"HERE",
+			"void",
+			"clickedwhere()",
+			"setCanBeDroppedOnColor",
+			"highlightdrophelperblock",
+			"highlightwheretodrop",
+			"highlight",
+			"didhighlight",
+			"shouldhighlight",
+			"levelBanner",
+			"B2Butt",
+			"posi",
+			"moveAlpacaAround",
+			"levelbanner",
+			"levelImagePreview",
+			"LoadSc",
+			"levelToLoad",
+			"LoadScene",
+			"PlayerPrefs",
+			"lerp_timer",
+			"music",
+			"musix",
+			"final_pan",
+			"done = true",
+			"star_Iso",
+			"hit.co",
+			"music",
+			"alpaca",
+			"NO_ZOOM_AMNT",
+			"moveCam",
 			"Debug",
 			"Debug.Log",
 			"idle",
@@ -240,18 +312,7 @@
 			"Start()",
 			"HorizontalVec",
 			"horizontal",
-			"IsoMetricMovement",
-			"SetTarget",
-			"init()",
-			"Start()",
-			"InputProcess()",
-			">> ",
-			"        \n",
-			"update_LastLocalPosition",
-			"UpdateXYZ",
-			"Update",
-			"UpdateXYZ",
-			"Update("
+			"IsoMetricMovement"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -269,7 +330,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -278,15 +339,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7158,
+						"buffer_size": 10804,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4058,
-								4058
+								7097,
+								7097
 							]
 						],
 						"settings":
@@ -294,85 +355,27 @@
 							"syntax": "Packages/C#/C#.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 536.0,
+						"translation.y": 3900.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "Assets/Anonym/MapEditor/script/KeyInputAssist.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 31095,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								28400,
-								28400
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 14950.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6785,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								515,
-								515
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/C#/C#.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 93.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
 					"file": "Assets/Scripts/MVC/Model/Map.cs",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6436,
+						"buffer_size": 7337,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5167,
-								5167
+								4208,
+								4208
 							]
 						],
 						"settings":
@@ -382,14 +385,132 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1722.0,
+						"translation.y": 2127.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Assets/Scripts/MVC/Model/Block.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1803,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								116,
+								116
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 87.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Assets/Scripts/FinalWinBlockController.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2727,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1227,
+								1227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 582.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
+					"file": "Assets/Anonym/MapEditor/script/Reset.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 764,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								640,
+								601
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Assets/Scripts/MVC/Controller/Alpaca.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7835,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7477,
+								7477
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 3087.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
 					"file": "Assets/Scripts/changeFacingDirection.cs",
 					"semi_transient": false,
 					"settings":
@@ -401,8 +522,8 @@
 						"selection":
 						[
 							[
-								4897,
-								4897
+								4492,
+								4492
 							]
 						],
 						"settings":
@@ -412,10 +533,40 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 721.0,
+						"translation.y": 1872.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Assets/LevelMenuControllerScript.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 18462,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6762.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

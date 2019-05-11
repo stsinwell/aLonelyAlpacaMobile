@@ -53,4 +53,19 @@ public class Block : IComparable {
             return;
         coord_obj.MoveToWorldPosition(dest);
     }
+
+    public void SetAnim(bool set) {
+        if(b_type != BlockType.MOVEABLE)
+            return;
+        Debug.Log("in block: " + set);
+        Animator sr = coord_obj.GetComponentInChildren<Animator>();
+        sr.ResetTrigger("try");
+        sr.ResetTrigger("stop");
+        if(set)
+            sr.SetTrigger("try");
+        else
+            sr.SetTrigger("stop");
+        Debug.Log("set: " + set);
+        sr.SetBool("trying", set);
+    }
 }

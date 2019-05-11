@@ -747,17 +747,17 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114267059788626970, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114468995008167606, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114329817668308066, guid: 39b01fccbc744354eb2d2b1e3110ea5a,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -920,7 +920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52b89b45dd3e0044990b89980139759a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 3
+  delayTime: 2.19
 --- !u!82 &1978124119
 AudioSource:
   m_ObjectHideFlags: 0

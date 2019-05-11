@@ -12,6 +12,7 @@ public class Reset : MonoBehaviour
   {
     //deathImage.enabled = false;
     music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
+    music.volume = 0.3f;
   }
 
   // Update is called once per frame
@@ -27,7 +28,7 @@ public class Reset : MonoBehaviour
   public void Restart()
   {
     //if(!GameObject.Find("MusicTime").GetComponent<AudioSource>().isPlaying)
-    if (music != null) music.volume = 0.1f;
+    // if (music != null) music.volume = 0.1f;
     // if(!music.isPlaying)
     // 	music.UnPause();
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);

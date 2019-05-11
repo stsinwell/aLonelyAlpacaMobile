@@ -12746,6 +12746,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1887078852009904517, guid: 0fad9e511d81d40dc85d590fea90a749,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
 --- !u!1 &397850696
@@ -50418,6 +50423,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -50458,6 +50471,18 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: nextLevel
@@ -50468,19 +50493,26 @@ PrefabInstance:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 715276988}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 715276988}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 212026788880827104, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.29
+      objectReference: {fileID: 0}
     - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalPosition.z
       value: -19.25

@@ -12,7 +12,8 @@ public class Alpaca : MonoBehaviour {
 
 	float dest_y = -100; // destined height (y coord), -100 if not falling
 	bool squash = false; // will squash when reach destination
-	bool dead = false;
+	bool dead = false; // whether alpaca be dead
+	const float OFFSET = 0.23f; // sketchy offset that you shift alpaca down for
 
 	// Use this for initialization
 	void Start () {
@@ -25,21 +26,25 @@ public class Alpaca : MonoBehaviour {
         	music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
 
     	if (music != null) 
-			music.volume = 1f;
+			music.volume = 0.3f;
 
 		dest_y = -100;
+
+		Vector3 tmp = GetCurrAlpacaLocation();
+		tmp.y -= OFFSET;
+		gameObject.transform.position = tmp;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		// fall if not at destinated height yet
-		if(dest_y != -100 && gameObject.transform.position.y > dest_y) {
+		if(dest_y != -100 && GetY() > dest_y) {
 			Vector3 coords = gameObject.transform.position;
 			coords.y -= Time.deltaTime * 15;
 			// Debug.Log("falling " + coords.y);
 			gameObject.transform.position = coords;
 			SetFalling(true);
-		} else if(dest_y != -100 && gameObject.transform.position.y <= dest_y) {
+		} else if(dest_y != -100 && GetY() <= dest_y) {
 			Vector3 coords = gameObject.transform.position;
 			coords.y = dest_y;
 			gameObject.transform.position = coords;
@@ -51,18 +56,14 @@ public class Alpaca : MonoBehaviour {
 			}
 		}
 
-		if(!dead && dest_y == -100) {
-			UpdateWalk();
-		}
-
 		//Decrement walk_anim_timer - eventually disable countdown flag
-		if (animator.GetInteger("countdown") > 0) {
-			walk_countdown_local -= Time.deltaTime;
-			if (walk_countdown_local <= 0) {
-				walk_countdown_local = 0;
-				animator.SetInteger("countdown", 0);
-			}
-		}
+		// if (animator.GetInteger("countdown") > 0) {
+		// 	walk_countdown_local -= Time.deltaTime;
+		// 	if (walk_countdown_local <= 0) {
+		// 		walk_countdown_local = 0;
+		// 		animator.SetInteger("countdown", 0);
+		// 	}
+		// }
 	}
 
 	/**
@@ -77,6 +78,11 @@ public class Alpaca : MonoBehaviour {
     	return coords;
     }
 
+    private float GetY() {
+    	return gameObject.transform.position.y + 0.3f;
+    }
+
+
     /**
      * Move alpaca to this block
      *
@@ -90,8 +96,10 @@ public class Alpaca : MonoBehaviour {
     		if(coords.y - dir.y > 2.5) 
     			squash = true;
 			gameObject.transform.position =  new Vector3(dir.x, coords.y, dir.z);
-			dest_y = dir.y;
+			dest_y = dir.y - OFFSET;
 		} else {
+			UpdateWalk();
+			dir.y -= OFFSET;
 			gameObject.transform.position = dir;
 		}
     }
@@ -118,7 +126,7 @@ public class Alpaca : MonoBehaviour {
      * at which point it flips the "countdown" flag for the animator(switches back to idle)
      */
     private const float WALK_ANIM_TIME = 0.3f;
-    float walk_countdown_local;
+    float walk_countdown_local = 0;
 
     int dir = 2; // direction alpaca is facing, set SetFacingDirection for more
 
@@ -131,7 +139,7 @@ public class Alpaca : MonoBehaviour {
 		if (!deathSong.isPlaying)
 		{
 			if (music != null) 
-				music.volume = 0.015f;
+				music.volume = 0.005f;
 			deathSong.Play();
 		}
     }
@@ -175,6 +183,14 @@ public class Alpaca : MonoBehaviour {
 		this.dir = dir;
     }
 
+    public void StopWalk() {
+    	animator.SetBool("poof", false);
+		animator.SetBool("walkse", false);
+		animator.SetBool("walksw", false);
+		animator.SetBool("walknw", false);
+		animator.SetBool("walkne", false);
+    }
+
     public void UpdateWalk() {
 		if (dir == 1 && !animator.GetBool("walkne"))
 		{
@@ -184,9 +200,10 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", true);
 			walk_countdown_local = WALK_ANIM_TIME;
+			animator.SetInteger("countdown", 0);
 		}
-		else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkne"))
-			animator.SetBool("walkne", false);
+		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkne"))
+		// 	animator.SetBool("walkne", false);
 
 		//SW
 		if (dir == 3 && !animator.GetBool("walksw"))
@@ -195,11 +212,12 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", true);
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", false);
-			animator.SetInteger("countdown", 1);
+			// animator.SetInteger("countdown", 1);
 			walk_countdown_local = WALK_ANIM_TIME;
+			animator.SetInteger("countdown", 0);
 		}
-		else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walksw"))
-			animator.SetBool("walksw", false);
+		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walksw"))
+		// 	animator.SetBool("walksw", false);
 
 		//NW
 		if (dir == 0 && !animator.GetBool("walknw"))
@@ -208,11 +226,12 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", false);
 			animator.SetBool("walknw", true);
 			animator.SetBool("walkne", false);
-			animator.SetInteger("countdown", 1);
+			// animator.SetInteger("countdown", 1);
 			walk_countdown_local = WALK_ANIM_TIME;
+			animator.SetInteger("countdown", 0);
 		}
-		else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walknw"))
-			animator.SetBool("walknw", false);
+		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walknw"))
+		// 	animator.SetBool("walknw", false);
 
 		//SE
 		if (dir == 2 && !animator.GetBool("walkse"))
@@ -221,11 +240,12 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", false);
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", false);
-			animator.SetInteger("countdown", 1);
+			// animator.SetInteger("countdown", 1);
 			walk_countdown_local = WALK_ANIM_TIME;
+			animator.SetInteger("countdown", 0);
 		}
-		else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkse"))
-			animator.SetBool("walkse", false);
+		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkse"))
+		// 	animator.SetBool("walkse", false);
     }
 
     public void SetFalling(bool set) {
@@ -236,8 +256,12 @@ public class Alpaca : MonoBehaviour {
 		animator.SetBool("is_falling", set);
     }
 
+    bool lastBlock;
+
     public void SetBlock(bool has) {
+    	animator.SetBool("poof", has);
 		animator.SetBool("is_blockpaca", has);
+		lastBlock = has;
     }
 }
 
