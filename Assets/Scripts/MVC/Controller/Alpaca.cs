@@ -42,9 +42,19 @@ public class Alpaca : MonoBehaviour {
 			Vector3 coords = gameObject.transform.position;
 			coords.y -= Time.deltaTime * 15;
 			// Debug.Log("falling " + coords.y);
+			if(coords.y <= dest_y) {
+				coords.y = dest_y;
+				dest_y = -100;
+				SetFalling(false);
+				if(squash) {
+					SetSquashed();
+					squash = false;
+				}
+			} else {
+				SetFalling(true);
+			}
 			gameObject.transform.position = coords;
-			SetFalling(true);
-		} else if(dest_y != -100 && GetY() <= dest_y) {
+		} else if(dest_y != -100 && GetY() - OFFSET - 0.05f <= dest_y) {
 			Vector3 coords = gameObject.transform.position;
 			coords.y = dest_y;
 			gameObject.transform.position = coords;
@@ -55,15 +65,6 @@ public class Alpaca : MonoBehaviour {
 				squash = false;
 			}
 		}
-
-		//Decrement walk_anim_timer - eventually disable countdown flag
-		// if (animator.GetInteger("countdown") > 0) {
-		// 	walk_countdown_local -= Time.deltaTime;
-		// 	if (walk_countdown_local <= 0) {
-		// 		walk_countdown_local = 0;
-		// 		animator.SetInteger("countdown", 0);
-		// 	}
-		// }
 	}
 
 	/**
@@ -261,7 +262,12 @@ public class Alpaca : MonoBehaviour {
     public void SetBlock(bool has) {
     	animator.SetBool("poof", has);
 		animator.SetBool("is_blockpaca", has);
+		animator.SetBool("drop_block", !has);
 		lastBlock = has;
+    }
+
+    public bool HasBlock() {
+    	return lastBlock;
     }
 }
 

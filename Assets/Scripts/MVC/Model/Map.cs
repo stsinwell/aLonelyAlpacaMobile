@@ -36,7 +36,7 @@ public class Map {
             bt = Block.BlockType.GRASS;
         } else if (name.Contains("magma")) {
             bt = Block.BlockType.LAVA;
-        } else if (name.Contains("interactable")) {
+        } else if (name.Contains("interactable") || name.Contains("poof")) {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
@@ -103,7 +103,7 @@ public class Map {
      */
     public bool LoadTryHoldBlock(Vector3 coords, bool set) {
         if(held_block != null) return false;
-        if(set && try_held_block == null) {
+        if(set) {
             Vector2Int xz = new Vector2Int((int)coords.x,(int) coords.z);
             SortedList<int, Block> get;
             if(map.TryGetValue(xz, out get)) {
@@ -118,7 +118,6 @@ public class Map {
             }
         } else if(try_held_block != null) {
             try_held_block.SetAnim(false);
-            try_held_block = null;
         }
         return false;
     }
@@ -136,7 +135,6 @@ public class Map {
     public bool TryHoldOrPlaceBlock(Vector3 coords) {
         if(try_held_block != null) {
             try_held_block.SetAnim(false);
-            try_held_block = null;
         }
         coords.x = (float)Math.Round(coords.x);
         coords.y = (float)Math.Round(coords.y);

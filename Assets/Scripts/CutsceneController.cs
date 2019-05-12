@@ -34,11 +34,14 @@ public class CutsceneController : MonoBehaviour {
 	/** True if scene is finished, ensures scene doesn't run anymore */
 	private bool endScene = false;
 
+	private IntroMoveAlpaca rt;
+
 	// Use this for initialization
 	void Start () {
 		curScene = GetComponent<Image>();
 		if(nextScene != null)
 			nextSceneImage = nextScene.GetComponent<Image>();
+		rt = GetComponent<IntroMoveAlpaca>();
 		FIScript = GetComponent<FadeImage>();
 	}
 	// Update is called once per frame
@@ -52,6 +55,8 @@ public class CutsceneController : MonoBehaviour {
 						curScene.enabled = false;
 					FIScript.FadeOut();
 					fadeActive = true;
+					if(rt != null)
+						rt.setMoveIt(true);
 					if(nextSceneImage!=null)
 						nextSceneImage.enabled = true;
 				}

@@ -6,35 +6,38 @@ public class IntroMoveAlpaca : MonoBehaviour {
 
 	// Use this for initialization
 	
-	private RectTransform rt;
+	public RectTransform rt;
 	private bool moveIt;
 	private float moveSpeed;
 
 	void Start () {	
-		rt = GetComponent<RectTransform>();
-		moveSpeed = 55f;
+		moveSpeed = 120f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(moveIt){
+			Debug.Log(rt.position.y);
 			Vector3 temp = rt.position; 
-			if(Input.GetKeyDown(KeyCode.Space)){
-				temp.y = 361.5f;
+			if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
+				temp.y = 605f;
 				rt.position = temp;
 				moveIt = false;
 			}
 			else{
 				temp.y += moveSpeed*Time.deltaTime;
 				rt.position = temp;
-				if(rt.position.y >= 361.5f){
-					temp.y = 361.5f;
+				if(rt.position.y >= 605f){
+					temp.y = 605f;
 					rt.position = temp;
 					moveIt = false;
-				}
 			}
 		}		
 	}
+}
 
-	public void setMoveIt(bool move){ this.moveIt = move;}
+	public void setMoveIt(bool move){ 
+		Debug.Log("set move it");
+		this.moveIt = move;
+	}
 }

@@ -102,6 +102,7 @@ public class WorldScript : MonoBehaviour {
 	 * Get the block below the given location.
 	 */
 	Block GetBlockBelow(Vector3 loc) {
+		if(loc == null || map == null) return null;
 		loc.y--;
 		loc.y = (float)Math.Ceiling(loc.y);
 		return map.GetBlock(loc);
@@ -253,6 +254,9 @@ public class WorldScript : MonoBehaviour {
     		default:
     			return false;
     	}
+    	lastClickedWhere = clickedWhere;
+    	if(GetBlockAbove(dest) != null) // Is there a block above attempted block?
+			return false;
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
     	if(temp) {
     		alpaca.SetBlock(map.IsBlockHeld());
@@ -286,6 +290,9 @@ public class WorldScript : MonoBehaviour {
     		default:
     			return false;
     	}
+    	lastClickedWhere = clickedWhere;
+    	if(GetBlockAbove(dest) != null) // Is there a block above attempted block?
+			return false;
     	bool temp = (map.LoadTryHoldBlock(dest, set));
     	return temp;
     }
