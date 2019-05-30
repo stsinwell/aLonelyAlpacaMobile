@@ -39,6 +39,7 @@ public class ShowLevelBannerInCanvas : MonoBehaviour {
                 uiImage.color = new Color(1, 1, 1, i);
                 yield return null;
             }
+            uiImage.color = new Color(1, 1, 1, 0);
         }
 	}
 }

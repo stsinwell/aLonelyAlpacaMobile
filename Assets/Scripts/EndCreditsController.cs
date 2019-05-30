@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,9 +20,9 @@ public class EndCreditsController : MonoBehaviour {
 	private float timeAccum;
 	//private bool speedyCreds;
 	public float initial_speed;
-	private const float initial_pos = -968f;
-	private const float final_position = 968f;
-	private const float time_delay = 1f;
+	private const float initial_pos = -950f;
+	private const float final_position = 1790f;
+	private const float time_delay = 0f;
 
 	// Use this for initialization
 	void Start () {
@@ -44,7 +45,7 @@ public class EndCreditsController : MonoBehaviour {
 		else{
 			if(!done){
 				Vector3 temp = rt.position; 
-				if(Input.GetKey(KeyCode.Space)){
+				if(Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)){
 					moveSpeed = initial_speed*4;
 					//moveSpeed = speedyCreds ? initial_speed : (initial_speed*3);
 					//speedyCreds = !speedyCreds;
@@ -79,4 +80,5 @@ public class EndCreditsController : MonoBehaviour {
      	FIScript.FadeOut();
 		firstScreenAfterCredsImage.enabled = true;
  	}
+
 }

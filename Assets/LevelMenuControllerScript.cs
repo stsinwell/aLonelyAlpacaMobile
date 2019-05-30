@@ -26,7 +26,7 @@ public class LevelMenuControllerScript : MonoBehaviour
   // Use this for initialization
   void Start()
   {
-    levelPassed = PlayerPrefs.GetInt("LevelPassed");
+    levelPassed = 26;//PlayerPrefs.GetInt("LevelPassed");
     if(levelPassed > 26 || levelPassed < 0)
         levelPassed = 0;
     moveAlpacaAround = levelPassed;
@@ -333,6 +333,7 @@ public class LevelMenuControllerScript : MonoBehaviour
         B20Button.interactable = true;
         B21Button.interactable = true;
         B22Button.interactable = true;
+        B23Button.interactable = true;
         break;
       case 23:
         B2Button.interactable = true;
@@ -357,6 +358,7 @@ public class LevelMenuControllerScript : MonoBehaviour
         B21Button.interactable = true;
         B22Button.interactable = true;
         B23Button.interactable = true;
+        B24Button.interactable = true;
         break;
       case 24:
         B2Button.interactable = true;
@@ -382,33 +384,9 @@ public class LevelMenuControllerScript : MonoBehaviour
         B22Button.interactable = true;
         B23Button.interactable = true;
         B24Button.interactable = true;
-        break;
-      case 25:
-        B2Button.interactable = true;
-        B3Button.interactable = true;
-        B4Button.interactable = true;
-        B5Button.interactable = true;
-        B6Button.interactable = true;
-        B7Button.interactable = true;
-        B8Button.interactable = true;
-        B9Button.interactable = true;
-        B10Button.interactable = true;
-        B11Button.interactable = true;
-        B12Button.interactable = true;
-        B13Button.interactable = true;
-        B14Button.interactable = true;
-        B15Button.interactable = true;
-        B16Button.interactable = true;
-        B17Button.interactable = true;
-        B18Button.interactable = true;
-        B19Button.interactable = true;
-        B20Button.interactable = true;
-        B21Button.interactable = true;
-        B22Button.interactable = true;
-        B23Button.interactable = true;
-        B24Button.interactable = true;
         B25Button.interactable = true;
         break;
+      case 25:
       case 26:
         B2Button.interactable = true;
         B3Button.interactable = true;
@@ -461,56 +439,55 @@ public class LevelMenuControllerScript : MonoBehaviour
 
     GameObject alpacaSprite = GameObject.Find("AlpacaSprite");
     alpacaSprite.GetComponent<RectTransform>().position = mostRecentStarPosition + new Vector3(0, 40, 0);
-    if ((mostRecentLevel >= 1 && mostRecentLevel <= 6)
+    if ((mostRecentLevel >= 0 && mostRecentLevel <= 6)
     || (mostRecentLevel >= 14 && mostRecentLevel <= 18)
     || mostRecentLevel == 25)
-      alpacaSprite.GetComponent<Image>().sprite = alpacaLeft;
-
-    if ((mostRecentLevel >= 7 && mostRecentLevel <= 13)
-    || (mostRecentLevel >= 19 && mostRecentLevel <= 21)) alpacaSprite.GetComponent<Image>().sprite = alpacaRight;
+        alpacaSprite.GetComponent<Image>().sprite = alpacaLeft;
+    else
+        alpacaSprite.GetComponent<Image>().sprite = alpacaRight;
 
   }
 
   // Update is called once per frame
   void Update()
   {
-    if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow)) && moveAlpacaAround > 0)
-    {
-      moveAlpacaAround = moveAlpacaAround - 1;
-      positionAlpacaOnRecentLevel(moveAlpacaAround);
-      if (moveAlpacaAround > levelPassed)
-      {
-        levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-        levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
-      }
-      else
-      {
-        Debug.Log("movealpacaaround is: " + moveAlpacaAround);
-        levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-        levelImagePreview.sprite = GameObject.Find("level" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-      }
-    }
-    if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.DownArrow)) && moveAlpacaAround < 25)
-    {
-      moveAlpacaAround = moveAlpacaAround + 1;
-      positionAlpacaOnRecentLevel(moveAlpacaAround);
-      if (moveAlpacaAround > levelPassed)
-      {
-        levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-        levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
-      }
-      else
-      {
-        levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-        levelImagePreview.sprite = GameObject.Find("level" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
-      }
-    }
+    // if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.UpArrow)) && moveAlpacaAround > 0)
+    // {
+    //   moveAlpacaAround = moveAlpacaAround - 1;
+    //   positionAlpacaOnRecentLevel(moveAlpacaAround);
+    //   if (moveAlpacaAround > levelPassed)
+    //   {
+    //     levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //     levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
+    //   }
+    //   else
+    //   {
+    //     Debug.Log("movealpacaaround is: " + moveAlpacaAround);
+    //     levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //     levelImagePreview.sprite = GameObject.Find("level" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //   }
+    // }
+    // if ((Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.DownArrow)) && moveAlpacaAround < 26)
+    // {
+    //   moveAlpacaAround = moveAlpacaAround + 1;
+    //   positionAlpacaOnRecentLevel(moveAlpacaAround);
+    //   if (moveAlpacaAround > levelPassed)
+    //   {
+    //     levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //     levelImagePreview.sprite = GameObject.Find("lockedLevel").GetComponent<SpriteRenderer>().sprite;
+    //   }
+    //   else
+    //   {
+    //     levelBanner.sprite = GameObject.Find("banner" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //     levelImagePreview.sprite = GameObject.Find("level" + (moveAlpacaAround + 1)).GetComponent<SpriteRenderer>().sprite;
+    //   }
+    // }
 
-    if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
-    && ((moveAlpacaAround) <= levelPassed))
-    {
-      SceneManager.LoadScene("B" + (moveAlpacaAround + 1), LoadSceneMode.Single);
-    }
+    // if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter))
+    // && ((moveAlpacaAround) <= levelPassed))
+    // {
+    //   SceneManager.LoadScene("B" + (moveAlpacaAround + 1), LoadSceneMode.Single);
+    // }
 
   }
 }

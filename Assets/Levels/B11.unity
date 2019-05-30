@@ -14665,8 +14665,9 @@ GameObject:
   - component: {fileID: 979570672}
   - component: {fileID: 979570676}
   - component: {fileID: 979570674}
+  - component: {fileID: 979570678}
   m_Layer: 0
-  m_Name: T_F00_(-05,02)__interactable_block_rounded
+  m_Name: T_F00_(-05,02)__block_poof_0
   m_TagString: PlayerBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14781,6 +14782,18 @@ Transform:
   m_Father: {fileID: 257110430}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &979570678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 979570671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &988149777
 GameObject:
   m_ObjectHideFlags: 0
@@ -21664,8 +21677,9 @@ GameObject:
   - component: {fileID: 1430306471}
   - component: {fileID: 1430306470}
   - component: {fileID: 1430306469}
+  - component: {fileID: 1430306474}
   m_Layer: 0
-  m_Name: T_F00_(-03,02)__interactable_block_rounded
+  m_Name: T_F00_(-03,02)__block_poof_0
   m_TagString: PlayerBlock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21780,6 +21794,18 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1430306469}
   bChangedforEditor: 1
+--- !u!114 &1430306474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1430306467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1439350890
 GameObject:
   m_ObjectHideFlags: 0
@@ -25381,14 +25407,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -25439,6 +25457,14 @@ PrefabInstance:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 597526457}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: deathImage

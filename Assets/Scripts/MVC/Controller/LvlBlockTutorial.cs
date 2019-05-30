@@ -11,10 +11,13 @@ public class LvlBlockTutorial : MonoBehaviour
 	public GameObject approachShrub;
 	public Image holdLeft;
 	public Image holdRight;
+    public Image dropLeft;
+    public Image dropRight;
 	public Image quadrant0;
 	public Image quadrant1;
+    public Image quadrant2;
+    public Image quadrant3;
 	public Alpaca alpaca;
-	Color quadrantColor;
 	int step = 0;
 
 	Vector3 alpacaApproachLeft = new Vector3(-1, 0, 0);
@@ -23,14 +26,26 @@ public class LvlBlockTutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        holdLeft.enabled = false;
-        holdRight.enabled = false;
-        quadrantColor = quadrant0.color;
-        quadrant0.enabled = quadrant1.enabled = false;
+        holdLeft.enabled = holdRight.enabled = false;
+        dropLeft.enabled = dropRight.enabled = false;
+        quadrant0.enabled = quadrant1.enabled = quadrant2.enabled = quadrant3.enabled = false;
+
+        holdLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.75f);
+        holdRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.75f);
+        dropLeft.rectTransform.position = new Vector3(Screen.width * 0.25f , Screen.height * 0.25f);
+        dropRight.rectTransform.position = new Vector3(Screen.width * 0.75f, Screen.height * 0.25f);
     }
 
     bool equals(Vector3 a, Vector3 b) {
 		return Math.Round(a.x - b.x)  == 0 && Math.Round(a.z - b.z) == 0;
+    }
+
+    bool onEdgeLeft(Vector3 a) {
+        return Math.Round(a.y) == 1 && Math.Round(a.z) == -1;
+    }
+
+    bool onEdgeRight(Vector3 a) {
+        return Math.Round(a.y) == 1 && Math.Round(a.x) == 1 && Math.Round(a.z) == 0;
     }
 
     // Update is called once per frame
@@ -64,6 +79,20 @@ public class LvlBlockTutorial : MonoBehaviour
 					holdRight.enabled = quadrant1.enabled = false;
         		}
         		break;
+            case 2:
+                if(alpaca.HasBlock()) {
+                    quadrant2.enabled = quadrant3.enabled = false;
+                    dropLeft.enabled = dropRight.enabled = false;
+                    if(onEdgeLeft(alpacaPos))
+                        quadrant3.enabled = dropLeft.enabled = true;
+                    if(onEdgeRight(alpacaPos))
+                        quadrant2.enabled = dropRight.enabled = true;
+                } 
+                else {
+                    quadrant2.enabled = quadrant3.enabled = false;
+                    dropLeft.enabled = dropRight.enabled = false;
+                }
+                break;
         	default:
         		break;
         }

@@ -68,4 +68,14 @@ public class Block : IComparable {
         Debug.Log("set: " + set);
         sr.SetBool("trying", set);
     }
+
+    public void Highlight() {
+        if(coord_obj.GetComponent<Unclickable>() != null)
+            coord_obj.GetComponent<Unclickable>().setCanBeDroppedOnColor();
+    }
+
+    public void Unhighlight() {
+        if(coord_obj.GetComponent<Unclickable>() != null)
+            coord_obj.GetComponent<Unclickable>().setNormalColor();
+    }
 }

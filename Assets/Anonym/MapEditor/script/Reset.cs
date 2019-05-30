@@ -11,8 +11,10 @@ public class Reset : MonoBehaviour
   void Start()
   {
     //deathImage.enabled = false;
-    music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
-    music.volume = 0.3f;
+    if(GameObject.Find("MusicTime") != null) {
+      music = GameObject.Find("MusicTime").GetComponent<AudioSource>();
+      music.volume = 0.3f;
+    }
   }
 
   // Update is called once per frame

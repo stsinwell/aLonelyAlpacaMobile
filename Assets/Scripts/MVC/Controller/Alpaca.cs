@@ -14,6 +14,7 @@ public class Alpaca : MonoBehaviour {
 	bool squash = false; // will squash when reach destination
 	bool dead = false; // whether alpaca be dead
 	const float OFFSET = 0.23f; // sketchy offset that you shift alpaca down for
+	public AudioSource landSound;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +50,8 @@ public class Alpaca : MonoBehaviour {
 				if(squash) {
 					SetSquashed();
 					squash = false;
+				} else {
+					landSound.Play();
 				}
 			} else {
 				SetFalling(true);
@@ -181,6 +184,7 @@ public class Alpaca : MonoBehaviour {
 	 *  -----------
      */
     public void SetFacingDirection(int dir) {
+    	if(dir == -1) return;
 		this.dir = dir;
     }
 
@@ -203,8 +207,6 @@ public class Alpaca : MonoBehaviour {
 			walk_countdown_local = WALK_ANIM_TIME;
 			animator.SetInteger("countdown", 0);
 		}
-		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkne"))
-		// 	animator.SetBool("walkne", false);
 
 		//SW
 		if (dir == 3 && !animator.GetBool("walksw"))
@@ -217,8 +219,6 @@ public class Alpaca : MonoBehaviour {
 			walk_countdown_local = WALK_ANIM_TIME;
 			animator.SetInteger("countdown", 0);
 		}
-		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walksw"))
-		// 	animator.SetBool("walksw", false);
 
 		//NW
 		if (dir == 0 && !animator.GetBool("walknw"))
@@ -231,8 +231,6 @@ public class Alpaca : MonoBehaviour {
 			walk_countdown_local = WALK_ANIM_TIME;
 			animator.SetInteger("countdown", 0);
 		}
-		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walknw"))
-		// 	animator.SetBool("walknw", false);
 
 		//SE
 		if (dir == 2 && !animator.GetBool("walkse"))
@@ -245,8 +243,6 @@ public class Alpaca : MonoBehaviour {
 			walk_countdown_local = WALK_ANIM_TIME;
 			animator.SetInteger("countdown", 0);
 		}
-		// else if (animator.GetInteger("countdown") == 0 && animator.GetBool("walkse"))
-		// 	animator.SetBool("walkse", false);
     }
 
     public void SetFalling(bool set) {
@@ -259,7 +255,10 @@ public class Alpaca : MonoBehaviour {
 
     bool lastBlock;
 
+    public AudioSource popSound;
+
     public void SetBlock(bool has) {
+    	popSound.Play();
     	animator.SetBool("poof", has);
 		animator.SetBool("is_blockpaca", has);
 		animator.SetBool("drop_block", !has);

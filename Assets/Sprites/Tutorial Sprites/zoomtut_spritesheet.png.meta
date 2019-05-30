@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: c726cb0ca35f3f14297c8fdab42161cc
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: zoomtut_spritesheet_0
-    21300002: zoomtut_spritesheet_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: zoomtut_spritesheet_0
+  - first:
+      213: 21300002
+    second: zoomtut_spritesheet_1
   externalObjects: {}
-  serializedVersion: 7
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -103,7 +107,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 57
-        height: 40
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,7 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34afae575103d9445a6a3a5d6311369d
+      spriteID: 9551aa18c1d3543ecb45ef619bd16249
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -123,7 +128,7 @@ TextureImporter:
         x: 57
         y: 0
         width: 57
-        height: 40
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,7 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 069138f9657769a4cb7b333ddbb8d99d
+      spriteID: e400316b0677140bda14529aeb1510e6
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -140,10 +146,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: e0e04f71e0850014cb4d0d13bed7ec9f
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

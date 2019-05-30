@@ -52,10 +52,7 @@ public class Map {
             coords.y = (float)Math.Round(coords.y);
             coords.z = (float)Math.Round(coords.z);
             Block block;
-            if(bt == Block.BlockType.MOVEABLE)
-                block = new Block(bt, coords, obj);
-            else
-                block = new Block(bt, coords);
+            block = new Block(bt, coords, obj);
             xz = new Vector2Int((int)coords.x, (int)coords.z);
 
             SortedList<int, Block> get;
@@ -141,7 +138,7 @@ public class Map {
         coords.z = (float)Math.Round(coords.z);
         Vector2Int xz = new Vector2Int((int)coords.x,(int) coords.z);
         SortedList<int, Block> get;
-        if(held_block == null) {
+        if(held_block == null) { // try hold block
             if(map.TryGetValue(xz, out get)) {
                 Block get_b;
                 if(get.TryGetValue((int)coords.y, out get_b)) {
@@ -153,7 +150,7 @@ public class Map {
                     }
                 }
             }
-        } else {
+        } else { // try place block
             if(GetBlock(coords) != null) 
                 return false;
             Block top = GetHighestBlockBelow(coords);

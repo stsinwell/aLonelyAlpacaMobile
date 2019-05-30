@@ -5779,8 +5779,9 @@ GameObject:
   - component: {fileID: 146238572}
   - component: {fileID: 146238576}
   - component: {fileID: 146238574}
+  - component: {fileID: 146238578}
   m_Layer: 0
-  m_Name: T_F-39_(02,-03)__interactable_block_rounded
+  m_Name: T_F-39_(02,-03)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5895,6 +5896,18 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &146238578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146238571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &153524563
 GameObject:
   m_ObjectHideFlags: 0
@@ -13119,8 +13132,9 @@ GameObject:
   - component: {fileID: 339571182}
   - component: {fileID: 339571186}
   - component: {fileID: 339571184}
+  - component: {fileID: 339571188}
   m_Layer: 0
-  m_Name: T_F-36_(08,-02)__interactable_block_rounded
+  m_Name: T_F-36_(08,-02)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13235,6 +13249,18 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 210
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &339571188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339571181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &346491806
 GameObject:
   m_ObjectHideFlags: 0
@@ -25079,8 +25105,9 @@ GameObject:
   - component: {fileID: 712641485}
   - component: {fileID: 712641489}
   - component: {fileID: 712641487}
+  - component: {fileID: 712641491}
   m_Layer: 0
-  m_Name: T_F-39_(07,-02)__interactable_block_rounded
+  m_Name: T_F-39_(07,-02)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25195,6 +25222,18 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 208
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &712641491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712641484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &715187195
 GameObject:
   m_ObjectHideFlags: 0
@@ -34281,8 +34320,9 @@ GameObject:
   - component: {fileID: 974768664}
   - component: {fileID: 974768668}
   - component: {fileID: 974768666}
+  - component: {fileID: 974768670}
   m_Layer: 0
-  m_Name: T_F-39_(06,-02)__interactable_block_rounded
+  m_Name: T_F-39_(06,-02)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34397,6 +34437,18 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 174
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974768670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 974768663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &975018592
 GameObject:
   m_ObjectHideFlags: 0
@@ -39571,14 +39623,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -39629,6 +39673,14 @@ PrefabInstance:
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 1582058309}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: deathImage
@@ -50959,8 +51011,9 @@ GameObject:
   - component: {fileID: 1465394541}
   - component: {fileID: 1465394540}
   - component: {fileID: 1465394539}
+  - component: {fileID: 1465394544}
   m_Layer: 0
-  m_Name: T_F-39_(08,-02)__interactable_block_rounded
+  m_Name: T_F-39_(08,-02)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51075,6 +51128,18 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 1465394539}
   bChangedforEditor: 1
+--- !u!114 &1465394544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465394537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1471810434
 GameObject:
   m_ObjectHideFlags: 0
@@ -67599,8 +67664,9 @@ GameObject:
   - component: {fileID: 2027900517}
   - component: {fileID: 2027900516}
   - component: {fileID: 2027900515}
+  - component: {fileID: 2027900520}
   m_Layer: 0
-  m_Name: T_F-39_(08,-06)__interactable_block_rounded
+  m_Name: T_F-39_(08,-06)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67715,6 +67781,18 @@ MonoBehaviour:
   bSnapFree: 0
   _autoName: {fileID: 2027900515}
   bChangedforEditor: 1
+--- !u!114 &2027900520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027900513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2031326752
 GameObject:
   m_ObjectHideFlags: 0
@@ -67969,8 +68047,9 @@ GameObject:
   - component: {fileID: 2034758495}
   - component: {fileID: 2034758499}
   - component: {fileID: 2034758497}
+  - component: {fileID: 2034758501}
   m_Layer: 0
-  m_Name: T_F-39_(08,-05)__interactable_block_rounded
+  m_Name: T_F-39_(08,-05)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68085,6 +68164,18 @@ Transform:
   m_Father: {fileID: 175586210}
   m_RootOrder: 205
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2034758501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034758494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2035391187
 GameObject:
   m_ObjectHideFlags: 0

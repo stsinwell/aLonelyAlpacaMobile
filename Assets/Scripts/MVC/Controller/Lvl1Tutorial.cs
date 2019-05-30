@@ -28,8 +28,10 @@ public class Lvl1Tutorial : MonoBehaviour
 		quadrants[2].enabled = false;
 		quadrants[3].enabled = false;
 
-		tutImage.color = new Color(1, 1, 1, 0);
-		StartCoroutine(fadeIn(true));
+        if(tutImage != null) {
+            tutImage.color = new Color(1, 1, 1, 0);
+            StartCoroutine(fadeIn(true));
+        }
     }
 
     // Update is called once per frame
@@ -59,8 +61,8 @@ public class Lvl1Tutorial : MonoBehaviour
      * Makes the current click position highlighted
      */
     void HighlightQuadrant(int clickedWhere) {
-    	// Debug.Log(clickedWhere);
     	ClearHighlights();
+        if(clickedWhere == -1) return;
     	quadrants[clickedWhere].enabled = true;
     }
 
@@ -75,6 +77,7 @@ public class Lvl1Tutorial : MonoBehaviour
                     tutImage.color = new Color(1, 1, 1, i);
                 yield return null;
             }
+            tutImage.color = new Color(1, 1, 1, 1);
         }
 	}
 
@@ -90,6 +93,7 @@ public class Lvl1Tutorial : MonoBehaviour
                 tutImage.color = new Color(1, 1, 1, i);
                 yield return null;
             }
+            tutImage.color = new Color(1, 1, 1, 0);
         }
 	}
 
@@ -106,25 +110,27 @@ public class Lvl1Tutorial : MonoBehaviour
 		return Input.GetMouseButton(0) && !(results.Count > 0);	
 	}
 
-	// Used to determine which quadrant is clicked
+    // Used to determine which quadrant is clicked
+    int padding = Screen.height / 12;
     int middle_x = Screen.width / 2;
     int middle_y = Screen.height / 2;
 
-	/**
+    /**
      * Returns which quadrant the click this update was on.
      *  -----------
-	 * |  0  |  1  |
-	 * |-----------
-	 * |  3  |  2  |
-	 *  -----------
+     * |  0  |  1  |
+     * |-----------
+     * |  3  |  2  |
+     *  -----------
      */
     int ClickedWhere(Vector3 clickPos) {
-		if(clickPos.x < middle_x) {
-			if (clickPos.y < middle_y) return 3;
-			else return 0;
-		} else {
-			if (clickPos.y < middle_y) return 2;
-			else return 1;
-		}
+        if(clickPos.x < middle_x - padding) {
+            if (clickPos.y < middle_y - padding) return 3;
+            else if(clickPos.y > middle_y + padding) return 0;
+        } else if(clickPos.x > middle_x + padding) {
+            if (clickPos.y < middle_y - padding) return 2;
+            else if(clickPos.y > middle_y + padding) return 1;
+        }
+        return -1;
     }
 }

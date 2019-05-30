@@ -6781,8 +6781,9 @@ GameObject:
   - component: {fileID: 867211585}
   - component: {fileID: 867211589}
   - component: {fileID: 867211587}
+  - component: {fileID: 867211591}
   m_Layer: 0
-  m_Name: T_F03_(00,02)__interactable_block_rounded
+  m_Name: T_F03_(00,02)__block_poof_0
   m_TagString: Clickable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6897,6 +6898,18 @@ Transform:
   m_Father: {fileID: 1239014328}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867211591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867211584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47f45d0feab74112a02d35fcffa95b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &870280984
 GameObject:
   m_ObjectHideFlags: 0
@@ -15703,9 +15716,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4a4215040f9f43ad95e131ce25fe9df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  landSound: {fileID: 0}
   animator: {fileID: 95444561261860478}
   deathImage: {fileID: 1323403258}
   deathSong: {fileID: 82234210716419340}
+  popSound: {fileID: 82153810071035660}
 --- !u!114 &114882778382776124
 MonoBehaviour:
   m_ObjectHideFlags: 0

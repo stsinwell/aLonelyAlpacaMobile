@@ -3471,6 +3471,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rt: {fileID: 1691792511}
+  shadow: {fileID: 503300218}
 --- !u!1 &439862422
 GameObject:
   m_ObjectHideFlags: 0
@@ -3964,7 +3965,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ebe259354a61234398f12e4964e375f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeRate: 0
+  fadeRate: 4
 --- !u!114 &503300222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7528,14 +7529,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: player prefab (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 4
@@ -7585,6 +7578,14 @@ PrefabInstance:
         type: 3}
       propertyPath: deathImage
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
@@ -13964,7 +13965,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: {fileID: 0}
   endOfSceneLocation: B1
-  currSceneTime: 1.2
+  currSceneTime: 0.5
   skipFade: 0
   spaceToSpeedUp: 1
 --- !u!114 &1838543105

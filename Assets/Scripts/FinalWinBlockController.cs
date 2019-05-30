@@ -16,14 +16,16 @@ public class FinalWinBlockController : MonoBehaviour
   public float FIN_time;
   private Animator star_animator;
   private Transform star_tf;
+  public GameObject credits;
+  public GameObject player;
 
   public GameObject cam;
   private Transform cam_tf;
   private bool moveItStar;
   private bool moveItCam;
   private const float moveSpeed = 3f;
-  private const float final_pan_pos = 16.91f;
-  private const float final_pan_pos_c = 18.4f;
+  private const float final_pan_pos = 17.5f;
+  private const float final_pan_pos_c = 19f;
 
   // Use this for initialization
   void Start()
@@ -38,10 +40,10 @@ public class FinalWinBlockController : MonoBehaviour
     FIScript = Background.GetComponent<FadeOutWSprite>();
   }
 
-  // Update is called once per frame
   public void BeatFinalLevel()
   {
       endSong.Play();
+      player.GetComponent<WorldScript>().enabled = false;
       star_animator.speed = 2;
       moveItStar = true;
       moveItCam = true;
@@ -51,7 +53,6 @@ public class FinalWinBlockController : MonoBehaviour
   bool done, donec;
   void Update()
   {
-    Debug.Log("mvoeit start: " + moveItStar + " moveitcam: " + moveItCam);
     if (moveItStar || moveItCam)
     {
       Vector3 temp = star_tf.position;
@@ -94,6 +95,7 @@ public class FinalWinBlockController : MonoBehaviour
   {
     yield return new WaitForSeconds(time);
     FIScript.FadeOut();
+    credits.SetActive(true);
     StartCoroutine(CredsAfterTime(FIN_time));
   }
   IEnumerator CredsAfterTime(float time)

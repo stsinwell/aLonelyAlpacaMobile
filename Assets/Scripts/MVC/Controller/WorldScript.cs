@@ -12,6 +12,7 @@ using Anonym.Isometric;
 public class WorldScript : MonoBehaviour {
 
     public AudioSource winSound;
+    public AudioSource jumpSound;
 	Map map;
 	Alpaca alpaca;
 	// used to highlight four quadrants
@@ -20,6 +21,7 @@ public class WorldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Debug.Log("world init");
 		if(map == null) {
 			map = new Map(100, 100);
 		}
@@ -55,6 +57,7 @@ public class WorldScript : MonoBehaviour {
     void HighlightQuadrant() {
     	// Debug.Log(clickedWhere);
     	ClearHighlights();
+    	if(clickedWhere == -1) return;
     	quadrants[clickedWhere].enabled = true;
     }
 
@@ -124,7 +127,7 @@ public class WorldScript : MonoBehaviour {
 		return map.GetBlock(loc);
 	}
 
-	float timer = 0; // used to delay level transition before wind sound plays
+	float end_timer = 0; // used to delay level transition before wind sound plays
 
 	/**
 	 * Checks what block the alpaca is on currently and handles its logic.
@@ -133,8 +136,6 @@ public class WorldScript : MonoBehaviour {
 	void ProcessCurrBlock() {
 		Block currBlock = GetBlockBelow(alpaca.GetCurrAlpacaLocation());
 		if(currBlock == null) {
-			// Debug.Log(alpaca.GetCurrAlpacaLocation());
-			// Debug.Log("Current block alpaca is on is null!");
 			return;
 		}
 		switch(currBlock.b_type) {
@@ -142,16 +143,20 @@ public class WorldScript : MonoBehaviour {
 				alpaca.SetFlamed();
 				break;
 			case Block.BlockType.WIN:
-				if(timer == 0)
+				if(end_timer == 0) {
 					winSound.Play();
-				timer += Time.deltaTime;
-				if(timer > 0.2f) {
+				}
+				end_timer += Time.deltaTime;
+				if(end_timer > 0.2f) {
 					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}
-					if(level < 26)
+					if(level < 26 && end_timer < 100f) {
+						Debug.Log("reset on end");
+						end_timer = 999f;
 						SceneManager.LoadSceneAsync("B" + (level+1), LoadSceneMode.Single);
+					}
 					else {
 						FinalWinBlockController final = gameObject.GetComponent<FinalWinBlockController>();
 						final.BeatFinalLevel();
@@ -166,6 +171,42 @@ public class WorldScript : MonoBehaviour {
 			default:
 				Debug.Log("Alpaca is on a none block!");
 				return;
+		}
+	}
+
+	Block highlighted;
+
+	void HandleFrontBlockHighlight() {
+		if( lastClickedWhere != clickedWhere) {
+			alpaca.UpdateWalk();
+			return;
+		}
+		if(highlighted != null)
+			highlighted.Unhighlight();
+		if(!alpaca.HasBlock())
+			return;
+
+    	Vector3 dest = alpaca.GetCurrAlpacaLocation();
+    	switch(clickedWhere) {
+    		case 0:
+    			dest.x--;
+    			break;
+    		case 1:
+    			dest.z++;
+    			break;
+    		case 2:
+    			dest.x++;
+    			break;
+    		case 3:
+    			dest.z--;
+    			break;
+    		default:
+    			return;
+    	}
+
+		highlighted = map.GetHighestBlockBelow(dest);
+		if(highlighted != null && GetBlockAt(dest) == null) {
+			highlighted.Highlight();
 		}
 	}
 
@@ -198,36 +239,33 @@ public class WorldScript : MonoBehaviour {
     		default:
     			return;
     	}
+
 		if(GetBlockAt(dest) != null) { // Is there a block right in front? --> climb mode
-			// Debug.Log("1" + GetBlockAt(dest).b_type + " " + dest);
-			// Debug.Log("alpaca at " + curr);
 			if(GetBlockAbove(curr) != null) // Is there a block above alpaca?
 				return;
 			else {
 				if(GetBlockAbove(dest) != null) // Is there a block the one right in front?
 					return;
 				else {
+					jumpSound.Play();
 					dest.y++;
 					alpaca.Move(dest);
 				}
 			}
 		} else {
-			// Debug.Log("2");
 			if(GetBlockBelow(dest) != null) { // Is there a block that can walk on straight?
-				// Debug.Log("2.5");
 				if(GetBlockBelow(dest).b_type != Block.BlockType.WALL)	// Is it a block to not walk on? --> don't move
 					alpaca.Move(dest);
 			} else {
-				// Debug.Log("3");
 				Block top = map.GetHighestBlockBelow(dest);
 				if(top != null) { // Is there a block alpaca can fall on?
 					dest = top.getCoords();
 					dest.y++;
 					alpaca.Move(dest);
-					// Debug.Log("4");
 				}
 			}
 		}
+		
 		lastClickedWhere = clickedWhere;
     }
 
@@ -255,7 +293,8 @@ public class WorldScript : MonoBehaviour {
     			return false;
     	}
     	lastClickedWhere = clickedWhere;
-    	if(GetBlockAbove(dest) != null) // Is there a block above attempted block?
+    	// Is there a block above attempted block?
+    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
 			return false;
     	bool temp = (map.TryHoldOrPlaceBlock(dest));
     	if(temp) {
@@ -291,7 +330,8 @@ public class WorldScript : MonoBehaviour {
     			return false;
     	}
     	lastClickedWhere = clickedWhere;
-    	if(GetBlockAbove(dest) != null) // Is there a block above attempted block?
+    	// Is there a moveable block above attempted block?
+    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) 
 			return false;
     	bool temp = (map.LoadTryHoldBlock(dest, set));
     	return temp;
@@ -304,10 +344,14 @@ public class WorldScript : MonoBehaviour {
 	Vector2 clickPos; // Position of click on this update, if is clicking right now
 	bool didClick = false; // Whether there was a click the last update (click start/end detection)
 	float lastTimeClicked = 0; // Duration of a click, if currently active. 100+ otherwise.
+	float tilPickup = 0; // Duration between loading picking up block & picking up block
 	int clickedWhere = 2;
+	bool get = false;
 	int lastClickedWhere = 2; // used to check if should just change direction or walk
 							  // see ClickedWhere() for more
 	bool flag = true; // only start the block pick up animation once
+
+	float death_timer = 0;
 	/**
 	 * Processes the input for this update. In charge of:
 	 * - Moving alpaca
@@ -315,9 +359,29 @@ public class WorldScript : MonoBehaviour {
 	 */
     void ProcessInput() {
     	if(alpaca.IsDead()) {
-    		ProcessCurrBlock(); // if squashed and burn, do burn.
+			death_timer += Time.deltaTime;
+    		if(ClickedNow() && death_timer > 0.25f) { // reset on click
+    			Debug.Log("reset on click");
+    			if(ClickedWhere() != -1)
+    				clickedWhere = ClickedWhere();
+    			SceneManager.LoadSceneAsync( SceneManager.GetActiveScene().name );
+    		}
     		return;
     	}
+
+    	// if in process of loading of holding/dropping a block
+    	if(get) {
+    		tilPickup += Time.deltaTime;
+    		if(tilPickup > 0.3f) { // timer reached, actually process
+    			Debug.Log("BOOP");
+				alpaca.StopWalk();
+				get = false;
+				AttemptPickUpOrPlaceBlock();
+				lastTimeClicked = 999;
+			}
+			return;
+    	}
+
     	if(ClickedNow() && !didClick) { // click just started
     		clickedWhere = ClickedWhere();
     	}
@@ -335,19 +399,16 @@ public class WorldScript : MonoBehaviour {
     		clickedWhere = ClickedWhere();
     		HighlightQuadrant();
     		alpaca.SetFacingDirection(clickedWhere);
-    		// check if pick up block
     		lastTimeClicked += Time.deltaTime;
-    		if(flag && lastTimeClicked > 0.2f) {
+    		if(flag && lastTimeClicked > 0.25f) { // attempt to pick up block after certain time
     			LoadTryHoldBlock(true);
     			flag = false;
-    		}
-    		if(lastTimeClicked > 0.7f && lastTimeClicked < 90) { // timer reached
-    			alpaca.StopWalk();
-    			if(AttemptPickUpOrPlaceBlock())
-    				lastTimeClicked = 100; // don't allow any more attempts for this click
+    			get = true;
+    			tilPickup = 0;
     		}
     		alpaca.UpdateWalk();
     	}
+    	HandleFrontBlockHighlight();
     	didClick = ClickedNow();
 	}
 
@@ -361,10 +422,14 @@ public class WorldScript : MonoBehaviour {
 		List<RaycastResult> results = new List<RaycastResult>();
 		EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 		
-		return Input.GetMouseButton(0) && !(results.Count > 0);	
+		return Input.GetMouseButton(0) && !(results.Count > 0) && end_timer == 0;	
 	}
 
+	/**
+	 * Also used in Lvl1Tutorial
+	 */
 	// Used to determine which quadrant is clicked
+	int padding = Screen.height / 12;
     int middle_x = Screen.width / 2;
     int middle_y = Screen.height / 2;
 
@@ -377,13 +442,14 @@ public class WorldScript : MonoBehaviour {
 	 *  -----------
      */
     int ClickedWhere() {
-		if(clickPos.x < middle_x) {
-			if (clickPos.y < middle_y) return 3;
-			else return 0;
-		} else {
-			if (clickPos.y < middle_y) return 2;
-			else return 1;
+		if(clickPos.x < middle_x - padding) {
+			if (clickPos.y < middle_y - padding) return 3;
+			else if(clickPos.y > middle_y + padding) return 0;
+		} else if(clickPos.x > middle_x + padding) {
+			if (clickPos.y < middle_y - padding) return 2;
+			else if(clickPos.y > middle_y + padding) return 1;
 		}
+		return -1;
     }
 }
 
