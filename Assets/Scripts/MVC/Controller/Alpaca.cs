@@ -5,16 +5,18 @@ using UnityEngine;
 using Anonym.Isometric;
 using UnityEngine.UI;
 
-
+/**
+ * Model / controller for the alpaca. Handles animation, falling,
+ * picking & dropping blocks, and handling death.
+ */
 public class Alpaca : MonoBehaviour {
-
-	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 	float dest_y = -100; // destined height (y coord), -100 if not falling
 	bool squash = false; // will squash when reach destination
 	bool dead = false; // whether alpaca be dead
 	const float OFFSET = 0.23f; // sketchy offset that you shift alpaca down for
 	public AudioSource landSound;
+	public AudioSource popSound;
 
 	// Use this for initialization
 	void Start () {
@@ -86,6 +88,9 @@ public class Alpaca : MonoBehaviour {
     	return gameObject.transform.position.y + 0.3f;
     }
 
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = STATE
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
     /**
      * Move alpaca to this block
@@ -114,23 +119,29 @@ public class Alpaca : MonoBehaviour {
     public bool IsDead() {
     	return dead;
     }
+    
+    bool lastBlock; // true iff alpaca is holding a block
+
+    public void SetBlock(bool has) {
+    	popSound.Play();
+    	animator.SetBool("poof", has);
+		animator.SetBool("is_blockpaca", has);
+		animator.SetBool("drop_block", !has);
+		lastBlock = has;
+    }
+
+    public bool HasBlock() {
+    	return lastBlock;
+    }
 
     // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+    // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ANIMATION
     // = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
     public Animator animator; // alpaca animator
     private AudioSource music; // background music (reference to change volume if dead)
     public Image deathImage; // death banner image
     public AudioSource deathSong; // death audio
-    /** 
-     * To make animations work better, this float keeps track of how long a walk animation
-     * plays for before switching to idling again.
-     * In particular, this float is decremented by deltaTime each cycle until it reaches <= 0, 
-     * at which point it flips the "countdown" flag for the animator(switches back to idle)
-     */
-    private const float WALK_ANIM_TIME = 0.3f;
-    float walk_countdown_local = 0;
 
     int dir = 2; // direction alpaca is facing, set SetFacingDirection for more
 
@@ -199,13 +210,10 @@ public class Alpaca : MonoBehaviour {
     public void UpdateWalk() {
 		if (dir == 1 && !animator.GetBool("walkne"))
 		{
-			animator.SetInteger("countdown", 1);
 			animator.SetBool("walkse", false);
 			animator.SetBool("walksw", false);
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", true);
-			walk_countdown_local = WALK_ANIM_TIME;
-			animator.SetInteger("countdown", 0);
 		}
 
 		//SW
@@ -215,9 +223,6 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", true);
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", false);
-			// animator.SetInteger("countdown", 1);
-			walk_countdown_local = WALK_ANIM_TIME;
-			animator.SetInteger("countdown", 0);
 		}
 
 		//NW
@@ -227,9 +232,6 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", false);
 			animator.SetBool("walknw", true);
 			animator.SetBool("walkne", false);
-			// animator.SetInteger("countdown", 1);
-			walk_countdown_local = WALK_ANIM_TIME;
-			animator.SetInteger("countdown", 0);
 		}
 
 		//SE
@@ -239,9 +241,6 @@ public class Alpaca : MonoBehaviour {
 			animator.SetBool("walksw", false);
 			animator.SetBool("walknw", false);
 			animator.SetBool("walkne", false);
-			// animator.SetInteger("countdown", 1);
-			walk_countdown_local = WALK_ANIM_TIME;
-			animator.SetInteger("countdown", 0);
 		}
     }
 
@@ -253,20 +252,5 @@ public class Alpaca : MonoBehaviour {
 		animator.SetBool("is_falling", set);
     }
 
-    bool lastBlock;
-
-    public AudioSource popSound;
-
-    public void SetBlock(bool has) {
-    	popSound.Play();
-    	animator.SetBool("poof", has);
-		animator.SetBool("is_blockpaca", has);
-		animator.SetBool("drop_block", !has);
-		lastBlock = has;
-    }
-
-    public bool HasBlock() {
-    	return lastBlock;
-    }
 }
 

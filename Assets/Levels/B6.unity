@@ -3828,7 +3828,7 @@ PrefabInstance:
         type: 3}
       propertyPath: RefTileSprite
       value: 
-      objectReference: {fileID: 21300000, guid: ce57ab82422e13049ad164df6e5945dc,
+      objectReference: {fileID: 21300000, guid: 20676648bae36eb48b7e379770aaf2c6,
         type: 3}
     - target: {fileID: 114080869328083372, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
         type: 3}
@@ -3839,6 +3839,11 @@ PrefabInstance:
         type: 3}
       propertyPath: GameCamera
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355924275546482, guid: 2d6e5544ae374d54fbbb33de6f4148e9,
+        type: 3}
+      propertyPath: _GridInterval.y
+      value: 0.33333334
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d6e5544ae374d54fbbb33de6f4148e9, type: 3}
@@ -8535,13 +8540,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.1
+    - target: {fileID: 1431581352955236, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2.1
+    - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: m_AllowDynamicResolution
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4105754181196000, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8575,16 +8589,6 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: nextLevel
-      value: B8
-      objectReference: {fileID: 0}
-    - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
-        type: 3}
-      propertyPath: deathImage
-      value: 
-      objectReference: {fileID: 265324214}
     - target: {fileID: 4499786355736964, guid: a766938edf27ac3478ad5627f052337e, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -8593,40 +8597,41 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4806721770704938, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114882778652291180, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: deathImage
       value: 
       objectReference: {fileID: 265324214}
-    - target: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 20777856560667634, guid: a766938edf27ac3478ad5627f052337e,
+    - target: {fileID: 114140336462760838, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
-      propertyPath: m_AllowDynamicResolution
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1431581352955236, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: nextLevel
+      value: B8
       objectReference: {fileID: 0}
     - target: {fileID: 82234210983772764, guid: a766938edf27ac3478ad5627f052337e,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
+    - target: {fileID: 114834795081446234, guid: a766938edf27ac3478ad5627f052337e,
+        type: 3}
+      propertyPath: deathImage
+      value: 
+      objectReference: {fileID: 265324214}
+    - target: {fileID: 1490323226699094, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4538968837023744, guid: a766938edf27ac3478ad5627f052337e, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
+    - target: {fileID: 1001249598812184, guid: a766938edf27ac3478ad5627f052337e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

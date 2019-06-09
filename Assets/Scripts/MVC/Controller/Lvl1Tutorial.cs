@@ -5,6 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 /**
+ * Script for first and second level with control scheme. Shows
+ * quadrants and "tap to move" as well as showing direction arrows
+ * guiding where to tap.
+ * 
  * This is a lot of code reuse form other scripts idk if this is good style LOL
  * From World Controller & Show Level Banner Controller
  */
@@ -90,10 +94,12 @@ public class Lvl1Tutorial : MonoBehaviour
             for (float i = 1; i >= 0; i -= Time.deltaTime)
             {
                 // set color with i as alpha
-                tutImage.color = new Color(1, 1, 1, i);
+                if(tutImage != null)
+                    tutImage.color = new Color(1, 1, 1, i);
                 yield return null;
             }
-            tutImage.color = new Color(1, 1, 1, 0);
+            if(tutImage != null)
+                tutImage.color = new Color(1, 1, 1, 0);
         }
 	}
 

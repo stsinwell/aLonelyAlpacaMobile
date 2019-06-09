@@ -2,6 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Handles background scaling. Should keep it fills the entire screen.
+ * (Used by Zoomer script)
+ */
 public class ScaleBackground : MonoBehaviour
 {
 	public SpriteRenderer render;

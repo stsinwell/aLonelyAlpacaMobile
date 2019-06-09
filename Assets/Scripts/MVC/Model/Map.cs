@@ -4,7 +4,8 @@ using System;
 using UnityEngine;
 using Anonym.Isometric;
 
-/* Model of the map with all its blocks.
+/**
+ * Model of the map for a specific level with all its blocks.
  */
 public class Map {
 

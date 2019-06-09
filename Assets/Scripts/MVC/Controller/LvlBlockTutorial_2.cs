@@ -4,6 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+/**
+ * Tutorial script used for Yuji's level (curr. level 7). Displays
+ * what direction to hold to drop block off of cliff. People were 
+ * having difficulty between holding in facing direction instead of 
+ * clicking where they wanted to drop.
+ */
 public class LvlBlockTutorial_2 : MonoBehaviour
 {
     public Image dropRight;
@@ -23,7 +29,7 @@ public class LvlBlockTutorial_2 : MonoBehaviour
     }
 
     bool Equals(Vector3 a, Vector3 b) {
-		return Math.Round(a.x - b.x)  == 0 && Math.Round(a.z - b.z) == 0;
+		return Math.Round(a.x - b.x)  == 0 && Math.Round(a.z - b.z) == 0 && Math.Round(a.y - b.y) == 0;
     }
 
     // Update is called once per frame

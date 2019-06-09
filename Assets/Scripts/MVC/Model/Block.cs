@@ -4,7 +4,8 @@ using System;
 using UnityEngine;
 using Anonym.Isometric;
 
-/* Model of a single block in the game.
+/**
+ * Model of a single block in the game.
  */
 public class Block : IComparable {
     public enum BlockType {GRASS, LAVA, MOVEABLE, WIN, NONE, WALL};
@@ -12,17 +13,9 @@ public class Block : IComparable {
     public int p_x; public int p_y; public int p_z; // position
     public GridCoordinates coord_obj;
 
-    /* Creates a Block type. 
-     * o is a GameObject with a IsoTile attached to it.
+    /**
+     * Creates a Block type. 
      */
-    public Block(BlockType bt, Vector3 coords){
-        b_type = bt;
-
-        p_x = (int)coords.x;
-        p_y = (int)coords.y;
-        p_z = (int)coords.z;
-    }
-
     public Block(BlockType bt, Vector3 coords, GridCoordinates obj) {
         b_type = bt;
 

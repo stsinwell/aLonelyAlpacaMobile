@@ -8,7 +8,11 @@ using System;
 using System.Text.RegularExpressions;
 using Anonym.Isometric;
 
-
+/**
+ * The ~ all foreseeing ~ control script for every playable level.
+ * Contains a model of the currentl level map, model of the alpaca,
+ * and is in charge of processing user movements.
+ */
 public class WorldScript : MonoBehaviour {
 
     public AudioSource winSound;
@@ -38,7 +42,7 @@ public class WorldScript : MonoBehaviour {
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = QUADRANT HIGHLIGHTING
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 	/**
@@ -62,11 +66,12 @@ public class WorldScript : MonoBehaviour {
     }
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = MODEL DECLARATION
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 	
 	/**
-	 * Adds a block to the map.
+	 * Adds a block to the map. Every block declares itself when its GridCoordinates 
+	 * object is initialized (Start() method).
 	 * 
 	 * @param {name} Name of block
 	 * @param {last} Previous coordinate of block, if existed
@@ -80,7 +85,7 @@ public class WorldScript : MonoBehaviour {
 	}
 
 	/**
-	 * Adds the alpaca model to world.
+	 * Adds the alpaca model to world. Alpaca object declares itself in its constructor.
 	 * 
 	 * @param {a} Alpaca
 	 */
@@ -98,7 +103,7 @@ public class WorldScript : MonoBehaviour {
 	}
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  BLOCK PROCESSING
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 	/**
@@ -338,7 +343,7 @@ public class WorldScript : MonoBehaviour {
     }
 
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =  INPUT PROCESSING
 	// = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 
 	Vector2 clickPos; // Position of click on this update, if is clicking right now
@@ -429,7 +434,7 @@ public class WorldScript : MonoBehaviour {
 	 * Also used in Lvl1Tutorial
 	 */
 	// Used to determine which quadrant is clicked
-	int padding = Screen.height / 12;
+	int padding = Screen.height / 12; // do not process if user clicks too close to boundary
     int middle_x = Screen.width / 2;
     int middle_y = Screen.height / 2;
 

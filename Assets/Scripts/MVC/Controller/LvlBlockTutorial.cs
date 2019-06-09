@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
+/**
+ * Tutorial script for first moveable block level. Instructs
+ * the player to approach the block, hold to pick up, and when 
+ * reaching the edge to hold to drop.
+ */
 public class LvlBlockTutorial : MonoBehaviour
 {
 

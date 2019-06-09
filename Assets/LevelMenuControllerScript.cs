@@ -417,6 +417,10 @@ public class LevelMenuControllerScript : MonoBehaviour
     }
 
     Debug.Log("levelPassed: " + levelPassed);
+    GameObject previousLevel = GameObject.Find("GameObject");
+    if (previousLevel != null) {
+        levelPassed = int.Parse(Regex.Match(previousLevel.GetComponent<currentLevelName>().currentLevelNameString, @"\d+").Value);
+    }
     positionAlpacaOnRecentLevel(levelPassed);
   }
 

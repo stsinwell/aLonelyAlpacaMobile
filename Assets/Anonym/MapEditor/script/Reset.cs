@@ -29,10 +29,6 @@ public class Reset : MonoBehaviour
 
   public void Restart()
   {
-    //if(!GameObject.Find("MusicTime").GetComponent<AudioSource>().isPlaying)
-    // if (music != null) music.volume = 0.1f;
-    // if(!music.isPlaying)
-    // 	music.UnPause();
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 }
