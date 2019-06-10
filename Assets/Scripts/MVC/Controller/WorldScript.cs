@@ -179,7 +179,7 @@ public class WorldScript : MonoBehaviour {
 		}
 	}
 
-	Block highlighted;
+	Block highlighted; // block highlighted if you're holding a block
 
 	void HandleFrontBlockHighlight() {
 		if( lastClickedWhere != clickedWhere) {
@@ -317,7 +317,6 @@ public class WorldScript : MonoBehaviour {
     bool LoadTryHoldBlock(bool set) {
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
-    	Debug.Log("in world " + set);
     	switch(clickedWhere) {
     		case 0:
     			dest.x--;
@@ -350,13 +349,14 @@ public class WorldScript : MonoBehaviour {
 	bool didClick = false; // Whether there was a click the last update (click start/end detection)
 	float lastTimeClicked = 0; // Duration of a click, if currently active. 100+ otherwise.
 	float tilPickup = 0; // Duration between loading picking up block & picking up block
-	int clickedWhere = 2;
-	bool get = false;
+	int clickedWhere = 2; // Currect facing direction of the alpaca
+	bool get = false; // Whether or not in process of holding / dropping a block (for animation delay)
 	int lastClickedWhere = 2; // used to check if should just change direction or walk
 							  // see ClickedWhere() for more
 	bool flag = true; // only start the block pick up animation once
 
-	float death_timer = 0;
+	float death_timer = 0.5f; // Used to delay before you can click screen to restart after death
+
 	/**
 	 * Processes the input for this update. In charge of:
 	 * - Moving alpaca
@@ -364,8 +364,8 @@ public class WorldScript : MonoBehaviour {
 	 */
     void ProcessInput() {
     	if(alpaca.IsDead()) {
-			death_timer += Time.deltaTime;
-    		if(ClickedNow() && death_timer > 0.25f) { // reset on click
+			death_timer -= Time.deltaTime;
+    		if(ClickedNow() && death_timer < 0) { // reset on click
     			Debug.Log("reset on click");
     			if(ClickedWhere() != -1)
     				clickedWhere = ClickedWhere();
@@ -374,11 +374,11 @@ public class WorldScript : MonoBehaviour {
     		return;
     	}
 
-    	// if in process of loading of holding/dropping a block
+    	// if in process of loading of holding/dropping a block,
+    	// don't process input
     	if(get) {
     		tilPickup += Time.deltaTime;
     		if(tilPickup > 0.3f) { // timer reached, actually process
-    			Debug.Log("BOOP");
 				alpaca.StopWalk();
 				get = false;
 				AttemptPickUpOrPlaceBlock();
@@ -387,9 +387,6 @@ public class WorldScript : MonoBehaviour {
 			return;
     	}
 
-    	if(ClickedNow() && !didClick) { // click just started
-    		clickedWhere = ClickedWhere();
-    	}
     	if(!ClickedNow() && didClick) { // click just ended
     		if(lastTimeClicked < 100) { //did not pick up block
     			MoveOnClick();
@@ -400,12 +397,16 @@ public class WorldScript : MonoBehaviour {
     		alpaca.StopWalk();
     		flag = true;
     	} else if(ClickedNow()) { // click is happening
+    		if(!didClick) { // click just started
+    			clickedWhere = ClickedWhere();
+    		}
     		clickPos = Input.mousePosition;
     		clickedWhere = ClickedWhere();
     		HighlightQuadrant();
     		alpaca.SetFacingDirection(clickedWhere);
     		lastTimeClicked += Time.deltaTime;
-    		if(flag && lastTimeClicked > 0.25f) { // attempt to pick up block after certain time
+    		// attempt to pick up block after certain time
+    		if(flag && lastTimeClicked > 0.25f) { 
     			LoadTryHoldBlock(true);
     			flag = false;
     			get = true;
@@ -445,6 +446,8 @@ public class WorldScript : MonoBehaviour {
 	 * |-----------
 	 * |  3  |  2  |
 	 *  -----------
+	 *
+	 *  Returns-1 if too close to the boundary
      */
     int ClickedWhere() {
 		if(clickPos.x < middle_x - padding) {

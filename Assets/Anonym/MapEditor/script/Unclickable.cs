@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/**
+ * Used to change the attached block's sprite / tint.
+ */
 public class Unclickable : MonoBehaviour {
     SpriteRenderer sr;
     Color normalColor;

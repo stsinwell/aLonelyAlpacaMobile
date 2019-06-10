@@ -25,6 +25,9 @@ public class Block : IComparable {
         coord_obj = obj;
     }
 
+    /**
+     * Required to be able to enumerate between blocks.
+     */
     public int CompareTo(object obj)
     {
         Block f = (Block)obj;
@@ -50,16 +53,10 @@ public class Block : IComparable {
     public void SetAnim(bool set) {
         if(b_type != BlockType.MOVEABLE)
             return;
-        Debug.Log("in block: " + set);
         Animator sr = coord_obj.GetComponentInChildren<Animator>();
         sr.ResetTrigger("try");
-        sr.ResetTrigger("stop");
         if(set)
             sr.SetTrigger("try");
-        else
-            sr.SetTrigger("stop");
-        Debug.Log("set: " + set);
-        sr.SetBool("trying", set);
     }
 
     public void Highlight() {

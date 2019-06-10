@@ -177,6 +177,9 @@ namespace Anonym.Isometric
 #endif
         void Start()
         {
+            /**
+             * Declare this block to the World object
+             */
             if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
                 WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
                 world.AddBlock(name, new Vector3(0,0,0), gameObject.transform.position, this);
@@ -185,11 +188,6 @@ namespace Anonym.Isometric
 
         void Update()
         {
-            // if(true)
-            //     if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
-                    // WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
-                    // world.AddBlock(name, _lastLocalPosition, transform.localPosition);
-            //     }
 			if (!Application.isEditor || Application.isPlaying || !enabled)
                 // ||  gameObject.transform.root == gameObject.transform)
 				return;
@@ -219,10 +217,6 @@ namespace Anonym.Isometric
 
             if (_lastLocalPosition != transform.localPosition)
             {
-                // if(GameObject.FindGameObjectsWithTag("WORLD").Length > 0) {
-                //     WorldScript world = GameObject.FindGameObjectsWithTag("WORLD")[0].GetComponent<WorldScript>();
-                //     world.AddBlock(name, _lastLocalPosition, transform.localPosition);
-                // }
                 _lastLocalPosition = transform.localPosition;
                 Rename();
             }

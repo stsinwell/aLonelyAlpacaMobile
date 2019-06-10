@@ -128,6 +128,8 @@ public class Lvl1Tutorial : MonoBehaviour
      * |-----------
      * |  3  |  2  |
      *  -----------
+     *
+     * Returns -1 if too close to the boundary
      */
     int ClickedWhere(Vector3 clickPos) {
         if(clickPos.x < middle_x - padding) {
