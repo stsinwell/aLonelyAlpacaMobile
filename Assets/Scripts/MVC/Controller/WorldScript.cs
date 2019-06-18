@@ -22,6 +22,14 @@ public class WorldScript : MonoBehaviour {
 	// used to highlight four quadrants
 	public GameObject quadrant_0, quadrant_1, quadrant_2, quadrant_3;
 	private Image[] quadrants;
+	private BlockButt blockButt;
+
+	/**
+	 * 0 = hold in quadrant to drop/pick up
+	 * 1 = hold anywhere to drop/pick up in facing direction
+	 * 2 = click icon to hold/drop
+	 */
+	private int control_scheme = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -94,6 +102,13 @@ public class WorldScript : MonoBehaviour {
 			map = new Map(100, 100);
 		}
 		alpaca = a;
+	}
+
+	public void AddBlockButt(BlockButt b) {
+		if(map == null) {
+			map = new Map(100, 100);
+		}
+		blockButt = b;
 	}
 
 	// Update is called once per frame
@@ -274,6 +289,61 @@ public class WorldScript : MonoBehaviour {
 		lastClickedWhere = clickedWhere;
     }
 
+    public void FlagControlScheme(Text t) {
+    	if(control_scheme == 0)
+    		control_scheme = 1;
+    	else if(control_scheme == 1) {
+    		control_scheme = 2;
+    	} else {
+    		control_scheme = 0;
+    		blockButt.SetColor(new Color(1, 1, 1, 0));
+    	}
+    	t.text = control_scheme.ToString();
+    }
+
+    public void ClickBlockButt() {
+    	AttemptPickUpOrPlaceBlock();
+    }
+
+    void UpdateBlockButt() {
+    	if(blockButt == null) return;
+
+    	if(map.IsBlockHeld()) {
+    		blockButt.SetColor(new Color(1, 1, 1, 1));
+			return;
+    	}
+
+    	Vector3 curr = alpaca.GetCurrAlpacaLocation();
+    	Vector3 dest = curr;
+    	switch(clickedWhere) {
+    		case 0:
+    			dest.x--;
+    			break;
+    		case 1:
+    			dest.z++;
+    			break;
+    		case 2:
+    			dest.x++;
+    			break;
+    		case 3:
+    			dest.z--;
+    			break;
+    		default:
+    			return;
+    	}
+
+		// Is there a block above attempted block?
+    	if(GetBlockAbove(dest) != null && GetBlockAbove(dest).b_type == Block.BlockType.MOVEABLE) {
+    		blockButt.SetColor(new Color(1, 1, 1, 0));
+			return;
+    	}
+    	if(GetBlockAt(dest) != null && GetBlockAt(dest).b_type == Block.BlockType.MOVEABLE) {
+    		blockButt.SetColor(new Color(1, 1, 1, 0.5f));
+    	} else {
+    		blockButt.SetColor(new Color(1, 1, 1, 0));
+    	}
+    }
+
     /**
      * Picks up a block if there's a moveable on in front,
      * or drops a block if the alpaca has one and there's a platform it can fall on.
@@ -315,6 +385,7 @@ public class WorldScript : MonoBehaviour {
      * or drops a block if the alpaca has one and there's a platform it can fall on.
      */
     bool LoadTryHoldBlock(bool set) {
+    	if(control_scheme == 2) return false;
     	Vector3 curr = alpaca.GetCurrAlpacaLocation();
     	Vector3 dest = curr;
     	switch(clickedWhere) {
@@ -381,6 +452,7 @@ public class WorldScript : MonoBehaviour {
     		if(tilPickup > 0.3f) { // timer reached, actually process
 				alpaca.StopWalk();
 				get = false;
+				if(control_scheme == 2) return;
 				AttemptPickUpOrPlaceBlock();
 				lastTimeClicked = 999;
 			}
@@ -388,22 +460,30 @@ public class WorldScript : MonoBehaviour {
     	}
 
     	if(!ClickedNow() && didClick) { // click just ended
+    		if(control_scheme == 1) {
+    			clickPos = Input.mousePosition;
+    			clickedWhere = ClickedWhere();
+    			HighlightQuadrant();
+    			alpaca.SetFacingDirection(clickedWhere);
+    			alpaca.UpdateWalk();
+    		}
     		if(lastTimeClicked < 100) { //did not pick up block
     			MoveOnClick();
     			map.LoadTryHoldBlock(new Vector3(0,0,0), false);
     		}
     		lastTimeClicked = 0;
     		ClearHighlights();
-    		alpaca.StopWalk();
+    		if(control_scheme == 0 || control_scheme == 2)
+    			alpaca.StopWalk();
     		flag = true;
     	} else if(ClickedNow()) { // click is happening
-    		if(!didClick) { // click just started
-    			clickedWhere = ClickedWhere();
+    		if(control_scheme == 0 || control_scheme == 2) {
+	     		clickPos = Input.mousePosition;
+	    		clickedWhere = ClickedWhere();
+	    		HighlightQuadrant();
+    			alpaca.SetFacingDirection(clickedWhere);
+    			alpaca.UpdateWalk();
     		}
-    		clickPos = Input.mousePosition;
-    		clickedWhere = ClickedWhere();
-    		HighlightQuadrant();
-    		alpaca.SetFacingDirection(clickedWhere);
     		lastTimeClicked += Time.deltaTime;
     		// attempt to pick up block after certain time
     		if(flag && lastTimeClicked > 0.25f) { 
@@ -412,9 +492,10 @@ public class WorldScript : MonoBehaviour {
     			get = true;
     			tilPickup = 0;
     		}
-    		alpaca.UpdateWalk();
     	}
     	HandleFrontBlockHighlight();
+	    if(control_scheme == 2)
+			UpdateBlockButt();
     	didClick = ClickedNow();
 	}
 

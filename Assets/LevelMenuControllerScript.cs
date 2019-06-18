@@ -421,7 +421,7 @@ public class LevelMenuControllerScript : MonoBehaviour
     if (previousLevel != null) {
         levelPassed = int.Parse(Regex.Match(previousLevel.GetComponent<currentLevelName>().currentLevelNameString, @"\d+").Value);
     }
-    positionAlpacaOnRecentLevel(levelPassed);
+    positionAlpacaOnRecentLevel(levelPassed - 1);
   }
 
   public void levelToLoad(int level)
