@@ -41,7 +41,7 @@ public class Map {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
-        } else if (name.Contains("warning")) {
+        } else if (name.Contains("warning") || name.Contains("wall")) {
             bt = Block.BlockType.WALL;
         }
 
