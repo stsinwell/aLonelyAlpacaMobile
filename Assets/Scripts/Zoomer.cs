@@ -5,14 +5,18 @@ using UnityEngine;
 public class Zoomer : MonoBehaviour {
 	/* The scene camera. */
 	public Camera cam; 
-	/* The size of a non-zoomed camera. */
-	private float NO_ZOOM_AMNT;
-	/* The size of a zoomed camera. */
-	private float ZOOM_AMNT;
-	/* The increase to the camera size that produces a zoom. */
-	public float zAmount;
+	/* The size of a full-zoomed camera. */
+	private float ZOOM_AMNT_FULL;
+	/* The size of a zoomed camera at half-zoom. */
+	private float ZOOM_AMNT_HALF;
+	/* The size of a zoomed camera at no-zoom. */
+	private float ZOOM_AMNT_NONE;
+	/* The increase to the camera size that produces half-zoom. */
+	public float zAmount_half;
+	/* The increase to the camera size that produces no-zoom. */
+	public float zAmount_none;
 	/* How close the camera gets to the zoomed/non-zoomed thresholds. */
-	private float ZOOM_CLOSENESS = 0.0005f;
+	private const float ZOOM_CLOSENESS = 0.0005f;
 	/* The speed of the camera zoom. */
 	private float ZOOM_SPEED = 0.5f;
 
@@ -27,18 +31,21 @@ public class Zoomer : MonoBehaviour {
 
 	/* The current state of the zooming. */
 	private enum ZoomState {
-		ZOOMING_OUT,
-		ZOOMING_IN,
-		ZOOMED_IN,
-		ZOOMED_OUT
+		ZOOMING_OUT_F_H, // full-zoom to half-zoom
+		ZOOMING_OUT_H_N, // half-zoom to no-zoom
+		ZOOMING_IN_N_F, // no-zoom to full-zoom
+		ZOOMED_FULL,
+		ZOOMED_HALF,
+		ZOOMED_NONE
 	};
 	private ZoomState zState;
 	private float lerp_timer;
 
 	void Start () {
-		NO_ZOOM_AMNT = cam.orthographicSize;
-		ZOOM_AMNT = cam.orthographicSize + zAmount;
-		zState = ZoomState.ZOOMED_IN;
+		ZOOM_AMNT_FULL = cam.orthographicSize;
+		ZOOM_AMNT_HALF = cam.orthographicSize + zAmount_half;
+		ZOOM_AMNT_NONE = cam.orthographicSize + zAmount_none;
+		zState = ZoomState.ZOOMED_FULL;
 		lerp_timer = 0;
 	}
 
@@ -46,17 +53,23 @@ public class Zoomer : MonoBehaviour {
 	public void toggleZoom() {
 		lerp_timer = 0;
 		switch(zState) {
-			case ZoomState.ZOOMING_IN:
-				zState = ZoomState.ZOOMING_OUT;
+			case ZoomState.ZOOMING_OUT_F_H:
+				zState = ZoomState.ZOOMING_OUT_H_N;
 				break;
-			case ZoomState.ZOOMING_OUT:
-				zState = ZoomState.ZOOMING_IN;
+			case ZoomState.ZOOMING_OUT_H_N:
+				zState = ZoomState.ZOOMING_IN_N_F;
 				break;
-			case ZoomState.ZOOMED_OUT:
-				zState = ZoomState.ZOOMING_IN;
+			case ZoomState.ZOOMING_IN_N_F:
+				zState = ZoomState.ZOOMING_OUT_F_H;
 				break;
-			case ZoomState.ZOOMED_IN:
-				zState = ZoomState.ZOOMING_OUT;
+			case ZoomState.ZOOMED_FULL:
+				zState = ZoomState.ZOOMING_OUT_F_H;
+				break;
+			case ZoomState.ZOOMED_HALF:
+				zState = ZoomState.ZOOMING_OUT_H_N;
+				break;
+			case ZoomState.ZOOMED_NONE:
+				zState = ZoomState.ZOOMING_IN_N_F;
 				break;
 		}
 	}
@@ -65,7 +78,6 @@ public class Zoomer : MonoBehaviour {
 	void moveCam(float start, float end) {
 		cam.orthographicSize = Mathf.Lerp(start, end, lerp_timer);
 		float scaleProp = 1 / cam.orthographicSize;
-		// Debug.Log(scaleProp);
 		background.GetComponent<ScaleBackground>().Scale2(scaleProp);
 		background2.GetComponent<ScaleBackground>().Scale2(scaleProp);
 	}
@@ -79,27 +91,34 @@ public class Zoomer : MonoBehaviour {
 	/* Update the camera position and zoom state. */
 	void resolveZoom() {
 		switch(zState) {
-			case ZoomState.ZOOMING_OUT:
+			case ZoomState.ZOOMING_OUT_F_H:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
-				moveCam(cam.orthographicSize, ZOOM_AMNT);
-				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT)) {
-					zState = ZoomState.ZOOMED_OUT;
+				moveCam(cam.orthographicSize, ZOOM_AMNT_HALF);
+				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_HALF)) {
+					zState = ZoomState.ZOOMED_HALF;
 				}
 				break;
-			case ZoomState.ZOOMING_IN:
+			case ZoomState.ZOOMING_OUT_H_N:
 				lerp_timer += ZOOM_SPEED * Time.deltaTime;
-				moveCam(cam.orthographicSize, NO_ZOOM_AMNT);
-				if (camMoveDone(NO_ZOOM_AMNT, cam.orthographicSize)) {
-					zState = ZoomState.ZOOMED_IN;
+				moveCam(cam.orthographicSize, ZOOM_AMNT_NONE);
+				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_NONE)) {
+					zState = ZoomState.ZOOMED_NONE;
 				}
 				break;
-			case ZoomState.ZOOMED_IN:
-				// float scaleProp = 1 / cam.orthographicSize;
-				// background.GetComponent<ScaleBackground>().Scale(scaleProp);
-				// background2.GetComponent<ScaleBackground>().Scale(scaleProp);
+			case ZoomState.ZOOMING_IN_N_F:
+				lerp_timer += ZOOM_SPEED * Time.deltaTime;
+				moveCam(cam.orthographicSize, ZOOM_AMNT_FULL);
+				if (camMoveDone(cam.orthographicSize, ZOOM_AMNT_FULL)) {
+					zState = ZoomState.ZOOMED_FULL;
+				}
+				break;	
+			case ZoomState.ZOOMED_FULL:
 				lerp_timer = 0;
 				break;
-			case ZoomState.ZOOMED_OUT:
+			case ZoomState.ZOOMED_HALF:
+				lerp_timer = 0;
+				break;
+			case ZoomState.ZOOMED_NONE:
 				lerp_timer = 0;
 				break;
 		};

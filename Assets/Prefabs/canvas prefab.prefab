@@ -273,6 +273,7 @@ GameObject:
   - component: {fileID: 114328948682561056}
   - component: {fileID: 114178595373478844}
   - component: {fileID: 114547592250205640}
+  - component: {fileID: 996668562190964942}
   m_Layer: 5
   m_Name: Zoom Butt
   m_TagString: Untagged
@@ -379,7 +380,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 996668562190964942}
         m_MethodName: toggleZoom
         m_Mode: 1
         m_Arguments:
@@ -406,6 +407,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hoverTextImage: {fileID: 0}
   mouseOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &996668562190964942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341986989249610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0298c9c6b909e274ebe8a32ce87c6682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  zAmount_half: 2.5
+  zAmount_none: 5
+  background: {fileID: 0}
+  background2: {fileID: 0}
+  bgScaleAmnt: 0
+  timer: 0
 --- !u!1 &1700265565860296
 GameObject:
   m_ObjectHideFlags: 0
