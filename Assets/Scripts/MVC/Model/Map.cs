@@ -32,7 +32,7 @@ public class Map {
      * @param {[type]} GridCoordinates obj    [Grid coordinates obj tied to this block (for movement)]
      */
     public void AddBlock(string name, Vector3 last, Vector3 coords, GridCoordinates obj) {
-        Block.BlockType bt = Block.BlockType.NONE;
+        Block.BlockType bt = Block.BlockType.WALL;
         if (name.Contains("grass") || name.Contains("start")) {
             bt = Block.BlockType.GRASS;
         } else if (name.Contains("magma")) {
@@ -41,8 +41,8 @@ public class Map {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
-        } else if (name.Contains("warning") || name.Contains("wall")) {
-            bt = Block.BlockType.WALL;
+        } else if (name.Contains("spinning")) { //for final level
+            bt = Block.BlockType.NONE;
         }
 
         Vector2Int xz;

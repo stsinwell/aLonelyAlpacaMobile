@@ -266,7 +266,7 @@ public class WorldScript : MonoBehaviour {
 			else {
 				if(GetBlockAbove(dest) != null) // Is there a block the one right in front?
 					return;
-				else {
+				else if(GetBlockAt(dest).b_type != Block.BlockType.WALL ) { // Is the block one banning walking?
 					jumpSound.Play();
 					dest.y++;
 					alpaca.Move(dest);
@@ -278,7 +278,7 @@ public class WorldScript : MonoBehaviour {
 					alpaca.Move(dest);
 			} else {
 				Block top = map.GetHighestBlockBelow(dest);
-				if(top != null) { // Is there a block alpaca can fall on?
+				if(top != null && top.b_type != Block.BlockType.WALL) { // Is there a block alpaca can fall on?
 					dest = top.getCoords();
 					dest.y++;
 					alpaca.Move(dest);

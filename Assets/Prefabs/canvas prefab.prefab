@@ -115,7 +115,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114174710544138298}
+  m_TargetGraphic: {fileID: 7739127320956786909}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -363,7 +363,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114328948682561056}
+  m_TargetGraphic: {fileID: 840157317337008020}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -624,7 +624,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114044045961873226}
+  m_TargetGraphic: {fileID: 6845250531861582049}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -892,7 +892,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 114770920633643920}
+  m_TargetGraphic: {fileID: 1912795761015644804}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
@@ -936,7 +936,7 @@ GameObject:
   - component: {fileID: 2485899305595070215}
   - component: {fileID: 7739127320956786909}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Reset Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 5041001777168161973}
   - component: {fileID: 1912795761015644804}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Level Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 6797658697407017557}
   - component: {fileID: 6845250531861582049}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Music Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 2564590082440592540}
   - component: {fileID: 840157317337008020}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Zoom Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
