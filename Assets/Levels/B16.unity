@@ -11436,7 +11436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1055367784236320, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4228833587824526, guid: 0fad9e511d81d40dc85d590fea90a749, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23376,7 +23376,7 @@ MonoBehaviour:
   _grid: {fileID: 515555254}
   bSnapFree: 0
   _autoName: {fileID: 733758390}
-  bChangedforEditor: 0
+  bChangedforEditor: 1
 --- !u!114 &733758392
 MonoBehaviour:
   m_ObjectHideFlags: 0
