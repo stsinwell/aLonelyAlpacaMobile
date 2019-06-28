@@ -5,44 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class GoHome : MonoBehaviour
 {
-
-  public string menuLevel;
-  public string levelSelect;
+  public string menuLevel = "B0 - Menu";
+  public string levelSelect = "Level Select Menu Mobile";
   GameObject currentLevel;
   currentLevelName currentLevelScript;
   GameObject previousLevel;
   currentLevelName previousLevelScript;
 
-  // Use this for initialization
-  void Start()
-  {
-
-  }
-
-  public void goHome()
-  {
+  public void goHome() {
     SceneManager.LoadScene(menuLevel, LoadSceneMode.Single);
   }
 
-  public void goToLevelSelect()
-  {
+  public void goToLevelSelect() {
     currentLevel = GameObject.Find("GameObject");
     currentLevelScript = currentLevel.GetComponent<currentLevelName>();
     currentLevelScript.currentLevelNameString = SceneManager.GetActiveScene().name;
-    Debug.Log("current level name: " + currentLevelScript.currentLevelNameString);
+    SceneManager.LoadSceneAsync(levelSelect, LoadSceneMode.Single);
 
-    SceneManager.LoadScene(levelSelect, LoadSceneMode.Single);
   }
 
-  public void goBackToPreviousLevel()
-  {
+  public void goBackToPreviousLevel() {
     previousLevel = GameObject.Find("GameObject");
-    if (previousLevel == null)
-    {
-      goHome();
-    }
-    else
-    {
+    if (previousLevel == null) goHome();
+    else {
       previousLevelScript = previousLevel.GetComponent<currentLevelName>();
       SceneManager.LoadScene(previousLevelScript.currentLevelNameString, LoadSceneMode.Single);
     }

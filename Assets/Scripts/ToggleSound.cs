@@ -24,6 +24,7 @@ public class ToggleSound : MonoBehaviour {
 	void Update () {
 	}
 
+	// Toggles music sprite and volume
 	public void toggle () {
 		level = ((level == musicLevel.Full) ? musicLevel.Half : 
 					((level == musicLevel.Half) ? musicLevel.Off : musicLevel.Full));
