@@ -36,7 +36,7 @@ public class Lvl1Tutorial : MonoBehaviour
 		quadrants[2].enabled = false;
 		quadrants[3].enabled = false;
 
-        Debug.Log(Screen.width);
+        // Debug.Log(Screen.width);
         if(quadrants[0] != null) 
             quadrants[0].rectTransform.localScale = quadrants[1].rectTransform.localScale 
                 = quadrants[2].rectTransform.localScale = quadrants[3].rectTransform.localScale 
