@@ -8,6 +8,7 @@ public enum musicLevel : byte {Off, Half, Full};
 public class ToggleSound : MonoBehaviour {
 
 	static musicLevel level = musicLevel.Full;
+	public GameObject childImage;
 	public Sprite musicFull;
 	public Sprite musicHalf;
 	public Sprite musicOff;
@@ -15,7 +16,9 @@ public class ToggleSound : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		musicImage = GetComponent<Image>();
+		// Menu music button has no child image, needs special case
+		musicImage = ( childImage == null ) ? GetComponent<Image>() : childImage.GetComponent<Image>();
+		// Set sprite at start of each level
 		musicImage.sprite = (level == musicLevel.Full) ? musicFull :
 								((level == musicLevel.Half) ? musicHalf : musicOff);
 	}

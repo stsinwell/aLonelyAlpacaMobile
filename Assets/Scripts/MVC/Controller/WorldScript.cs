@@ -33,7 +33,6 @@ public class WorldScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("world init");
 		if(map == null) {
 			map = new Map(100, 100);
 		}
@@ -169,7 +168,6 @@ public class WorldScript : MonoBehaviour {
 				end_timer += Time.deltaTime;
 				if(end_timer > 0.2f) {
 					int level = int.Parse(Regex.Match(SceneManager.GetActiveScene().name, @"\d+").Value);
-					Debug.Log("skvhbs: " + level);
 					if(PlayerPrefs.GetInt("LevelPassed") < level) {
 						PlayerPrefs.SetInt("LevelPassed", level);
 					}

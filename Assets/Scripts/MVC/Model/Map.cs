@@ -41,7 +41,7 @@ public class Map {
             bt = Block.BlockType.MOVEABLE;
         } else if (name.Contains("winblock")) {
             bt = Block.BlockType.WIN;
-        } else if (name.Contains("spinning")) { //for final level
+        } else if (name.Contains("spinning") || name.Contains("arrow")) { //for final && tut level
             bt = Block.BlockType.NONE;
         }
 
